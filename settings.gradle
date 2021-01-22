@@ -1,0 +1,2 @@
+rootProject.name = "vitamin-compose"
+include ':foundation'
