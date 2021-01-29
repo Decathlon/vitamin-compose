@@ -1,2 +1,4 @@
 rootProject.name = "vitamin-compose"
 include ':foundation'
+include ':buttons'
+include ':sample'

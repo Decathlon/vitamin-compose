@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.font
 import androidx.compose.ui.text.font.fontFamily
 import androidx.compose.ui.unit.sp
 
-val typography = Typography(
+val VitaminTypography = Typography(
     h1 = TextStyle(
         fontFamily = fontFamily(font(R.font.roboto_condensed_bolditalic)),
         fontSize = 60.sp,
@@ -68,6 +68,7 @@ val typography = Typography(
     ),
     button = TextStyle(
         fontFamily = fontFamily(font(R.font.roboto_regular)),
+        fontWeight = FontWeight.W700,
         fontSize = 14.sp
     ),
     caption = TextStyle(
