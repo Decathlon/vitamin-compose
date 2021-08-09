@@ -12,20 +12,20 @@ class DefaultBorderStroke(
 )
 
 internal object VitaminButtonsBorders {
-  @Composable
   val primary: DefaultBorderStroke
+    @Composable
     get() = DefaultBorderStroke(
       stroke = BorderStroke(width = 2.dp, color = Color.Transparent)
     )
 
-  @Composable
   val primaryReversed: DefaultBorderStroke
+    @Composable
     get() = DefaultBorderStroke(
       stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.uiBackground)
     )
 
-  @Composable
   val secondary: DefaultBorderStroke
+    @Composable
     get() = DefaultBorderStroke(
       stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.textPrimary),
       disabled = BorderStroke(
@@ -34,8 +34,8 @@ internal object VitaminButtonsBorders {
       )
     )
 
-  @Composable
   val secondaryReversed: DefaultBorderStroke
+    @Composable
     get() = DefaultBorderStroke(
       stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.textSecondary),
       disabled = BorderStroke(
@@ -44,7 +44,7 @@ internal object VitaminButtonsBorders {
       )
     )
 
-  @Composable
   val none: DefaultBorderStroke
+    @Composable
     get() = DefaultBorderStroke()
 }

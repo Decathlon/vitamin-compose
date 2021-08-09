@@ -1,6 +1,6 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id("com.android.application")
+    id("kotlin-android")
 }
 
 android {
@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.decathlon.compose.sample"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -22,34 +22,33 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
-        useIR = true
-    }
-
-    buildFeatures {
-        compose true
+        jvmTarget = "1.8"
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion kotlin_version
+        kotlinCompilerVersion = kotlin_version
+        kotlinCompilerExtensionVersion = compose_version
+    }
+
+    buildFeatures {
+        compose = true
     }
 }
 
 dependencies {
-    api project(':foundation')
-    api project(':buttons')
+    implementation(project(':foundation'))
+    implementation(project(':buttons'))
 
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.activity:activity-compose:1.3.1")
+    implementation("com.google.android.material:material:1.4.0")
 
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation("androidx.compose.ui:ui:$compose_version")
+    implementation("androidx.compose.material:material:$compose_version")
+    implementation("androidx.compose.ui:ui-tooling:$compose_version")
 }

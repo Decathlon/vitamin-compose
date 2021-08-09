@@ -1,14 +1,15 @@
 package com.decathlon.compose.buttons
 
-import androidx.compose.foundation.AmbientIndication
 import androidx.compose.foundation.Indication
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Providers
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,7 +22,7 @@ object VitaminButtons {
   fun Primary(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -41,7 +42,7 @@ object VitaminButtons {
   fun PrimaryReversed(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -52,7 +53,7 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.primaryReversed,
-    ripple = rememberRipple(color = VitaminButtonsColors.primary.backgroundColor(true)),
+    ripple = rememberRipple(color = VitaminButtonsColors.primary.backgroundColor(true).value),
     border = VitaminButtonsBorders.primaryReversed,
     size = size,
     modifier = modifier,
@@ -63,7 +64,7 @@ object VitaminButtons {
   fun Secondary(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -84,7 +85,7 @@ object VitaminButtons {
   fun SecondaryReversed(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -106,7 +107,7 @@ object VitaminButtons {
   fun Ghost(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -128,7 +129,7 @@ object VitaminButtons {
   fun GhostReversed(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -150,7 +151,7 @@ object VitaminButtons {
   fun Conversion(
     text: String,
     modifier: Modifier = Modifier,
-    icon: ImageVector? = null,
+    icon: Painter? = null,
     iconSide: IconSide = IconSide.LEFT,
     enabled: Boolean = true,
     size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -174,11 +175,11 @@ object VitaminButtons {
 internal fun VitaminButton(
   text: String,
   modifier: Modifier = Modifier,
-  icon: ImageVector? = null,
+  icon: Painter? = null,
   iconSide: IconSide = IconSide.LEFT,
   enabled: Boolean = true,
   colors: ButtonColors = VitaminButtonsColors.primary,
-  ripple: Indication = rememberRipple(color = colors.contentColor(enabled = enabled)),
+  ripple: Indication = rememberRipple(color = colors.contentColor(enabled = enabled).value),
   border: DefaultBorderStroke = VitaminButtonsBorders.primary,
   elevation: ButtonElevation? = ButtonDefaults.elevation(),
   size: ButtonSizes = VitaminButtonSizes.mediumSize(),
@@ -187,21 +188,22 @@ internal fun VitaminButton(
 ) {
   val iconButton = @Composable {
     icon?.let {
-      if (iconSide == IconSide.RIGHT) Spacer(Modifier.preferredWidth(ButtonIconPadding))
+      if (iconSide == IconSide.RIGHT) Spacer(Modifier.width(ButtonIconPadding))
       Icon(
-        imageVector = icon,
+        painter = icon,
+        contentDescription = null,
         modifier = Modifier.size(size.iconSize),
-        tint = colors.contentColor(enabled = enabled)
+        tint = colors.contentColor(enabled = enabled).value
       )
-      if (iconSide == IconSide.LEFT) Spacer(Modifier.preferredWidth(ButtonIconPadding))
+      if (iconSide == IconSide.LEFT) Spacer(Modifier.width(ButtonIconPadding))
     }
   }
-  Providers(AmbientIndication provides @Composable { ripple }) {
+  CompositionLocalProvider(LocalIndication provides ripple) {
     Button(
       enabled = enabled,
       modifier = modifier
         .widthIn(min = size.minWidth)
-        .preferredHeight(size.height),
+        .height(size.height),
       colors = colors,
       border = if (enabled) border.stroke else border.disabled,
       contentPadding = size.contentPadding,

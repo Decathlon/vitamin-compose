@@ -9,8 +9,8 @@ import com.decathlon.compose.theme.VitaminTheme
 
 @OptIn(ExperimentalMaterialApi::class)
 internal object VitaminButtonsColors {
-  @Composable
   val primary: ButtonColors
+    @Composable
     get() = ButtonDefaults.buttonColors(
       backgroundColor = VitaminTheme.colors.brand,
       contentColor = VitaminTheme.colors.textSecondary,
@@ -18,48 +18,48 @@ internal object VitaminButtonsColors {
       disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
     )
 
-  @Composable
   val primaryReversed: ButtonColors
+    @Composable
     get() = ButtonDefaults.outlinedButtonColors(
       backgroundColor = VitaminTheme.colors.uiBackground,
       contentColor = VitaminTheme.colors.textPrimary,
       disabledContentColor = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
     )
 
-  @Composable
   val secondary: ButtonColors
+    @Composable
     get() = ButtonDefaults.outlinedButtonColors(
       backgroundColor = VitaminTheme.colors.uiBackground,
       contentColor = VitaminTheme.colors.textPrimary,
       disabledContentColor = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
     )
 
-  @Composable
   val secondaryReversed: ButtonColors
+    @Composable
     get() = ButtonDefaults.outlinedButtonColors(
       backgroundColor = Color.Transparent,
       contentColor = VitaminTheme.colors.textSecondary,
       disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
     )
 
-  @Composable
   val ghost: ButtonColors
+    @Composable
     get() = ButtonDefaults.textButtonColors(
       backgroundColor = Color.Transparent,
       contentColor = VitaminTheme.colors.brandDark,
       disabledContentColor = VitaminTheme.colors.brandDark.copy(alpha = .25f)
     )
 
-  @Composable
   val ghostReversed: ButtonColors
+    @Composable
     get() = ButtonDefaults.textButtonColors(
       backgroundColor = Color.Transparent,
       contentColor = VitaminTheme.colors.textSecondary,
       disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
     )
 
-  @Composable
   val conversion: ButtonColors
+    @Composable
     get() = ButtonDefaults.buttonColors(
       backgroundColor = VitaminTheme.colors.ecommerceSecondary,
       contentColor = VitaminTheme.colors.textPrimary,

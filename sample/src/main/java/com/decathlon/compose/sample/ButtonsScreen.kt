@@ -7,6 +7,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -28,11 +29,11 @@ fun ButtonsScreen() {
         ButtonRow {
           VitaminButtons.Primary(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.Primary(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -41,12 +42,12 @@ fun ButtonsScreen() {
         ButtonRow {
           VitaminButtons.Primary(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             iconSide = IconSide.RIGHT
           ) {}
           VitaminButtons.Primary(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             iconSide = IconSide.RIGHT,
             enabled = false
           ) {}
@@ -62,11 +63,11 @@ fun ButtonsScreen() {
         ButtonRow {
           VitaminButtons.Secondary(
             text = "Secondary",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.Secondary(
             text = "Secondary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -81,11 +82,11 @@ fun ButtonsScreen() {
         ButtonRow {
           VitaminButtons.Ghost(
             text = "Ghost",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.Ghost(
             text = "Ghost",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -100,11 +101,11 @@ fun ButtonsScreen() {
         ButtonRow(lastItem = true) {
           VitaminButtons.Conversion(
             text = "Conversion",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.Conversion(
             text = "Conversion",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -119,11 +120,11 @@ fun ButtonsScreen() {
         ButtonRow(color = VitaminTheme.colors.brand) {
           VitaminButtons.PrimaryReversed(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.PrimaryReversed(
             text = "Primary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -138,11 +139,11 @@ fun ButtonsScreen() {
         ButtonRow(color = VitaminTheme.colors.brand) {
           VitaminButtons.SecondaryReversed(
             text = "Secondary",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.SecondaryReversed(
             text = "Secondary",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }
@@ -157,11 +158,11 @@ fun ButtonsScreen() {
         ButtonRow(lastItem = true, color = VitaminTheme.colors.brand) {
           VitaminButtons.GhostReversed(
             text = "Ghost",
-            icon = vectorResource(id = R.drawable.ic_add_fill)
+            icon = painterResource(id = R.drawable.ic_add_fill)
           ) {}
           VitaminButtons.GhostReversed(
             text = "Ghost",
-            icon = vectorResource(id = R.drawable.ic_add_fill),
+            icon = painterResource(id = R.drawable.ic_add_fill),
             enabled = false
           ) {}
         }

@@ -21,9 +21,9 @@ fun VitaminTheme(
 }
 
 object VitaminTheme {
-  @Composable
   val colors: VitaminColors
-    get() = AmbientVitaminColors.current
+    @Composable
+    get() = LocalVitaminColors.current
 
   val typography: Typography
     get() = VitaminTypography

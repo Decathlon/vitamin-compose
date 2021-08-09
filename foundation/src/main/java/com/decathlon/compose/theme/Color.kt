@@ -124,10 +124,10 @@ fun ProvideVitaminColors(
 ) {
   val colorPalette = remember { colors }
   colorPalette.update(colors)
-  Providers(AmbientVitaminColors provides colorPalette, content = content)
+  CompositionLocalProvider(LocalVitaminColors provides colorPalette, content = content)
 }
 
-internal val AmbientVitaminColors = staticAmbientOf<VitaminColors> {
+internal val LocalVitaminColors = compositionLocalOf<VitaminColors> {
   error("No VitaminColorPalette provided")
 }
 
