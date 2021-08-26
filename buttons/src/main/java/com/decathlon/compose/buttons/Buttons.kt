@@ -1,22 +1,18 @@
 package com.decathlon.compose.buttons
 
-import androidx.compose.foundation.Indication
-import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple.LocalRippleTheme
+import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.theme.VitaminTheme
 
-@OptIn(ExperimentalMaterialApi::class)
 object VitaminButtons {
   @Composable
   fun Primary(
@@ -32,7 +28,6 @@ object VitaminButtons {
     icon = icon,
     iconSide = iconSide,
     enabled = enabled,
-    ripple = rememberRipple(color = VitaminTheme.colors.textPrimary),
     size = size,
     modifier = modifier,
     onClick = onClick
@@ -53,7 +48,7 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.primaryReversed,
-    ripple = rememberRipple(color = VitaminButtonsColors.primary.backgroundColor(true).value),
+    ripples = VitaminButtonsRipples.primaryReversed,
     border = VitaminButtonsBorders.primaryReversed,
     size = size,
     modifier = modifier,
@@ -75,6 +70,7 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.secondary,
+    ripples = VitaminButtonsRipples.secondary,
     border = VitaminButtonsBorders.secondary,
     size = size,
     modifier = modifier,
@@ -82,7 +78,7 @@ object VitaminButtons {
   )
 
   @Composable
-  fun SecondaryReversed(
+  fun Tertiary(
     text: String,
     modifier: Modifier = Modifier,
     icon: Painter? = null,
@@ -95,8 +91,8 @@ object VitaminButtons {
     icon = icon,
     iconSide = iconSide,
     enabled = enabled,
-    colors = VitaminButtonsColors.secondaryReversed,
-    border = VitaminButtonsBorders.secondaryReversed,
+    colors = VitaminButtonsColors.tertiary,
+    ripples = VitaminButtonsRipples.tertiary,
     elevation = null,
     size = size,
     modifier = modifier,
@@ -118,7 +114,7 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.ghost,
-    border = VitaminButtonsBorders.none,
+    ripples = VitaminButtonsRipples.ghost,
     elevation = null,
     size = size,
     modifier = modifier,
@@ -140,7 +136,7 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.ghostReversed,
-    border = VitaminButtonsBorders.none,
+    ripples = VitaminButtonsRipples.ghostReversed,
     elevation = null,
     size = size,
     modifier = modifier,
@@ -162,15 +158,13 @@ object VitaminButtons {
     iconSide = iconSide,
     enabled = enabled,
     colors = VitaminButtonsColors.conversion,
-    ripple = rememberRipple(color = Color.White),
-    border = VitaminButtonsBorders.none,
+    ripples = VitaminButtonsRipples.conversion,
     size = size,
     modifier = modifier,
     onClick = onClick
   )
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 internal fun VitaminButton(
   text: String,
@@ -179,10 +173,14 @@ internal fun VitaminButton(
   iconSide: IconSide = IconSide.LEFT,
   enabled: Boolean = true,
   colors: ButtonColors = VitaminButtonsColors.primary,
-  ripple: Indication = rememberRipple(color = colors.contentColor(enabled = enabled).value),
-  border: DefaultBorderStroke = VitaminButtonsBorders.primary,
-  elevation: ButtonElevation? = ButtonDefaults.elevation(),
+  ripples: RippleTheme = VitaminButtonsRipples.primary,
+  border: DefaultBorderStroke = VitaminButtonsBorders.none,
   size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+  elevation: ButtonElevation? = ButtonDefaults.elevation(
+    defaultElevation = 0.dp,
+    pressedElevation = 0.dp,
+    disabledElevation = 0.dp
+  ),
   style: TextStyle = VitaminTheme.typography.button,
   onClick: () -> Unit
 ) {
@@ -198,7 +196,7 @@ internal fun VitaminButton(
       if (iconSide == IconSide.LEFT) Spacer(Modifier.width(ButtonIconPadding))
     }
   }
-  CompositionLocalProvider(LocalIndication provides ripple) {
+  CompositionLocalProvider(LocalRippleTheme provides ripples) {
     Button(
       enabled = enabled,
       modifier = modifier
@@ -251,9 +249,9 @@ fun VitaminSecondaryButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminSecondaryReversedButtonPreview() {
+fun VitaminTertiaryButtonPreview() {
   VitaminTheme {
-    VitaminButtons.SecondaryReversed(text = "La sélection cadeaux") {}
+    VitaminButtons.Tertiary(text = "La sélection cadeaux") {}
   }
 }
 

@@ -7,63 +7,68 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.decathlon.compose.theme.VitaminTheme
 
+const val vtmnStatesDisabled = .38f
+
 @OptIn(ExperimentalMaterialApi::class)
 internal object VitaminButtonsColors {
   val primary: ButtonColors
     @Composable
     get() = ButtonDefaults.buttonColors(
-      backgroundColor = VitaminTheme.colors.brand,
-      contentColor = VitaminTheme.colors.textSecondary,
-      disabledBackgroundColor = VitaminTheme.colors.brand.copy(alpha = .25f),
-      disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
+      backgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimary,
+      contentColor = VitaminTheme.colors.vtmnContentPrimaryReversed,
+      disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimary.copy(alpha = vtmnStatesDisabled),
+      disabledContentColor = VitaminTheme.colors.vtmnContentPrimaryReversed.copy(alpha = vtmnStatesDisabled)
     )
 
   val primaryReversed: ButtonColors
     @Composable
-    get() = ButtonDefaults.outlinedButtonColors(
-      backgroundColor = VitaminTheme.colors.uiBackground,
-      contentColor = VitaminTheme.colors.textPrimary,
-      disabledContentColor = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
+    get() = ButtonDefaults.buttonColors(
+      backgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed,
+      contentColor = VitaminTheme.colors.vtmnContentPrimary,
+      disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimary.copy(alpha = vtmnStatesDisabled),
+      disabledContentColor = VitaminTheme.colors.vtmnContentPrimaryReversed.copy(alpha = vtmnStatesDisabled)
     )
 
   val secondary: ButtonColors
     @Composable
-    get() = ButtonDefaults.outlinedButtonColors(
-      backgroundColor = VitaminTheme.colors.uiBackground,
-      contentColor = VitaminTheme.colors.textPrimary,
-      disabledContentColor = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
+    get() = ButtonDefaults.buttonColors(
+      backgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary,
+      contentColor = VitaminTheme.colors.vtmnContentAction,
+      disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary.copy(alpha = vtmnStatesDisabled),
+      disabledContentColor = VitaminTheme.colors.vtmnContentAction.copy(alpha = vtmnStatesDisabled)
     )
 
-  val secondaryReversed: ButtonColors
+  val tertiary: ButtonColors
     @Composable
-    get() = ButtonDefaults.outlinedButtonColors(
-      backgroundColor = Color.Transparent,
-      contentColor = VitaminTheme.colors.textSecondary,
-      disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
+    get() = ButtonDefaults.buttonColors(
+      backgroundColor = VitaminTheme.colors.vtmnBackgroundBrandSecondary,
+      contentColor = VitaminTheme.colors.vtmnContentAction,
+      disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundBrandSecondary.copy(alpha = vtmnStatesDisabled),
+      disabledContentColor = VitaminTheme.colors.vtmnContentAction.copy(alpha = vtmnStatesDisabled)
     )
 
   val ghost: ButtonColors
     @Composable
     get() = ButtonDefaults.textButtonColors(
       backgroundColor = Color.Transparent,
-      contentColor = VitaminTheme.colors.brandDark,
-      disabledContentColor = VitaminTheme.colors.brandDark.copy(alpha = .25f)
+      contentColor = VitaminTheme.colors.vtmnContentAction,
+      disabledContentColor = VitaminTheme.colors.vtmnContentAction.copy(alpha = vtmnStatesDisabled)
     )
 
   val ghostReversed: ButtonColors
     @Composable
     get() = ButtonDefaults.textButtonColors(
       backgroundColor = Color.Transparent,
-      contentColor = VitaminTheme.colors.textSecondary,
-      disabledContentColor = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
+      contentColor = VitaminTheme.colors.vtmnContentActionReversed,
+      disabledContentColor = VitaminTheme.colors.vtmnContentActionReversed.copy(alpha = vtmnStatesDisabled)
     )
 
   val conversion: ButtonColors
     @Composable
     get() = ButtonDefaults.buttonColors(
-      backgroundColor = VitaminTheme.colors.ecommerceSecondary,
-      contentColor = VitaminTheme.colors.textPrimary,
-      disabledBackgroundColor = VitaminTheme.colors.ecommerceSecondary.copy(alpha = .25f),
-      disabledContentColor = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
+      backgroundColor = VitaminTheme.colors.vtmnBackgroundAccent,
+      contentColor = VitaminTheme.colors.vtmnContentPrimary,
+      disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundAccent.copy(alpha = vtmnStatesDisabled),
+      disabledContentColor = VitaminTheme.colors.vtmnContentPrimary.copy(alpha = vtmnStatesDisabled)
     )
 }

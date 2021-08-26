@@ -2,7 +2,6 @@ package com.decathlon.compose.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.theme.VitaminTheme
 
@@ -12,36 +11,19 @@ class DefaultBorderStroke(
 )
 
 internal object VitaminButtonsBorders {
-  val primary: DefaultBorderStroke
-    @Composable
-    get() = DefaultBorderStroke(
-      stroke = BorderStroke(width = 2.dp, color = Color.Transparent)
-    )
 
   val primaryReversed: DefaultBorderStroke
     @Composable
     get() = DefaultBorderStroke(
-      stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.uiBackground)
+      stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed),
+      disabled = BorderStroke(width = 2.dp, color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed.copy(alpha = vtmnStatesDisabled))
     )
 
   val secondary: DefaultBorderStroke
     @Composable
     get() = DefaultBorderStroke(
-      stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.textPrimary),
-      disabled = BorderStroke(
-        width = 2.dp,
-        color = VitaminTheme.colors.textPrimary.copy(alpha = .25f)
-      )
-    )
-
-  val secondaryReversed: DefaultBorderStroke
-    @Composable
-    get() = DefaultBorderStroke(
-      stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.textSecondary),
-      disabled = BorderStroke(
-        width = 2.dp,
-        color = VitaminTheme.colors.textSecondary.copy(alpha = .25f)
-      )
+      stroke = BorderStroke(width = 2.dp, color = VitaminTheme.colors.vtmnBorderSecondary),
+      disabled = BorderStroke(width = 2.dp, color = VitaminTheme.colors.vtmnBorderSecondary.copy(alpha = vtmnStatesDisabled))
     )
 
   val none: DefaultBorderStroke

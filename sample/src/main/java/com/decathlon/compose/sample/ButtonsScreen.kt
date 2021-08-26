@@ -17,7 +17,7 @@ import com.decathlon.compose.theme.VitaminTheme
 
 @Composable
 fun ButtonsScreen() {
-  Surface(color = VitaminTheme.colors.uiBackground) {
+  Surface(color = VitaminTheme.colors.vtmnBackgroundPrimary) {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
       item {
         ButtonRow(firstItem = true) {
@@ -111,13 +111,13 @@ fun ButtonsScreen() {
         }
       }
       item {
-        ButtonRow(firstItem = true, color = VitaminTheme.colors.brand) {
+        ButtonRow(firstItem = true, color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
           VitaminButtons.PrimaryReversed(text = "Primary") {}
           VitaminButtons.PrimaryReversed(text = "Primary", enabled = false) {}
         }
       }
       item {
-        ButtonRow(color = VitaminTheme.colors.brand) {
+        ButtonRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
           VitaminButtons.PrimaryReversed(
             text = "Primary",
             icon = painterResource(id = R.drawable.ic_add_fill)
@@ -130,32 +130,19 @@ fun ButtonsScreen() {
         }
       }
       item {
-        ButtonRow(color = VitaminTheme.colors.brand) {
-          VitaminButtons.SecondaryReversed(text = "Secondary") {}
-          VitaminButtons.SecondaryReversed(text = "Secondary", enabled = false) {}
+        ButtonRow(firstItem = true) {
+          VitaminButtons.Tertiary(text = "Tertiary") {}
+          VitaminButtons.Tertiary(text = "Tertiary", enabled = false) {}
         }
       }
       item {
-        ButtonRow(color = VitaminTheme.colors.brand) {
-          VitaminButtons.SecondaryReversed(
-            text = "Secondary",
-            icon = painterResource(id = R.drawable.ic_add_fill)
-          ) {}
-          VitaminButtons.SecondaryReversed(
-            text = "Secondary",
-            icon = painterResource(id = R.drawable.ic_add_fill),
-            enabled = false
-          ) {}
-        }
-      }
-      item {
-        ButtonRow(color = VitaminTheme.colors.brand) {
+        ButtonRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
           VitaminButtons.GhostReversed(text = "Ghost") {}
           VitaminButtons.GhostReversed(text = "Ghost", enabled = false) {}
         }
       }
       item {
-        ButtonRow(lastItem = true, color = VitaminTheme.colors.brand) {
+        ButtonRow(lastItem = true, color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
           VitaminButtons.GhostReversed(
             text = "Ghost",
             icon = painterResource(id = R.drawable.ic_add_fill)
@@ -175,7 +162,7 @@ fun ButtonsScreen() {
 fun ButtonRow(
   firstItem: Boolean = false,
   lastItem: Boolean = false,
-  color: Color = VitaminTheme.colors.uiBackground,
+  color: Color = VitaminTheme.colors.vtmnBackgroundPrimary,
   content: @Composable RowScope.() -> Unit
 ) {
   Row(

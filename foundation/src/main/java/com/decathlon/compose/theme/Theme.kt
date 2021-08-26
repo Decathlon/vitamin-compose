@@ -10,7 +10,8 @@ fun VitaminTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
   content: @Composable () -> Unit
 ) {
-  ProvideVitaminColors(LightColorPalette) {
+  val palette = if (darkTheme) DarkColorPalette else LightColorPalette
+  ProvideVitaminColors(palette) {
     MaterialTheme(
       colors = debugColors(darkTheme),
       typography = VitaminTypography,
