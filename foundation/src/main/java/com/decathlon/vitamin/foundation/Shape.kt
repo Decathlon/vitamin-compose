@@ -1,4 +1,4 @@
-package com.decathlon.compose.theme
+package com.decathlon.vitamin.foundation
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

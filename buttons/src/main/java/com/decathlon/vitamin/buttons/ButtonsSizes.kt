@@ -1,11 +1,11 @@
-package com.decathlon.compose.buttons
+package com.decathlon.vitamin.buttons
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.theme.VitaminTheme
+import com.decathlon.vitamin.foundation.VitaminTheme
 
 class ButtonSizes(
   val fontSize: TextUnit,

@@ -1,4 +1,4 @@
-package com.decathlon.compose.theme
+package com.decathlon.vitamin.foundation
 
 import android.util.Log
 import androidx.compose.material.Colors

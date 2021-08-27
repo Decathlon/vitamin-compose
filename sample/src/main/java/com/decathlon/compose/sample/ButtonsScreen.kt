@@ -8,12 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.buttons.IconSide
-import com.decathlon.compose.buttons.VitaminButtons
-import com.decathlon.compose.theme.VitaminTheme
+import com.decathlon.vitamin.buttons.IconSide
+import com.decathlon.vitamin.buttons.VitaminButtons
+import com.decathlon.vitamin.foundation.VitaminTheme
 
 @Composable
 fun ButtonsScreen() {

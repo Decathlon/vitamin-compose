@@ -1,4 +1,4 @@
-package com.decathlon.compose.theme
+package com.decathlon.vitamin.foundation
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

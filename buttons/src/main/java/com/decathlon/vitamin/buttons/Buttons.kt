@@ -1,4 +1,4 @@
-package com.decathlon.compose.buttons
+package com.decathlon.vitamin.buttons
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.theme.VitaminTheme
+import com.decathlon.vitamin.foundation.VitaminTheme
 
 object VitaminButtons {
   @Composable

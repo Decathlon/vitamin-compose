@@ -1,9 +1,11 @@
-package com.decathlon.compose.theme
+package com.decathlon.vitamin.foundation
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Typography
 import androidx.compose.runtime.Composable
+import com.decathlon.vitamin.foundation.*
+import com.decathlon.vitamin.foundation.LocalVitaminColors
 
 @Composable
 fun VitaminTheme(

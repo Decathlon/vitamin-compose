@@ -1,9 +1,9 @@
-package com.decathlon.compose.buttons
+package com.decathlon.vitamin.buttons
 
 import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
-import com.decathlon.compose.theme.VitaminTheme
+import com.decathlon.vitamin.foundation.VitaminTheme
 
 internal object VitaminButtonsRipples {
   val primary: RippleTheme
