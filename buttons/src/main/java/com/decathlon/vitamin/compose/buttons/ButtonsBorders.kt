@@ -1,9 +1,9 @@
-package com.decathlon.vitamin.buttons
+package com.decathlon.vitamin.compose.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
-import com.decathlon.vitamin.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 class DefaultBorderStroke(
   val stroke: BorderStroke? = null,

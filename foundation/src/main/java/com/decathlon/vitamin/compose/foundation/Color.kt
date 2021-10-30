@@ -1,4 +1,4 @@
-package com.decathlon.vitamin.foundation
+package com.decathlon.vitamin.compose.foundation
 
 import androidx.compose.material.Colors
 import androidx.compose.runtime.*

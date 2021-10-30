@@ -10,9 +10,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.vitamin.buttons.IconSide
-import com.decathlon.vitamin.buttons.VitaminButtons
-import com.decathlon.vitamin.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.buttons.IconSide
+import com.decathlon.vitamin.compose.buttons.VitaminButtons
+import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Composable
 fun ButtonsScreen() {

@@ -1,11 +1,11 @@
-package com.decathlon.vitamin.buttons
+package com.decathlon.vitamin.compose.buttons
 
 import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.decathlon.vitamin.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 const val vtmnStatesDisabled = .38f
 
