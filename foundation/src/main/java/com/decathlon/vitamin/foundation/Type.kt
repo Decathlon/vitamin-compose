@@ -4,84 +4,94 @@ import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+private val roboto = FontFamily(
+    Font(R.font.roboto_condensed_bold, FontWeight.Bold, FontStyle.Normal),
+    Font(R.font.roboto_condensed_bolditalic, FontWeight.Bold, FontStyle.Italic),
+    Font(R.font.roboto_condensed_light, FontWeight.Light, FontStyle.Normal),
+    Font(R.font.roboto_condensed_lightitalic, FontWeight.Light, FontStyle.Italic),
+    Font(R.font.roboto_condensed_regular, FontWeight.Normal, FontStyle.Normal),
+    Font(R.font.roboto_condensed_regularitalic, FontWeight.Normal, FontStyle.Italic)
+)
+
 val VitaminTypography = Typography(
     h1 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_condensed_bolditalic)),
+        fontFamily = roboto,
         fontSize = 42.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 44.sp
     ),
     h2 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 40.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 44.sp
     ),
     h3 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 36.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 40.sp
     ),
     h4 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 28.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 32.sp
     ),
     h5 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 24.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 28.sp
     ),
     h6 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 20.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 24.sp
     ),
     subtitle1 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 16.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 24.sp
     ),
     subtitle2 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 15.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 20.sp
     ),
     body1 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 17.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 28.sp
     ),
     body2 = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 16.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 24.sp
     ),
     button = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 16.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 16.sp
     ),
     caption = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 12.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 16.sp
     ),
     overline = TextStyle(
-        fontFamily = FontFamily(Font(R.font.roboto_regular)),
+        fontFamily = roboto,
         fontSize = 11.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 13.sp

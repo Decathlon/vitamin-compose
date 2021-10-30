@@ -1,6 +1,5 @@
 package com.decathlon.vitamin.foundation
 
-import android.util.Log
 import androidx.compose.material.Colors
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
@@ -85,7 +84,8 @@ val LightColorPalette = VitaminColors(
   vtmnBackgroundPrimaryReversed = vtmnBlack,
   vtmnBackgroundBrandPrimaryReversed = vtmnWhite,
   vtmnContentPrimary = vtmnBlack,
-  vtmnContentSecondary = vtmnGrey500,
+  vtmnContentSecondary = vtmnGrey600,
+  vtmnContentTertiary = vtmnGrey500,
   vtmnContentAction = vtmnBlue500,
   vtmnContentActive = vtmnBlue400,
   vtmnContentInactive = vtmnGrey400,
@@ -93,32 +93,35 @@ val LightColorPalette = VitaminColors(
   vtmnContentWarning = vtmnOrange400,
   vtmnContentPositive = vtmnConifer400,
   vtmnContentInformation = vtmnBlue400,
+  vtmnContentAccent = vtmnBlack,
   vtmnContentPrimaryReversed = vtmnWhite,
   vtmnContentActionReversed = vtmnWhite,
-  vtmnBorderPrimary = vtmnBlack,
+  vtmnBorderPrimary = vtmnWhite,
   vtmnBorderSecondary = vtmnGrey200,
+  vtmnBorderTertiary = vtmnGrey100,
   vtmnBorderActive = vtmnBlue400,
   vtmnBorderInactive = vtmnGrey400,
   vtmnBorderNegative = vtmnRed400,
   vtmnBorderWarning = vtmnOrange400,
   vtmnBorderPositive = vtmnConifer400,
   vtmnBorderInformation = vtmnBlue400,
-  vtmnBorderPrimaryReversed = vtmnWhite,
+  vtmnBorderPrimaryReversed = vtmnBlack,
   vtmnHoverPrimary = vtmnBlue50
 )
 
 val DarkColorPalette = VitaminColors(
-  vtmnBackgroundPrimary = vtmnBlack,
+  vtmnBackgroundPrimary = vtmnGrey800,
   vtmnBackgroundSecondary = vtmnGrey900,
-  vtmnBackgroundTertiary = vtmnGrey800,
+  vtmnBackgroundTertiary = vtmnBlack,
   vtmnBackgroundBrandPrimary = vtmnBlue300,
   vtmnBackgroundBrandSecondary = vtmnBlue700,
   vtmnBackgroundAccent = vtmnYellow400,
   vtmnBackgroundDiscount = vtmnRed400,
-  vtmnBackgroundPrimaryReversed = vtmnBlack,
+  vtmnBackgroundPrimaryReversed = vtmnWhite,
   vtmnBackgroundBrandPrimaryReversed = vtmnBlack,
   vtmnContentPrimary = vtmnWhite,
   vtmnContentSecondary = vtmnGrey300,
+  vtmnContentTertiary = vtmnGreen400,
   vtmnContentAction = vtmnBlue200,
   vtmnContentActive = vtmnBlue300,
   vtmnContentInactive = vtmnGrey500,
@@ -126,17 +129,19 @@ val DarkColorPalette = VitaminColors(
   vtmnContentWarning = vtmnOrange300,
   vtmnContentPositive = vtmnConifer300,
   vtmnContentInformation = vtmnBlue300,
+  vtmnContentAccent = vtmnBlack,
   vtmnContentPrimaryReversed = vtmnBlack,
   vtmnContentActionReversed = vtmnBlack,
-  vtmnBorderPrimary = vtmnWhite,
-  vtmnBorderSecondary = vtmnGrey200,
+  vtmnBorderPrimary = vtmnGrey800,
+  vtmnBorderSecondary = vtmnGrey700,
+  vtmnBorderTertiary = vtmnBlack,
   vtmnBorderActive = vtmnBlue300,
   vtmnBorderInactive = vtmnGrey500,
   vtmnBorderNegative = vtmnRed300,
   vtmnBorderWarning = vtmnOrange300,
   vtmnBorderPositive = vtmnConifer300,
   vtmnBorderInformation = vtmnBlue300,
-  vtmnBorderPrimaryReversed = vtmnBlack,
+  vtmnBorderPrimaryReversed = vtmnWhite,
   vtmnHoverPrimary = vtmnBlue700
 )
 
@@ -144,6 +149,7 @@ val DarkColorPalette = VitaminColors(
 @OptIn(ExperimentalGraphicsApi::class)
 @Stable
 class VitaminColors constructor(
+  // Background
   vtmnBackgroundPrimary: Color,
   vtmnBackgroundSecondary: Color,
   vtmnBackgroundTertiary: Color,
@@ -153,8 +159,11 @@ class VitaminColors constructor(
   vtmnBackgroundDiscount: Color,
   vtmnBackgroundPrimaryReversed: Color,
   vtmnBackgroundBrandPrimaryReversed: Color,
+
+  // Content
   vtmnContentPrimary: Color,
   vtmnContentSecondary: Color,
+  vtmnContentTertiary: Color,
   vtmnContentAction: Color,
   vtmnContentActive: Color,
   vtmnContentInactive: Color,
@@ -162,10 +171,14 @@ class VitaminColors constructor(
   vtmnContentWarning: Color,
   vtmnContentPositive: Color,
   vtmnContentInformation: Color,
+  vtmnContentAccent: Color,
   vtmnContentPrimaryReversed: Color,
   vtmnContentActionReversed: Color,
+
+  // Border
   vtmnBorderPrimary: Color,
   vtmnBorderSecondary: Color,
+  vtmnBorderTertiary: Color,
   vtmnBorderActive: Color,
   vtmnBorderInactive: Color,
   vtmnBorderNegative: Color,
@@ -176,8 +189,8 @@ class VitaminColors constructor(
 
   // Hover
   vtmnHoverPrimary: Color,
-  vtmnHoverPrimaryTransparent: Color = vtmnBackgroundBrandPrimary.convertByHSL(aTransform = { 0.5f }),
-  vtmnHoverSecondaryTransparent: Color = vtmnContentPrimary.convertByHSL(aTransform = { 0.5f }),
+  vtmnHoverPrimaryTransparent: Color = vtmnBackgroundBrandPrimary.convertByHSL(aTransform = { 0.05f }),
+  vtmnHoverSecondaryTransparent: Color = vtmnContentPrimary.convertByHSL(aTransform = { 0.05f }),
   vtmnHoverTertiaryTransparent: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it * 0.98f }, aTransform = { 0.8f }),
   vtmnHoverTertiary: Color = vtmnBackgroundSecondary.convertByHSL(lTransform = { it * 0.95f }),
   vtmnHoverBrand: Color = vtmnBackgroundBrandPrimary.convertByHSL(lTransform = { it * 0.85f }),
@@ -220,6 +233,8 @@ class VitaminColors constructor(
     private set
   var vtmnContentSecondary by mutableStateOf(vtmnContentSecondary)
     private set
+  var vtmnContentTertiary by mutableStateOf(vtmnContentTertiary)
+    private set
   var vtmnContentAction by mutableStateOf(vtmnContentAction)
     private set
   var vtmnContentActive by mutableStateOf(vtmnContentActive)
@@ -234,6 +249,8 @@ class VitaminColors constructor(
     private set
   var vtmnContentInformation by mutableStateOf(vtmnContentInformation)
     private set
+  var vtmnContentAccent by mutableStateOf(vtmnContentAccent)
+    private set
   var vtmnContentPrimaryReversed by mutableStateOf(vtmnContentPrimaryReversed)
     private set
   var vtmnContentActionReversed by mutableStateOf(vtmnContentActionReversed)
@@ -241,6 +258,8 @@ class VitaminColors constructor(
   var vtmnBorderPrimary by mutableStateOf(vtmnBorderPrimary)
     private set
   var vtmnBorderSecondary by mutableStateOf(vtmnBorderSecondary)
+    private set
+  var vtmnBorderTertiary by mutableStateOf(vtmnBorderTertiary)
     private set
   var vtmnBorderActive by mutableStateOf(vtmnBorderActive)
     private set
@@ -313,6 +332,7 @@ class VitaminColors constructor(
     vtmnBackgroundBrandPrimaryReversed = other.vtmnBackgroundBrandPrimaryReversed
     vtmnContentPrimary = other.vtmnContentPrimary
     vtmnContentSecondary = other.vtmnContentSecondary
+    vtmnContentTertiary = other.vtmnContentTertiary
     vtmnContentAction = other.vtmnContentAction
     vtmnContentActive = other.vtmnContentActive
     vtmnContentInactive = other.vtmnContentInactive
@@ -320,10 +340,12 @@ class VitaminColors constructor(
     vtmnContentWarning = other.vtmnContentWarning
     vtmnContentPositive = other.vtmnContentPositive
     vtmnContentInformation = other.vtmnContentInformation
+    vtmnContentAccent = other.vtmnContentAccent
     vtmnContentPrimaryReversed = other.vtmnContentPrimaryReversed
     vtmnContentActionReversed = other.vtmnContentActionReversed
     vtmnBorderPrimary = other.vtmnBorderPrimary
     vtmnBorderSecondary = other.vtmnBorderSecondary
+    vtmnBorderTertiary = other.vtmnBorderTertiary
     vtmnBorderActive = other.vtmnBorderActive
     vtmnBorderInactive = other.vtmnBorderInactive
     vtmnBorderNegative = other.vtmnBorderNegative
@@ -399,14 +421,7 @@ fun Color.convertByHSL(
   aTransform: (a: Float) -> Float = { it }
 ): Color {
   val (h, s, l) = this.toHSL()
-  Log.d("ColorHSL", "********************************")
-  Log.d("ColorHSL", "Color: $this")
-  Log.d("ColorHSL", "Color RGB: ${this.red * 255}, ${this.green * 255}, ${this.blue * 255}")
-  Log.d("ColorHSL", "h: $h, s: $s, l: $l")
-  Log.d("ColorHSL", "transform h: ${hTransform(h)}, transform s: ${sTransform(s)}, transform h: ${lTransform(l)}, transform a: ${aTransform(1f)}")
-  val hsl = Color.hsl(hTransform(h), sTransform(s), lTransform(l), aTransform(1f))
-  Log.d("ColorHSL", "Color HSL: $hsl")
-  return hsl
+  return Color.hsl(hTransform(h), sTransform(s), lTransform(l), aTransform(1f))
 }
 
 fun Color.toHSL(): HSLColor {

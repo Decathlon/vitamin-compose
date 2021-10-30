@@ -26,7 +26,7 @@ internal object VitaminButtonsColors {
       backgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed,
       contentColor = VitaminTheme.colors.vtmnContentPrimary,
       disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundBrandPrimary.copy(alpha = vtmnStatesDisabled),
-      disabledContentColor = VitaminTheme.colors.vtmnContentPrimaryReversed.copy(alpha = vtmnStatesDisabled)
+      disabledContentColor = VitaminTheme.colors.vtmnContentPrimary.copy(alpha = vtmnStatesDisabled)
     )
 
   val secondary: ButtonColors
