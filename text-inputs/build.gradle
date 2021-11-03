@@ -1,0 +1,36 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 30
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerVersion = kotlin_version
+        kotlinCompilerExtensionVersion = compose_version
+    }
+
+    buildFeatures {
+        compose = true
+    }
+}
+
+dependencies {
+    api(project(":foundation"))
+    implementation("androidx.compose.ui:ui-tooling:$compose_version")
+}

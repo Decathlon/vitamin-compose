@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/buttons" />
             <option value="$PROJECT_DIR$/foundation" />
             <option value="$PROJECT_DIR$/sample" />
+            <option value="$PROJECT_DIR$/text-inputs" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
