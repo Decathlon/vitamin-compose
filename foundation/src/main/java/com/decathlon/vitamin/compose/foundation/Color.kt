@@ -73,7 +73,7 @@ val vtmnGrey800 = Color(26, 42, 52)
 val vtmnGrey900 = Color(20, 33, 41)
 val vtmnBlack = Color(0, 16, 24)
 
-val LightColorPalette = VitaminColors(
+val vtmnLightColorPalette = VitaminColors(
   vtmnBackgroundPrimary = vtmnWhite,
   vtmnBackgroundSecondary = vtmnGrey50,
   vtmnBackgroundTertiary = vtmnGrey100,
@@ -109,7 +109,7 @@ val LightColorPalette = VitaminColors(
   vtmnHoverPrimary = vtmnBlue50
 )
 
-val DarkColorPalette = VitaminColors(
+val vtmnDarkColorPalette = VitaminColors(
   vtmnBackgroundPrimary = vtmnGrey800,
   vtmnBackgroundSecondary = vtmnGrey900,
   vtmnBackgroundTertiary = vtmnBlack,
@@ -191,7 +191,9 @@ class VitaminColors constructor(
   vtmnHoverPrimary: Color,
   vtmnHoverPrimaryTransparent: Color = vtmnBackgroundBrandPrimary.convertByHSL(aTransform = { 0.05f }),
   vtmnHoverSecondaryTransparent: Color = vtmnContentPrimary.convertByHSL(aTransform = { 0.05f }),
-  vtmnHoverTertiaryTransparent: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it * 0.98f }, aTransform = { 0.8f }),
+  vtmnHoverTertiaryTransparent: Color = vtmnHoverPrimary.convertByHSL(
+    lTransform = { it * 0.98f },
+    aTransform = { 0.8f }),
   vtmnHoverTertiary: Color = vtmnBackgroundSecondary.convertByHSL(lTransform = { it * 0.95f }),
   vtmnHoverBrand: Color = vtmnBackgroundBrandPrimary.convertByHSL(lTransform = { it * 0.85f }),
   vtmnHoverAccent: Color = vtmnBackgroundAccent.convertByHSL(lTransform = { it + (1 - it) * 0.48f }),
@@ -200,11 +202,13 @@ class VitaminColors constructor(
   vtmnHoverBrandReversedTransparent: Color = vtmnContentPrimaryReversed.convertByHSL(aTransform = { 0.8f }),
 
   // Active
-  vtmnActivePrimary: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it + (1 - it) * 0.35f}),
+  vtmnActivePrimary: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it + (1 - it) * 0.35f }),
   vtmnActivePrimaryTransparent: Color = vtmnContentActive.convertByHSL(aTransform = { 0.15f }),
   vtmnActiveSecondaryTransparent: Color = vtmnContentPrimary.convertByHSL(aTransform = { 0.15f }),
   vtmnActiveTertiary: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it * 0.93f }),
-  vtmnActiveTertiaryTransparent: Color = vtmnHoverPrimary.convertByHSL(lTransform = { it * 0.94f }, aTransform = { 0.8f }),
+  vtmnActiveTertiaryTransparent: Color = vtmnHoverPrimary.convertByHSL(
+    lTransform = { it * 0.94f },
+    aTransform = { 0.8f }),
   vtmnActiveBrand: Color = vtmnBackgroundBrandPrimary.convertByHSL(lTransform = { it * 0.7f }),
   vtmnActiveAccent: Color = vtmnBackgroundAccent.convertByHSL(lTransform = { it + (1 - it) * 0.5f }),
   vtmnActivePrimaryReversedTransparent: Color = vtmnContentPrimaryReversed.convertByHSL(aTransform = { 0.25f }),
@@ -315,7 +319,9 @@ class VitaminColors constructor(
     private set
   var vtmnActivePrimaryReversedTransparent by mutableStateOf(vtmnActivePrimaryReversedTransparent)
     private set
-  var vtmnActiveSecondaryReversedTransparent by mutableStateOf(vtmnActiveSecondaryReversedTransparent)
+  var vtmnActiveSecondaryReversedTransparent by mutableStateOf(
+    vtmnActiveSecondaryReversedTransparent
+  )
     private set
   var vtmnActiveBrandReversedTransparent by mutableStateOf(vtmnActiveBrandReversedTransparent)
     private set
@@ -380,36 +386,26 @@ class VitaminColors constructor(
   }
 }
 
-@Composable
-fun ProvideVitaminColors(
-  colors: VitaminColors,
-  content: @Composable () -> Unit
-) {
-  val colorPalette = remember { colors }
-  colorPalette.update(colors)
-  CompositionLocalProvider(LocalVitaminColors provides colorPalette, content = content)
-}
-
 internal val LocalVitaminColors = compositionLocalOf<VitaminColors> {
   error("No VitaminColorPalette provided")
 }
 
 fun debugColors(
   darkTheme: Boolean,
-  debugColor: Color = Color.Magenta
+  vtmnColors: VitaminColors
 ) = Colors(
-  primary = debugColor,
-  primaryVariant = debugColor,
-  secondary = debugColor,
-  secondaryVariant = debugColor,
-  background = debugColor,
-  surface = debugColor,
-  error = debugColor,
-  onPrimary = debugColor,
-  onSecondary = debugColor,
-  onBackground = debugColor,
-  onSurface = debugColor,
-  onError = debugColor,
+  primary = vtmnColors.vtmnBackgroundBrandPrimary,
+  primaryVariant = vtmnColors.vtmnBackgroundBrandPrimary,
+  onPrimary = vtmnColors.vtmnContentPrimaryReversed,
+  secondary = vtmnColors.vtmnBackgroundAccent,
+  secondaryVariant = vtmnColors.vtmnBackgroundAccent,
+  onSecondary = vtmnColors.vtmnContentPrimaryReversed,
+  background = vtmnColors.vtmnBackgroundPrimary,
+  onBackground = vtmnColors.vtmnContentPrimary,
+  surface = vtmnColors.vtmnBackgroundPrimary,
+  onSurface = vtmnColors.vtmnContentPrimary,
+  error = vtmnColors.vtmnContentNegative,
+  onError = vtmnColors.vtmnContentPrimaryReversed,
   isLight = !darkTheme
 )
 
@@ -426,7 +422,12 @@ fun Color.convertByHSL(
 
 fun Color.toHSL(): HSLColor {
   val hsl = floatArrayOf(0f, 0f, 0f)
-  ColorUtils.RGBToHSL((this.red * 255).toInt(), (this.green * 255).toInt(), (this.blue * 255).toInt(), hsl)
+  ColorUtils.RGBToHSL(
+    (this.red * 255).toInt(),
+    (this.green * 255).toInt(),
+    (this.blue * 255).toInt(),
+    hsl
+  )
   return HSLColor(hsl[0], hsl[1], hsl[2])
 }
 
