@@ -8,18 +8,27 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-private val roboto = FontFamily(
+private val robotoCondensed = FontFamily(
+    Font(R.font.roboto_condensed_regular, FontWeight.Normal, FontStyle.Normal),
+    Font(R.font.roboto_condensed_regularitalic, FontWeight.Normal, FontStyle.Italic),
     Font(R.font.roboto_condensed_bold, FontWeight.Bold, FontStyle.Normal),
     Font(R.font.roboto_condensed_bolditalic, FontWeight.Bold, FontStyle.Italic),
     Font(R.font.roboto_condensed_light, FontWeight.Light, FontStyle.Normal),
     Font(R.font.roboto_condensed_lightitalic, FontWeight.Light, FontStyle.Italic),
-    Font(R.font.roboto_condensed_regular, FontWeight.Normal, FontStyle.Normal),
-    Font(R.font.roboto_condensed_regularitalic, FontWeight.Normal, FontStyle.Italic)
+)
+
+private val roboto = FontFamily(
+    Font(R.font.roboto_regular, FontWeight.Normal, FontStyle.Normal),
+    Font(R.font.roboto_italic, FontWeight.Normal, FontStyle.Italic),
+    Font(R.font.roboto_bold, FontWeight.Bold, FontStyle.Normal),
+    Font(R.font.roboto_bolditalic, FontWeight.Bold, FontStyle.Italic),
+    Font(R.font.roboto_light, FontWeight.Light, FontStyle.Normal),
+    Font(R.font.roboto_lightitalic, FontWeight.Light, FontStyle.Italic),
 )
 
 val VitaminTypography = Typography(
     h1 = TextStyle(
-        fontFamily = roboto,
+        fontFamily = robotoCondensed,
         fontSize = 42.sp,
         fontWeight = FontWeight.W700,
         lineHeight = 44.sp
