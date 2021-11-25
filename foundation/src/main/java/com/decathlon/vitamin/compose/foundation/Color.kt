@@ -6,6 +6,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ExperimentalGraphicsApi
 import androidx.core.graphics.ColorUtils
 
+val vtmnPurple50 = Color(242, 237, 242)
+val vtmnPurple100 = Color(220, 207, 221)
+val vtmnPurple200 = Color(172, 141, 175)
+val vtmnPurple300 = Color(150, 111, 154)
+val vtmnPurple400 = Color(108, 78, 111)
+val vtmnPurple500 = Color(91,65,93)
+val vtmnPurple600 = Color(73, 53, 75)
+val vtmnPurple700 = Color(44, 32, 45)
+
 val vtmnBlue50 = Color(231, 243, 249)
 val vtmnBlue100 = Color(190, 222, 239)
 val vtmnBlue200 = Color(126, 190, 224)
@@ -94,8 +103,10 @@ val vtmnLightColorPalette = VitaminColors(
   vtmnContentPositive = vtmnConifer400,
   vtmnContentInformation = vtmnBlue400,
   vtmnContentAccent = vtmnBlack,
+  vtmnContentVisited = vtmnPurple400,
   vtmnContentPrimaryReversed = vtmnWhite,
   vtmnContentActionReversed = vtmnWhite,
+  vtmnContentVisitedReversed = vtmnPurple200,
   vtmnBorderPrimary = vtmnWhite,
   vtmnBorderSecondary = vtmnGrey200,
   vtmnBorderTertiary = vtmnGrey100,
@@ -130,8 +141,10 @@ val vtmnDarkColorPalette = VitaminColors(
   vtmnContentPositive = vtmnConifer300,
   vtmnContentInformation = vtmnBlue300,
   vtmnContentAccent = vtmnBlack,
+  vtmnContentVisited = vtmnPurple300,
   vtmnContentPrimaryReversed = vtmnBlack,
   vtmnContentActionReversed = vtmnBlack,
+  vtmnContentVisitedReversed = vtmnPurple300,
   vtmnBorderPrimary = vtmnGrey800,
   vtmnBorderSecondary = vtmnGrey700,
   vtmnBorderTertiary = vtmnBlack,
@@ -172,8 +185,10 @@ class VitaminColors constructor(
   vtmnContentPositive: Color,
   vtmnContentInformation: Color,
   vtmnContentAccent: Color,
+  vtmnContentVisited: Color,
   vtmnContentPrimaryReversed: Color,
   vtmnContentActionReversed: Color,
+  vtmnContentVisitedReversed: Color,
 
   // Border
   vtmnBorderPrimary: Color,
@@ -255,9 +270,13 @@ class VitaminColors constructor(
     private set
   var vtmnContentAccent by mutableStateOf(vtmnContentAccent)
     private set
+  var vtmnContentVisited by mutableStateOf(vtmnContentVisited)
+    private set
   var vtmnContentPrimaryReversed by mutableStateOf(vtmnContentPrimaryReversed)
     private set
   var vtmnContentActionReversed by mutableStateOf(vtmnContentActionReversed)
+    private set
+  var vtmnContentVisitedReversed by mutableStateOf(vtmnContentVisitedReversed)
     private set
   var vtmnBorderPrimary by mutableStateOf(vtmnBorderPrimary)
     private set
@@ -347,8 +366,10 @@ class VitaminColors constructor(
     vtmnContentPositive = other.vtmnContentPositive
     vtmnContentInformation = other.vtmnContentInformation
     vtmnContentAccent = other.vtmnContentAccent
+    vtmnContentVisited = other.vtmnContentVisited
     vtmnContentPrimaryReversed = other.vtmnContentPrimaryReversed
     vtmnContentActionReversed = other.vtmnContentActionReversed
+    vtmnContentVisitedReversed = other.vtmnContentVisitedReversed
     vtmnBorderPrimary = other.vtmnBorderPrimary
     vtmnBorderSecondary = other.vtmnBorderSecondary
     vtmnBorderTertiary = other.vtmnBorderTertiary
