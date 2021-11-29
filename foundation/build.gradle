@@ -5,12 +5,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 24
-        targetSdkVersion 30
+        minSdkVersion 21
+        targetSdkVersion 31
     }
 
     compileOptions {
@@ -33,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     api("androidx.compose.ui:ui:$compose_version")
     api("androidx.compose.material:material:$compose_version")
 }
