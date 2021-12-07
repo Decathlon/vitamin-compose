@@ -3,7 +3,8 @@ include(":foundation")
 include(":buttons")
 include(":text-inputs")
 include(':switches')
+include(":appbars")
 include(":sample")
-include ':radiobuttons'
-include ':checkboxes'
-include ':progressbar'
+include(":radiobuttons")
+include(":progressbar")
+include(":checkboxes")

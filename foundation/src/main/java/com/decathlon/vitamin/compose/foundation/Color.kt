@@ -423,7 +423,7 @@ fun debugColors(
   secondary = vtmnColors.vtmnBackgroundAccent,
   secondaryVariant = vtmnColors.vtmnBackgroundAccent,
   onSecondary = vtmnColors.vtmnContentPrimaryReversed,
-  background = vtmnColors.vtmnBackgroundPrimary,
+  background = vtmnColors.vtmnBackgroundSecondary,
   onBackground = vtmnColors.vtmnContentPrimary,
   surface = vtmnColors.vtmnBackgroundPrimary,
   onSurface = vtmnColors.vtmnContentPrimary,
