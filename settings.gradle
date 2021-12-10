@@ -5,3 +5,4 @@ include(":text-inputs")
 include(':switches')
 include(":sample")
 include ':checkboxes'
+include ':progressbar'

@@ -46,6 +46,7 @@ dependencies {
     implementation(project(':text-inputs'))
     implementation(project(':checkboxes'))
     implementation(project(':switches'))
+    implementation(project(':progressbar'))
 
     implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("androidx.activity:activity-compose:1.4.0")
