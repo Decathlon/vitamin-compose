@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.decathlon.compose.sample.screens.Buttons
 import com.decathlon.compose.sample.screens.Checkboxes
+import com.decathlon.compose.sample.screens.Switches
 import com.decathlon.compose.sample.screens.TextInputs
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
                 val navController = rememberNavController()
-                val screens = remember { arrayListOf(Buttons, TextInputs, Checkboxes) }
+                val screens = remember { arrayListOf(Buttons, TextInputs, Checkboxes, Switches) }
                 NavHost(navController = navController, startDestination = "dashboard") {
                     composable("dashboard") { DashboardScreen(navController, screens) }
                     screens.forEach { screen ->

@@ -2,5 +2,6 @@ rootProject.name = "vitamin-compose"
 include(":foundation")
 include(":buttons")
 include(":text-inputs")
+include(':switches')
 include(":sample")
 include ':checkboxes'

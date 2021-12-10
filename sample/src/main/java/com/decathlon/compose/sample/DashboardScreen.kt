@@ -6,15 +6,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.decathlon.compose.sample.components.SampleScaffold
-import com.decathlon.compose.sample.screens.Checkboxes
 import com.decathlon.compose.sample.screens.Screen
-import com.decathlon.compose.sample.screens.TextInputs
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Composable
