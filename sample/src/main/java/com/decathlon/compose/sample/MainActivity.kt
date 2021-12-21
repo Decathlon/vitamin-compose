@@ -5,10 +5,12 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.decathlon.compose.sample.screens.Buttons
+import com.decathlon.compose.sample.screens.Checkboxes
 import com.decathlon.compose.sample.screens.TextInputs
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -33,10 +35,12 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
                 val navController = rememberNavController()
+                val screens = remember { arrayListOf(Buttons, TextInputs, Checkboxes) }
                 NavHost(navController = navController, startDestination = "dashboard") {
-                    composable("dashboard") { DashboardScreen(navController) }
-                    composable(Buttons.navigationKey) { Buttons.Screen() }
-                    composable(TextInputs.navigationKey) { TextInputs.Screen() }
+                    composable("dashboard") { DashboardScreen(navController, screens) }
+                    screens.forEach { screen ->
+                        composable(screen.navigationKey) { screen.Screen() }
+                    }
                 }
             }
         }

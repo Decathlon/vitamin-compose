@@ -12,13 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.decathlon.compose.sample.components.SampleScaffold
-import com.decathlon.compose.sample.screens.Buttons
+import com.decathlon.compose.sample.screens.Checkboxes
+import com.decathlon.compose.sample.screens.Screen
 import com.decathlon.compose.sample.screens.TextInputs
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Composable
-fun DashboardScreen(navController: NavHostController) {
-    val screens = remember { arrayListOf(Buttons, TextInputs) }
+fun DashboardScreen(navController: NavHostController, screens: List<Screen>) {
     SampleScaffold(title = "Dashboard") {
         LazyColumn {
             items(screens) {
