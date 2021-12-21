@@ -3,3 +3,4 @@ include(":foundation")
 include(":buttons")
 include(":text-inputs")
 include(":sample")
+include ':checkboxes'
