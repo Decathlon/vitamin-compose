@@ -6,8 +6,8 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.foundation.vtmnStatesDisabled
 
-const val vtmnStatesDisabled = .38f
 
 @OptIn(ExperimentalMaterialApi::class)
 internal object VitaminButtonsColors {

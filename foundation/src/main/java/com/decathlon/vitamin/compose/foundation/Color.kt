@@ -6,6 +6,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ExperimentalGraphicsApi
 import androidx.core.graphics.ColorUtils
 
+const val vtmnStatesDisabled = .38f
+
 val vtmnPurple50 = Color(242, 237, 242)
 val vtmnPurple100 = Color(220, 207, 221)
 val vtmnPurple200 = Color(172, 141, 175)
