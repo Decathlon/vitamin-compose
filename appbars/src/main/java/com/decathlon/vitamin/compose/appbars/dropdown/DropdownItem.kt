@@ -2,8 +2,14 @@ package com.decathlon.vitamin.compose.appbars.dropdown
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.DropdownMenuItem
+import androidx.compose.material.Icon
+import androidx.compose.material.MenuDefaults
+import androidx.compose.material.ProvideTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -22,7 +28,7 @@ data class DropdownItem(
 @Composable
 internal fun VitaminDropdownItem(
     onClick: () -> Unit,
-    modifier: Modifier   = Modifier,
+    modifier: Modifier = Modifier,
     item: DropdownItem? = null,
     enabled: Boolean = true,
     contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
@@ -63,7 +69,7 @@ internal fun VitaminDropdownItem(
 @Composable
 internal fun VitaminDropdownItemContent(
     onClick: () -> Unit,
-    modifier: Modifier   = Modifier,
+    modifier: Modifier = Modifier,
     startIcon: (@Composable () -> Unit)? = null,
     endIcon: (@Composable () -> Unit)? = null,
     enabled: Boolean = true,

@@ -9,42 +9,42 @@ import androidx.compose.runtime.remember
 
 @Composable
 fun VitaminTheme(
-  darkTheme: Boolean = isSystemInDarkTheme(),
-  content: @Composable () -> Unit
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
 ) {
-  val palette = if (darkTheme) vtmnDarkColorPalette else vtmnLightColorPalette
-  ProvideVitaminResources(palette, vtmnTypography) {
-    MaterialTheme(
-      colors = debugColors(darkTheme, palette),
-      typography = mdTypography,
-      shapes = shapes,
-      content = content
-    )
-  }
+    val palette = if (darkTheme) vtmnDarkColorPalette else vtmnLightColorPalette
+    ProvideVitaminResources(palette, vtmnTypography) {
+        MaterialTheme(
+            colors = debugColors(darkTheme, palette),
+            typography = mdTypography,
+            shapes = shapes,
+            content = content
+        )
+    }
 }
 
 @Composable
 fun ProvideVitaminResources(
-  colors: VitaminColors,
-  typography: VitaminTypography,
-  content: @Composable () -> Unit
+    colors: VitaminColors,
+    typography: VitaminTypography,
+    content: @Composable () -> Unit
 ) {
-  val colorPalette = remember { colors }
-  colorPalette.update(colors)
-  CompositionLocalProvider(
-    LocalVitaminColors provides colorPalette,
-    LocalVitaminTypographies provides typography,
-  ) {
-    ProvideTextStyle(value = typography.body1, content = content)
-  }
+    val colorPalette = remember { colors }
+    colorPalette.update(colors)
+    CompositionLocalProvider(
+        LocalVitaminColors provides colorPalette,
+        LocalVitaminTypographies provides typography,
+    ) {
+        ProvideTextStyle(value = typography.body1, content = content)
+    }
 }
 
 object VitaminTheme {
-  val colors: VitaminColors
-    @Composable
-    get() = LocalVitaminColors.current
+    val colors: VitaminColors
+        @Composable
+        get() = LocalVitaminColors.current
 
-  val typography: VitaminTypography
-    @Composable
-    get() = LocalVitaminTypographies.current
+    val typography: VitaminTypography
+        @Composable
+        get() = LocalVitaminTypographies.current
 }

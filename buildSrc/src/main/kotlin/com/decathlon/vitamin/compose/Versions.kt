@@ -41,6 +41,6 @@ object Dependencies {
     }
     object Vitamin {
         const val icons = "com.decathlon.vitamin:foundation-icons:${Versions.vitamin}"
-        const val assets = "com.decathlon.vitamin:foundation-assets${Versions.vitamin}"
+        const val assets = "com.decathlon.vitamin:foundation-assets:${Versions.vitamin}"
     }
 }

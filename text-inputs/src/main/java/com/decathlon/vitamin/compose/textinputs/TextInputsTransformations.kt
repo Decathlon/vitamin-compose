@@ -4,6 +4,6 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 
 object TextInputsTransformations {
-  val none = VisualTransformation.None
-  val password = PasswordVisualTransformation()
+    val none = VisualTransformation.None
+    val password = PasswordVisualTransformation()
 }

@@ -1,7 +1,11 @@
 package com.decathlon.compose.sample.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -20,10 +24,7 @@ fun SampleRow(
         modifier = Modifier
             .fillMaxWidth()
             .background(color = color)
-            .padding(
-                top = if (firstItem) 10.dp else 5.dp,
-                bottom = if (lastItem) 10.dp else 5.dp
-            ),
+            .padding(top = if (firstItem) 10.dp else 5.dp, bottom = if (lastItem) 10.dp else 5.dp),
         content = content
     )
 }

@@ -53,7 +53,8 @@ dependencies {
     implementation(project(":text-inputs"))
     implementation(project(":checkboxes"))
     implementation(project(":switches"))
-    implementation(project(":progressbar"))
+    implementation(project(":progressbars"))
+    implementation(project(":radiobuttons"))
     implementation(project(":appbars"))
 
     implementation(Dependencies.AndroidX.appcompat)

@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-import com.decathlon.vitamin.compose.foundation.vtmnStatesDisabled
+import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 
 object VitaminCheckboxes {
     @Composable
@@ -35,7 +35,7 @@ object VitaminCheckboxes {
                 colors = VitaminCheckboxesColors.primary(enabled)
             )
             endContent?.let {
-                val alpha = if (enabled) 1f else vtmnStatesDisabled
+                val alpha = if (enabled) 1f else VtmnStatesDisabled
                 Spacer(modifier = Modifier.width(7.dp))
                 CompositionLocalProvider(LocalContentAlpha provides alpha) {
                     ProvideTextStyle(
