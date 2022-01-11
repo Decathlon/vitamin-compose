@@ -33,6 +33,8 @@ android {
 
 dependencies {
     implementation("androidx.core:core-ktx:1.7.0")
+    api("com.decathlon.vitamin:foundation-icons:$vitamin_version")
+    api("com.decathlon.vitamin:foundation-assets:$vitamin_version")
     api("androidx.compose.ui:ui:$compose_version")
     api("androidx.compose.material:material:$compose_version")
 }
