@@ -2,6 +2,7 @@
 buildscript {
     ext.compose_version = '1.0.5'
     ext.kotlin_version = '1.5.31'
+    ext.vitamin_version = '0.2.0-beta01'
 
     repositories {
         google()

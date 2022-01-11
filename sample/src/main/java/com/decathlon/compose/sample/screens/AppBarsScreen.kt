@@ -1,5 +1,7 @@
 package com.decathlon.compose.sample.screens
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -14,8 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.appbars.*
-import com.decathlon.vitamin.compose.appbars.VitaminTopBarsColors
 import com.decathlon.vitamin.compose.appbars.dropdown.ActionItem
+import com.decathlon.vitamin.compose.appbars.dropdown.SearchActionItem
 import com.decathlon.vitamin.compose.appbars.dropdown.SelectedActionItem
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
@@ -25,6 +27,7 @@ object AppBars : Screen {
     override val navigationKey: String
         get() = "appbars"
 
+    @OptIn(ExperimentalAnimationApi::class)
     @Composable
     override fun Screen() {
         SampleScaffold(title = name) {
@@ -91,7 +94,6 @@ object AppBars : Screen {
                     val expanded = remember { mutableStateOf(false) }
                     VitaminTopBars.Primary(
                         title = "Vitamin",
-                        colors = VitaminTopBarsColors.contextual(),
                         navigationIcon = {
                             Close(
                                 onClick = {},
@@ -124,7 +126,100 @@ object AppBars : Screen {
                                 contentDescription = "More",
                             )
                         },
-                        expanded = expanded
+                        expanded = expanded,
+                        isContextualized = true
+                    )
+                }
+                item {
+                    val searching = remember { mutableStateOf("") }
+                    VitaminTopBars.Search(
+                        value = searching.value,
+                        placeholder = "Placeholder",
+                        onValueChange = {
+                            searching.value = it
+                        },
+                        navigationIcon = {
+                            if (searching.value == "") {
+                                Search(contentDescription = null)
+                            } else {
+                                Context(onClick = {}, contentDescription = null)
+                            }
+                        },
+                        actions = arrayListOf(
+                            SearchActionItem.Microphone(
+                                contentDescription = null,
+                                onClick = {}
+                            )
+                        )
+                    )
+                }
+                item {
+                    val searching = remember { mutableStateOf("Search Terms") }
+                    VitaminTopBars.Search(
+                        value = searching.value,
+                        placeholder = "Placeholder",
+                        onValueChange = {
+                            searching.value = it
+                        },
+                        navigationIcon = {
+                            if (searching.value == "") {
+                                Search(contentDescription = null)
+                            } else {
+                                Context(onClick = {}, contentDescription = null)
+                            }
+                        },
+                        actions = arrayListOf(
+                            SearchActionItem.Microphone(
+                                contentDescription = null,
+                                onClick = {}
+                            ),
+                            SearchActionItem.Close(
+                                contentDescription = null,
+                                onClick = {}
+                            )
+                        )
+                    )
+                }
+                item {
+                    val searching = remember { mutableStateOf("") }
+                    val searchMode = remember { mutableStateOf(false) }
+                    AnimatedContent(
+                        targetState = searchMode.value,
+                        content = {
+                            if (!it) {
+                                VitaminTopBars.Primary(
+                                    title = "Vitamin",
+                                    actions = arrayListOf(
+                                        ActionItem(
+                                            icon = painterResource(R.drawable.ic_vtmn_search_line),
+                                            contentDescription = null,
+                                            content = { Text("Search") },
+                                            onClick = {
+                                                searchMode.value = true
+                                                return@ActionItem true
+                                            }
+                                        ),
+                                    )
+                                )
+                            } else {
+                                VitaminTopBars.Search(
+                                    value = searching.value,
+                                    placeholder = "Placeholder",
+                                    onValueChange = {
+                                        searching.value = it
+                                    },
+                                    navigationIcon = {
+                                        if (searching.value == "") {
+                                            Search(contentDescription = null)
+                                        } else {
+                                            Context(onClick = {
+                                                searchMode.value = false
+                                            }, contentDescription = null)
+                                        }
+                                    }
+                                )
+                            }
+                        }
                     )
                 }
                 item {

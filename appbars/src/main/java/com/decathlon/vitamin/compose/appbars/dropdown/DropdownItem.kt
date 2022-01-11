@@ -28,9 +28,9 @@ internal fun VitaminDropdownItem(
     contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     style: TextStyle = VitaminTheme.typography.subtitle1,
-    colors: DropdownItemColors = VitaminDropdownItemColors.primary(),
     content: @Composable () -> Unit
 ) {
+    val colors = VitaminDropdownItemColors.primary()
     VitaminDropdownItemContent(
         onClick = onClick,
         modifier = modifier.background(color = colors.background),

@@ -50,8 +50,19 @@ open class ActionItem(
 
 open class SelectedActionItem(
     val selected: Boolean = false,
-    val icon: Painter? = null,
+    val icon: Painter,
     val contentDescription: String?,
     val content: @Composable () -> Unit = {},
     val onClick: () -> Boolean
 )
+
+sealed class SearchActionItem(
+    val contentDescription: String?,
+    val onClick: () -> Unit
+) {
+    class Microphone(contentDescription: String?, onClick: () -> Unit) :
+        SearchActionItem(contentDescription = contentDescription, onClick = onClick)
+
+    class Close(contentDescription: String?, onClick: () -> Unit) :
+        SearchActionItem(contentDescription = contentDescription, onClick = onClick)
+}
