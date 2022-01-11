@@ -4,5 +4,6 @@ include(":buttons")
 include(":text-inputs")
 include(':switches')
 include(":sample")
+include ':radiobuttons'
 include ':checkboxes'
 include ':progressbar'

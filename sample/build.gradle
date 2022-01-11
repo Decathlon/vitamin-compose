@@ -55,4 +55,5 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.4.0-beta02")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.21.3-beta")
     implementation("androidx.compose.ui:ui-tooling:$compose_version")
+    implementation project(path: ':radiobuttons')
 }
