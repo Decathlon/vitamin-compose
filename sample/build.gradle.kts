@@ -60,6 +60,7 @@ dependencies {
     implementation(project(":tags"))
     implementation(project(":ratings"))
     implementation(project(":prices"))
+    implementation(project(":modals"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)
