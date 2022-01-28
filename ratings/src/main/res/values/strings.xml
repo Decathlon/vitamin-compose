@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vtmn_ratings_read_only">%s on %s</string>
+    <plurals name="vtmn_ratings_read_only_with_comments">
+        <item quantity="zero">%s on %s - %s comment</item>
+        <item quantity="one">%s on %s - %s comment</item>
+        <item quantity="other">%s on %s - %s comments</item>
+    </plurals>
+    <string name="vtmn_ratings_interactive_star_selected">Selected %s</string>
+    <string name="vtmn_ratings_interactive_star_unselected">Unselected %s</string>
+</resources>

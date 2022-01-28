@@ -58,6 +58,7 @@ dependencies {
     implementation(project(":appbars"))
     implementation(project(":tabs"))
     implementation(project(":tags"))
+    implementation(project(":ratings"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)
