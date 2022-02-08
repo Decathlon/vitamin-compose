@@ -9,13 +9,7 @@ import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.decathlon.compose.sample.screens.AppBars
-import com.decathlon.compose.sample.screens.Buttons
-import com.decathlon.compose.sample.screens.Checkboxes
-import com.decathlon.compose.sample.screens.Progress
-import com.decathlon.compose.sample.screens.RadioButtons
-import com.decathlon.compose.sample.screens.Switches
-import com.decathlon.compose.sample.screens.TextInputs
+import com.decathlon.compose.sample.screens.*
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
@@ -47,7 +41,8 @@ class MainActivity : AppCompatActivity() {
                         Switches,
                         Progress,
                         RadioButtons,
-                        AppBars
+                        AppBars,
+                        Tabs
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {

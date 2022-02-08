@@ -56,6 +56,7 @@ dependencies {
     implementation(project(":progressbars"))
     implementation(project(":radiobuttons"))
     implementation(project(":appbars"))
+    implementation(project(":tabs"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)
