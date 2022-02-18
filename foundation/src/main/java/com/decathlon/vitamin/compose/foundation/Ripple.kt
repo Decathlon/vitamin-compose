@@ -1,12 +1,16 @@
 package com.decathlon.vitamin.compose.foundation
 
 import android.os.Build
+import androidx.compose.foundation.interaction.Interaction
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.emptyFlow
 
 private const val AlphaPrimaryReversed = 0.25f
 private const val AlphaBrandReversed = 0.6f
@@ -67,6 +71,15 @@ private object AccentRippleTheme : RippleTheme {
 
     @Composable
     override fun rippleAlpha(): RippleAlpha = RippleAlpha(1f, 1f, 1f, getAlpha())
+}
+
+@Immutable
+class NoRippleInteractionSource : MutableInteractionSource {
+    override val interactions: Flow<Interaction> = emptyFlow()
+    override suspend fun emit(interaction: Interaction) { /*not used in this context*/
+    }
+
+    override fun tryEmit(interaction: Interaction) = true
 }
 
 @Immutable
