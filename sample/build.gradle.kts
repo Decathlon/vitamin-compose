@@ -55,6 +55,7 @@ dependencies {
     implementation(project(":switches"))
     implementation(project(":progressbars"))
     implementation(project(":radiobuttons"))
+    implementation(project(":chips"))
     implementation(project(":appbars"))
     implementation(project(":dividers"))
     implementation(project(":tabs"))
@@ -69,6 +70,6 @@ dependencies {
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.navigation)
     implementation(Dependencies.Compose.tooling)
-
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
     implementation(Dependencies.Accompanist.systemuicontroller)
 }
