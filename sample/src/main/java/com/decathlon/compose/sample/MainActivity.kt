@@ -13,6 +13,7 @@ import com.decathlon.compose.sample.screens.AppBars
 import com.decathlon.compose.sample.screens.Badges
 import com.decathlon.compose.sample.screens.Buttons
 import com.decathlon.compose.sample.screens.Checkboxes
+import com.decathlon.compose.sample.screens.Chips
 import com.decathlon.compose.sample.screens.Dividers
 import com.decathlon.compose.sample.screens.Fabs
 import com.decathlon.compose.sample.screens.Modals
@@ -69,7 +70,8 @@ class MainActivity : AppCompatActivity() {
                         Snackbars,
                         Badges,
                         QuantityPicker,
-                        Fabs
+                        Fabs,
+                        Chips
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {
