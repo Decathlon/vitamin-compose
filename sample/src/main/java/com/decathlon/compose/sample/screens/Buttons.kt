@@ -13,6 +13,14 @@ import com.decathlon.vitamin.compose.buttons.IconSide
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
+const val BIG_TEXT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+        "Curabitur sodales eros molestie orci semper tempor. Mauris ac placerat urna. " +
+        "In pellentesque ac ex sed fringilla. " +
+        "Phasellus ipsum tellus, feugiat quis porta ut, viverra eget est. " +
+        "Fusce pulvinar eros nunc, non tincidunt quam fermentum vitae. " +
+        "Sed porttitor augue sed pretium rutrum. " +
+        "Aliquam auctor posuere porttitor. Quisque cursus purus eget facilisis interdum."
+
 object Buttons : Screen {
     override val name: String
         get() = "Buttons"
@@ -29,6 +37,13 @@ object Buttons : Screen {
                     SampleRow(firstItem = true) {
                         VitaminButtons.Primary(text = "Primary") {}
                         VitaminButtons.Primary(text = "Primary", enabled = false) {}
+                    }
+                }
+                item {
+                    SampleRow {
+                        VitaminButtons.Primary(
+                            text = BIG_TEXT
+                        ) {}
                     }
                 }
                 item {

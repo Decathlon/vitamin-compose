@@ -18,6 +18,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -221,7 +222,9 @@ internal fun VitaminButton(
             Text(
                 text = text,
                 style = style,
-                fontSize = size.fontSize
+                fontSize = size.fontSize,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1
             )
             if (iconSide == IconSide.RIGHT) iconButton()
         }
