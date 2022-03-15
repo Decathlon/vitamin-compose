@@ -11,6 +11,8 @@ object Versions {
     object AndroidX {
         const val core = "1.7.0"
         const val appcompat = "1.4.0"
+        const val lifecycle = "2.4.0"
+        const val savedstate = "1.1.0"
     }
     object Compose {
         const val library = "1.0.5"
@@ -28,6 +30,9 @@ object Dependencies {
     object AndroidX {
         const val core = "androidx.core:core-ktx:${Versions.AndroidX.core}"
         const val appcompat = "androidx.appcompat:appcompat:${Versions.AndroidX.appcompat}"
+        const val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.lifecycle}"
+        const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.AndroidX.lifecycle}"
+        const val savedstate = "androidx.savedstate:savedstate-ktx:${Versions.AndroidX.savedstate}"
     }
     object Compose {
         const val ui = "androidx.compose.ui:ui:${Versions.Compose.library}"

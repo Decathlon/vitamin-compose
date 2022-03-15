@@ -4,10 +4,7 @@ import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.getByType
-import org.gradle.kotlin.dsl.plugins
-import org.gradle.kotlin.dsl.repositories
-import org.gradle.kotlin.dsl.withType
+import org.gradle.kotlin.dsl.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 class VitaminComposeLibraryPlugin : Plugin<Project> {
@@ -17,6 +14,13 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
             mavenCentral()
         }
         target.configureAndroid()
+        // Weird but necessary for the compose preview.
+        target.dependencies {
+            add("debugImplementation", Dependencies.AndroidX.lifecycle)
+            add("debugImplementation", Dependencies.AndroidX.lifecycleViewModel)
+            add("debugImplementation", Dependencies.AndroidX.savedstate)
+            add("debugImplementation", Dependencies.AndroidX.core)
+        }
     }
 }
 
