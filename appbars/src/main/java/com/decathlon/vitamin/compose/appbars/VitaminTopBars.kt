@@ -32,6 +32,17 @@ import kotlin.math.min
 object VitaminTopBars {
     private const val MAX_ACTIONS = 3
 
+    /**
+     * The primary TopBar displays information and actions related to the current screen.
+     * @param title The title of your screen
+     * @param modifier The [Modifier] to be applied to this TopBar
+     * @param maxActions The max number of icon actions at the right of the TopBar
+     * @param actions The [ActionItem] actions of your topBar. [ActionItem] define the look and the event associated to an item in the topBar
+     * @param isContextualized Allows to switch colors between primary and contextualized colors
+     * @param expanded Open menu for actions greater than `maxActions` value
+     * @param overflowIcon The icon to open overflow menu
+     * @param navigationIcon The navigation icon displayed at the start of the TopBar
+     */
     @Composable
     fun Primary(
         title: String,
@@ -84,6 +95,20 @@ object VitaminTopBars {
         }
     }
 
+    /**
+     * The search TopBar displays a text input to search in the current screen.
+     * @param value The value of your search
+     * @param placeholder The placeholder value inside the text input of the TopBar
+     * @param modifier The [Modifier] to be applied to this TopBar
+     * @param isEnabled True if you can type in the search bar, otherwise false
+     * @param actions The [SearchActionItem] actions of your topBar. [SearchActionItem] define the look and the event associated to an item in the topBar
+     * @param textStyle The typography of the text inside the text input
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param keyboardOptions Software keyboard options that contains options such as KeyboardType or ImeAction
+     * @param keyboardActions When the text input emit an IME action, the corresponding callback is called
+     * @param navigationIcon The navigation icon displayed at the start of the TopBar
+     * @param onValueChange The callback to be called when the user type a new character
+     */
     @Composable
     fun Search(
         value: String,
