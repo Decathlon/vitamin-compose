@@ -25,6 +25,25 @@ import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object VitaminTextInputs {
+    /**
+     * Outlined text input to get an input value from the user.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+     * @param modifier The `Modifier` to be applied to the component
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
+     * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
+     * @param counter The optional counter to be displayed the the end bottom outside the text input container
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param transformation Transforms the visual representation of the input value
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param singleLine True if the text input doesn't extend their height, otherwise, false
+     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
+     * @param isEnabled True if you can type in the text input, otherwise false
+     * @param onValueChange The callback to be called when the user type a new character
+     */
     @Composable
     fun Outlined(
         value: String,
@@ -112,6 +131,25 @@ object VitaminTextInputs {
         )
     }
 
+    /**
+     * Filled text input to get an input value from the user.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+     * @param modifier The `Modifier` to be applied to the component
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
+     * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
+     * @param counter The optional counter to be displayed the the end bottom outside the text input container
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param transformation Transforms the visual representation of the input value
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param singleLine True if the text input doesn't extend their height, otherwise, false
+     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
+     * @param isEnabled True if you can type in the text input, otherwise false
+     * @param onValueChange The callback to be called when the user type a new character
+     */
     @Composable
     fun Filled(
         value: String,

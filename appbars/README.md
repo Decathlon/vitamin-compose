@@ -113,7 +113,7 @@ object VitaminTopBars {
 The search TopBar displays a text input to search in the current screen.
 
 The minimal usage of the component is the value of your search, a placeholder inside
-the text input and the callback to be notified when the user type a new character but
+the text input and the callback to be called when the user type a new character but
 you can configure your text input and add actions at the right of the text input.
 
 ```kotlin
