@@ -56,6 +56,7 @@ dependencies {
     implementation(project(":progressbars"))
     implementation(project(":radiobuttons"))
     implementation(project(":appbars"))
+    implementation(project(":dividers"))
     implementation(project(":tabs"))
     implementation(project(":tags"))
     implementation(project(":ratings"))
