@@ -15,12 +15,14 @@ object Versions {
         const val savedstate = "1.1.0"
     }
     object Compose {
+        const val utils = "1.1.1"
         const val library = "1.0.5"
         const val activity = "1.4.0"
         const val navigation = "2.4.0-rc01"
     }
     object Accompanist {
         const val systemuicontroller = "0.21.3-beta"
+        const val placeholder = "0.24.6-alpha"
     }
 
     object Test {
@@ -47,9 +49,11 @@ object Dependencies {
         const val navigation = "androidx.navigation:navigation-compose:${Versions.Compose.navigation}"
         const val test = "androidx.compose.ui:ui-test-junit4:${Versions.Compose.library}"
         const val testManifest = "androidx.compose.ui:ui-test-manifest:${Versions.Compose.library}"
+        const val utils = "androidx.compose.ui:ui-util:${Versions.Compose.library}"
     }
     object Accompanist {
         const val systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Accompanist.systemuicontroller}"
+        const val placeholder = "com.google.accompanist:accompanist-placeholder:${Versions.Accompanist.placeholder}"
     }
     object Vitamin {
         const val icons = "com.decathlon.vitamin:foundation-icons:${Versions.vitamin}"

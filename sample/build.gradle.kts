@@ -57,6 +57,7 @@ dependencies {
     implementation(project(":radiobuttons"))
     implementation(project(":appbars"))
     implementation(project(":tabs"))
+    implementation(project(":skeleton"))
     implementation(project(":tags"))
     implementation(project(":ratings"))
     implementation(project(":prices"))
@@ -70,4 +71,5 @@ dependencies {
     implementation(Dependencies.Compose.tooling)
 
     implementation(Dependencies.Accompanist.systemuicontroller)
+    implementation(Dependencies.Accompanist.placeholder)
 }
