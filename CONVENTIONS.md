@@ -36,7 +36,9 @@ project.
 
 For colors and sizes, functions for each variant shouldn't contains `Colors` and `Sizes` keywords.
 e.g. `Vitamin<Component>Colors.primary()` for colors and `Vitamin<Component>Sizes.medium()` for 
-sizes.
+sizes. Functions arguments should be suffixed with `Color`, e.g. `backgroundColor`
+
+
 
 ## Composable variants
 
