@@ -30,6 +30,8 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
             add("debugImplementation", Libs.lifecycle_runtime)
             add("debugImplementation", Libs.savedstate)
             add("debugImplementation", Libs.core)
+            add("debugImplementation", Libs.compose_ui)
+            add("debugImplementation", Libs.compose_ui_util)
             add("debugImplementation", Libs.poolingcontainer)
 
             add("androidTestImplementation", Libs.junit)
