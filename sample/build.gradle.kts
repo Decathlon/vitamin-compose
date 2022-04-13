@@ -61,6 +61,7 @@ dependencies {
     implementation(project(":appbars"))
     implementation(project(":dividers"))
     implementation(project(":tabs"))
+    implementation(project(":skeletons"))
     implementation(project(":tags"))
     implementation(project(":ratings"))
     implementation(project(":prices"))
