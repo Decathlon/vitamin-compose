@@ -120,5 +120,3 @@ object VitaminTabs {
     private fun getTabHeight(list: List<TabItem>) =
         if (list.any { it.topIcon }) 72.dp else 48.dp
 }
-
-

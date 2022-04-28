@@ -37,7 +37,8 @@ object VitaminTopBars {
      * @param title The title of your screen
      * @param modifier The [Modifier] to be applied to this TopBar
      * @param maxActions The max number of icon actions at the right of the TopBar
-     * @param actions The [ActionItem] actions of your topBar. [ActionItem] define the look and the event associated to an item in the topBar
+     * @param actions The [ActionItem] actions of your topBar.
+     * [ActionItem] define the look and the event associated to an item in the topBar
      * @param isContextualized Allows to switch colors between primary and contextualized colors
      * @param expanded Open menu for actions greater than `maxActions` value
      * @param overflowIcon The icon to open overflow menu
@@ -101,7 +102,8 @@ object VitaminTopBars {
      * @param placeholder The placeholder value inside the text input of the TopBar
      * @param modifier The [Modifier] to be applied to this TopBar
      * @param isEnabled True if you can type in the search bar, otherwise false
-     * @param actions The [SearchActionItem] actions of your topBar. [SearchActionItem] define the look and the event associated to an item in the topBar
+     * @param actions The [SearchActionItem] actions of your topBar.
+     * [SearchActionItem] define the look and the event associated to an item in the topBar
      * @param textStyle The typography of the text inside the text input
      * @param interactionSource Representing the stream of interaction for the text input
      * @param keyboardOptions Software keyboard options that contains options such as KeyboardType or ImeAction

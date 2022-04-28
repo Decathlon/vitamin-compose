@@ -13,7 +13,8 @@ import com.decathlon.vitamin.compose.buttons.IconSide
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
-const val BIG_TEXT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+const val BigText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
         "Curabitur sodales eros molestie orci semper tempor. Mauris ac placerat urna. " +
         "In pellentesque ac ex sed fringilla. " +
         "Phasellus ipsum tellus, feugiat quis porta ut, viverra eget est. " +
@@ -42,7 +43,7 @@ object Buttons : Screen {
                 item {
                     SampleRow {
                         VitaminButtons.Primary(
-                            text = BIG_TEXT
+                            text = BigText
                         ) {}
                     }
                 }

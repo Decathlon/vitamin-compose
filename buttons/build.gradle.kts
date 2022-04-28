@@ -7,7 +7,6 @@ plugins {
     id("com.vanniktech.maven.publish")
 }
 
-
 dependencies {
     api(project(":foundation"))
     implementation(Dependencies.Compose.tooling)

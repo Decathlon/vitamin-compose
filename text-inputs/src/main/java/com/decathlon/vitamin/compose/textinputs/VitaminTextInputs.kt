@@ -28,7 +28,8 @@ object VitaminTextInputs {
     /**
      * Outlined text input to get an input value from the user.
      * @param value The value of your text input
-     * @param label The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
      * @param modifier The `Modifier` to be applied to the component
      * @param icon The optional trailing icon to be displayed at the end of the text input container
      * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
@@ -134,7 +135,8 @@ object VitaminTextInputs {
     /**
      * Filled text input to get an input value from the user.
      * @param value The value of your text input
-     * @param label The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
      * @param modifier The `Modifier` to be applied to the component
      * @param icon The optional trailing icon to be displayed at the end of the text input container
      * @param helperText The optional helper text to be displayed at the start bottom outside the text input container

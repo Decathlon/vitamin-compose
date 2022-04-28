@@ -21,6 +21,7 @@ object Tabs : Screen {
     override val navigationKey: String
         get() = "tabs"
 
+    @SuppressWarnings("MagicNumber", "LongMethod")
     @Composable
     override fun Screen() {
         SampleScaffold(title = name) {
@@ -31,7 +32,6 @@ object Tabs : Screen {
             ) {
                 item {
                     val list = remember { mutableStateListOf<TabItem>() }
-
                     for (i in 0..20) {
                         list.add(
                             TabItem(
@@ -53,7 +53,6 @@ object Tabs : Screen {
 
                 item {
                     val list = remember { mutableStateListOf<TabItem>() }
-
                     for (i in 0..20) {
                         list.add(
                             TabItem(
@@ -75,7 +74,6 @@ object Tabs : Screen {
 
                 item {
                     val list = remember { mutableStateListOf<TabItem>() }
-
                     for (i in 0..20) {
                         list.add(
                             TabItem(
@@ -115,8 +113,6 @@ object Tabs : Screen {
                         }
                     )
                 }
-
-
                 item {
                     val list = remember { mutableStateListOf<TabItem>() }
                     for (i in 0..2) {
@@ -158,7 +154,6 @@ object Tabs : Screen {
                         }
                     )
                 }
-
             }
         }
     }
@@ -168,11 +163,12 @@ object Tabs : Screen {
         val indexOfItem = list.indexOf(tabItemSelected)
 
         if (indexOfItem != indexOfLastSelected) {
-            if (indexOfLastSelected != -1)
+            if (indexOfLastSelected != -1) {
                 list[indexOfLastSelected] = list[indexOfLastSelected].copy(selected = false)
-
-            if (indexOfItem != -1)
+            }
+            if (indexOfItem != -1) {
                 list[indexOfItem] = list[indexOfItem].copy(selected = true)
+            }
         }
     }
 }

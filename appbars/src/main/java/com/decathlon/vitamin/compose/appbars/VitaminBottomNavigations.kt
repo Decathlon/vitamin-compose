@@ -10,7 +10,8 @@ import com.decathlon.vitamin.compose.appbars.dropdown.SelectedActionItem
 object VitaminBottomNavigations {
     /**
      * The bottom navigation allow the user to switch between destinations in an app.
-     * @param actions The [SelectedActionItem] actions of your bottom navigation. [SelectedActionItem] define the look and the event associated to an item in the bottom navigation
+     * @param actions The [SelectedActionItem] actions of your bottom navigation.
+     * [SelectedActionItem] define the look and the event associated to an item in the bottom navigation
      * @param modifier The [Modifier] to be applied to this BottomNavigation
      */
     @Composable

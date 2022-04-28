@@ -1,7 +1,12 @@
 package com.decathlon.vitamin.compose.tabs
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Tab
 import androidx.compose.material.TabPosition
 import androidx.compose.material.TabRowDefaults
@@ -66,7 +71,8 @@ private fun VitaminTab(
     val color =
         if (selectedTabIndex == index) activeColor else disabledColor
 
-    Tab(modifier = Modifier.fillMaxHeight(),
+    Tab(
+        modifier = Modifier.fillMaxHeight(),
         selected = selectedTabIndex == index,
         onClick = {
             onTabClicked(tabItem)
@@ -91,7 +97,6 @@ private fun VitaminTab(
                     textStyle = textStyle,
                     textOverflow = textOverflow
                 )
-
             }
         }
     )
@@ -151,7 +156,6 @@ private fun VitaminTopIconTab(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-
         tabItem.icon?.let {
             Image(
                 painter = it,
