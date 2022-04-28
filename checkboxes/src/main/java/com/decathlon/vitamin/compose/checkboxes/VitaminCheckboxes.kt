@@ -17,6 +17,16 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 
 object VitaminCheckboxes {
+    /**
+     * The checkbox allow users to select one or more items from a set. Checkboxes can turn an
+     * option on or off.
+     * @param checked Whether Checkbox is checked or unchecked
+     * @param modifier The [Modifier] to be applied to this Checkbox
+     * @param onCheckedChange The callback to be called when the state of the checkbox changed
+     * @param enabled True if you can check the checkbox, otherwise false
+     * @param interactionSource Representing the stream of interaction for the checkbox
+     * @param endContent The optional end content displayed after the checkbox
+     */
     @Composable
     fun Primary(
         checked: Boolean,
