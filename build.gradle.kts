@@ -31,8 +31,8 @@ subprojects {
 
     sonarqube {
         properties {
-            property("sonar.projectKey", "dktunited_vitamin-compose")
-            property("sonar.organization", "dktunited")
+            property("sonar.projectKey", "decathlon_vitamin-compose")
+            property("sonar.organization", "decathlon")
             property("sonar.host.url", "https://sonarcloud.io")
             property("sonar.kotlin.detekt.reportPaths", "$buildDir/reports/detekt/merge.xml")
             property("sonar.login", System.getenv("SONAR_TOKEN"))

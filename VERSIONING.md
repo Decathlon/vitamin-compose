@@ -5,7 +5,7 @@ This project is deployed in release and snapshot modes. Both have their own vers
 ## Release mode
 
 At each tag pushed on the GitHub repository, our CI will be triggered to assemble all modules and
-publish artifacts on Maven Central. In all cases, a status will be published on `#vitamin-android`
+publish artifacts on Maven Central. In all cases, a status will be published on `#vitamin-compose`
 channel in the Vitamin slack to know if the publication is okay or not.
 
 ### Format
