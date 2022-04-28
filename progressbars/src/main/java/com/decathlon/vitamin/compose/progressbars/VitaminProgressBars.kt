@@ -25,6 +25,14 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import kotlin.math.roundToInt
 
 object VitaminProgressBars {
+    /**
+     * Linear progress indicators displays the length of a process.
+     * @param progress The progress of this progress indicator, where 0.0 represents no progress
+     * and 1.0 represents full progress
+     * @param modifier The [Modifier] to be applied to the component
+     * @param size Different sizes for the progress bar
+     * @param label The optional label above the progress bar with the progression at the end
+     */
     @Composable
     fun Linear(
         progress: Float,
@@ -54,6 +62,12 @@ object VitaminProgressBars {
         }
     }
 
+    /**
+     * Linear progress indicators express an unspecified wait time.
+     * @param modifier The [Modifier] to be applied to the component
+     * @param size Different sizes for the progress bar
+     * @param label The optional label above the progress bar with the progression at the end
+     */
     @Composable
     fun Linear(
         modifier: Modifier = Modifier,
@@ -72,6 +86,14 @@ object VitaminProgressBars {
         }
     }
 
+    /**
+     * Circular progress indicators displays the length of a process.
+     * @param progress The progress of this progress indicator, where 0.0 represents no progress
+     * and 1.0 represents full progress
+     * @param modifier The [Modifier] to be applied to the component
+     * @param size Different sizes for the progress bar
+     * @param content The optional content inside the circular progress bar
+     */
     @Composable
     fun Circular(
         progress: Float,
@@ -101,6 +123,12 @@ object VitaminProgressBars {
         }
     }
 
+    /**
+     * Circular progress indicators express an unspecified wait time.
+     * @param modifier The [Modifier] to be applied to the component
+     * @param size Different sizes for the progress bar
+     * @param content The optional content inside the circular progress bar
+     */
     @Composable
     fun Circular(
         modifier: Modifier = Modifier,
