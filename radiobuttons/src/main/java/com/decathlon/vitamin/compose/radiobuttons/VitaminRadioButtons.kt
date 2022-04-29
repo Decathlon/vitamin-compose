@@ -12,7 +12,6 @@ import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.material.RadioButton
 import androidx.compose.material.RadioButtonColors
-import androidx.compose.material.RadioButtonDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
@@ -24,18 +23,23 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 
 object VitaminRadioButtons {
+    /**
+     * The primary radio button allow users to select one option from a set.
+     * @param selected Whether radio button is selected or unselected
+     * @param modifier The [Modifier] to be applied to the component
+     * @param onClick The callback to be called when the state of the radio button changed
+     * @param enabled True if you can check the radio button, otherwise false
+     * @param colors The color of the radio button
+     * @param interactionSource Representing the stream of interaction for the radio button
+     * @param endContent The optional end content displayed after the radio button
+     */
     @Composable
     fun Primary(
         selected: Boolean,
         modifier: Modifier = Modifier,
         onClick: (() -> Unit)?,
         enabled: Boolean = true,
-        colors: RadioButtonColors = RadioButtonDefaults.colors(
-            selectedColor = VitaminTheme.colors.vtmnContentActive,
-            unselectedColor = VitaminTheme.colors.vtmnContentInactive,
-            disabledColor = if (selected) VitaminTheme.colors.vtmnContentActive.copy(alpha = VtmnStatesDisabled)
-            else VitaminTheme.colors.vtmnContentInactive.copy(alpha = VtmnStatesDisabled)
-        ),
+        colors: RadioButtonColors = VitaminRadioButtonsColors.primary(selected = selected),
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         endContent: (@Composable () -> Unit)? = null
     ) {
