@@ -126,6 +126,14 @@ val vtmnLightColorPalette = VitaminColors(
     vtmnBorderPositive = VitaminPalette.vtmnGreen400,
     vtmnBorderInformation = VitaminPalette.vtmnBlue400,
     vtmnBorderPrimaryReversed = VitaminPalette.vtmnBlack,
+    vtmnDecorativeGravel = VitaminPalette.vtmnGrey100,
+    vtmnDecorativeBrick = VitaminPalette.vtmnRed100,
+    vtmnDecorativeSaffron = VitaminPalette.vtmnOrange100,
+    vtmnDecorativeGold = VitaminPalette.vtmnYellow100,
+    vtmnDecorativeJade = VitaminPalette.vtmnConifer100,
+    vtmnDecorativeEmerald = VitaminPalette.vtmnGreen100,
+    vtmnDecorativeCobalt = VitaminPalette.vtmnBlue100,
+    vtmnDecorativeAmethyst = VitaminPalette.vtmnPurple100,
     vtmnHoverPrimary = VitaminPalette.vtmnBlue50
 )
 
@@ -164,6 +172,14 @@ val vtmnDarkColorPalette = VitaminColors(
     vtmnBorderPositive = VitaminPalette.vtmnConifer300,
     vtmnBorderInformation = VitaminPalette.vtmnBlue300,
     vtmnBorderPrimaryReversed = VitaminPalette.vtmnWhite,
+    vtmnDecorativeGravel = VitaminPalette.vtmnGrey600,
+    vtmnDecorativeBrick = VitaminPalette.vtmnRed600,
+    vtmnDecorativeSaffron = VitaminPalette.vtmnOrange600,
+    vtmnDecorativeGold = VitaminPalette.vtmnYellow700,
+    vtmnDecorativeJade = VitaminPalette.vtmnConifer700,
+    vtmnDecorativeEmerald = VitaminPalette.vtmnGreen600,
+    vtmnDecorativeCobalt = VitaminPalette.vtmnBlue600,
+    vtmnDecorativeAmethyst = VitaminPalette.vtmnPurple600,
     vtmnHoverPrimary = VitaminPalette.vtmnBlue700
 )
 
@@ -209,6 +225,16 @@ class VitaminColors constructor(
     vtmnBorderPositive: Color,
     vtmnBorderInformation: Color,
     vtmnBorderPrimaryReversed: Color,
+
+    // Decorative
+    vtmnDecorativeGravel: Color,
+    vtmnDecorativeBrick: Color,
+    vtmnDecorativeSaffron: Color,
+    vtmnDecorativeGold: Color,
+    vtmnDecorativeJade: Color,
+    vtmnDecorativeEmerald: Color,
+    vtmnDecorativeCobalt: Color,
+    vtmnDecorativeAmethyst: Color,
 
     // Hover
     vtmnHoverPrimary: Color,
@@ -330,6 +356,24 @@ class VitaminColors constructor(
     var vtmnBorderInformation by mutableStateOf(vtmnBorderInformation)
         private set
     var vtmnBorderPrimaryReversed by mutableStateOf(vtmnBorderPrimaryReversed)
+        private set
+
+    // Decorative
+    var vtmnDecorativeGravel by mutableStateOf(vtmnDecorativeGravel)
+        private set
+    var vtmnDecorativeBrick by mutableStateOf(vtmnDecorativeBrick)
+        private set
+    var vtmnDecorativeSaffron by mutableStateOf(vtmnDecorativeSaffron)
+        private set
+    var vtmnDecorativeGold by mutableStateOf(vtmnDecorativeGold)
+        private set
+    var vtmnDecorativeJade by mutableStateOf(vtmnDecorativeJade)
+        private set
+    var vtmnDecorativeEmerald by mutableStateOf(vtmnDecorativeEmerald)
+        private set
+    var vtmnDecorativeCobalt by mutableStateOf(vtmnDecorativeCobalt)
+        private set
+    var vtmnDecorativeAmethyst by mutableStateOf(vtmnDecorativeAmethyst)
         private set
 
     // Hover

@@ -20,6 +20,7 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
             add("debugImplementation", Dependencies.AndroidX.lifecycleViewModel)
             add("debugImplementation", Dependencies.AndroidX.savedstate)
             add("debugImplementation", Dependencies.AndroidX.core)
+
         }
     }
 }

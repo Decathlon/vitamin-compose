@@ -7,7 +7,7 @@ object Versions {
     }
     const val kotlin = "1.5.31"
     const val material = "1.4.0"
-    const val vitamin = "0.2.0-beta01"
+    const val vitamin = "0.3.0-beta02"
     object AndroidX {
         const val core = "1.7.0"
         const val appcompat = "1.4.0"

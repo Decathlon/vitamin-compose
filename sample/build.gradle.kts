@@ -57,6 +57,7 @@ dependencies {
     implementation(project(":radiobuttons"))
     implementation(project(":appbars"))
     implementation(project(":tabs"))
+    implementation(project(":tags"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)

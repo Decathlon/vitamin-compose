@@ -113,6 +113,7 @@ object Tabs : Screen {
                         }
                     )
                 }
+
                 item {
                     val list = remember { mutableStateListOf<TabItem>() }
                     for (i in 0..2) {
@@ -166,6 +167,7 @@ object Tabs : Screen {
             if (indexOfLastSelected != -1) {
                 list[indexOfLastSelected] = list[indexOfLastSelected].copy(selected = false)
             }
+
             if (indexOfItem != -1) {
                 list[indexOfItem] = list[indexOfItem].copy(selected = true)
             }
