@@ -6,7 +6,6 @@ import androidx.compose.material.ScrollableTabRow
 import androidx.compose.material.TabRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -17,34 +16,27 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 data class TabItem(
     val label: String,
     val icon: Painter? = null,
-    val contentDescription: String? = null,
     val topIcon: Boolean = false,
     var selected: Boolean = false
 )
 
-data class TabItemStyle(
-    val tabBackgroundColor: Color,
-    val tabIndicatorColor: Color,
-    val activeColor: Color,
-    val disabledColor: Color,
-    val textStyle: TextStyle,
-    val textOverflow: TextOverflow,
-)
-
 object VitaminTabs {
-
+    /**
+     * The fixed tabs displays all tabs in a set simultaneously.
+     * @param tabItems The [TabItem] actions of your tabs. [TabItem] define the look to the items
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the icon, label, background and indicator
+     * @param textStyle The text style of the label inside tabs
+     * @param textOverflow How visual overflow should be handled
+     * @param onTabClicked The callback to be called when the user click on a tab
+     */
     @Composable
     fun Fixed(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        tabItemStyle: TabItemStyle = TabItemStyle(
-            tabBackgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary,
-            tabIndicatorColor = VitaminTheme.colors.vtmnContentActive,
-            activeColor = VitaminTheme.colors.vtmnContentActive,
-            disabledColor = VitaminTheme.colors.vtmnContentSecondary,
-            textStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
-            textOverflow = TextOverflow.Ellipsis
-        ),
+        colors: TabsColors = VitaminTabsColors.primary(),
+        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
         val selectedTab = tabItems.firstOrNull { it.selected } ?: tabItems.first()
@@ -52,10 +44,10 @@ object VitaminTabs {
 
         TabRow(
             selectedTabIndex = indexOfSelectedTab,
-            backgroundColor = tabItemStyle.tabBackgroundColor,
+            backgroundColor = colors.tabBackgroundColor,
             indicator = {
                 VitaminTabItemIndicator(
-                    it, indexOfSelectedTab, tabItemStyle.tabIndicatorColor
+                    it, indexOfSelectedTab, colors.tabIndicatorColor
                 )
             },
             modifier = modifier.height(getTabHeight(tabItems))
@@ -63,28 +55,33 @@ object VitaminTabs {
             VitaminTabs(
                 tabItems = tabItems,
                 selectedTabIndex = indexOfSelectedTab,
-                activeColor = tabItemStyle.activeColor,
-                disabledColor = tabItemStyle.disabledColor,
-                textStyle = tabItemStyle.textStyle,
-                textOverflow = tabItemStyle.textOverflow
+                activeColor = colors.activeColor,
+                disabledColor = colors.disabledColor,
+                textStyle = textStyle,
+                textOverflow = textOverflow
             ) {
                 onTabClicked(it)
             }
         }
     }
 
+    /**
+     * When a set of tabs cannot fit on screen, use scrollable tabs. Scrollable tabs can use longer
+     * text labels and a larger number of tabs. They are best used for browsing on touch interfaces.
+     * @param tabItems The [TabItem] actions of your tabs. [TabItem] define the look to the items
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the icon, label, background and indicator
+     * @param textStyle The text style of the label inside tabs
+     * @param textOverflow How visual overflow should be handled
+     * @param onTabClicked The callback to be called when the user click on a tab
+     */
     @Composable
     fun Scrollable(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        tabItemStyle: TabItemStyle = TabItemStyle(
-            tabBackgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary,
-            tabIndicatorColor = VitaminTheme.colors.vtmnContentActive,
-            activeColor = VitaminTheme.colors.vtmnContentActive,
-            disabledColor = VitaminTheme.colors.vtmnContentSecondary,
-            textStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
-            textOverflow = TextOverflow.Ellipsis
-        ),
+        colors: TabsColors = VitaminTabsColors.primary(),
+        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
         val selectedTab = tabItems.firstOrNull { it.selected } ?: tabItems.first()
@@ -93,12 +90,12 @@ object VitaminTabs {
         Column(modifier = modifier) {
             ScrollableTabRow(
                 selectedTabIndex = indexOfSelectedTab,
-                backgroundColor = tabItemStyle.tabBackgroundColor,
+                backgroundColor = colors.tabBackgroundColor,
                 indicator = {
                     VitaminTabItemIndicator(
                         it,
                         indexOfSelectedTab,
-                        tabItemStyle.tabIndicatorColor
+                        colors.tabIndicatorColor
                     )
                 },
                 modifier = Modifier.height(getTabHeight(tabItems))
@@ -106,10 +103,10 @@ object VitaminTabs {
                 VitaminTabs(
                     tabItems = tabItems,
                     selectedTabIndex = indexOfSelectedTab,
-                    activeColor = tabItemStyle.activeColor,
-                    disabledColor = tabItemStyle.disabledColor,
-                    textStyle = tabItemStyle.textStyle,
-                    textOverflow = tabItemStyle.textOverflow
+                    activeColor = colors.activeColor,
+                    disabledColor = colors.disabledColor,
+                    textStyle = textStyle,
+                    textOverflow = textOverflow
                 ) {
                     onTabClicked(it)
                 }

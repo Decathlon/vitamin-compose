@@ -37,7 +37,6 @@ object Tabs : Screen {
                             TabItem(
                                 label = "Label $i",
                                 icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
-                                contentDescription = "",
                                 selected = i == 0
                             )
                         )
@@ -58,7 +57,6 @@ object Tabs : Screen {
                             TabItem(
                                 label = "Label $i",
                                 icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
-                                contentDescription = "",
                                 topIcon = true,
                                 selected = i == 0
                             )
@@ -78,7 +76,6 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                contentDescription = "",
                                 selected = i == 0
                             )
                         )
@@ -100,7 +97,6 @@ object Tabs : Screen {
                             TabItem(
                                 label = "Label $i",
                                 icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
-                                contentDescription = "",
                                 selected = i == 0
                             )
                         )
@@ -121,7 +117,6 @@ object Tabs : Screen {
                             TabItem(
                                 label = "Label $i",
                                 icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
-                                contentDescription = "",
                                 topIcon = true,
                                 selected = i == 0
                             )
@@ -142,7 +137,6 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                contentDescription = "",
                                 selected = i == 0
                             )
                         )

@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -72,7 +73,7 @@ private fun VitaminTab(
         if (selectedTabIndex == index) activeColor else disabledColor
 
     Tab(
-        modifier = Modifier.fillMaxHeight(),
+        modifier = Modifier.fillMaxHeight().semantics(mergeDescendants = true) {},
         selected = selectedTabIndex == index,
         onClick = {
             onTabClicked(tabItem)
@@ -129,7 +130,7 @@ private fun VitaminRightIconTab(
         tabItem.icon?.let {
             Image(
                 painter = it,
-                contentDescription = tabItem.contentDescription,
+                contentDescription = null,
                 colorFilter = ColorFilter.tint(color = color),
             )
         }
@@ -159,7 +160,7 @@ private fun VitaminTopIconTab(
         tabItem.icon?.let {
             Image(
                 painter = it,
-                contentDescription = tabItem.contentDescription,
+                contentDescription = null,
                 colorFilter = ColorFilter.tint(color = color)
             )
         }
