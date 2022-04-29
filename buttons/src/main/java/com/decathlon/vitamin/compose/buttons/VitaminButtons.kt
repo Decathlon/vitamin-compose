@@ -24,6 +24,17 @@ import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object VitaminButtons {
+    /**
+     * The primary button should only be used once per view (not including a modal dialog),
+     * these buttons have the most emphasis.
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun Primary(
         text: String,
@@ -43,6 +54,16 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The primary reversed should be used for primary actions on pictures or dark backgrounds
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun PrimaryReversed(
         text: String,
@@ -65,6 +86,17 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The secondary button is the standard button for most use cases. The outlined styling
+     * places less emphasis on these buttons
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun Secondary(
         text: String,
@@ -87,6 +119,17 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The tertiary button is usually used for miscellaneous actions: the action is important,
+     * but may not be what the user is looking to do right then
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun Tertiary(
         text: String,
@@ -109,6 +152,17 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The ghost button should be used for secondary actions when combined with a primary button
+     * or when you need to list multiple actions in one single view as a preference page
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun Ghost(
         text: String,
@@ -131,6 +185,16 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The ghost reversed should be used on pictures or dark backgrounds
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun GhostReversed(
         text: String,
@@ -153,6 +217,16 @@ object VitaminButtons {
         onClick = onClick
     )
 
+    /**
+     * The conversion button must be used for transactional actions
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
     @Composable
     fun Conversion(
         text: String,
