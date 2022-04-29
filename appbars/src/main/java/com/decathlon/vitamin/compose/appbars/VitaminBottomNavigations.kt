@@ -5,7 +5,15 @@ import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.decathlon.vitamin.compose.appbars.dropdown.SelectedActionItem
+import androidx.compose.ui.graphics.painter.Painter
+
+open class SelectedActionItem(
+    val selected: Boolean = false,
+    val icon: Painter,
+    val contentDescription: String?,
+    val content: @Composable () -> Unit = {},
+    val onClick: () -> Boolean
+)
 
 object VitaminBottomNavigations {
     /**

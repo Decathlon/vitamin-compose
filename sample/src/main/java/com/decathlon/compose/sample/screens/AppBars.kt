@@ -16,11 +16,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.appbars.ActionItem
+import com.decathlon.vitamin.compose.appbars.SearchActionItem
+import com.decathlon.vitamin.compose.appbars.SelectedActionItem
 import com.decathlon.vitamin.compose.appbars.VitaminBottomNavigations
 import com.decathlon.vitamin.compose.appbars.VitaminTopBars
-import com.decathlon.vitamin.compose.appbars.dropdown.ActionItem
-import com.decathlon.vitamin.compose.appbars.dropdown.SearchActionItem
-import com.decathlon.vitamin.compose.appbars.dropdown.SelectedActionItem
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object AppBars : Screen {
@@ -69,19 +69,19 @@ object AppBars : Screen {
                                 icon = painterResource(R.drawable.ic_vtmn_android_line),
                                 contentDescription = null,
                                 content = { Text("Android") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             ),
                             ActionItem(
                                 icon = null,
                                 contentDescription = null,
                                 content = { Text("Windows") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             ),
                             ActionItem(
                                 icon = painterResource(R.drawable.ic_vtmn_apple_line),
                                 contentDescription = null,
                                 content = { Text("Apple") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             )
                         ),
                         overflowIcon = {
@@ -90,7 +90,7 @@ object AppBars : Screen {
                                 contentDescription = "More",
                             )
                         },
-                        expanded = expanded
+                        expandedMenu = expanded
                     )
                 }
                 item {
@@ -108,19 +108,19 @@ object AppBars : Screen {
                                 icon = painterResource(R.drawable.ic_vtmn_android_line),
                                 contentDescription = null,
                                 content = { Text("Android") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             ),
                             ActionItem(
                                 icon = null,
                                 contentDescription = null,
                                 content = { Text("Windows") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             ),
                             ActionItem(
                                 icon = painterResource(R.drawable.ic_vtmn_apple_line),
                                 contentDescription = null,
                                 content = { Text("Apple") },
-                                onClick = { return@ActionItem true }
+                                onClick = { }
                             )
                         ),
                         overflowIcon = {
@@ -129,7 +129,7 @@ object AppBars : Screen {
                                 contentDescription = "More",
                             )
                         },
-                        expanded = expanded,
+                        expandedMenu = expanded,
                         isContextualized = true
                     )
                 }
@@ -197,10 +197,7 @@ object AppBars : Screen {
                                             icon = painterResource(R.drawable.ic_vtmn_search_line),
                                             contentDescription = null,
                                             content = { Text("Search") },
-                                            onClick = {
-                                                searchMode.value = true
-                                                return@ActionItem true
-                                            }
+                                            onClick = { searchMode.value = true }
                                         ),
                                     )
                                 )

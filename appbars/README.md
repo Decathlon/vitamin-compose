@@ -26,7 +26,8 @@ object VitaminTopBars {
         maxActions: Int = 2,
         actions: List<ActionItem> = emptyList(),
         isContextualized: Boolean = false,
-        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        expandedMenu: Boolean = false,
+        onDismissOverflowMenu: (() -> Unit)? = null,
         overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null,
         navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null
     )
@@ -85,7 +86,8 @@ Parameters | Descriptions
 `maxActions: Int = 2` | The max number of icon actions at the right of the TopBar
 `actions: List<ActionItem> = emptyList()` | The `ActionItem` actions of your topBar. `ActionItem` define the look and the event associated to an item in the topBar
 `isContextualized: Boolean = false` | Allows to switch colors between primary and contextualized colors
-`expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | Open menu for actions greater than `maxActions` value
+`expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) }` | Open menu for actions greater than `maxActions` value
+`onDismissOverflowMenu: (() -> Unit)? = null` | The callback called when the menu should be removed
 `overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null` | The icon to open overflow menu
 `navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null` | The navigation icon displayed at the start of the TopBar
 

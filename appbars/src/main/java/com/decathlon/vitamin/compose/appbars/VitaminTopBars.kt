@@ -22,10 +22,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
-import com.decathlon.vitamin.compose.appbars.dropdown.ActionItem
-import com.decathlon.vitamin.compose.appbars.dropdown.OverflowMenu
-import com.decathlon.vitamin.compose.appbars.dropdown.SearchActionItem
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import kotlin.math.min
 
@@ -40,7 +38,8 @@ object VitaminTopBars {
      * @param actions The [ActionItem] actions of your topBar.
      * [ActionItem] define the look and the event associated to an item in the topBar
      * @param isContextualized Allows to switch colors between primary and contextualized colors
-     * @param expanded Open menu for actions greater than `maxActions` value
+     * @param expandedMenu Open menu for actions greater than `maxActions` value
+     * @param onDismissOverflowMenu The callback called when the menu should be removed
      * @param overflowIcon The icon to open overflow menu
      * @param navigationIcon The navigation icon displayed at the start of the TopBar
      */
@@ -51,7 +50,8 @@ object VitaminTopBars {
         maxActions: Int = 2,
         actions: List<ActionItem> = emptyList(),
         isContextualized: Boolean = false,
-        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) },
+        onDismissOverflowMenu: (() -> Unit)? = null,
         overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null,
         navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null
     ) {
@@ -64,7 +64,7 @@ object VitaminTopBars {
                 navigationIcon = navigationIcon.takeOrNull(),
                 actions = {
                     val showAsActionItems = actions.take(min(MAX_ACTIONS, maxActions))
-                    val overflowItems = actions.subtract(showAsActionItems.toSet())
+                    val overflowItems = actions.subtract(showAsActionItems.toSet()).toList()
                     showAsActionItems.forEach { action ->
                         if (action.icon != null) {
                             IconButtons(onClick = { action.onClick() }) {
@@ -84,9 +84,10 @@ object VitaminTopBars {
                     }
                     if (overflowItems.isNotEmpty() && overflowIcon != null) {
                         OverflowMenu(
-                            actions = overflowItems.toList(),
-                            expanded = expanded,
-                            overflowIcon = overflowIcon
+                            actions = overflowItems,
+                            expanded = expandedMenu,
+                            overflowIcon = overflowIcon,
+                            onDismissRequest = onDismissOverflowMenu
                         )
                     }
                 },
@@ -175,6 +176,24 @@ object VitaminTopBars {
             }
         }
     }
+}
+
+open class ActionItem(
+    val icon: Painter? = null,
+    val contentDescription: String?,
+    val content: @Composable () -> Unit = {},
+    val onClick: () -> Unit,
+)
+
+sealed class SearchActionItem(
+    val contentDescription: String?,
+    val onClick: () -> Unit
+) {
+    class Microphone(contentDescription: String?, onClick: () -> Unit) :
+        SearchActionItem(contentDescription = contentDescription, onClick = onClick)
+
+    class Close(contentDescription: String?, onClick: () -> Unit) :
+        SearchActionItem(contentDescription = contentDescription, onClick = onClick)
 }
 
 internal val LocalVitaminTopBarColors = compositionLocalOf<TopBarsColors> {
