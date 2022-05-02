@@ -9,5 +9,6 @@ plugins {
 
 dependencies {
     api(project(":foundation"))
+    api(project(":menus"))
     implementation(Dependencies.Compose.tooling)
 }

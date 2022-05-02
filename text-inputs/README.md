@@ -34,6 +34,7 @@ object VitaminTextInputs {
         singleLine: Boolean = false,
         maxLines: Int = Int.MAX_VALUE,
         isEnabled: Boolean = true,
+        readOnly: Boolean = false,
         onValueChange: (String) -> Unit
     )
 }
@@ -78,6 +79,7 @@ Parameters | Descriptions
 `singleLine: Boolean = false` | True if the text input doesn't extend their height, otherwise, false
 `maxLines: Int = Int.MAX_VALUE` | The number of maximum lines the text input can have if the `singleLine` is set to `true`
 `isEnabled: Boolean = true` | True if you can type in the text input, otherwise false
+`readOnly: Boolean = false` | True if you don't want open the keyboard when the user click on the text field
 `onValueChange: (String) -> Unit` | The callback to be called when the user type a new character
 
 ### Filled
@@ -101,6 +103,7 @@ object VitaminTextInputs {
         singleLine: Boolean = false,
         maxLines: Int = Int.MAX_VALUE,
         isEnabled: Boolean = true,
+        readOnly: Boolean = false,
         onValueChange: (String) -> Unit
     )
 }
@@ -145,4 +148,5 @@ Parameters | Descriptions
 `singleLine: Boolean = false` | True if the text input doesn't extend their height, otherwise, false
 `maxLines: Int = Int.MAX_VALUE` | The number of maximum lines the text input can have if the `singleLine` is set to `true`
 `isEnabled: Boolean = true` | True if you can type in the text input, otherwise false
+`readOnly: Boolean = false` | True if you don't want open the keyboard when the user click on the text field
 `onValueChange: (String) -> Unit` | The callback to be called when the user type a new character

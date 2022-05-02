@@ -43,6 +43,7 @@ object VitaminTextInputs {
      * @param singleLine True if the text input doesn't extend their height, otherwise, false
      * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
      * @param isEnabled True if you can type in the text input, otherwise false
+     * @param readOnly True if you don't want open the keyboard when the user click on the text field
      * @param onValueChange The callback to be called when the user type a new character
      */
     @Composable
@@ -62,6 +63,7 @@ object VitaminTextInputs {
         singleLine: Boolean = false,
         maxLines: Int = Int.MAX_VALUE,
         isEnabled: Boolean = true,
+        readOnly: Boolean = false,
         onValueChange: (String) -> Unit
     ) {
         VitaminTextInputLayout(
@@ -112,6 +114,7 @@ object VitaminTextInputs {
                     maxLines = maxLines,
                     modifier = Modifier.fillMaxWidth(),
                     enabled = isEnabled,
+                    readOnly = readOnly,
                     isError = colors.state == State.ERROR,
                     trailingIcon = {
                         if (icon != null && colors.state != State.SUCCESS) {
@@ -150,6 +153,7 @@ object VitaminTextInputs {
      * @param singleLine True if the text input doesn't extend their height, otherwise, false
      * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
      * @param isEnabled True if you can type in the text input, otherwise false
+     * @param readOnly True if you don't want open the keyboard when the user click on the text field
      * @param onValueChange The callback to be called when the user type a new character
      */
     @Composable
@@ -169,6 +173,7 @@ object VitaminTextInputs {
         singleLine: Boolean = false,
         maxLines: Int = Int.MAX_VALUE,
         isEnabled: Boolean = true,
+        readOnly: Boolean = false,
         onValueChange: (String) -> Unit
     ) {
         VitaminTextInputLayout(
@@ -220,6 +225,7 @@ object VitaminTextInputs {
                     modifier = Modifier.fillMaxWidth(),
                     enabled = isEnabled,
                     isError = colors.state == State.ERROR,
+                    readOnly = readOnly,
                     trailingIcon = {
                         if (icon != null && colors.state != State.SUCCESS) {
                             icon()
