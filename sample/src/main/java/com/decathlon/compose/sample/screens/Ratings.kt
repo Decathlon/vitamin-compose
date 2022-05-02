@@ -34,7 +34,7 @@ object Ratings : Screen {
     @SuppressWarnings("LongMethod")
     @Composable
     override fun Screen() {
-        SampleScaffold(title = AppBars.name) {
+        SampleScaffold(title = name) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()

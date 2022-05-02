@@ -2,13 +2,13 @@ package com.decathlon.compose.sample.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.decathlon.compose.sample.components.SampleRow
+import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.switches.VitaminSwitches
 
@@ -21,7 +21,7 @@ object Switches : Screen {
 
     @Composable
     override fun Screen() {
-        Surface(color = VitaminTheme.colors.vtmnBackgroundPrimary) {
+        SampleScaffold(title = name) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 item {
                     SampleRow(firstItem = true) {

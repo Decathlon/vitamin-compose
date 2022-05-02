@@ -61,7 +61,9 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {
-                    composable("dashboard") { DashboardScreen(navController, screens) }
+                    composable("dashboard") {
+                        DashboardScreen(navController, screens.sortedBy { it.name })
+                    }
                     screens.forEach { screen ->
                         composable(screen.navigationKey) { screen.Screen() }
                     }
