@@ -5,23 +5,36 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.toSize
+import com.decathlon.vitamin.compose.dropdown.VitaminMenuItems
+import com.decathlon.vitamin.compose.dropdown.VitaminMenus.Dropdown
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object VitaminTextInputs {
@@ -136,6 +149,61 @@ object VitaminTextInputs {
     }
 
     /**
+     * Outlined dropdown to get the input from a dropdown menu.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param modifier The `Modifier` to be applied to the component
+     * @param expanded State to open or close the dropdown menu
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param isEnabled True if you can type in the text input, otherwise false
+     * @param children Declare your dropdown menu item components inside your dropdown
+     */
+    @Composable
+    fun OutlinedDropdown(
+        value: String,
+        label: String,
+        modifier: Modifier = Modifier,
+        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        isEnabled: Boolean = true,
+        children: @Composable VitaminMenuItems.() -> Unit
+    ) {
+        var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
+        Dropdown(
+            expanded = expanded,
+            anchor = {
+                Outlined(
+                    value = value,
+                    label = label,
+                    modifier = Modifier.onGloballyPositioned {
+                        mTextFieldSize = it.size.toSize()
+                    },
+                    colors = colors,
+                    textStyle = textStyle,
+                    readOnly = true,
+                    singleLine = true,
+                    maxLines = 1,
+                    isEnabled = isEnabled,
+                    onValueChange = {},
+                    icon = {
+                        IconButton(onClick = { expanded.value = true }) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_vtmn_arrow_drop_down_fill),
+                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
+                            )
+                        }
+                    }
+                )
+            },
+            modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
+            children = children
+        )
+    }
+
+    /**
      * Filled text input to get an input value from the user.
      * @param value The value of your text input
      * @param label The label to be displayed inside the text input container and pushed at the top
@@ -242,6 +310,61 @@ object VitaminTextInputs {
                 )
             },
             modifier = modifier
+        )
+    }
+
+    /**
+     * Filled dropdown to get the input from a dropdown menu.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param modifier The `Modifier` to be applied to the component
+     * @param expanded State to open or close the dropdown menu
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param isEnabled True if you can type in the text input, otherwise false
+     * @param children Declare your dropdown menu item components inside your dropdown
+     */
+    @Composable
+    fun FilledDropdown(
+        value: String,
+        label: String,
+        modifier: Modifier = Modifier,
+        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        isEnabled: Boolean = true,
+        children: @Composable VitaminMenuItems.() -> Unit
+    ) {
+        var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
+        Dropdown(
+            expanded = expanded,
+            anchor = {
+                Filled(
+                    value = value,
+                    label = label,
+                    modifier = Modifier.onGloballyPositioned {
+                        mTextFieldSize = it.size.toSize()
+                    },
+                    colors = colors,
+                    textStyle = textStyle,
+                    readOnly = true,
+                    singleLine = true,
+                    maxLines = 1,
+                    isEnabled = isEnabled,
+                    onValueChange = {},
+                    icon = {
+                        IconButton(onClick = { expanded.value = true }) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_vtmn_arrow_drop_down_fill),
+                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
+                            )
+                        }
+                    }
+                )
+            },
+            modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
+            children = children
         )
     }
 }

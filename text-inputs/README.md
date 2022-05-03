@@ -82,6 +82,65 @@ Parameters | Descriptions
 `readOnly: Boolean = false` | True if you don't want open the keyboard when the user click on the text field
 `onValueChange: (String) -> Unit` | The callback to be called when the user type a new character
 
+### Outlined Dropdown
+
+```kotlin
+object VitaminTextInputs {
+    @Composable
+    fun OutlinedDropdown(
+        value: String,
+        label: String,
+        modifier: Modifier = Modifier,
+        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        isEnabled: Boolean = true,
+        children: @Composable VitaminMenuItems.() -> Unit
+    )
+}
+```
+
+Outlined dropdown to get an input value from a dropdown menu.
+
+The minimal usage of the component is the current value of your text input picked from the dropdown
+menu, a label associated to it and the children where you declare your menu items. But you can
+configure your text input much more.
+
+```kotlin
+val expanded = remember { mutableStateOf(false) }
+val dropdownValue = remember { mutableStateOf("") }
+VitaminTextInputs.OutlinedDropdown(
+    value = dropdownValue.value,
+    label = "Label",
+    expanded = expanded,
+    children = {
+        PrimaryItem(onClick = {
+            dropdownValue.value = "Label 1"
+            expanded.value = false
+        }) {
+            Text(text = "Option 1")
+        }
+        PrimaryItem(onClick = {
+            dropdownValue.value = "Label 2"
+            expanded.value = false
+        }) {
+            Text(text = "Option 2")
+        }
+    }
+)
+```
+
+Parameters | Descriptions
+-- | --
+`value: String` | The value of your text input
+`label: String` | The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
+`expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
+`textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
+`isEnabled: Boolean = true` | True if you can type in the text input, otherwise false
+`children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown
+
 ### Filled
 
 ```kotlin
@@ -150,3 +209,62 @@ Parameters | Descriptions
 `isEnabled: Boolean = true` | True if you can type in the text input, otherwise false
 `readOnly: Boolean = false` | True if you don't want open the keyboard when the user click on the text field
 `onValueChange: (String) -> Unit` | The callback to be called when the user type a new character
+
+### Filled Dropdown
+
+```kotlin
+object VitaminTextInputs {
+    @Composable
+    fun FilledDropdown(
+        value: String,
+        label: String,
+        modifier: Modifier = Modifier,
+        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        isEnabled: Boolean = true,
+        children: @Composable VitaminMenuItems.() -> Unit
+    )
+}
+```
+
+Filled dropdown to get an input value from a dropdown menu.
+
+The minimal usage of the component is the current value of your text input picked from the dropdown
+menu, a label associated to it and the children where you declare your menu items. But you can
+configure your text input much more.
+
+```kotlin
+val expanded = remember { mutableStateOf(false) }
+val dropdownValue = remember { mutableStateOf("") }
+VitaminTextInputs.FilledDropdown(
+    value = dropdownValue.value,
+    label = "Label",
+    expanded = expanded,
+    children = {
+        PrimaryItem(onClick = {
+            dropdownValue.value = "Label 1"
+            expanded.value = false
+        }) {
+            Text(text = "Option 1")
+        }
+        PrimaryItem(onClick = {
+            dropdownValue.value = "Label 2"
+            expanded.value = false
+        }) {
+            Text(text = "Option 2")
+        }
+    }
+)
+```
+
+Parameters | Descriptions
+-- | --
+`value: String` | The value of your text input
+`label: String` | The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
+`expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
+`textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
+`isEnabled: Boolean = true` | True if you can type in the text input, otherwise false
+`children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown

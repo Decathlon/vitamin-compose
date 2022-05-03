@@ -4,7 +4,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Icon
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -50,6 +53,29 @@ object TextInputs : Screen {
                             )
                         }
                     ) {}
+                }
+                item {
+                    val expanded = remember { mutableStateOf(false) }
+                    val dropdownValue = remember { mutableStateOf("") }
+                    VitaminTextInputs.OutlinedDropdown(
+                        value = dropdownValue.value,
+                        label = "Label",
+                        expanded = expanded,
+                        children = {
+                            PrimaryItem(onClick = {
+                                dropdownValue.value = "Label 1"
+                                expanded.value = false
+                            }) {
+                                Text(text = "Option 1")
+                            }
+                            PrimaryItem(onClick = {
+                                dropdownValue.value = "Label 2"
+                                expanded.value = false
+                            }) {
+                                Text(text = "Option 2")
+                            }
+                        }
+                    )
                 }
                 item {
                     VitaminTextInputs.Outlined(
@@ -104,6 +130,29 @@ object TextInputs : Screen {
                             )
                         }
                     ) {}
+                }
+                item {
+                    val expanded = remember { mutableStateOf(false) }
+                    val dropdownValue = remember { mutableStateOf("") }
+                    VitaminTextInputs.FilledDropdown(
+                        value = dropdownValue.value,
+                        label = "Label",
+                        expanded = expanded,
+                        children = {
+                            PrimaryItem(onClick = {
+                                dropdownValue.value = "Label 1"
+                                expanded.value = false
+                            }) {
+                                Text(text = "Option 1")
+                            }
+                            PrimaryItem(onClick = {
+                                dropdownValue.value = "Label 2"
+                                expanded.value = false
+                            }) {
+                                Text(text = "Option 2")
+                            }
+                        }
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
