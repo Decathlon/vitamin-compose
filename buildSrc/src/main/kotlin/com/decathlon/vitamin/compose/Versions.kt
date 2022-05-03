@@ -22,6 +22,11 @@ object Versions {
     object Accompanist {
         const val systemuicontroller = "0.21.3-beta"
     }
+
+    object Test {
+        const val junit = "1.1.3"
+        const val espresso = "3.4.0"
+    }
 }
 
 object Dependencies {
@@ -40,6 +45,8 @@ object Dependencies {
         const val tooling = "androidx.compose.ui:ui-tooling:${Versions.Compose.library}"
         const val activity = "androidx.activity:activity-compose:${Versions.Compose.activity}"
         const val navigation = "androidx.navigation:navigation-compose:${Versions.Compose.navigation}"
+        const val test = "androidx.compose.ui:ui-test-junit4:${Versions.Compose.library}"
+        const val testManifest = "androidx.compose.ui:ui-test-manifest:${Versions.Compose.library}"
     }
     object Accompanist {
         const val systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:${Versions.Accompanist.systemuicontroller}"
@@ -47,5 +54,10 @@ object Dependencies {
     object Vitamin {
         const val icons = "com.decathlon.vitamin:foundation-icons:${Versions.vitamin}"
         const val assets = "com.decathlon.vitamin:foundation-assets:${Versions.vitamin}"
+    }
+
+    object Test {
+        const val junit = "androidx.test.ext:junit:${Versions.Test.junit}"
+        const val espresso = "androidx.test.espresso:espresso-core:${Versions.Test.espresso}"
     }
 }

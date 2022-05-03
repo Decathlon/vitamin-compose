@@ -21,6 +21,11 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
             add("debugImplementation", Dependencies.AndroidX.savedstate)
             add("debugImplementation", Dependencies.AndroidX.core)
 
+            add("androidTestImplementation", Dependencies.Test.junit)
+            add("androidTestImplementation", Dependencies.Test.espresso)
+            add("androidTestImplementation", Dependencies.Compose.test)
+            // Needed for createComposeRule, but not createAndroidComposeRule:
+            add("debugImplementation", Dependencies.Compose.testManifest)
         }
     }
 }
@@ -33,6 +38,8 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
         vectorDrawables {
             useSupportLibrary = true
         }
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -48,5 +55,11 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
     }
     buildFeatures {
         compose = true
+    }
+
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }

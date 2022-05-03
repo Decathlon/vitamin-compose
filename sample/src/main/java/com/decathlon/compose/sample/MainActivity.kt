@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import com.decathlon.compose.sample.screens.AppBars
 import com.decathlon.compose.sample.screens.Buttons
 import com.decathlon.compose.sample.screens.Checkboxes
+import com.decathlon.compose.sample.screens.Prices
 import com.decathlon.compose.sample.screens.Progress
 import com.decathlon.compose.sample.screens.RadioButtons
 import com.decathlon.compose.sample.screens.Ratings
@@ -53,7 +54,8 @@ class MainActivity : AppCompatActivity() {
                         AppBars,
                         Tabs,
                         Tags,
-                        Ratings
+                        Ratings,
+                        Prices,
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {

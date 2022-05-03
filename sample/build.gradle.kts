@@ -59,6 +59,7 @@ dependencies {
     implementation(project(":tabs"))
     implementation(project(":tags"))
     implementation(project(":ratings"))
+    implementation(project(":prices"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)
