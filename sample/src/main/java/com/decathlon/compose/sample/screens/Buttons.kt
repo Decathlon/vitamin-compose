@@ -137,18 +137,18 @@ object Buttons : Screen {
                         firstItem = true,
                         color = VitaminTheme.colors.vtmnBackgroundBrandPrimary
                     ) {
-                        VitaminButtons.PrimaryReversed(text = "Primary") {}
-                        VitaminButtons.PrimaryReversed(text = "Primary", enabled = false) {}
+                        VitaminButtons.PrimaryReversed(text = "Primary Reversed") {}
+                        VitaminButtons.PrimaryReversed(text = "Primary Reversed", enabled = false) {}
                     }
                 }
                 item {
                     SampleRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
                         VitaminButtons.PrimaryReversed(
-                            text = "Primary",
+                            text = "Primary Reversed",
                             icon = painterResource(id = R.drawable.ic_add_fill)
                         ) {}
                         VitaminButtons.PrimaryReversed(
-                            text = "Primary",
+                            text = "Primary Reversed",
                             icon = painterResource(id = R.drawable.ic_add_fill),
                             enabled = false
                         ) {}
