@@ -15,13 +15,6 @@ implementation("com.decathlon.vitamin.compose:tags:<versions>")
 
 ### Tags
 
-The minimal usage of this component is a label:
-
-```kotlin
- VitaminTag(label = "Tag label")
-```
-
-A tag with vitamin `accent` color as a background, with an icon and which is clickable may look like this :
 ```kotlin
 VitaminTag(
     label = "Accent tag",
@@ -31,11 +24,19 @@ VitaminTag(
 )
 ```
 
+The `VitaminTag` allows to highlights, organize and categorize items.
+
+The minimal usage of this component is a label:
+
+```kotlin
+ VitaminTag(label = "Tag label")
+```
+
 | Parameters | Descriptions |
 | ---------- | ------------ |
-| `label: String` | The label of the tag |
-| `modifier: Modifier = Modifier` | The modifier to be applied to the tag. |
-| `variant: VitaminTagColor = VitaminTagColors.brand()` | The `VitaminTagColor` to color the tag |
+| `label: String` | The item label |
+| `modifier: Modifier = Modifier` | The `Modifier` to be applied to `VitaminTag`. |
+| `color: VitaminTagColor = VitaminTagColors.brand` | The `VitaminTagColor` to color the tag |
 | `textStyle: TextStyle = VitaminTheme.typography.body3` | The style to be applied to the text label in the tag. |
 | `iconPainter: Painter? = null` | The icon to display at the left of the label. ⚠️ Be careful to use vector drawable with a single item inside and with no `<selector>`. |
 | `onClick: (() -> Unit)? = null` | The callback to be called if the tag is clicked. |

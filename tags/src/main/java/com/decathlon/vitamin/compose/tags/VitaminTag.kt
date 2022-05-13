@@ -25,7 +25,7 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
  * @param modifier The `Modifier` to be applied to [VitaminTag].
  * @param color define the background and text color used to accentuate the tag. Type is [VitaminTagColor].
  * @param textStyle The [TextStyle] to be applied to the text inside the tag.
- * @param iconPainter the [Painter] ressource used for the icon.
+ * @param iconPainter the [Painter] resource used for the icon.
  * @param onClick The callback to be called when the user click on the tag.
  */
 @Composable
