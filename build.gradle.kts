@@ -31,11 +31,7 @@ subprojects {
 
     sonarqube {
         properties {
-            property("sonar.projectKey", "decathlon_vitamin-compose")
-            property("sonar.organization", "decathlon")
-            property("sonar.host.url", "https://sonarcloud.io")
-            property("sonar.kotlin.detekt.reportPaths", "$buildDir/reports/detekt/merge.xml")
-            property("sonar.login", System.getenv("SONAR_TOKEN"))
+            property("sonar.sources", "src/main")
             property("sonar.debug", true)
         }
     }
@@ -69,6 +65,21 @@ subprojects {
                 }
             }
         }
+    }
+}
+
+apply {
+    plugin("org.sonarqube")
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "Decathlon_vitamin-compose")
+        property("sonar.projectName", "vitamin-compose")
+        property("sonar.organization", "decathlon")
+        property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.kotlin.detekt.reportPaths", "$buildDir/reports/detekt/merge.xml")
+        property("sonar.login", System.getenv("SONAR_TOKEN"))
     }
 }
 
