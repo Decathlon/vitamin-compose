@@ -65,6 +65,7 @@ dependencies {
     implementation(project(":ratings"))
     implementation(project(":prices"))
     implementation(project(":modals"))
+    implementation(project(":badges"))
 
     implementation(AndroidX.appCompat)
     implementation(Google.Android.material)
