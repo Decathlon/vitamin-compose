@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.decathlon.compose.sample.screens.AppBars
+import com.decathlon.compose.sample.screens.Badges
 import com.decathlon.compose.sample.screens.Buttons
 import com.decathlon.compose.sample.screens.Checkboxes
 import com.decathlon.compose.sample.screens.Dividers
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity() {
                         Ratings,
                         Prices,
                         Modals,
-                        Dividers
+                        Dividers,
+                        Badges
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {
