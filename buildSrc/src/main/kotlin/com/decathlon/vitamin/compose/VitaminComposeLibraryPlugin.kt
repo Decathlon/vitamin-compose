@@ -24,7 +24,6 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
             add("androidTestImplementation", Dependencies.Test.junit)
             add("androidTestImplementation", Dependencies.Test.espresso)
             add("androidTestImplementation", Dependencies.Compose.test)
-            // Needed for createComposeRule, but not createAndroidComposeRule:
             add("debugImplementation", Dependencies.Compose.testManifest)
         }
     }
@@ -38,8 +37,8 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
         vectorDrawables {
             useSupportLibrary = true
         }
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
+        testApplicationId = "com.decathlon.vitamin.compose.test"
+        testInstrumentationRunner = "com.karumi.shot.ShotTestRunner"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

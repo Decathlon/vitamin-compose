@@ -59,3 +59,27 @@ If you respect all these rules you will help us saving time and we will be able 
 
 As shown in Pull Request template, you have to test on 3 devices, mobile, tablet and kiosk.
 If you do not own these types of devices, you can emulate them following [these tips](EMULATORS.md).
+
+## Screenshot testing
+
+The library [Shot](https://github.com/pedrovgs/Shot) is used to perform screenshot testing. Please be sure to validate that your change on a component didn't break any reference's screenshots. If you developed a new component, record and save on github reference's screenshots.
+
+Here are few useful command line to use to run screenshot test :
+
+- record all screenshots of a class :
+
+```shell
+./gradlew ./gradlew executeScreenshotTests -Pandroid.testInstrumentationRunnerArguments.class=com.package.MyTestClass -Precord
+```
+
+- verify all screenshots of a class :
+
+```shell
+./gradlew ./gradlew executeScreenshotTests -Pandroid.testInstrumentationRunnerArguments.class=com.package.MyTestClass
+```
+
+- verify all screenshots :
+
+```shell
+./gradlew ./gradlew executeScreenshotTests
+```

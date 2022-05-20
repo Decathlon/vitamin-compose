@@ -61,6 +61,7 @@ dependencies {
     implementation(project(":ratings"))
     implementation(project(":prices"))
     implementation(project(":modals"))
+    implementation(project(":cards"))
 
     implementation(Dependencies.AndroidX.appcompat)
     implementation(Dependencies.material)
@@ -68,6 +69,7 @@ dependencies {
     implementation(Dependencies.Compose.activity)
     implementation(Dependencies.Compose.navigation)
     implementation(Dependencies.Compose.tooling)
+    implementation(Dependencies.Compose.coil)
 
     implementation(Dependencies.Accompanist.systemuicontroller)
 }

@@ -18,6 +18,7 @@ object Versions {
         const val library = "1.0.5"
         const val activity = "1.4.0"
         const val navigation = "2.4.0-rc01"
+        const val coil = "2.0.0-rc03"
     }
     object Accompanist {
         const val systemuicontroller = "0.21.3-beta"
@@ -26,6 +27,7 @@ object Versions {
     object Test {
         const val junit = "1.1.3"
         const val espresso = "3.4.0"
+        const val testRules = "1.4.0"
     }
 }
 
@@ -45,6 +47,7 @@ object Dependencies {
         const val tooling = "androidx.compose.ui:ui-tooling:${Versions.Compose.library}"
         const val activity = "androidx.activity:activity-compose:${Versions.Compose.activity}"
         const val navigation = "androidx.navigation:navigation-compose:${Versions.Compose.navigation}"
+        const val coil = "io.coil-kt:coil-compose:${Versions.Compose.coil}"
         const val test = "androidx.compose.ui:ui-test-junit4:${Versions.Compose.library}"
         const val testManifest = "androidx.compose.ui:ui-test-manifest:${Versions.Compose.library}"
     }
@@ -59,5 +62,6 @@ object Dependencies {
     object Test {
         const val junit = "androidx.test.ext:junit:${Versions.Test.junit}"
         const val espresso = "androidx.test.espresso:espresso-core:${Versions.Test.espresso}"
+        const val testRules = "androidx.test:rules:${Versions.Test.testRules}"
     }
 }
