@@ -247,6 +247,39 @@ object VitaminButtons {
         modifier = modifier,
         onClick = onClick
     )
+
+    /**
+     * The card button should be used in cards component only because its colors doesn't change when
+     * switching to dark/light mode.
+     * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
+     * @param icon The optional icon to be displayed at the start or the end of the button container
+     * @param iconSide If an icon is added, you can configure the side at the start or end of the button
+     * @param enabled True if you can click on the button, otherwise false
+     * @param size Different sizes for the buttons
+     * @param onClick The callback to be called when the user click on the button
+     */
+    @Composable
+    fun CardButton(
+        text: String,
+        modifier: Modifier = Modifier,
+        icon: Painter? = null,
+        iconSide: IconSide = IconSide.LEFT,
+        enabled: Boolean = true,
+        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        onClick: () -> Unit
+    ) = VitaminButton(
+        text = text,
+        icon = icon,
+        iconSide = iconSide,
+        enabled = enabled,
+        colors = VitaminButtonsColors.card,
+        ripples = VitaminButtonsRipples.card,
+        border = VitaminButtonsBorders.card,
+        size = size,
+        modifier = modifier,
+        onClick = onClick
+    )
 }
 
 @Composable

@@ -26,4 +26,6 @@ dependencies {
     implementation("com.android.tools.build:gradle:7.0.3")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
     implementation("com.vanniktech:gradle-maven-publish-plugin:0.18.0")
+    implementation("com.karumi:shot:5.14.1")
+
 }

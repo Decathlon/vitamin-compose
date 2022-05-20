@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
+import com.decathlon.vitamin.compose.foundation.vtmnLightColorPalette
 
 internal object VitaminButtonsColors {
     val primary: ButtonColors
@@ -67,5 +68,15 @@ internal object VitaminButtonsColors {
             contentColor = VitaminTheme.colors.vtmnContentPrimary,
             disabledBackgroundColor = VitaminTheme.colors.vtmnBackgroundAccent.copy(alpha = VtmnStatesDisabled),
             disabledContentColor = VitaminTheme.colors.vtmnContentPrimary.copy(alpha = VtmnStatesDisabled)
+        )
+
+    /* Colors always light on card button. Use only in card component */
+    val card: ButtonColors
+        @Composable
+        get() = ButtonDefaults.buttonColors(
+            backgroundColor = vtmnLightColorPalette.vtmnBackgroundBrandPrimaryReversed,
+            contentColor = vtmnLightColorPalette.vtmnContentPrimary,
+            disabledBackgroundColor = vtmnLightColorPalette.vtmnBackgroundBrandPrimary.copy(alpha = VtmnStatesDisabled),
+            disabledContentColor = vtmnLightColorPalette.vtmnContentPrimary.copy(alpha = VtmnStatesDisabled)
         )
 }

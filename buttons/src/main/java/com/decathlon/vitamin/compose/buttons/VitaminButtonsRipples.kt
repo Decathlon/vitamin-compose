@@ -5,6 +5,7 @@ import androidx.compose.material.ripple.RippleAlpha
 import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.foundation.vtmnLightColorPalette
 
 internal object VitaminButtonsRipples {
     val primary: RippleTheme
@@ -75,6 +76,17 @@ internal object VitaminButtonsRipples {
 
             @Composable
             override fun rippleAlpha(): RippleAlpha = RippleAlpha(1f, 1f, 1f, getAlpha())
+        }
+
+    /* Colors always light on card button. Use only in card component */
+    val card: RippleTheme
+        @Composable
+        get() = object : RippleTheme {
+            @Composable
+            override fun defaultColor() = vtmnLightColorPalette.vtmnActiveBrandReversedTransparent
+
+            @Composable
+            override fun rippleAlpha(): RippleAlpha = RippleAlpha(1f, 1f, 1f, getAlpha(0.6f))
         }
 
     /**
