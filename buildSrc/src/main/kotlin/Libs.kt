@@ -8,6 +8,7 @@ object Libs {
     const val savedstate = "androidx.savedstate:savedstate-ktx:_"
     const val lifecycle_runtime = "androidx.lifecycle:lifecycle-runtime-ktx:_"
     const val lifecycle_viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:_"
+    const val poolingcontainer = "androidx.customview:customview-poolingcontainer:_"
 
     const val junit = "androidx.test.ext:junit:_"
     const val espresso = "androidx.test.espresso:espresso-core:_"
