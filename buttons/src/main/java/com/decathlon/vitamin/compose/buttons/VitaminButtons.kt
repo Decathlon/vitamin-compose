@@ -17,7 +17,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -32,7 +31,9 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -42,15 +43,19 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.primary(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.brand,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        size = size,
-        modifier = modifier,
+        colors = colors,
+        sizes = sizes,
+        ripple = ripple,
         onClick = onClick
     )
 
@@ -61,7 +66,10 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -71,18 +79,21 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        borders: VitaminButtonBorders = VitaminButtonsBorders.primaryReversed(),
+        ripple: RippleTheme = VitaminTheme.ripples.brandReversed,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.primaryReversed,
-        ripples = VitaminButtonsRipples.primaryReversed,
-        border = VitaminButtonsBorders.primaryReversed,
-        size = size,
-        modifier = modifier,
+        colors = colors,
+        sizes = sizes,
+        borders = borders,
+        ripple = ripple,
         onClick = onClick
     )
 
@@ -94,7 +105,10 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -104,18 +118,21 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.secondary(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        borders: VitaminButtonBorders = VitaminButtonsBorders.secondary(),
+        ripple: RippleTheme = VitaminTheme.ripples.primary,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.secondary,
-        ripples = VitaminButtonsRipples.secondary,
-        border = VitaminButtonsBorders.secondary,
-        size = size,
-        modifier = modifier,
+        colors = colors,
+        sizes = sizes,
+        borders = borders,
+        ripple = ripple,
         onClick = onClick
     )
 
@@ -127,7 +144,9 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -137,18 +156,20 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.tertiary(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.tertiary,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.tertiary,
-        ripples = VitaminButtonsRipples.tertiary,
+        colors = colors,
+        sizes = sizes,
+        ripple = ripple,
         elevation = null,
-        size = size,
-        modifier = modifier,
         onClick = onClick
     )
 
@@ -160,7 +181,9 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -170,18 +193,20 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.ghost(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.ghost,
-        ripples = VitaminButtonsRipples.ghost,
+        colors = colors,
+        sizes = sizes,
+        ripple = ripple,
         elevation = null,
-        size = size,
-        modifier = modifier,
         onClick = onClick
     )
 
@@ -192,7 +217,9 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -202,18 +229,20 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.ghostReversed(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.ghostReversed,
-        ripples = VitaminButtonsRipples.ghostReversed,
+        colors = colors,
+        sizes = sizes,
+        ripple = ripple,
         elevation = null,
-        size = size,
-        modifier = modifier,
         onClick = onClick
     )
 
@@ -224,7 +253,9 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
-     * @param size Different sizes for the buttons
+     * @param colors The colors of the background and the content in enabled and disabled
+     * @param sizes The sizes for the text, paddings and width/height
+     * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
     @Composable
@@ -234,38 +265,39 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.conversion(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.accent,
         onClick: () -> Unit
-    ) = VitaminButton(
+    ) = VitaminButtonImpl(
         text = text,
+        modifier = modifier,
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
-        colors = VitaminButtonsColors.conversion,
-        ripples = VitaminButtonsRipples.conversion,
-        size = size,
-        modifier = modifier,
+        colors = colors,
+        sizes = sizes,
+        ripple = ripple,
         onClick = onClick
     )
 }
 
 @Composable
-internal fun VitaminButton(
+private fun VitaminButtonImpl(
     text: String,
     modifier: Modifier = Modifier,
-    icon: Painter? = null,
-    iconSide: IconSide = IconSide.LEFT,
-    enabled: Boolean = true,
-    colors: ButtonColors = VitaminButtonsColors.primary,
-    ripples: RippleTheme = VitaminButtonsRipples.primary,
-    border: DefaultBorderStroke = VitaminButtonsBorders.none,
-    size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+    icon: Painter?,
+    iconSide: IconSide,
+    enabled: Boolean,
+    colors: ButtonColors,
+    sizes: VitaminButtonSizes,
+    borders: VitaminButtonBorders = VitaminButtonsBorders.none(),
+    ripple: RippleTheme,
     elevation: ButtonElevation? = ButtonDefaults.elevation(
         defaultElevation = 0.dp,
         pressedElevation = 0.dp,
         disabledElevation = 0.dp
     ),
-    style: TextStyle = VitaminTheme.typography.button,
     onClick: () -> Unit
 ) {
     val iconButton = @Composable {
@@ -274,29 +306,28 @@ internal fun VitaminButton(
             Icon(
                 painter = icon,
                 contentDescription = null,
-                modifier = Modifier.size(size.iconSize),
+                modifier = Modifier.size(sizes.iconSize),
                 tint = colors.contentColor(enabled = enabled).value
             )
             if (iconSide == IconSide.LEFT) Spacer(Modifier.width(ButtonIconPadding))
         }
     }
-    CompositionLocalProvider(LocalRippleTheme provides ripples) {
+    CompositionLocalProvider(LocalRippleTheme provides ripple) {
         Button(
             enabled = enabled,
             modifier = modifier
-                .widthIn(min = size.minWidth)
-                .height(size.height),
+                .widthIn(min = sizes.minWidth)
+                .height(sizes.height),
             colors = colors,
-            border = if (enabled) border.stroke else border.disabled,
-            contentPadding = size.contentPadding,
+            border = if (enabled) borders.stroke else borders.disabled,
+            contentPadding = sizes.contentPadding,
             elevation = elevation,
             onClick = onClick
         ) {
             if (iconSide == IconSide.LEFT) iconButton()
             Text(
                 text = text,
-                style = style,
-                fontSize = size.fontSize,
+                style = sizes.textStyle,
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 1
             )
