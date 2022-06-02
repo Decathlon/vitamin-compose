@@ -9,6 +9,11 @@
 
 You can find all components in [ReadMe](README.md), at the Artifacts paragraph.
 
+## Compose contract convention
+
+All contributions need to follow some rules about Compose contract, name conventions and
+class architecture. Please read the [Conventions](CONVENTIONS.md) file before any pull request.
+
 ## Code of conduct
 
 This project and everyone participating in it is governed by the [following code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
