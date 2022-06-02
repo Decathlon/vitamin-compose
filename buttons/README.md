@@ -24,7 +24,9 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
-        size: ButtonSizes = VitaminButtonSizes.mediumSize(),
+        colors: ButtonColors = VitaminButtonsColors.primary(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        ripple: RippleTheme = VitaminTheme.ripples.brand,
         onClick: () -> Unit
     )
 }
@@ -49,7 +51,9 @@ Parameters | Descriptions
 `icon: Painter? = null` | The optional icon to be displayed at the start or the end of the button container
 `iconSide: IconSide = IconSide.LEFT` | If an icon is added, you can configure the side at the start or end of the button
 `enabled: Boolean = true` | True if you can click on the button, otherwise false
-`size: ButtonSizes = VitaminButtonSizes.mediumSize()` | Different sizes for the buttons
+`colors: ButtonColors = VitaminButtonsColors.primary()` | The colors of the background and the content in enabled and disabled
+`sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize()` | The sizes for the text, paddings and width/height
+`ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on the component
 `onClick: () -> Unit` | The callback to be called when the user click on the button
 
 ### All Variants
