@@ -27,7 +27,7 @@ object VitaminButtonsColors {
     fun primaryReversed(
         backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed,
         contentColor: Color = VitaminTheme.colors.vtmnContentPrimary,
-        disabledBackgroundColor: Color = VitaminTheme.colors.vtmnBackgroundBrandPrimary
+        disabledBackgroundColor: Color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed
             .copy(alpha = VtmnStatesDisabled),
         disabledContentColor: Color = VitaminTheme.colors.vtmnContentPrimary
             .copy(alpha = VtmnStatesDisabled)
@@ -71,10 +71,10 @@ object VitaminButtonsColors {
     @Composable
     fun conversion(
         backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundAccent,
-        contentColor: Color = VitaminTheme.colors.vtmnContentPrimary,
+        contentColor: Color = VitaminTheme.colors.vtmnContentAccent,
         disabledBackgroundColor: Color = VitaminTheme.colors.vtmnBackgroundAccent
             .copy(alpha = VtmnStatesDisabled),
-        disabledContentColor: Color = VitaminTheme.colors.vtmnContentPrimary
+        disabledContentColor: Color = VitaminTheme.colors.vtmnContentAccent
             .copy(alpha = VtmnStatesDisabled)
     ): ButtonColors = ButtonDefaults.buttonColors(
         backgroundColor = backgroundColor,

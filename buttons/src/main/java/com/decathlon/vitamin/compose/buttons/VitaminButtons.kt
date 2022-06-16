@@ -81,7 +81,7 @@ object VitaminButtons {
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
         sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
-        borders: VitaminButtonBorders = VitaminButtonsBorders.primaryReversed(),
+        borders: VitaminButtonBorders = VitaminButtonsBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.brandReversed,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -120,7 +120,7 @@ object VitaminButtons {
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.secondary(),
         sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
-        borders: VitaminButtonBorders = VitaminButtonsBorders.secondary(),
+        borders: VitaminButtonBorders = VitaminButtonsBorders.primary(),
         ripple: RippleTheme = VitaminTheme.ripples.primary,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -384,7 +384,7 @@ fun VitaminGhostButtonPreview() {
 @Composable
 fun VitaminGhostReversedButtonPreview() {
     VitaminTheme {
-        VitaminButtons.Ghost(text = "Gift selection") {}
+        VitaminButtons.GhostReversed(text = "Gift selection") {}
     }
 }
 
