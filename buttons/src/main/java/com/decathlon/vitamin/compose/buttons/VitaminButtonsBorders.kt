@@ -18,22 +18,10 @@ data class VitaminButtonBorders(
 
 object VitaminButtonsBorders {
     @Composable
-    fun primaryReversed(
+    fun primary(
         width: Dp = 2.dp,
-        strokeColor: Color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed,
-        disabledColor: Color = VitaminTheme.colors.vtmnBackgroundBrandPrimaryReversed.copy(alpha = VtmnStatesDisabled)
-    ): VitaminButtonBorders = remember {
-        VitaminButtonBorders(
-            stroke = BorderStroke(width = width, color = strokeColor),
-            disabled = BorderStroke(width = width, color = disabledColor)
-        )
-    }
-
-    @Composable
-    fun secondary(
-        width: Dp = 2.dp,
-        strokeColor: Color = VitaminTheme.colors.vtmnBorderSecondary,
-        disabledColor: Color = VitaminTheme.colors.vtmnBorderSecondary.copy(alpha = VtmnStatesDisabled)
+        strokeColor: Color = VitaminTheme.colors.vtmnBorderPrimary,
+        disabledColor: Color = VitaminTheme.colors.vtmnBorderPrimary.copy(alpha = VtmnStatesDisabled)
     ): VitaminButtonBorders = remember {
         VitaminButtonBorders(
             stroke = BorderStroke(width = width, color = strokeColor),
