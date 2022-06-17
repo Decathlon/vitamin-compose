@@ -26,16 +26,16 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
         target.configureAndroid()
         // Weird but necessary for the compose preview.
         target.dependencies {
-            add("debugImplementation", Dependencies.AndroidX.lifecycle)
-            add("debugImplementation", Dependencies.AndroidX.lifecycleViewModel)
-            add("debugImplementation", Dependencies.AndroidX.savedstate)
-            add("debugImplementation", Dependencies.AndroidX.core)
+            add("debugImplementation", Libs.lifecycle_viewmodel)
+            add("debugImplementation", Libs.lifecycle_runtime)
+            add("debugImplementation", Libs.savedstate)
+            add("debugImplementation", Libs.core)
 
-            add("androidTestImplementation", Dependencies.Test.junit)
-            add("androidTestImplementation", Dependencies.Test.espresso)
-            add("androidTestImplementation", Dependencies.Compose.test)
+            add("androidTestImplementation", Libs.junit)
+            add("androidTestImplementation", Libs.espresso)
+            add("androidTestImplementation", Libs.compose_test)
             // Needed for createComposeRule, but not createAndroidComposeRule:
-            add("debugImplementation", Dependencies.Compose.testManifest)
+            add("debugImplementation", Libs.compose_test_manifest)
         }
     }
 }
@@ -56,7 +56,7 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
         targetCompatibility = JavaVersion.VERSION_11
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.Compose.library
+        kotlinCompilerExtensionVersion = Libs.compose_ui.split(":").last()
     }
     tasks.withType<KotlinCompile> {
         kotlinOptions {

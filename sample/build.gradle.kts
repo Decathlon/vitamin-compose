@@ -1,5 +1,5 @@
-import com.decathlon.vitamin.compose.Dependencies
 import com.decathlon.vitamin.compose.Versions
+import de.fayard.refreshVersions.core.versionFor
 
 plugins {
     id("com.android.application")
@@ -40,7 +40,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.Compose.library
+        kotlinCompilerExtensionVersion = versionFor(AndroidX.compose.ui)
     }
 
     buildFeatures {
@@ -63,12 +63,12 @@ dependencies {
     implementation(project(":prices"))
     implementation(project(":modals"))
 
-    implementation(Dependencies.AndroidX.appcompat)
-    implementation(Dependencies.material)
+    implementation(AndroidX.appCompat)
+    implementation(Google.Android.material)
 
-    implementation(Dependencies.Compose.activity)
-    implementation(Dependencies.Compose.navigation)
-    implementation(Dependencies.Compose.tooling)
+    implementation(AndroidX.activity.compose)
+    implementation(AndroidX.navigation.compose)
+    implementation(AndroidX.compose.ui.tooling)
 
-    implementation(Dependencies.Accompanist.systemuicontroller)
+    implementation(Google.Accompanist.systemuicontroller)
 }
