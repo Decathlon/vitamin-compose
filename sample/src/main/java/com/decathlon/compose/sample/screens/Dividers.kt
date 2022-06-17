@@ -2,11 +2,11 @@ package com.decathlon.compose.sample.screens
 
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -79,7 +79,6 @@ object Dividers : Screen {
                 }
             }
         }
-
     }
 }
 
@@ -99,7 +98,6 @@ fun DummyContent() {
             .background(VitaminTheme.colors.vtmnContentSecondary)
     )
 }
-
 
 @Preview(showBackground = true)
 @Composable
