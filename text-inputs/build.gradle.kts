@@ -1,5 +1,3 @@
-import com.decathlon.vitamin.compose.Dependencies
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
@@ -10,5 +8,5 @@ plugins {
 dependencies {
     api(project(":foundation"))
     api(project(":menus"))
-    implementation(Dependencies.Compose.tooling)
+    implementation(AndroidX.compose.ui.tooling)
 }
