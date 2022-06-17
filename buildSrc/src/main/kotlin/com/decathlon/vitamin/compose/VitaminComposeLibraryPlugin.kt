@@ -4,11 +4,21 @@ import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.*
+import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.getByType
+import org.gradle.kotlin.dsl.repositories
+import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 class VitaminComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
+        target.apply(plugin = "app.cash.licensee")
+        target.configure<app.cash.licensee.LicenseeExtension> {
+            allow("Apache-2.0")
+            allow("MIT")
+        }
         target.repositories {
             google()
             mavenCentral()
