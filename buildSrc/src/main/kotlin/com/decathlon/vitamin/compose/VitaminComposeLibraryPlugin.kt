@@ -60,7 +60,11 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
     }
     tasks.withType<KotlinCompile> {
         kotlinOptions {
+            allWarningsAsErrors = true
             jvmTarget = JavaVersion.VERSION_11.toString()
+            freeCompilerArgs = freeCompilerArgs + listOf(
+                "-opt-in=kotlin.RequiresOptIn"
+            )
         }
     }
     buildFeatures {
