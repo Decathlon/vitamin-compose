@@ -19,6 +19,7 @@ import com.decathlon.compose.sample.screens.Prices
 import com.decathlon.compose.sample.screens.Progress
 import com.decathlon.compose.sample.screens.RadioButtons
 import com.decathlon.compose.sample.screens.Ratings
+import com.decathlon.compose.sample.screens.Snackbars
 import com.decathlon.compose.sample.screens.Switches
 import com.decathlon.compose.sample.screens.Tabs
 import com.decathlon.compose.sample.screens.Tags
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                         Prices,
                         Modals,
                         Dividers,
+                        Snackbars,
                         Badges
                     )
                 }

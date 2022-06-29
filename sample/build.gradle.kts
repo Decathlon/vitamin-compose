@@ -65,6 +65,7 @@ dependencies {
     implementation(project(":ratings"))
     implementation(project(":prices"))
     implementation(project(":modals"))
+    implementation(project(":snackbars"))
     implementation(project(":badges"))
 
     implementation(AndroidX.appCompat)
