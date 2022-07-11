@@ -16,64 +16,97 @@ import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object VitaminPrices {
+    /**
+     * A price is used to display the monetary value of a product or service.
+     * @param text The text of the price
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the background and the content elements
+     * @param sizes The sizes for the text
+     */
     @Composable
     fun Default(
         text: String,
-        size: VitaminPriceSize = VitaminPriceSizes.medium,
-        modifier: Modifier = Modifier
-    ) = VitaminPrice(
+        modifier: Modifier = Modifier,
+        colors: PriceColors = VitaminPriceColors.default(),
+        sizes: PriceSizes = VitaminPriceSizes.medium(),
+    ) = VitaminPriceImpl(
         text = text,
-        size = size,
+        colors = colors,
+        sizes = sizes,
         modifier = modifier
     )
 
+    /**
+     * Accent price is used to display the monetary value of a product or service.
+     * @param text The text of the price
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the background and the content elements
+     * @param sizes The sizes for the text
+     */
     @Composable
     fun Accent(
         text: String,
-        size: VitaminPriceSize = VitaminPriceSizes.medium,
-        modifier: Modifier = Modifier
-    ) = VitaminPrice(
+        modifier: Modifier = Modifier,
+        colors: PriceColors = VitaminPriceColors.accent(),
+        sizes: PriceSizes = VitaminPriceSizes.medium(),
+    ) = VitaminPriceImpl(
         text = text,
-        size = size,
-        modifier = modifier,
-        color = VitaminPriceColors.accent
+        colors = colors,
+        sizes = sizes,
+        modifier = modifier
     )
 
+    /**
+     * Alert price is used to display the monetary value of a product or service.
+     * @param text The text of the price
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the background and the content elements
+     * @param sizes The sizes for the text
+     */
     @Composable
     fun Alert(
         text: String,
-        size: VitaminPriceSize = VitaminPriceSizes.medium,
-        modifier: Modifier = Modifier
-    ) = VitaminPrice(
+        modifier: Modifier = Modifier,
+        colors: PriceColors = VitaminPriceColors.alert(),
+        sizes: PriceSizes = VitaminPriceSizes.medium(),
+    ) = VitaminPriceImpl(
         text = text,
-        size = size,
-        modifier = modifier,
-        color = VitaminPriceColors.alert
+        colors = colors,
+        sizes = sizes,
+        modifier = modifier
     )
 
+    /**
+     * Strikethrough price is used to display the monetary value of a product or service.
+     * @param text The text of the price
+     * @param modifier The [Modifier] to be applied to the component
+     * @param colors The colors of the background and the content elements
+     * @param sizes The sizes for the text
+     */
     @Composable
     fun Strikethrough(
         text: String,
-        size: VitaminPriceSize = VitaminPriceSizes.medium,
-        modifier: Modifier = Modifier
-    ) = VitaminPrice(
+        modifier: Modifier = Modifier,
+        colors: PriceColors = VitaminPriceColors.strikethrough(),
+        sizes: PriceSizes = VitaminPriceSizes.medium(),
+    ) = VitaminPriceImpl(
         text = text,
-        size = size,
+        colors = colors,
+        sizes = sizes,
         modifier = modifier,
-        color = VitaminPriceColors.strikethrough,
         strikethrough = true
     )
 }
 
 @Composable
-internal fun VitaminPrice(
+internal fun VitaminPriceImpl(
     text: String,
-    size: VitaminPriceSize,
+    sizes: PriceSizes,
+    colors: PriceColors,
     modifier: Modifier = Modifier,
-    color: VitaminPriceColor = VitaminPriceColors.default,
     strikethrough: Boolean = false
 ) {
-    val textStyle = size.textStyle.let {
+    val textStyle = sizes.textStyle.let {
         if (strikethrough) {
             it.copy(textDecoration = TextDecoration.LineThrough)
         } else {
@@ -84,10 +117,10 @@ internal fun VitaminPrice(
     val accessibleStrikethroughText = stringResource(id = R.string.vtmn_price_strikethrough, text)
     Text(
         text = text,
-        color = color.textColor,
+        color = colors.contentColor,
         style = textStyle,
         modifier = modifier
-            .background(color.backgroundColor, RoundedCornerShape(4.dp))
+            .background(colors.backgroundColor, RoundedCornerShape(4.dp))
             .padding(horizontal = 8.dp, vertical = 2.dp)
             .semantics {
                 if (strikethrough) {
@@ -101,7 +134,7 @@ internal fun VitaminPrice(
 @Composable
 fun PreviewPriceDefaultMedium() {
     VitaminTheme {
-        VitaminPrices.Default(text = "250,00 €", size = VitaminPriceSizes.medium)
+        VitaminPrices.Default(text = "250,00 €", sizes = VitaminPriceSizes.medium())
     }
 }
 
@@ -111,7 +144,7 @@ fun PreviewPriceAccentMedium() {
     VitaminTheme {
         VitaminPrices.Accent(
             text = "250,00 €",
-            size = VitaminPriceSizes.medium
+            sizes = VitaminPriceSizes.medium()
         )
     }
 }
@@ -120,7 +153,7 @@ fun PreviewPriceAccentMedium() {
 @Composable
 fun PreviewPriceAlertLarge() {
     VitaminTheme {
-        VitaminPrices.Alert(text = "250,00 €", size = VitaminPriceSizes.large)
+        VitaminPrices.Alert(text = "250,00 €", sizes = VitaminPriceSizes.large())
     }
 }
 
@@ -128,6 +161,6 @@ fun PreviewPriceAlertLarge() {
 @Composable
 fun PreviewPriceStrikethroughSmall() {
     VitaminTheme {
-        VitaminPrices.Strikethrough(text = "250,00 €", size = VitaminPriceSizes.small)
+        VitaminPrices.Strikethrough(text = "250,00 €", sizes = VitaminPriceSizes.small())
     }
 }
