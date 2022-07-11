@@ -20,10 +20,12 @@ object VitaminCheckboxes {
     @Composable
     fun Primary(
         checked: Boolean,
-        modifier: Modifier = Modifier,
         onCheckedChange: (Boolean) -> Unit,
+        modifier: Modifier = Modifier,
         enabled: Boolean = true,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: CheckboxColors = VitaminCheckboxColors.primary(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
         endContent: (@Composable () -> Unit)? = null
     )
 }
@@ -52,8 +54,10 @@ VitaminCheckboxes.Primary(
 Parameters | Descriptions
 -- | --
 `checked: Boolean` | Whether Checkbox is checked or unchecked
-`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `onCheckedChange: (Boolean) -> Unit` | The callback to be called when the state of the checkbox changed
+`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can check the checkbox, otherwise false
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the checkbox
+`colors: CheckboxColors = VitaminCheckboxColors.primary()` | The colors of checkbox states and the text at the end in enable and disable mode
+`textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text at the end of the checkbox
 `endContent: (@Composable () -> Unit)? = null` | The optional end content displayed after the checkbox
