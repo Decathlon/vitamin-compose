@@ -33,6 +33,7 @@ object VitaminButtons {
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
      * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
@@ -44,7 +45,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primary(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.brand,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -55,6 +57,7 @@ object VitaminButtons {
         enabled = enabled,
         colors = colors,
         sizes = sizes,
+        borders = borders,
         ripple = ripple,
         onClick = onClick
     )
@@ -80,8 +83,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
-        borders: VitaminButtonBorders = VitaminButtonsBorders.none(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.brandReversed,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -119,8 +122,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.secondary(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
-        borders: VitaminButtonBorders = VitaminButtonsBorders.primary(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.primary(),
         ripple: RippleTheme = VitaminTheme.ripples.primary,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -146,6 +149,7 @@ object VitaminButtons {
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
      * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
@@ -157,7 +161,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.tertiary(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.tertiary,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -168,6 +173,7 @@ object VitaminButtons {
         enabled = enabled,
         colors = colors,
         sizes = sizes,
+        borders = borders,
         ripple = ripple,
         elevation = null,
         onClick = onClick
@@ -183,6 +189,7 @@ object VitaminButtons {
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
      * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
@@ -194,7 +201,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.ghost(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -205,6 +213,7 @@ object VitaminButtons {
         enabled = enabled,
         colors = colors,
         sizes = sizes,
+        borders = borders,
         ripple = ripple,
         elevation = null,
         onClick = onClick
@@ -219,6 +228,7 @@ object VitaminButtons {
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
      * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
@@ -230,7 +240,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.ghostReversed(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -241,6 +252,7 @@ object VitaminButtons {
         enabled = enabled,
         colors = colors,
         sizes = sizes,
+        borders = borders,
         ripple = ripple,
         elevation = null,
         onClick = onClick
@@ -255,6 +267,7 @@ object VitaminButtons {
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
+     * @param borders The width and color of the border in enabled and disabled
      * @param ripple The ripple effect applied on the component
      * @param onClick The callback to be called when the user click on the button
      */
@@ -266,7 +279,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.conversion(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: ButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.accent,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
@@ -277,6 +291,7 @@ object VitaminButtons {
         enabled = enabled,
         colors = colors,
         sizes = sizes,
+        borders = borders,
         ripple = ripple,
         onClick = onClick
     )
@@ -290,8 +305,8 @@ private fun VitaminButtonImpl(
     iconSide: IconSide,
     enabled: Boolean,
     colors: ButtonColors,
-    sizes: VitaminButtonSizes,
-    borders: VitaminButtonBorders = VitaminButtonsBorders.none(),
+    sizes: ButtonSizes,
+    borders: ButtonBorders = VitaminButtonBorders.none(),
     ripple: RippleTheme,
     elevation: ButtonElevation? = ButtonDefaults.elevation(
         defaultElevation = 0.dp,
