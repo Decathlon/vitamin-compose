@@ -21,7 +21,7 @@ object VitaminTabs {
     fun Fixed(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        colors: TabsColors = VitaminTabsColors.primary(),
+        colors: TabColors = VitaminTabColors.primary(),
         textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
@@ -51,7 +51,7 @@ Parameters | Descriptions
 -- | --
 `tabItems: List<TabItem>` | The `TabItem` actions of your tabs. `TabItem` define the look to the items
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`colors: TabsColors = VitaminTabsColors.primary()` | The colors of the icon, label, background and indicator
+`colors: TabColors = VitaminTabColors.primary()` | The colors of the icon, label, background and indicator
 `textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold)` | The text style of the label inside tabs
 `textOverflow: TextOverflow = TextOverflow.Ellipsis` | How visual overflow should be handled
 `onTabClicked: (tabItem: TabItem) -> Unit` | The callback to be called when the user click on a tab
@@ -64,7 +64,7 @@ object VitaminTabs {
     fun Scrollable(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        colors: TabsColors = VitaminTabsColors.primary(),
+        colors: TabColors = VitaminTabColors.primary(),
         textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
@@ -95,7 +95,7 @@ Parameters | Descriptions
 -- | --
 `tabItems: List<TabItem>` | The `TabItem` actions of your tabs. `TabItem` define the look to the items
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`colors: TabsColors = VitaminTabsColors.primary()` | The colors of the icon, label, background and indicator
+`colors: TabColors = VitaminTabColors.primary()` | The colors of the icon, label, background and indicator
 `textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold)` | The text style of the label inside tabs
 `textOverflow: TextOverflow = TextOverflow.Ellipsis` | How visual overflow should be handled
 `onTabClicked: (tabItem: TabItem) -> Unit` | The callback to be called when the user click on a tab
