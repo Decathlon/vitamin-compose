@@ -4,7 +4,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.decathlon.vitamin.compose.appbars.VitaminTopBars
+import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBars
 
 @Composable
 fun SampleScaffold(

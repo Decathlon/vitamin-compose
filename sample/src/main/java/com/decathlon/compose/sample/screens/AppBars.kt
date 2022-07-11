@@ -16,11 +16,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
-import com.decathlon.vitamin.compose.appbars.ActionItem
-import com.decathlon.vitamin.compose.appbars.SearchActionItem
-import com.decathlon.vitamin.compose.appbars.SelectedActionItem
-import com.decathlon.vitamin.compose.appbars.VitaminBottomNavigations
-import com.decathlon.vitamin.compose.appbars.VitaminTopBars
+import com.decathlon.vitamin.compose.appbars.bottomnavigations.SelectedActionItem
+import com.decathlon.vitamin.compose.appbars.bottomnavigations.VitaminBottomNavigations
+import com.decathlon.vitamin.compose.appbars.topbars.ActionItem
+import com.decathlon.vitamin.compose.appbars.topbars.SearchActionItem
+import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBarColors
+import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBars
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object AppBars : Screen {
@@ -129,8 +130,8 @@ object AppBars : Screen {
                                 contentDescription = "More",
                             )
                         },
+                        colors = VitaminTopBarColors.contextual(),
                         expandedMenu = expanded,
-                        isContextualized = true
                     )
                 }
                 item {
