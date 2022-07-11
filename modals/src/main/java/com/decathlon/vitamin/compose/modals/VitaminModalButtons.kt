@@ -20,7 +20,7 @@ object VitaminModalButtons {
     ) {
         VitaminButtons.Ghost(
             text = text,
-            sizes = VitaminButtonsSizes.mediumSize(
+            sizes = VitaminButtonsSizes.medium(
                 minWidth = 0.dp,
                 contentPadding = PaddingValues(0.dp)
             ),

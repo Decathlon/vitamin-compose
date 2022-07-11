@@ -25,7 +25,8 @@ object VitaminButtons {
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primary(),
-        sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonsBorders.none(),
         ripple: RippleTheme = VitaminTheme.ripples.brand,
         onClick: () -> Unit
     )
@@ -52,7 +53,8 @@ Parameters | Descriptions
 `iconSide: IconSide = IconSide.LEFT` | If an icon is added, you can configure the side at the start or end of the button
 `enabled: Boolean = true` | True if you can click on the button, otherwise false
 `colors: ButtonColors = VitaminButtonsColors.primary()` | The colors of the background and the content in enabled and disabled
-`sizes: VitaminButtonSizes = VitaminButtonsSizes.mediumSize()` | The sizes for the text, paddings and width/height
+`sizes: VitaminButtonSizes = VitaminButtonsSizes.medium()` | The sizes for the text, paddings and width/height
+`borders: ButtonBorders = VitaminButtonsBorders.none()` | The width and color of the border in enabled and disabled
 `ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on the component
 `onClick: () -> Unit` | The callback to be called when the user click on the button
 

@@ -7,7 +7,7 @@ object ButtonVariantsFactory {
     @Composable
     fun Button(
         variant: VitaminButtonsPrimaryTest.Variant,
-        size: VitaminButtonSizes,
+        size: ButtonSizes,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,

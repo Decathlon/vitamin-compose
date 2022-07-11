@@ -10,8 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.Paparazzi
-import com.decathlon.vitamin.compose.buttons.VitaminButtonsSizes.mediumSize
-import com.decathlon.vitamin.compose.buttons.VitaminButtonsSizes.smallSize
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
@@ -45,23 +43,23 @@ class VitaminButtonsPrimaryTest(
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize()
+                                size = VitaminButtonsSizes.small()
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize(),
+                                size = VitaminButtonsSizes.small(),
                                 enabled = false
                             )
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize(),
+                                size = VitaminButtonsSizes.small(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line)
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize(),
+                                size = VitaminButtonsSizes.small(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 enabled = false
                             )
@@ -69,13 +67,13 @@ class VitaminButtonsPrimaryTest(
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize(),
+                                size = VitaminButtonsSizes.small(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 iconSide = IconSide.RIGHT
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.smallSize(),
+                                size = VitaminButtonsSizes.small(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 iconSide = IconSide.RIGHT,
                                 enabled = false
@@ -100,23 +98,23 @@ class VitaminButtonsPrimaryTest(
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize()
+                                size = VitaminButtonsSizes.medium()
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize(),
+                                size = VitaminButtonsSizes.medium(),
                                 enabled = false
                             )
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize(),
+                                size = VitaminButtonsSizes.medium(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line)
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize(),
+                                size = VitaminButtonsSizes.medium(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 enabled = false
                             )
@@ -124,13 +122,13 @@ class VitaminButtonsPrimaryTest(
                         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize(),
+                                size = VitaminButtonsSizes.medium(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 iconSide = IconSide.RIGHT
                             )
                             ButtonVariantsFactory.Button(
                                 variant = variant,
-                                size = VitaminButtonsSizes.mediumSize(),
+                                size = VitaminButtonsSizes.medium(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                                 iconSide = IconSide.RIGHT,
                                 enabled = false
@@ -154,33 +152,33 @@ class VitaminButtonsPrimaryTest(
                         Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize()
+                            size = VitaminButtonsSizes.large()
                         )
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize(),
+                            size = VitaminButtonsSizes.large(),
                             enabled = false
                         )
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize(),
+                            size = VitaminButtonsSizes.large(),
                             icon = painterResource(id = R.drawable.ic_vtmn_android_line)
                         )
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize(),
+                            size = VitaminButtonsSizes.large(),
                             icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                             enabled = false
                         )
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize(),
+                            size = VitaminButtonsSizes.large(),
                             icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                             iconSide = IconSide.RIGHT
                         )
                         ButtonVariantsFactory.Button(
                             variant = variant,
-                            size = VitaminButtonsSizes.largeSize(),
+                            size = VitaminButtonsSizes.large(),
                             icon = painterResource(id = R.drawable.ic_vtmn_android_line),
                             iconSide = IconSide.RIGHT,
                             enabled = false

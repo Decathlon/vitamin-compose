@@ -11,26 +11,30 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 
 @Immutable
-data class VitaminButtonBorders(
+data class ButtonBorders(
     val stroke: BorderStroke? = null,
     val disabled: BorderStroke? = stroke
 )
 
-object VitaminButtonsBorders {
+object VitaminButtonBorders {
     @Composable
     fun primary(
         width: Dp = 2.dp,
         strokeColor: Color = VitaminTheme.colors.vtmnBorderPrimary,
         disabledColor: Color = VitaminTheme.colors.vtmnBorderPrimary.copy(alpha = VtmnStatesDisabled)
-    ): VitaminButtonBorders = remember {
-        VitaminButtonBorders(
+    ): ButtonBorders = remember(
+        width,
+        strokeColor,
+        disabledColor
+    ) {
+        ButtonBorders(
             stroke = BorderStroke(width = width, color = strokeColor),
             disabled = BorderStroke(width = width, color = disabledColor)
         )
     }
 
     @Composable
-    fun none(): VitaminButtonBorders = remember {
-        VitaminButtonBorders()
+    fun none(): ButtonBorders = remember {
+        ButtonBorders()
     }
 }
