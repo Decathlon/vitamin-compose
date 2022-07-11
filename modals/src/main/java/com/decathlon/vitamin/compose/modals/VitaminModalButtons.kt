@@ -12,9 +12,8 @@ enum class ModalButtonsOrientation {
 }
 
 object VitaminModalButtons {
-
     @Composable
-    fun Default(
+    fun Primary(
         text: String,
         onClick: () -> Unit
     ) {

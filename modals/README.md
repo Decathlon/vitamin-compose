@@ -24,13 +24,13 @@ object VitaminModals {
         modifier: Modifier = Modifier,
         title: String? = null,
         @DrawableRes iconRes: Int? = null,
+        buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,
         contentScrollState: ScrollState = rememberScrollState(),
+        colors: ModalColors = VitaminModalColors.primary(),
+        sizes: ModalSizes = VitaminModalSizes.medium(),
         positiveButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
         negativeButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
         neutralButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
-        buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,
-        sizes: ModalSizes = VitaminModalSizes.default(),
-        colors: ModalColors = VitaminModalColors.default()
     )
 }
 ```
@@ -70,8 +70,8 @@ VitaminModals.Primary(
         )
     },
     buttonsOrientation = ModalButtonsOrientation.HORIZONTAL,
-    sizes = VitaminModalSizes.default(),
-    colors = VitaminModalColors.default()
+    sizes = VitaminModalSizes.medium(),
+    colors = VitaminModalColors.primary()
 )
 ```
 
@@ -82,10 +82,10 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `title: String? = null` | The optional title to be displayed at the top of the modal
 `@DrawableRes iconRes: Int? = null` | The optional leading icon to be displayed at the start of the title
+`buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL` | The optional buttons orientation to display buttons vertically or horizontally
 `contentScrollState: ScrollState = rememberScrollState()` | The optional scroll state to observe the scrolling
+`colors: ModalColors = VitaminModalColors.primary()` | The optional sizes used to define colors of icon, title, content and background of the modal
+`sizes: ModalSizes = VitaminModalSizes.medium()` | The optional sizes used to define modal padding, spacers sizes and icon size
 `positiveButton: (@Composable VitaminModalButtons.() -> Unit)? = null` | The optional positive button to be displayed at the bottom of the modal 
 `negativeButton: (@Composable VitaminModalButtons.() -> Unit)? = null` | The optional negative button to be displayed at the bottom of the modal
 `neutralButton: (@Composable VitaminModalButtons.() -> Unit)? = null` | The optional neutral button to be displayed at the bottom of the modal
-`buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL` | The optional buttons orientation to display buttons vertically or horizontally
-`sizes: ModalSizes = VitaminModalSizes.default()` | The optional sizes used to define modal padding, spacers sizes and icon size
-`colors: ModalColors = VitaminModalColors.default()` | The optional sizes used to define colors of icon, title, content and background of the modal
