@@ -20,8 +20,8 @@ object VitaminDividers {
     @Composable
     fun FullBleed(
         modifier: Modifier = Modifier,
+        thickness: Dp = 1.dp,
         color: Color = VitaminTheme.colors.vtmnBorderSecondary,
-        thickness: Dp = 1.dp
     )
 }
 ```
@@ -40,8 +40,8 @@ VitaminDividers.FullBleed()
 Parameters | Descriptions
 -- | --
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the divider line
 `thickness: Dp = 1.dp` | thickness of the dividers line, 1 dp is used by default
+`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the divider line
 
 ### Inset
 
@@ -50,9 +50,9 @@ object VitaminDividers {
     @Composable
     fun Inset(
         modifier: Modifier = Modifier,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
         thickness: Dp = 1.dp,
-        startIndent: Dp = 64.dp
+        startIndent: Dp = 64.dp,
+        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
     )
 }
 ```
@@ -66,9 +66,9 @@ VitaminDividers.Inset()
 Parameters | Descriptions
 -- | --
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the dividers line
 `thickness: Dp = 1.dp` | thickness of the dividers line, 1 dp is used by default
 `startIndent: Dp = 64.dp` | the start indent padding, default value is 64.dp
+`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the dividers line
 
 ### Middle
 
@@ -77,10 +77,10 @@ object VitaminDividers {
     @Composable
     fun Middle(
         modifier: Modifier = Modifier,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
         thickness: Dp = 1.dp,
         startIndent: Dp = 32.dp,
-        endIndent: Dp = 32.dp
+        endIndent: Dp = 32.dp,
+        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
     )
 }
 ```
@@ -95,8 +95,8 @@ VitaminDividers.Middle()
 Parameters | Descriptions
 -- | --
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the dividers line
 `thickness: Dp = 1.dp` | thickness of the dividers line, 1 dp is used by default
 `startIndent: Dp = 32.dp` | the start indent padding, default value is 32.dp
 `endIndent: Dp = 32.dp` | the end indent padding, default value is 32.dp
+`color: Color = VitaminTheme.colors.vtmnBorderSecondary` | color of the dividers line
 

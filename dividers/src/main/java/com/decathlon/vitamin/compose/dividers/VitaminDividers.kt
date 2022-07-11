@@ -14,57 +14,51 @@ object VitaminDividers {
     /**
      * Full-bleed dividers separate content into sections. They can also be used to establish a hierarchy
      * @param modifier The [Modifier] to be applied to this dividers
-     * @param color color of the dividers line
      * @param thickness thickness of the dividers line, 1 dp is used by default
+     * @param color color of the dividers line
      */
     @Composable
     fun FullBleed(
         modifier: Modifier = Modifier,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
         thickness: Dp = 1.dp,
-    ) {
-        VitaminDivider(modifier, color, thickness, 0.dp, 0.dp)
-    }
+        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+    ) = VitaminDividerImpl(modifier, color, thickness, 0.dp, 0.dp)
 
     /**
      * Inset dividers separate related content, such as list item or thread
      * @param modifier The [Modifier] to be applied to this dividers
-     * @param color color of the dividers line
      * @param thickness thickness of the dividers line, 1 dp is used by default
      * @param startIndent the start indent padding, default value is 64.dp
+     * @param color color of the dividers line
      */
     @Composable
     fun Inset(
         modifier: Modifier = Modifier,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
         thickness: Dp = 1.dp,
-        startIndent: Dp = 64.dp
-    ) {
-        VitaminDivider(modifier, color, thickness, startIndent, 0.dp)
-    }
+        startIndent: Dp = 64.dp,
+        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+    ) = VitaminDividerImpl(modifier, color, thickness, startIndent, 0.dp)
 
     /**
      * Middle dividers are used in the middle of the layout. They can be used for separating related content or actions
      * @param modifier The [Modifier] to be applied to this dividers
-     * @param color color of the dividers line
      * @param thickness thickness of the dividers line, 1 dp is used by default
      * @param startIndent the start indent padding, default value is 32.dp
      * @param endIndent the end indent padding, default value is 32.dp
+     * @param color color of the dividers line
      */
     @Composable
     fun Middle(
         modifier: Modifier = Modifier,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
         thickness: Dp = 1.dp,
         startIndent: Dp = 32.dp,
-        endIndent: Dp = 32.dp
-    ) {
-        VitaminDivider(modifier, color, thickness, startIndent, endIndent)
-    }
+        endIndent: Dp = 32.dp,
+        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+    ) = VitaminDividerImpl(modifier, color, thickness, startIndent, endIndent)
 }
 
 @Composable
-private fun VitaminDivider(
+private fun VitaminDividerImpl(
     modifier: Modifier,
     color: Color,
     thickness: Dp,
