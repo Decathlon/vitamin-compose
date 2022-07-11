@@ -32,8 +32,8 @@ object VitaminRatings {
         showNote: Boolean = false,
         nbComments: Int? = null,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize(),
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium(),
     ) {
         val rounded = number.rounded()
         val contentDescription = if (nbComments == null) {
@@ -94,8 +94,8 @@ object VitaminRatings {
         modifier: Modifier = Modifier,
         nbComments: Int? = null,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize(),
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium(),
     ) {
         val rounded = number.rounded()
         val contentDescription = if (nbComments == null) {
@@ -149,8 +149,8 @@ object VitaminRatings {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize(),
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium(),
         onValueChange: (number: Int) -> Unit
     ) {
         Row(

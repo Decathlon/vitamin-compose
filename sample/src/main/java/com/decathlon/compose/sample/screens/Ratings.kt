@@ -20,9 +20,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.ratings.VitaminRatingColors
+import com.decathlon.vitamin.compose.ratings.VitaminRatingSizes
 import com.decathlon.vitamin.compose.ratings.VitaminRatings
-import com.decathlon.vitamin.compose.ratings.VitaminRatingsColors
-import com.decathlon.vitamin.compose.ratings.VitaminRatingsSizes
 import com.decathlon.vitamin.compose.switches.VitaminSwitches
 
 object Ratings : Screen {
@@ -45,13 +45,13 @@ object Ratings : Screen {
                 item { Text(text = "Read Only Mode", style = VitaminTheme.typography.h6) }
                 item {
                     val isEmphasis = remember { mutableStateOf(false) }
-                    val colors = if (isEmphasis.value) VitaminRatingsColors.emphasis()
-                    else VitaminRatingsColors.primary()
+                    val colors = if (isEmphasis.value) VitaminRatingColors.emphasis()
+                    else VitaminRatingColors.primary()
                     Spacer(modifier = Modifier.height(20.dp))
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         VitaminRatings.ReadOnly(
                             number = .3f,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -59,7 +59,7 @@ object Ratings : Screen {
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         VitaminRatings.ReadOnly(
                             number = 1.3f,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -67,7 +67,7 @@ object Ratings : Screen {
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         VitaminRatings.ReadOnly(
                             number = 4.8f,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -77,7 +77,7 @@ object Ratings : Screen {
                             number = 4.865f,
                             nbComments = 42,
                             showNote = true,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -96,13 +96,13 @@ object Ratings : Screen {
                 item { Text(text = "Compact Read Only Mode", style = VitaminTheme.typography.h6) }
                 item {
                     val isEmphasis = remember { mutableStateOf(false) }
-                    val colors = if (isEmphasis.value) VitaminRatingsColors.emphasis()
-                    else VitaminRatingsColors.primary()
+                    val colors = if (isEmphasis.value) VitaminRatingColors.emphasis()
+                    else VitaminRatingColors.primary()
                     Spacer(modifier = Modifier.height(20.dp))
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         VitaminRatings.ReadOnlyCompact(
                             number = 4.8f,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -111,7 +111,7 @@ object Ratings : Screen {
                         VitaminRatings.ReadOnlyCompact(
                             number = 4.865f,
                             nbComments = 42,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -120,7 +120,7 @@ object Ratings : Screen {
                         VitaminRatings.ReadOnlyCompact(
                             number = 4.865f,
                             nbComments = 0,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -129,7 +129,7 @@ object Ratings : Screen {
                         VitaminRatings.ReadOnlyCompact(
                             number = 4.865f,
                             nbComments = 1,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors
                         )
                     }
@@ -149,13 +149,13 @@ object Ratings : Screen {
                 item {
                     val interact = remember { mutableStateOf(0) }
                     val isEmphasis = remember { mutableStateOf(false) }
-                    val colors = if (isEmphasis.value) VitaminRatingsColors.emphasis()
-                    else VitaminRatingsColors.primary()
+                    val colors = if (isEmphasis.value) VitaminRatingColors.emphasis()
+                    else VitaminRatingColors.primary()
                     Spacer(modifier = Modifier.height(20.dp))
                     Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         VitaminRatings.Interactive(
                             number = interact.value,
-                            sizes = VitaminRatingsSizes.smallSize(),
+                            sizes = VitaminRatingSizes.small(),
                             colors = colors,
                             onValueChange = { interact.value = it }
                         )

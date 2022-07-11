@@ -24,8 +24,8 @@ object VitaminRatings {
         showNote: Boolean = false,
         nbComments: Int? = null,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize()
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium()
     )
 }
 ```
@@ -47,8 +47,8 @@ Parameters | Descriptions
 `showNote: Boolean = false` | Displays the note and the number of comments at the end of the stars
 `nbComments: Int? = null` | Number of comments attached to the note. Null if you want to display nothing
 `maxValue: Int = 5` | Max value of the note. By default, 5
-`colors: RatingsColors = VitaminRatingsColors.primary()` | Primary or emphasis colors applied on stars
-`sizes: RatingsSizes = VitaminRatingsSizes.mediumSize()` | Small or medium size applied on stars and text if they are displayed
+`colors: RatingColors = VitaminRatingColors.primary()` | Primary or emphasis colors applied on stars
+`sizes: RatingSizes = VitaminRatingSizes.medium()` | Small or medium size applied on stars and text if they are displayed
 
 ### ReadOnlyCompact
 
@@ -60,8 +60,8 @@ object VitaminRatings {
         modifier: Modifier = Modifier,
         nbComments: Int? = null,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize(),
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium(),
     )
 }
 ```
@@ -82,8 +82,8 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `nbComments: Int? = null` | Number of comments attached to the note. Null if you want to display nothing
 `maxValue: Int = 5` | Max value of the note. By default, 5
-`colors: RatingsColors = VitaminRatingsColors.primary()` | Primary or emphasis colors applied on stars
-`sizes: RatingsSizes = VitaminRatingsSizes.mediumSize()` | Small or medium size applied on stars and text if they are displayed
+`colors: RatingColors = VitaminRatingColors.primary()` | Primary or emphasis colors applied on stars
+`sizes: RatingSizes = VitaminRatingSizes.medium()` | Small or medium size applied on stars and text if they are displayed
 
 ### Interactive
 
@@ -95,8 +95,8 @@ object VitaminRatings {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         maxValue: Int = 5,
-        colors: RatingsColors = VitaminRatingsColors.primary(),
-        sizes: RatingsSizes = VitaminRatingsSizes.mediumSize(),
+        colors: RatingColors = VitaminRatingColors.primary(),
+        sizes: RatingSizes = VitaminRatingSizes.medium(),
         onValueChange: (number: Int) -> Unit
     )
 }
@@ -117,6 +117,6 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can give a note, otherwise false
 `maxValue: Int = 5` | Max value of the note. By default, 5
-`colors: RatingsColors = VitaminRatingsColors.primary()` | Primary or emphasis colors applied on stars
-`sizes: RatingsSizes = VitaminRatingsSizes.mediumSize()` | Small or medium size applied on stars and text if they are displayed
+`colors: RatingColors = VitaminRatingColors.primary()` | Primary or emphasis colors applied on stars
+`sizes: RatingSizes = VitaminRatingSizes.medium()` | Small or medium size applied on stars and text if they are displayed
 `onValueChange: (number: Int) -> Unit` | The callback to be called when the user click on a star
