@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.LinearProgressIndicator
+import androidx.compose.material.LocalContentColor
 import androidx.compose.material.LocalTextStyle
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -19,9 +20,10 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import androidx.compose.ui.unit.Dp
 import kotlin.math.roundToInt
 
 object VitaminProgressBars {
@@ -30,34 +32,42 @@ object VitaminProgressBars {
      * @param progress The progress of this progress indicator, where 0.0 represents no progress
      * and 1.0 represents full progress
      * @param modifier The [Modifier] to be applied to the component
-     * @param size Different sizes for the progress bar
      * @param label The optional label above the progress bar with the progression at the end
+     * @param colors The colors of the background, the progress and the label
+     * @param sizes Different sizes for the progress bar
      */
     @Composable
     fun Linear(
         progress: Float,
         modifier: Modifier = Modifier,
-        size: LinearSizes = VitaminLinearProgressBarSizes.smallSize(),
-        label: String? = null
+        label: String? = null,
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: LinearProgressBarSizes = VitaminLinearProgressBarSizes.medium(),
     ) {
-        Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(
+            modifier = modifier,
+            verticalArrangement = Arrangement.spacedBy(sizes.labelBottomPadding)
+        ) {
             if (label != null) {
                 Row(modifier = Modifier.fillMaxWidth()) {
                     LabelText(
                         label = label,
+                        color = colors.labelColor,
+                        style = sizes.textStyle,
                         modifier = Modifier.weight(1f)
                     )
                     Text(
                         text = progress.getProgressInPercent(),
-                        style = VitaminTheme.typography.body2
+                        color = colors.labelColor,
+                        style = sizes.textStyle
                     )
                 }
             }
             LinearProgressIndicator(
                 progress = progress,
-                modifier = Modifier.vitaminLinearProgressModifier(size),
-                color = VitaminTheme.colors.vtmnContentActive,
-                backgroundColor = VitaminTheme.colors.vtmnBackgroundTertiary
+                modifier = Modifier.vitaminLinearProgressModifier(sizes.strokeSize),
+                color = colors.progressColor,
+                backgroundColor = colors.backgroundColor
             )
         }
     }
@@ -65,23 +75,32 @@ object VitaminProgressBars {
     /**
      * Linear progress indicators express an unspecified wait time.
      * @param modifier The [Modifier] to be applied to the component
-     * @param size Different sizes for the progress bar
      * @param label The optional label above the progress bar with the progression at the end
+     * @param colors The colors of the background, the progress and the label
+     * @param sizes Different sizes for the progress bar
      */
     @Composable
     fun Linear(
         modifier: Modifier = Modifier,
-        size: LinearSizes = VitaminLinearProgressBarSizes.smallSize(),
-        label: String? = null
+        label: String? = null,
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: LinearProgressBarSizes = VitaminLinearProgressBarSizes.medium(),
     ) {
-        Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(
+            modifier = modifier,
+            verticalArrangement = Arrangement.spacedBy(sizes.labelBottomPadding)
+        ) {
             if (label != null) {
-                LabelText(label = label)
+                LabelText(
+                    label = label,
+                    color = colors.labelColor,
+                    style = sizes.textStyle
+                )
             }
             LinearProgressIndicator(
-                modifier = Modifier.vitaminLinearProgressModifier(size),
-                color = VitaminTheme.colors.vtmnContentActive,
-                backgroundColor = VitaminTheme.colors.vtmnBackgroundTertiary
+                modifier = Modifier.vitaminLinearProgressModifier(sizes.strokeSize),
+                color = colors.progressColor,
+                backgroundColor = colors.backgroundColor
             )
         }
     }
@@ -91,23 +110,26 @@ object VitaminProgressBars {
      * @param progress The progress of this progress indicator, where 0.0 represents no progress
      * and 1.0 represents full progress
      * @param modifier The [Modifier] to be applied to the component
-     * @param size Different sizes for the progress bar
+     * @param colors The colors of the background, the progress and the optional label
+     * @param sizes Different sizes for the progress bar
      * @param content The optional content inside the circular progress bar
      */
     @Composable
     fun Circular(
         progress: Float,
         modifier: Modifier = Modifier,
-        size: CircularSizes = VitaminCircularProgressBarSizes.smallSize(),
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.small(),
         content: (@Composable VitaminCircularContent.() -> Unit)? = null
     ) {
-        Box(modifier = modifier.size(size.boxSize)) {
+        Box(modifier = modifier.size(sizes.boxSize)) {
             if (content != null) {
                 CompositionLocalProvider(
-                    LocalTextStyle provides size.textStyle,
-                    LocalCircularProgress provides progress
+                    LocalTextStyle provides sizes.textStyle,
+                    LocalCircularProgress provides progress,
+                    LocalContentColor provides colors.labelColor
                 ) {
-                    Box(modifier = Modifier.padding(size.strokeSize + size.contentPadding)) {
+                    Box(modifier = Modifier.padding(sizes.strokeSize + sizes.contentPadding)) {
                         VitaminCircularContent.content()
                     }
                 }
@@ -116,9 +138,9 @@ object VitaminProgressBars {
                 progress = progress,
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .vitaminCircularProgressModifier(size),
-                color = VitaminTheme.colors.vtmnContentActive,
-                strokeWidth = size.strokeSize
+                    .size(sizes.boxSize),
+                color = colors.progressColor,
+                strokeWidth = sizes.strokeSize
             )
         }
     }
@@ -126,22 +148,25 @@ object VitaminProgressBars {
     /**
      * Circular progress indicators express an unspecified wait time.
      * @param modifier The [Modifier] to be applied to the component
-     * @param size Different sizes for the progress bar
+     * @param colors The colors of the background, the progress and the optional label
+     * @param sizes Different sizes for the progress bar
      * @param content The optional content inside the circular progress bar
      */
     @Composable
     fun Circular(
         modifier: Modifier = Modifier,
-        size: CircularSizes = VitaminCircularProgressBarSizes.smallSize(),
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.small(),
         content: (@Composable VitaminCircularContent.() -> Unit)? = null
     ) {
-        Box(modifier = modifier.size(size.boxSize)) {
+        Box(modifier = modifier.size(sizes.boxSize)) {
             if (content != null) {
                 CompositionLocalProvider(
-                    LocalTextStyle provides size.textStyle,
-                    LocalCircularProgress provides null
+                    LocalTextStyle provides sizes.textStyle,
+                    LocalCircularProgress provides null,
+                    LocalContentColor provides colors.labelColor
                 ) {
-                    Box(modifier = Modifier.padding(size.strokeSize + size.contentPadding)) {
+                    Box(modifier = Modifier.padding(sizes.strokeSize + sizes.contentPadding)) {
                         VitaminCircularContent.content()
                     }
                 }
@@ -149,30 +174,33 @@ object VitaminProgressBars {
             CircularProgressIndicator(
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .vitaminCircularProgressModifier(size),
-                color = VitaminTheme.colors.vtmnContentActive,
-                strokeWidth = size.strokeSize
+                    .size(sizes.boxSize),
+                color = colors.progressColor,
+                strokeWidth = sizes.strokeSize
             )
         }
     }
 }
 
 @Composable
-private fun LabelText(label: String, modifier: Modifier = Modifier) = Text(
-    label,
-    modifier = modifier.padding(end = 5.dp),
+private fun LabelText(
+    label: String,
+    color: Color,
+    style: TextStyle,
+    modifier: Modifier = Modifier
+) = Text(
+    text = label,
+    style = style,
+    color = color,
+    modifier = modifier,
     maxLines = 1,
     overflow = TextOverflow.Ellipsis,
-    style = VitaminTheme.typography.body2
 )
 
-private fun Modifier.vitaminLinearProgressModifier(linearSize: LinearSizes) = this
+private fun Modifier.vitaminLinearProgressModifier(height: Dp) = this
     .fillMaxWidth()
     .clip(CircleShape)
-    .height(linearSize.size)
-
-private fun Modifier.vitaminCircularProgressModifier(circularSize: CircularSizes) =
-    this.size(circularSize.boxSize)
+    .height(height)
 
 @SuppressWarnings("MagicNumber")
 internal fun Float.getProgressInPercent(): String = "${(this * 100).roundToInt()}%"

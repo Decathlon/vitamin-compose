@@ -37,28 +37,28 @@ object Progress : Screen {
                     VitaminProgressBars.Linear(
                         progress = 0.8f,
                         modifier = Modifier.progressScreenModifier(firstItem = true),
-                        size = VitaminLinearProgressBarSizes.smallSize()
+                        sizes = VitaminLinearProgressBarSizes.small()
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         progress = 0.9f,
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.mediumSize()
+                        sizes = VitaminLinearProgressBarSizes.medium()
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         progress = 0.05f,
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.largeSize()
+                        sizes = VitaminLinearProgressBarSizes.large()
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         progress = 0.1f,
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.smallSize(),
+                        sizes = VitaminLinearProgressBarSizes.small(),
                         label = "Download"
                     )
                 }
@@ -66,7 +66,7 @@ object Progress : Screen {
                     VitaminProgressBars.Linear(
                         progress = 0.35f,
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.mediumSize(),
+                        sizes = VitaminLinearProgressBarSizes.medium(),
                         label = "Download"
                     )
                 }
@@ -74,47 +74,47 @@ object Progress : Screen {
                     VitaminProgressBars.Linear(
                         progress = 0.7f,
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.largeSize(),
+                        sizes = VitaminLinearProgressBarSizes.large(),
                         label = "Download"
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.smallSize(),
+                        sizes = VitaminLinearProgressBarSizes.small(),
                         label = "Loading"
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.mediumSize(),
+                        sizes = VitaminLinearProgressBarSizes.medium(),
                         label = "Loading"
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.largeSize(),
+                        sizes = VitaminLinearProgressBarSizes.large(),
                         label = "Loading"
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.smallSize()
+                        sizes = VitaminLinearProgressBarSizes.small()
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.mediumSize()
+                        sizes = VitaminLinearProgressBarSizes.medium()
                     )
                 }
                 item {
                     VitaminProgressBars.Linear(
                         modifier = Modifier.progressScreenModifier(),
-                        size = VitaminLinearProgressBarSizes.largeSize()
+                        sizes = VitaminLinearProgressBarSizes.large()
                     )
                 }
                 item {
@@ -122,7 +122,7 @@ object Progress : Screen {
                         VitaminProgressBars.Circular(
                             progress = 0.6f,
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.mediumSize(),
+                            sizes = VitaminCircularProgressBarSizes.medium(),
                             content = {
                                 ImageCircular(
                                     painter = painterResource(id = R.drawable.store_decathlon),
@@ -132,7 +132,7 @@ object Progress : Screen {
                         )
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.mediumSize(),
+                            sizes = VitaminCircularProgressBarSizes.medium(),
                             content = {
                                 ImageCircular(
                                     painter = painterResource(id = R.drawable.store_decathlon),
@@ -147,7 +147,7 @@ object Progress : Screen {
                         VitaminProgressBars.Circular(
                             progress = 0.6f,
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.smallSize(),
+                            sizes = VitaminCircularProgressBarSizes.small(),
                             content = {
                                 ImageCircular(
                                     painter = painterResource(id = R.drawable.store_decathlon),
@@ -157,7 +157,7 @@ object Progress : Screen {
                         )
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.smallSize(),
+                            sizes = VitaminCircularProgressBarSizes.small(),
                             content = {
                                 ImageCircular(
                                     painter = painterResource(id = R.drawable.store_decathlon),
@@ -172,14 +172,14 @@ object Progress : Screen {
                         VitaminProgressBars.Circular(
                             progress = 0.6f,
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.mediumSize(),
+                            sizes = VitaminCircularProgressBarSizes.medium(),
                             content = {
                                 ProgressIndicatorText()
                             }
                         )
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.mediumSize(),
+                            sizes = VitaminCircularProgressBarSizes.medium(),
                             content = {
                                 ProgressIndicatorText()
                             }
@@ -191,12 +191,12 @@ object Progress : Screen {
                         VitaminProgressBars.Circular(
                             progress = 0.6f,
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.smallSize(),
+                            sizes = VitaminCircularProgressBarSizes.small(),
                         )
                         VitaminProgressBars.Circular(
                             progress = 0.9f,
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.smallSize(),
+                            sizes = VitaminCircularProgressBarSizes.small(),
                             content = {
                                 ProgressIndicatorText()
                             }
@@ -207,11 +207,11 @@ object Progress : Screen {
                     ProgressRow {
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.mediumSize(),
+                            sizes = VitaminCircularProgressBarSizes.medium(),
                         )
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
-                            size = VitaminCircularProgressBarSizes.smallSize(),
+                            sizes = VitaminCircularProgressBarSizes.small(),
                         )
                     }
                 }
