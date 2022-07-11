@@ -1,4 +1,4 @@
-package com.decathlon.vitamin.compose.appbars
+package com.decathlon.vitamin.compose.appbars.topbars
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
@@ -24,6 +24,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
+import com.decathlon.vitamin.compose.appbars.OverflowMenu
+import com.decathlon.vitamin.compose.appbars.topbars.icons.IconButtons
+import com.decathlon.vitamin.compose.appbars.topbars.icons.VitaminMenuIconButtons
+import com.decathlon.vitamin.compose.appbars.topbars.icons.VitaminNavigationIconButtons
+import com.decathlon.vitamin.compose.appbars.topbars.icons.VitaminSearchMenuIconButtons
+import com.decathlon.vitamin.compose.appbars.topbars.icons.VitaminSearchNavigationIconButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import kotlin.math.min
 
@@ -37,8 +43,8 @@ object VitaminTopBars {
      * @param maxActions The max number of icon actions at the right of the TopBar
      * @param actions The [ActionItem] actions of your topBar.
      * [ActionItem] define the look and the event associated to an item in the topBar
-     * @param isContextualized Allows to switch colors between primary and contextualized colors
      * @param expandedMenu Open menu for actions greater than `maxActions` value
+     * @param colors The colors of the background and the content elements in enabled and disabled mode
      * @param onDismissOverflowMenu The callback called when the menu should be removed
      * @param overflowIcon The icon to open overflow menu
      * @param navigationIcon The navigation icon displayed at the start of the TopBar
@@ -47,16 +53,14 @@ object VitaminTopBars {
     fun Primary(
         title: String,
         modifier: Modifier = Modifier,
-        maxActions: Int = 2,
+        maxActions: Int = MAX_ACTIONS,
         actions: List<ActionItem> = emptyList(),
-        isContextualized: Boolean = false,
         expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TopBarColors = VitaminTopBarColors.primary(),
         onDismissOverflowMenu: (() -> Unit)? = null,
         overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null,
         navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null
     ) {
-        val colors = if (isContextualized) VitaminTopBarsColors.contextual()
-        else VitaminTopBarsColors.primary()
         CompositionLocalProvider(LocalVitaminTopBarColors provides colors) {
             TopAppBar(
                 title = { Text(text = title) },
@@ -102,13 +106,14 @@ object VitaminTopBars {
      * @param value The value of your search
      * @param placeholder The placeholder value inside the text input of the TopBar
      * @param modifier The [Modifier] to be applied to this TopBar
-     * @param isEnabled True if you can type in the search bar, otherwise false
+     * @param enabled True if you can type in the search bar, otherwise false
      * @param actions The [SearchActionItem] actions of your topBar.
      * [SearchActionItem] define the look and the event associated to an item in the topBar
-     * @param textStyle The typography of the text inside the text input
-     * @param interactionSource Representing the stream of interaction for the text input
      * @param keyboardOptions Software keyboard options that contains options such as KeyboardType or ImeAction
      * @param keyboardActions When the text input emit an IME action, the corresponding callback is called
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The colors of the background and the content elements in enabled and disabled mode
+     * @param textStyle The typography of the text inside the text input
      * @param navigationIcon The navigation icon displayed at the start of the TopBar
      * @param onValueChange The callback to be called when the user type a new character
      */
@@ -117,16 +122,16 @@ object VitaminTopBars {
         value: String,
         placeholder: String,
         modifier: Modifier = Modifier,
-        isEnabled: Boolean = true,
+        enabled: Boolean = true,
         actions: List<SearchActionItem> = emptyList(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
-        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TopBarColors = VitaminTopBarColors.search(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        onValueChange: (String) -> Unit,
         navigationIcon: @Composable VitaminSearchNavigationIconButtons.() -> Unit,
-        onValueChange: (String) -> Unit
     ) {
-        val colors = VitaminTopBarsColors.search()
         CompositionLocalProvider(LocalVitaminTopBarColors provides colors) {
             TopAppBar(
                 modifier = modifier,
@@ -137,7 +142,7 @@ object VitaminTopBars {
                 BasicTextField(
                     value = value,
                     onValueChange = onValueChange,
-                    enabled = isEnabled,
+                    enabled = enabled,
                     textStyle = textStyle.copy(color = colors.inputColor!!),
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true,
@@ -152,7 +157,9 @@ object VitaminTopBars {
                         } else {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Box(
-                                    modifier = Modifier.fillMaxHeight().weight(1f),
+                                    modifier = Modifier
+                                        .fillMaxHeight()
+                                        .weight(1f),
                                     contentAlignment = Alignment.CenterStart,
                                 ) {
                                     textField()
@@ -196,7 +203,7 @@ sealed class SearchActionItem(
         SearchActionItem(contentDescription = contentDescription, onClick = onClick)
 }
 
-internal val LocalVitaminTopBarColors = compositionLocalOf<TopBarsColors> {
+internal val LocalVitaminTopBarColors = compositionLocalOf<TopBarColors> {
     error("No TopBarsColors provided")
 }
 

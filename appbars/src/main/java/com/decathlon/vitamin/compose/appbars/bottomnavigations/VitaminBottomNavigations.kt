@@ -1,4 +1,4 @@
-package com.decathlon.vitamin.compose.appbars
+package com.decathlon.vitamin.compose.appbars.bottomnavigations
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -21,13 +21,14 @@ object VitaminBottomNavigations {
      * @param actions The [SelectedActionItem] actions of your bottom navigation.
      * [SelectedActionItem] define the look and the event associated to an item in the bottom navigation
      * @param modifier The [Modifier] to be applied to this BottomNavigation
+     * @param colors The colors of the background and the content elements in selected and unselected mode
      */
     @Composable
     fun Primary(
         actions: List<SelectedActionItem>,
         modifier: Modifier = Modifier,
+        colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()
     ) {
-        val colors = VitaminBottomNavigationsColors.primary()
         BottomNavigation(
             modifier = modifier,
             backgroundColor = colors.background,

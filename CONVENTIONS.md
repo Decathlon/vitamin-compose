@@ -51,7 +51,7 @@ e.g. the top appbar which can be changed from primary to contextual and vice ver
 @Composable
 fun Primary(
     /* parameters */
-    isContextualized: Boolean = false,
+    colors: TopBarsColors = VitaminTopBarsColors.primary(),
 )
 ```
 

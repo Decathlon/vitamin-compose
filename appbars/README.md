@@ -23,10 +23,10 @@ object VitaminTopBars {
     fun Primary(
         title: String,
         modifier: Modifier = Modifier,
-        maxActions: Int = 2,
+        maxActions: Int = 3,
         actions: List<ActionItem> = emptyList(),
-        isContextualized: Boolean = false,
-        expandedMenu: Boolean = false,
+        expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) },
+        colors: TopBarsColors = VitaminTopBarColors.primary(),
         onDismissOverflowMenu: (() -> Unit)? = null,
         overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null,
         navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null
@@ -85,8 +85,8 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `maxActions: Int = 2` | The max number of icon actions at the right of the TopBar
 `actions: List<ActionItem> = emptyList()` | The `ActionItem` actions of your topBar. `ActionItem` define the look and the event associated to an item in the topBar
-`isContextualized: Boolean = false` | Allows to switch colors between primary and contextualized colors
 `expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) }` | Open menu for actions greater than `maxActions` value
+`colors: TopBarsColors = VitaminTopBarColors.primary()` | The colors of the background and the content elements in enabled and disabled mode
 `onDismissOverflowMenu: (() -> Unit)? = null` | The callback called when the menu should be removed
 `overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null` | The icon to open overflow menu
 `navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null` | The navigation icon displayed at the start of the TopBar
@@ -100,14 +100,15 @@ object VitaminTopBars {
         value: String,
         placeholder: String,
         modifier: Modifier = Modifier,
-        isEnabled: Boolean = true,
+        enabled: Boolean = true,
         actions: List<SearchActionItem> = emptyList(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
-        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TopBarsColors = VitaminTopBarColors.search(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        onValueChange: (String) -> Unit,
         navigationIcon: @Composable VitaminSearchNavigationIconButtons.() -> Unit,
-        onValueChange: (String) -> Unit
     )
 }
 ```
@@ -151,14 +152,15 @@ Parameters | Descriptions
 `value: String` | The value of your search
 `placeholder: String` | The placeholder value inside the text input of the TopBar
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`isEnabled: Boolean = true` | True if you can type in the search bar, otherwise false
+`enabled: Boolean = true` | True if you can type in the search bar, otherwise false
 `actions: List<SearchActionItem> = emptyList()` | The `SearchActionItem` actions of your topBar. `SearchActionItem` define the look and the event associated to an item in the topBar
-`textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
-`interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `keyboardOptions: KeyboardOptions = KeyboardOptions.Default` | Software keyboard options that contains options such as KeyboardType or ImeAction
 `keyboardActions: KeyboardActions = KeyboardActions.Default` | When the text input emit an IME action, the corresponding callback is called
-`navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null` | The navigation icon displayed at the start of the TopBar
+`interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
+`colors: TopBarsColors = VitaminTopBarColors.search()` | The colors of the background and the content elements in enabled and disabled mode
+`textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
 `onValueChange: (String) -> Unit` | The callback to be called when the user type a new character
+`navigationIcon: (@Composable VitaminNavigationIconButtons.() -> Unit)? = null` | The navigation icon displayed at the start of the TopBar
 
 ### BottomNavigation
 
@@ -168,6 +170,7 @@ object VitaminBottomNavigations {
     fun Primary(
         actions: List<SelectedActionItem>,
         modifier: Modifier = Modifier,
+        colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()
     )
 }
 ```
@@ -207,3 +210,4 @@ Parameters | Descriptions
 -- | --
 `actions: List<SelectedActionItem>` | The `SelectedActionItem` actions of your bottom navigation. `SelectedActionItem` define the look and the event associated to an item in the bottom navigation
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
+`colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()` | The colors of the background and the content elements in selected and unselected mode
