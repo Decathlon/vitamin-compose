@@ -23,8 +23,9 @@ object VitaminProgressBars {
     fun Linear(
         progress: Float,
         modifier: Modifier = Modifier,
-        size: LinearSizes = VitaminLinearProgressBarSizes.smallSize(),
-        label: String? = null
+        label: String? = null,
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: LinearProgressBarSizes = VitaminLinearProgressBarSizes.medium(),
     )
 }
 ```
@@ -37,8 +38,6 @@ a label above the progress bar.
 ```kotlin
 VitaminProgressBars.Linear(
     progress = 0.1f,
-    modifier = Modifier.progressScreenModifier(),
-    size = VitaminLinearProgressBarSizes.smallSize(),
     label = "Download"
 )
 ```
@@ -47,8 +46,9 @@ Parameters | Descriptions
 -- | --
 `progress: Float` | The progress of this progress indicator, where 0.0 represents no progress and 1.0 represents full progress
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`size: LinearSizes = VitaminLinearProgressBarSizes.smallSize()` | Different sizes for the progress bar
 `label: String? = null` | The optional label above the progress bar with the progression at the end
+`colors: ProgressBarColors = VitaminProgressBarColors.primary()` | The colors of the background, the progress and the label
+`sizes: LinearSizes = VitaminLinearProgressBarSizes.medium()` | Different sizes for the progress bar
 
 #### Indeterminate
 
@@ -57,8 +57,9 @@ object VitaminProgressBars {
     @Composable
     fun Linear(
         modifier: Modifier = Modifier,
-        size: LinearSizes = VitaminLinearProgressBarSizes.smallSize(),
-        label: String? = null
+        label: String? = null,
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: LinearProgressBarSizes = VitaminLinearProgressBarSizes.medium(),
     )
 }
 ```
@@ -70,8 +71,6 @@ parameter but you can customize the size and add a label above the progress bar.
 
 ```kotlin
 VitaminProgressBars.Linear(
-    modifier = Modifier.progressScreenModifier(),
-    size = VitaminLinearProgressBarSizes.smallSize(),
     label = "Download"
 )
 ```
@@ -79,8 +78,9 @@ VitaminProgressBars.Linear(
 Parameters | Descriptions
 -- | --
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`size: LinearSizes = VitaminLinearProgressBarSizes.smallSize()` | Different sizes for the progress bar
 `label: String? = null` | The optional label above the progress bar with the progression at the end
+`colors: ProgressBarColors = VitaminProgressBarColors.primary()` | The colors of the background, the progress and the label
+`sizes: LinearSizes = VitaminLinearProgressBarSizes.medium()` | Different sizes for the progress bar
 
 ### Circular ProgressBars
 
@@ -92,7 +92,8 @@ object VitaminProgressBars {
     fun Circular(
         progress: Float,
         modifier: Modifier = Modifier,
-        size: CircularSizes = VitaminCircularProgressBarSizes.smallSize(),
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.smallSize(),
         content: (@Composable VitaminCircularContent.() -> Unit)? = null
     )
 }
@@ -106,8 +107,6 @@ a content inside the circular progress bar.
 ```kotlin
 VitaminProgressBars.Circular(
     progress = 0.6f,
-    modifier = Modifier.progressScreenModifier(),
-    size = VitaminCircularProgressBarSizes.mediumSize(),
     content = {
         ImageCircular(
             painter = painterResource(id = R.drawable.store_decathlon),
@@ -121,7 +120,8 @@ Parameters | Descriptions
 -- | --
 `progress: Float` | The progress of this progress indicator, where 0.0 represents no progress and 1.0 represents full progress
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`size: CircularSizes = VitaminCircularProgressBarSizes.smallSize()` | Different sizes for the progress bar
+`colors: ProgressBarColors = VitaminProgressBarColors.primary()` | The colors of the background, the progress and the optional label
+`sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.smallSize()` | Different sizes for the progress bar
 `content: (@Composable VitaminCircularContent.() -> Unit)? = null` | The optional content inside the circular progress bar
 
 #### Indeterminate
@@ -131,7 +131,8 @@ object VitaminProgressBars {
     @Composable
     fun Circular(
         modifier: Modifier = Modifier,
-        size: CircularSizes = VitaminCircularProgressBarSizes.smallSize(),
+        colors: ProgressBarColors = VitaminProgressBarColors.primary(),
+        sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.smallSize(),
         content: (@Composable VitaminCircularContent.() -> Unit)? = null
     )
 }
@@ -144,8 +145,6 @@ parameter but you can customize the size and add a content inside the circular p
 
 ```kotlin
 VitaminProgressBars.Circular(
-    modifier = Modifier.progressScreenModifier(),
-    size = VitaminCircularProgressBarSizes.mediumSize(),
     content = {
         ImageCircular(
             painter = painterResource(id = R.drawable.store_decathlon),
@@ -158,5 +157,6 @@ VitaminProgressBars.Circular(
 Parameters | Descriptions
 -- | --
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
-`size: CircularSizes = VitaminCircularProgressBarSizes.smallSize()` | Different sizes for the progress bar
+`colors: ProgressBarColors = VitaminProgressBarColors.primary()` | The colors of the background, the progress and the optional label
+`sizes: CircularProgressBarSizes = VitaminCircularProgressBarSizes.smallSize()` | Different sizes for the progress bar
 `content: (@Composable VitaminCircularContent.() -> Unit)? = null` | The optional content inside the circular progress bar
