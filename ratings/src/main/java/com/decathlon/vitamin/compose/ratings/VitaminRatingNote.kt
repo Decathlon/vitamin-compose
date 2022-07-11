@@ -11,8 +11,8 @@ internal object VitaminRatingNote {
         number: Float,
         maxValue: Int,
         nbComments: Int?,
-        colors: RatingsColors,
-        sizes: RatingsSizes
+        colors: RatingColors,
+        sizes: RatingSizes
     ) {
         Note(
             number = number,
@@ -33,8 +33,8 @@ internal object VitaminRatingNote {
     fun Note(
         number: Float,
         maxValue: Int,
-        colors: RatingsColors,
-        sizes: RatingsSizes,
+        colors: RatingColors,
+        sizes: RatingSizes,
         rounded: Float = 10.0f
     ) {
         val numberRounded = (number * rounded).roundToInt() / rounded
@@ -48,8 +48,8 @@ internal object VitaminRatingNote {
     @Composable
     fun Comments(
         nbComments: Int,
-        colors: RatingsColors,
-        sizes: RatingsSizes
+        colors: RatingColors,
+        sizes: RatingSizes
     ) {
         Text(
             text = "($nbComments)",
