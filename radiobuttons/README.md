@@ -20,11 +20,12 @@ object VitaminRadioButtons {
     @Composable
     fun Primary(
         selected: Boolean,
-        modifier: Modifier = Modifier,
         onClick: (() -> Unit)?,
+        modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        colors: RadioButtonColors = VitaminRadioButtonsColors.primary(selected = selected),
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: RadioButtonColors = VitaminRadioButtonColors.primary(),
+        sizes: RadioButtonSizes = VitaminRadioButtonSizes.medium(),
         endContent: (@Composable () -> Unit)? = null
     )
 }
@@ -49,9 +50,10 @@ VitaminRadioButtons.Primary(
 Parameters | Descriptions
 -- | --
 `selected: Boolean` | Whether radio button is selected or unselected
-`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `onClick: (() -> Unit)?` | The callback to be called when the state of the radio button changed
+`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can check the radio button, otherwise false
-`colors: RadioButtonColors = VitaminRadioButtonsColors.primary(selected)` | The color of the radio button
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the radio button
+`colors: RadioButtonColors = VitaminRadioButtonColors.primary()` | The colors of the radio button and the optional label
+`sizes: RadioButtonSizes = VitaminRadioButtonSizes.medium()` | The sizes for the radio button, paddings and optional label
 `endContent: (@Composable () -> Unit)? = null` | The optional end content displayed after the radio button
