@@ -21,7 +21,7 @@ class VitaminPricesTest {
         val price = "50 €"
         composeTestRule.setContent {
             VitaminTheme {
-                VitaminPrices.Strikethrough(price, VitaminPriceSizes.small)
+                VitaminPrices.Strikethrough(price, sizes = VitaminPriceSizes.small())
             }
         }
 
@@ -38,7 +38,7 @@ class VitaminPricesTest {
         val price = "50 €"
         composeTestRule.setContent {
             VitaminTheme {
-                VitaminPrices.Default(price, VitaminPriceSizes.small)
+                VitaminPrices.Default(price, sizes = VitaminPriceSizes.small())
             }
         }
 
@@ -51,7 +51,7 @@ class VitaminPricesTest {
         val price = "50 €"
         composeTestRule.setContent {
             VitaminTheme {
-                VitaminPrices.Accent(price, VitaminPriceSizes.small)
+                VitaminPrices.Accent(price, sizes = VitaminPriceSizes.small())
             }
         }
 
@@ -66,7 +66,7 @@ class VitaminPricesTest {
         val price = "50 €"
         composeTestRule.setContent {
             VitaminTheme {
-                VitaminPrices.Alert(price, VitaminPriceSizes.small)
+                VitaminPrices.Alert(price, sizes = VitaminPriceSizes.small())
             }
         }
 

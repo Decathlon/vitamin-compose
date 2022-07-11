@@ -37,9 +37,9 @@ object Prices : Screen {
                     modifier = Modifier.fillMaxWidth().padding(vertical = 20.dp),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    VitaminPrices.Default(text = "250 €", size = VitaminPriceSizes.large)
-                    VitaminPrices.Default(text = "250 €", size = VitaminPriceSizes.medium)
-                    VitaminPrices.Default(text = "250 €", size = VitaminPriceSizes.small)
+                    VitaminPrices.Default(text = "250 €", sizes = VitaminPriceSizes.large())
+                    VitaminPrices.Default(text = "250 €", sizes = VitaminPriceSizes.medium())
+                    VitaminPrices.Default(text = "250 €", sizes = VitaminPriceSizes.small())
                 }
 
                 Text("Accent")
@@ -49,15 +49,15 @@ object Prices : Screen {
                 ) {
                     VitaminPrices.Accent(
                         text = "250 €",
-                        size = VitaminPriceSizes.large
+                        sizes = VitaminPriceSizes.large()
                     )
                     VitaminPrices.Accent(
                         text = "250 €",
-                        size = VitaminPriceSizes.medium
+                        sizes = VitaminPriceSizes.medium()
                     )
                     VitaminPrices.Accent(
                         text = "250 €",
-                        size = VitaminPriceSizes.small
+                        sizes = VitaminPriceSizes.small()
                     )
                 }
 
@@ -68,15 +68,15 @@ object Prices : Screen {
                 ) {
                     VitaminPrices.Alert(
                         text = "250 €",
-                        size = VitaminPriceSizes.large
+                        sizes = VitaminPriceSizes.large()
                     )
                     VitaminPrices.Alert(
                         text = "250 €",
-                        size = VitaminPriceSizes.medium
+                        sizes = VitaminPriceSizes.medium()
                     )
                     VitaminPrices.Alert(
                         text = "250 €",
-                        size = VitaminPriceSizes.small
+                        sizes = VitaminPriceSizes.small()
                     )
                 }
 
@@ -87,15 +87,15 @@ object Prices : Screen {
                 ) {
                     VitaminPrices.Strikethrough(
                         text = "250 €",
-                        size = VitaminPriceSizes.large
+                        sizes = VitaminPriceSizes.large()
                     )
                     VitaminPrices.Strikethrough(
                         text = "250 €",
-                        size = VitaminPriceSizes.medium
+                        sizes = VitaminPriceSizes.medium()
                     )
                     VitaminPrices.Strikethrough(
                         text = "250 €",
-                        size = VitaminPriceSizes.small
+                        sizes = VitaminPriceSizes.small()
                     )
                 }
             }
