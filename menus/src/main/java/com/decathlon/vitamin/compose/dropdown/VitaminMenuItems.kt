@@ -25,8 +25,9 @@ object VitaminMenuItems {
      * @param onClick The callback to be called when the user click on the dropdown item
      * @param modifier The [Modifier] to be applied to this BottomNavigation
      * @param enabled True if you can click on the button, otherwise false
-     * @param contentPadding The padding applied to the content of this menu item
      * @param interactionSource Representing the stream of interaction for the dropdown item
+     * @param colors The colors of the background and the content elements
+     * @param contentPadding The padding applied to the content of this menu item
      * @param startIcon Icon displayed at the beginning of the dropdown item
      * @param endIcon Icon displayed at the end of the dropdown item
      * @param content Option label displayed in the center of the dropdown item
@@ -36,26 +37,27 @@ object VitaminMenuItems {
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: MenuItemColors = VitaminMenuItemColors.primary(),
+        contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
         startIcon: (@Composable () -> Unit)? = null,
         endIcon: (@Composable () -> Unit)? = null,
         content: @Composable () -> Unit
     ) {
         DropdownMenuItem(
             onClick = onClick,
-            modifier = modifier.background(color = VitaminMenuItemColors.primary.background),
+            modifier = modifier.background(color = colors.background),
             enabled = enabled,
             contentPadding = contentPadding,
             interactionSource = interactionSource,
             content = {
                 ProvideTextStyle(
                     VitaminTheme.typography.subtitle1
-                        .copy(color = VitaminMenuItemColors.primary.contentColor)
+                        .copy(color = colors.contentColor)
                 ) {
                     if (startIcon != null) {
                         CompositionLocalProvider(
-                            LocalContentColor provides VitaminMenuItemColors.primary.iconColor,
+                            LocalContentColor provides colors.iconColor,
                             LocalContentAlpha provides ContentAlpha.high
                         ) {
                             startIcon()
@@ -67,7 +69,7 @@ object VitaminMenuItems {
                     }
                     if (endIcon != null) {
                         CompositionLocalProvider(
-                            LocalContentColor provides VitaminMenuItemColors.primary.iconColor,
+                            LocalContentColor provides colors.iconColor,
                             LocalContentAlpha provides ContentAlpha.high
                         ) {
                             endIcon()

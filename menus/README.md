@@ -71,8 +71,9 @@ object VitaminMenuItems {
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: MenuItemColors = VitaminMenuItemColors.primary(),
+        contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
         startIcon: (@Composable () -> Unit)? = null,
         endIcon: (@Composable () -> Unit)? = null,
         content: @Composable () -> Unit
@@ -91,8 +92,9 @@ Parameters | Descriptions
 `onClick: () -> Unit` | The callback to be called when the user click on the dropdown item
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can click on the button, otherwise false
-`contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding` | The padding applied to the content of this menu item
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the dropdown item
+`colors: MenuItemColors = VitaminMenuItemColors.primary()` | The colors of the background and the content elements
+`contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding` | The padding applied to the content of this menu item
 `startIcon: (@Composable () -> Unit)? = null` | Icon displayed at the beginning of the dropdown item
 `endIcon: (@Composable () -> Unit)? = null` | Icon displayed at the end of the dropdown item
 `content: @Composable () -> Unit` | Option label displayed in the center of the dropdown item
