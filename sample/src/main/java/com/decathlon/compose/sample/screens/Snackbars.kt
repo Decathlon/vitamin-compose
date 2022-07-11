@@ -32,12 +32,12 @@ object Snackbars : Screen {
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 item {
-                    VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar")
+                    VitaminSnackbars.Primary(text = "This is the description of the snackbar")
                 }
                 item {
-                    VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar",
+                    VitaminSnackbars.Primary(text = "This is the description of the snackbar",
                         action = {
-                            SnackbarAction(
+                            Button(
                                 text = "Button",
                                 onClick = { Log.d("Snackbars", "Click on Action") }
                             )
@@ -45,9 +45,9 @@ object Snackbars : Screen {
                     )
                 }
                 item {
-                    VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar",
+                    VitaminSnackbars.Primary(text = "This is the description of the snackbar",
                         action = {
-                            SnackbarAction(
+                            Button(
                                 text = "Button",
                                 onClick = { Log.d("Snackbars", "Click on Action") }
                             )

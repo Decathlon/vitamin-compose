@@ -9,14 +9,14 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 object VitaminSnackbars {
     @Composable
-    fun VitaminSnackbar(
+    fun Primary(
         text: String,
         modifier: Modifier = Modifier,
-        action: @Composable (VitaminSnackbarsAction.() -> Unit)? = null,
+        action: @Composable (VitaminSnackbarsActions.() -> Unit)? = null,
         actionOnNewLine: Boolean = false
     ) = Snackbar(
         modifier = modifier,
-        action = { action?.let { VitaminSnackbarsAction.it() } },
+        action = { action?.let { VitaminSnackbarsActions.it() } },
         actionOnNewLine = actionOnNewLine,
         backgroundColor = VitaminTheme.colors.vtmnBackgroundPrimaryReversed,
         contentColor = VitaminTheme.colors.vtmnContentPrimaryReversed,
@@ -34,7 +34,7 @@ object VitaminSnackbars {
 @Composable
 fun PreviewVitaminSnackBarWithTextOnly() {
     VitaminTheme {
-        VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar")
+        VitaminSnackbars.Primary(text = "This is the description of the snackbar")
     }
 }
 
@@ -42,9 +42,9 @@ fun PreviewVitaminSnackBarWithTextOnly() {
 @Composable
 fun PreviewVitaminSnackBarWithActionOneLine() {
     VitaminTheme {
-        VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar",
+        VitaminSnackbars.Primary(text = "This is the description of the snackbar",
             action = {
-                VitaminSnackbarsAction.SnackbarAction(
+                VitaminSnackbarsActions.Button(
                     text = "Button",
                     onClick = { /*TODO*/ }
                 )
@@ -57,9 +57,9 @@ fun PreviewVitaminSnackBarWithActionOneLine() {
 @Composable
 fun PreviewVitaminSnackBarWithActionTwoLine() {
     VitaminTheme {
-        VitaminSnackbars.VitaminSnackbar(text = "This is the description of the snackbar",
+        VitaminSnackbars.Primary(text = "This is the description of the snackbar",
             action = {
-                VitaminSnackbarsAction.SnackbarAction(
+                VitaminSnackbarsActions.Button(
                     text = "Button",
                     onClick = { /*TODO*/ }
                 )

@@ -8,10 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
-object VitaminSnackbarsAction {
+object VitaminSnackbarsActions {
 
     @Composable
-    fun SnackbarAction(
+    fun Button(
         text: String,
         onClick: () -> Unit,
         modifier: Modifier = Modifier,
@@ -25,7 +25,7 @@ object VitaminSnackbarsAction {
             )
         ) {
             Text(text = text,
-            style = VitaminTheme.typography.button)
+                style = VitaminTheme.typography.button)
         }
 }
 
@@ -33,6 +33,6 @@ object VitaminSnackbarsAction {
 @Composable
 fun PreviewSnackbarAction() {
     VitaminTheme {
-        VitaminSnackbarsAction.SnackbarAction(text = "Action", onClick = { /*Click*/ })
+        VitaminSnackbarsActions.Button(text = "Action", onClick = { /*Click*/ })
     }
 }
