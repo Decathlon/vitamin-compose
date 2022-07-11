@@ -34,33 +34,33 @@ object VitaminModals {
      * The default modal used to provide critical information or ask for decision.
      * @param content The content to be displayed below the title
      * @param onDismissRequest The callback to be called when the user need to dismiss the modal
-     * @param modifier The `Modifier` to be applied to the component
+     * @param modifier The [Modifier] to be applied to the component
      * @param title The optional title to be displayed at the top of the modal
      * @param iconRes The optional leading icon to be displayed at the start of the title
+     * @param buttonsOrientation The optional buttons orientation to display buttons vertically or horizontally
      * @param contentScrollState The optional scroll state to observe the scrolling
+     * @param colors The optional sizes used to define colors of icon, title, content and background of the modal
+     * @param sizes The optional sizes used to define modal padding, spacers sizes and icon size
      * @param positiveButton The optional positive button to be displayed at the bottom of the modal
      * @param negativeButton The optional negative button to be displayed at the bottom of the modal
      * @param neutralButton The optional neutral button to be displayed at the bottom of the modal
-     * @param buttonsOrientation The optional buttons orientation to display buttons vertically or horizontally
-     * @param sizes The optional sizes used to define modal padding, spacers sizes and icon size
-     * @param colors The optional sizes used to define colors of icon, title, content and background of the modal
      */
     @Composable
-    fun Default(
+    fun Primary(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
         title: String? = null,
         @DrawableRes iconRes: Int? = null,
+        buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,
         contentScrollState: ScrollState = rememberScrollState(),
+        colors: ModalColors = VitaminModalColors.primary(),
+        sizes: ModalSizes = VitaminModalSizes.medium(),
         positiveButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
         negativeButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
         neutralButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
-        buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,
-        sizes: ModalSizes = VitaminModalSizes.default(),
-        colors: ModalColors = VitaminModalColors.default()
     ) {
-        VitaminModal(
+        VitaminModalImpl(
             content = content,
             onDismissRequest = onDismissRequest,
             modifier = modifier,
@@ -78,7 +78,7 @@ object VitaminModals {
 }
 
 @Composable
-internal fun VitaminModal(
+internal fun VitaminModalImpl(
     content: @Composable (() -> Unit),
     onDismissRequest: () -> Unit,
     modifier: Modifier,

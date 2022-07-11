@@ -113,7 +113,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 content = {
                     Text(
                         text = message
@@ -138,7 +138,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 content = {
                     Text(
@@ -161,7 +161,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -185,7 +185,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -194,19 +194,19 @@ object Modals : Screen {
                     )
                 },
                 positiveButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Positive",
                         onClick = { showDialog.value = false }
                     )
                 },
                 negativeButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Negative",
                         onClick = { showDialog.value = false }
                     )
                 },
                 neutralButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Neutral",
                         onClick = { showDialog.value = false }
                     )
@@ -227,7 +227,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -237,19 +237,19 @@ object Modals : Screen {
                 },
                 contentScrollState = rememberScrollState(),
                 positiveButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Positive",
                         onClick = { showDialog.value = false }
                     )
                 },
                 negativeButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Negative",
                         onClick = { showDialog.value = false }
                     )
                 },
                 neutralButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Neutral",
                         onClick = { showDialog.value = false }
                     )
@@ -270,7 +270,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -279,19 +279,19 @@ object Modals : Screen {
                     )
                 },
                 positiveButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Extra extra long positive button",
                         onClick = { showDialog.value = false }
                     )
                 },
                 negativeButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Extra extra long negative button",
                         onClick = { showDialog.value = false }
                     )
                 },
                 neutralButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Extra extra long neutral button",
                         onClick = { showDialog.value = false }
                     )
@@ -313,7 +313,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Default(
+            VitaminModals.Primary(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -349,19 +349,19 @@ object Modals : Screen {
                     }
                 },
                 positiveButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Positive",
                         onClick = { showDialog.value = false }
                     )
                 },
                 negativeButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Negative",
                         onClick = { showDialog.value = false }
                     )
                 },
                 neutralButton = {
-                    VitaminModalButtons.Default(
+                    VitaminModalButtons.Primary(
                         text = "Neutral",
                         onClick = { showDialog.value = false }
                     )
