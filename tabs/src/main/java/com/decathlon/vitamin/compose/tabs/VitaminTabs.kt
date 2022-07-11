@@ -6,19 +6,11 @@ import androidx.compose.material.ScrollableTabRow
 import androidx.compose.material.TabRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-
-data class TabItem(
-    val label: String,
-    val icon: Painter? = null,
-    val topIcon: Boolean = false,
-    var selected: Boolean = false
-)
 
 object VitaminTabs {
     /**
@@ -34,20 +26,19 @@ object VitaminTabs {
     fun Fixed(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        colors: TabsColors = VitaminTabsColors.primary(),
+        colors: TabColors = VitaminTabColors.primary(),
         textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
         val selectedTab = tabItems.firstOrNull { it.selected } ?: tabItems.first()
         val indexOfSelectedTab = tabItems.indexOf(selectedTab)
-
         TabRow(
             selectedTabIndex = indexOfSelectedTab,
-            backgroundColor = colors.tabBackgroundColor,
+            backgroundColor = colors.backgroundColor,
             indicator = {
                 VitaminTabItemIndicator(
-                    it, indexOfSelectedTab, colors.tabIndicatorColor
+                    it, indexOfSelectedTab, colors.indicatorColor
                 )
             },
             modifier = modifier.height(getTabHeight(tabItems))
@@ -79,7 +70,7 @@ object VitaminTabs {
     fun Scrollable(
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
-        colors: TabsColors = VitaminTabsColors.primary(),
+        colors: TabColors = VitaminTabColors.primary(),
         textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
@@ -90,12 +81,12 @@ object VitaminTabs {
         Column(modifier = modifier) {
             ScrollableTabRow(
                 selectedTabIndex = indexOfSelectedTab,
-                backgroundColor = colors.tabBackgroundColor,
+                backgroundColor = colors.backgroundColor,
                 indicator = {
                     VitaminTabItemIndicator(
                         it,
                         indexOfSelectedTab,
-                        colors.tabIndicatorColor
+                        colors.indicatorColor
                     )
                 },
                 modifier = Modifier.height(getTabHeight(tabItems))
