@@ -18,8 +18,8 @@ import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-import com.decathlon.vitamin.compose.tags.VitaminTag
 import com.decathlon.vitamin.compose.tags.VitaminTagColors
+import com.decathlon.vitamin.compose.tags.VitaminTags
 
 object Tags : Screen {
     override val name: String
@@ -31,17 +31,17 @@ object Tags : Screen {
     @Composable
     override fun Screen() {
         val allTagColors = listOf(
-            Pair("Accent", VitaminTagColors.accent),
-            Pair("Alert", VitaminTagColors.alert),
-            Pair("Brand", VitaminTagColors.brand),
-            Pair("Decorative Amethyst", VitaminTagColors.decorativeAmethyst),
-            Pair("Decorative Brick", VitaminTagColors.decorativeBrick),
-            Pair("Decorative Cobalt", VitaminTagColors.decorativeCobalt),
-            Pair("Decorative Emerald", VitaminTagColors.decorativeEmerald),
-            Pair("Decorative Gold", VitaminTagColors.decorativeGold),
-            Pair("Decorative Gravel", VitaminTagColors.decorativeGravel),
-            Pair("Decorative Jade", VitaminTagColors.decorativeJade),
-            Pair("Decorative Saffron", VitaminTagColors.decorativeSaffron)
+            Pair("Accent", VitaminTagColors.accent()),
+            Pair("Alert", VitaminTagColors.alert()),
+            Pair("Brand", VitaminTagColors.brand()),
+            Pair("Decorative Amethyst", VitaminTagColors.decorativeAmethyst()),
+            Pair("Decorative Brick", VitaminTagColors.decorativeBrick()),
+            Pair("Decorative Cobalt", VitaminTagColors.decorativeCobalt()),
+            Pair("Decorative Emerald", VitaminTagColors.decorativeEmerald()),
+            Pair("Decorative Gold", VitaminTagColors.decorativeGold()),
+            Pair("Decorative Gravel", VitaminTagColors.decorativeGravel()),
+            Pair("Decorative Jade", VitaminTagColors.decorativeJade()),
+            Pair("Decorative Saffron", VitaminTagColors.decorativeSaffron())
         )
         val context = LocalContext.current
 
@@ -54,13 +54,13 @@ object Tags : Screen {
                 items(allTagColors) { color ->
                     Row(modifier = Modifier.padding(10.dp)) {
                         // Simple tag
-                        VitaminTag(label = color.first, color = color.second)
+                        VitaminTags.Accent(label = color.first, colors = color.second)
 
                         Spacer(Modifier.width(8.dp))
 
                         // Tag with icon
-                        VitaminTag(
-                            label = color.first, color = color.second,
+                        VitaminTags.Accent(
+                            label = color.first, colors = color.second,
                             iconPainter = painterResource(
                                 id = R.drawable.ic_vtmn_football_line
                             )
@@ -70,13 +70,13 @@ object Tags : Screen {
                 items(allTagColors) { color ->
                     Column(modifier = Modifier.padding(10.dp)) {
                         // Clickable tag
-                        VitaminTag(label = "Clickable ${color.first}", color = color.second) {
+                        VitaminTags.Accent(label = "Clickable ${color.first}", colors = color.second) {
                             Toast.makeText(context, "Click on tag ${color.first}", Toast.LENGTH_SHORT).show()
                         }
 
                         // Clickable tag with icon
-                        VitaminTag(
-                            label = "Clickable ${color.first}", color = color.second,
+                        VitaminTags.Accent(
+                            label = "Clickable ${color.first}", colors = color.second,
                             iconPainter = painterResource(
                                 id = R.drawable.ic_vtmn_football_fill
                             )
