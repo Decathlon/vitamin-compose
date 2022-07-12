@@ -37,13 +37,15 @@ object TextInputs : Screen {
                 item {
                     VitaminTextInputs.Outlined(
                         value = "",
-                        label = "Label"
-                    ) {}
+                        label = "Label",
+                        onValueChange = {}
+                    )
                 }
                 item {
                     VitaminTextInputs.Outlined(
                         value = "Input",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         icon = {
@@ -52,7 +54,7 @@ object TextInputs : Screen {
                                 contentDescription = null
                             )
                         }
-                    ) {}
+                    )
                 }
                 item {
                     val expanded = remember { mutableStateOf(false) }
@@ -81,46 +83,52 @@ object TextInputs : Screen {
                     VitaminTextInputs.Outlined(
                         value = "",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         colors = TextInputsState.error()
-                    ) {}
+                    )
                 }
                 item {
                     VitaminTextInputs.Outlined(
                         value = "",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         colors = TextInputsState.success()
-                    ) {}
+                    )
                 }
                 item {
                     VitaminTextInputs.Outlined(
                         value = "",
                         label = "Label",
-                        isEnabled = false
-                    ) {}
+                        onValueChange = {},
+                        enabled = false
+                    )
                 }
                 item {
                     VitaminTextInputs.Outlined(
                         value = "Input",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        isEnabled = false
-                    ) {}
+                        enabled = false
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
                         value = "",
-                        label = "Label"
-                    ) {}
+                        label = "Label",
+                        onValueChange = {},
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
                         value = "Input",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         icon = {
@@ -129,7 +137,7 @@ object TextInputs : Screen {
                                 contentDescription = null
                             )
                         }
-                    ) {}
+                    )
                 }
                 item {
                     val expanded = remember { mutableStateOf(false) }
@@ -158,35 +166,39 @@ object TextInputs : Screen {
                     VitaminTextInputs.Filled(
                         value = "",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         colors = TextInputsState.error()
-                    ) {}
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
                         value = "",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
                         colors = TextInputsState.success()
-                    ) {}
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
                         value = "",
                         label = "Label",
-                        isEnabled = false
-                    ) {}
+                        onValueChange = {},
+                        enabled = false
+                    )
                 }
                 item {
                     VitaminTextInputs.Filled(
                         value = "Input",
                         label = "Label",
+                        onValueChange = {},
                         helperText = "Helper Text",
                         counter = 999 to 999,
-                        isEnabled = false
-                    ) {}
+                        enabled = false
+                    )
                 }
             }
         }

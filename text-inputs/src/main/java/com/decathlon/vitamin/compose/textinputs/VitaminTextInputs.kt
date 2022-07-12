@@ -43,47 +43,47 @@ object VitaminTextInputs {
      * @param value The value of your text input
      * @param label The label to be displayed inside the text input container and pushed at the top
      * of text input when the component takes the focus
+     * @param onValueChange The callback to be called when the user type a new character
      * @param modifier The `Modifier` to be applied to the component
-     * @param icon The optional trailing icon to be displayed at the end of the text input container
      * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
      * @param counter The optional counter to be displayed the the end bottom outside the text input container
-     * @param colors The color to notify your user if they are in normal, error or success state
-     * @param textStyle The typography of the text inside the text input
-     * @param transformation Transforms the visual representation of the input value
-     * @param interactionSource Representing the stream of interaction for the text input
-     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
-     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
      * @param singleLine True if the text input doesn't extend their height, otherwise, false
      * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
-     * @param isEnabled True if you can type in the text input, otherwise false
      * @param readOnly True if you don't want open the keyboard when the user click on the text field
-     * @param onValueChange The callback to be called when the user type a new character
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param transformation Transforms the visual representation of the input value
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
      */
     @Composable
     fun Outlined(
         value: String,
         label: String,
+        onValueChange: (String) -> Unit,
         modifier: Modifier = Modifier,
-        icon: @Composable (() -> Unit)? = null,
         helperText: String? = null,
         counter: Pair<Int, Int>? = null,
-        colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
-        transformation: VisualTransformation = TextInputsTransformations.none,
-        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
-        keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
-        keyboardActions: KeyboardActions = KeyboardActions.Default,
         singleLine: Boolean = false,
         maxLines: Int = Int.MAX_VALUE,
-        isEnabled: Boolean = true,
         readOnly: Boolean = false,
-        onValueChange: (String) -> Unit
+        enabled: Boolean = true,
+        transformation: VisualTransformation = TextInputsTransformations.none,
+        keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+        keyboardActions: KeyboardActions = KeyboardActions.Default,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        icon: @Composable (() -> Unit)? = null
     ) {
-        VitaminTextInputLayout(
+        VitaminTextInputLayoutImpl(
             helperText = helperText,
             counter = counter,
             colors = colors,
-            isEnabled = isEnabled,
+            enabled = enabled,
             textInput = {
                 OutlinedTextField(
                     value = value,
@@ -126,7 +126,7 @@ object VitaminTextInputs {
                     singleLine = singleLine,
                     maxLines = maxLines,
                     modifier = Modifier.fillMaxWidth(),
-                    enabled = isEnabled,
+                    enabled = enabled,
                     readOnly = readOnly,
                     isError = colors.state == State.ERROR,
                     trailingIcon = {
@@ -154,10 +154,10 @@ object VitaminTextInputs {
      * @param label The label to be displayed inside the text input container and pushed at the top
      * of text input when the component takes the focus
      * @param modifier The `Modifier` to be applied to the component
+     * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
-     * @param isEnabled True if you can type in the text input, otherwise false
      * @param children Declare your dropdown menu item components inside your dropdown
      */
     @Composable
@@ -165,10 +165,10 @@ object VitaminTextInputs {
         value: String,
         label: String,
         modifier: Modifier = Modifier,
+        enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.body2,
-        isEnabled: Boolean = true,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
@@ -186,7 +186,7 @@ object VitaminTextInputs {
                     readOnly = true,
                     singleLine = true,
                     maxLines = 1,
-                    isEnabled = isEnabled,
+                    enabled = enabled,
                     onValueChange = {},
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
@@ -208,47 +208,47 @@ object VitaminTextInputs {
      * @param value The value of your text input
      * @param label The label to be displayed inside the text input container and pushed at the top
      * of text input when the component takes the focus
+     * @param onValueChange The callback to be called when the user type a new character
      * @param modifier The `Modifier` to be applied to the component
-     * @param icon The optional trailing icon to be displayed at the end of the text input container
      * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
      * @param counter The optional counter to be displayed the the end bottom outside the text input container
+     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
+     * @param singleLine True if the text input doesn't extend their height, otherwise, false
+     * @param readOnly True if you don't want open the keyboard when the user click on the text field
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param transformation Transforms the visual representation of the input value
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
-     * @param transformation Transforms the visual representation of the input value
-     * @param interactionSource Representing the stream of interaction for the text input
-     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
-     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
-     * @param singleLine True if the text input doesn't extend their height, otherwise, false
-     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
-     * @param isEnabled True if you can type in the text input, otherwise false
-     * @param readOnly True if you don't want open the keyboard when the user click on the text field
-     * @param onValueChange The callback to be called when the user type a new character
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
      */
     @Composable
     fun Filled(
         value: String,
         label: String,
+        onValueChange: (String) -> Unit,
         modifier: Modifier = Modifier,
-        icon: @Composable (() -> Unit)? = null,
         helperText: String? = null,
         counter: Pair<Int, Int>? = null,
-        colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        maxLines: Int = Int.MAX_VALUE,
+        singleLine: Boolean = false,
+        readOnly: Boolean = false,
+        enabled: Boolean = true,
         transformation: VisualTransformation = TextInputsTransformations.none,
-        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
-        singleLine: Boolean = false,
-        maxLines: Int = Int.MAX_VALUE,
-        isEnabled: Boolean = true,
-        readOnly: Boolean = false,
-        onValueChange: (String) -> Unit
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.body2,
+        icon: @Composable (() -> Unit)? = null,
     ) {
-        VitaminTextInputLayout(
+        VitaminTextInputLayoutImpl(
             helperText = helperText,
             counter = counter,
             colors = colors,
-            isEnabled = isEnabled,
+            enabled = enabled,
             textInput = {
                 TextField(
                     value = value,
@@ -291,7 +291,7 @@ object VitaminTextInputs {
                     singleLine = singleLine,
                     maxLines = maxLines,
                     modifier = Modifier.fillMaxWidth(),
-                    enabled = isEnabled,
+                    enabled = enabled,
                     isError = colors.state == State.ERROR,
                     readOnly = readOnly,
                     trailingIcon = {
@@ -319,10 +319,10 @@ object VitaminTextInputs {
      * @param label The label to be displayed inside the text input container and pushed at the top
      * of text input when the component takes the focus
      * @param modifier The `Modifier` to be applied to the component
+     * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
-     * @param isEnabled True if you can type in the text input, otherwise false
      * @param children Declare your dropdown menu item components inside your dropdown
      */
     @Composable
@@ -330,10 +330,10 @@ object VitaminTextInputs {
         value: String,
         label: String,
         modifier: Modifier = Modifier,
+        enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.body2,
-        isEnabled: Boolean = true,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
@@ -351,7 +351,7 @@ object VitaminTextInputs {
                     readOnly = true,
                     singleLine = true,
                     maxLines = 1,
-                    isEnabled = isEnabled,
+                    enabled = enabled,
                     onValueChange = {},
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
@@ -370,11 +370,11 @@ object VitaminTextInputs {
 }
 
 @Composable
-internal fun VitaminTextInputLayout(
+internal fun VitaminTextInputLayoutImpl(
     helperText: String?,
     counter: Pair<Int, Int>?,
     colors: TextInputStateColors,
-    isEnabled: Boolean,
+    enabled: Boolean,
     textInput: @Composable () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -394,7 +394,7 @@ internal fun VitaminTextInputLayout(
         Row(modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)) {
             helperText?.let {
                 val color = if (colors.state == State.ERROR) colors.textColor
-                else if (!isEnabled) colors.helperColor.copy(ContentAlpha.disabled)
+                else if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
                 else colors.helperColor
                 Text(
                     text = it,
@@ -408,7 +408,7 @@ internal fun VitaminTextInputLayout(
                 )
             }
             counter?.let {
-                val color = if (!isEnabled) colors.helperColor.copy(ContentAlpha.disabled)
+                val color = if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
                 else colors.helperColor
                 Text(
                     text = "${it.first}/${it.second}",

@@ -3,6 +3,7 @@ package com.decathlon.vitamin.compose.textinputs
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
@@ -29,16 +30,20 @@ object TextInputsState {
         focusBorderColor: Color = VitaminTheme.colors.vtmnBorderActive,
         helperColor: Color = VitaminTheme.colors.vtmnContentTertiary,
         iconColor: Color = VitaminTheme.colors.vtmnContentPrimary,
-    ): TextInputStateColors = TextInputStateColors(
-        textColor = textColor,
-        focusTextColor = focusTextColor,
-        borderColor = borderColor,
-        focusBorderColor = focusBorderColor,
-        helperColor = helperColor,
-        iconColor = iconColor,
-        icon = null,
-        state = State.NORMAL
-    )
+    ): TextInputStateColors = remember(
+        textColor, focusTextColor, borderColor, focusBorderColor, helperColor, iconColor
+    ) {
+        TextInputStateColors(
+            textColor = textColor,
+            focusTextColor = focusTextColor,
+            borderColor = borderColor,
+            focusBorderColor = focusBorderColor,
+            helperColor = helperColor,
+            iconColor = iconColor,
+            icon = null,
+            state = State.NORMAL
+        )
+    }
 
     @Composable
     fun error(
@@ -49,16 +54,20 @@ object TextInputsState {
         helperColor: Color = VitaminTheme.colors.vtmnContentTertiary,
         iconColor: Color = VitaminTheme.colors.vtmnBorderNegative,
         @DrawableRes icon: Int = R.drawable.ic_vtmn_error_warning_line
-    ): TextInputStateColors = TextInputStateColors(
-        textColor = textColor,
-        focusTextColor = focusTextColor,
-        borderColor = borderColor,
-        focusBorderColor = focusBorderColor,
-        helperColor = helperColor,
-        iconColor = iconColor,
-        icon = icon,
-        state = State.ERROR
-    )
+    ): TextInputStateColors = remember(
+        textColor, focusTextColor, borderColor, focusBorderColor, helperColor, iconColor
+    ) {
+        TextInputStateColors(
+            textColor = textColor,
+            focusTextColor = focusTextColor,
+            borderColor = borderColor,
+            focusBorderColor = focusBorderColor,
+            helperColor = helperColor,
+            iconColor = iconColor,
+            icon = icon,
+            state = State.ERROR
+        )
+    }
 
     @Composable
     fun success(
@@ -69,14 +78,18 @@ object TextInputsState {
         helperColor: Color = VitaminTheme.colors.vtmnContentTertiary,
         iconColor: Color = VitaminTheme.colors.vtmnBorderPositive,
         @DrawableRes icon: Int = R.drawable.ic_vtmn_check_line
-    ): TextInputStateColors = TextInputStateColors(
-        textColor = textColor,
-        focusTextColor = focusTextColor,
-        borderColor = borderColor,
-        focusBorderColor = focusBorderColor,
-        helperColor = helperColor,
-        iconColor = iconColor,
-        icon = icon,
-        state = State.SUCCESS
-    )
+    ): TextInputStateColors = remember(
+        textColor, focusTextColor, borderColor, focusBorderColor, helperColor, iconColor
+    ) {
+        TextInputStateColors(
+            textColor = textColor,
+            focusTextColor = focusTextColor,
+            borderColor = borderColor,
+            focusBorderColor = focusBorderColor,
+            helperColor = helperColor,
+            iconColor = iconColor,
+            icon = icon,
+            state = State.SUCCESS
+        )
+    }
 }
