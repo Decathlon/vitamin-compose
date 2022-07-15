@@ -10,7 +10,8 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Immutable
 data class RadioButtonSizes(
-    val contentPadding: Dp,
+    val minimumSize: Dp,
+    val padding: Dp,
     val labelStartPadding: Dp,
     val textStyle: TextStyle
 )
@@ -18,12 +19,14 @@ data class RadioButtonSizes(
 object VitaminRadioButtonSizes {
     @Composable
     fun medium(
-        contentPadding: Dp = 4.dp,
+        minimumSize: Dp = 48.dp,
+        padding: Dp = 8.dp,
         labelStartPadding: Dp = 6.dp,
         textStyle: TextStyle = VitaminTheme.typography.body2
-    ): RadioButtonSizes = remember(contentPadding, labelStartPadding, textStyle) {
+    ): RadioButtonSizes = remember(minimumSize, padding, labelStartPadding, textStyle) {
         RadioButtonSizes(
-            contentPadding = contentPadding,
+            minimumSize = minimumSize,
+            padding = padding,
             labelStartPadding = labelStartPadding,
             textStyle = textStyle
         )
