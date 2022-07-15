@@ -29,7 +29,6 @@ object VitaminSnackbars {
     )
 }
 
-
 @Preview
 @Composable
 fun PreviewVitaminSnackBarWithTextOnly() {
@@ -42,7 +41,8 @@ fun PreviewVitaminSnackBarWithTextOnly() {
 @Composable
 fun PreviewVitaminSnackBarWithActionOneLine() {
     VitaminTheme {
-        VitaminSnackbars.Primary(text = "This is the description of the snackbar",
+        VitaminSnackbars.Primary(
+            text = "This is the description of the snackbar",
             action = {
                 VitaminSnackbarsActions.Button(
                     text = "Button",
@@ -57,7 +57,8 @@ fun PreviewVitaminSnackBarWithActionOneLine() {
 @Composable
 fun PreviewVitaminSnackBarWithActionTwoLine() {
     VitaminTheme {
-        VitaminSnackbars.Primary(text = "This is the description of the snackbar",
+        VitaminSnackbars.Primary(
+            text = "This is the description of the snackbar",
             action = {
                 VitaminSnackbarsActions.Button(
                     text = "Button",

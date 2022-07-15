@@ -35,7 +35,8 @@ object Snackbars : Screen {
                     VitaminSnackbars.Primary(text = "This is the description of the snackbar")
                 }
                 item {
-                    VitaminSnackbars.Primary(text = "This is the description of the snackbar",
+                    VitaminSnackbars.Primary(
+                        text = "This is the description of the snackbar",
                         action = {
                             Button(
                                 text = "Button",
@@ -45,7 +46,8 @@ object Snackbars : Screen {
                     )
                 }
                 item {
-                    VitaminSnackbars.Primary(text = "This is the description of the snackbar",
+                    VitaminSnackbars.Primary(
+                        text = "This is the description of the snackbar",
                         action = {
                             Button(
                                 text = "Button",
@@ -58,7 +60,6 @@ object Snackbars : Screen {
             }
         }
     }
-
 }
 
 @Preview(showBackground = true)
