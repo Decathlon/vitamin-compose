@@ -35,41 +35,44 @@ object RadioButtons : Screen {
                     .padding(8.dp)
             ) {
                 item {
+                    val state = remember { mutableStateOf(false) }
                     Text("Unselected")
-                    Spacer(Modifier.height(8.dp))
                     VitaminRadioButtons.Primary(
                         selected = false,
                         onClick = null,
                         enabled = false
                     )
-                    Spacer(Modifier.height(16.dp))
                     VitaminRadioButtons.Primary(
-                        selected = false,
-                        onClick = null,
-                        enabled = true
-                    )
-                    CategorySpacer()
-                }
-                item {
-                    Text("Selected")
-                    Spacer(Modifier.height(8.dp))
-                    VitaminRadioButtons.Primary(
-                        selected = true,
-                        onClick = null,
-                        enabled = false
-                    )
-                    Spacer(Modifier.height(16.dp))
-                    VitaminRadioButtons.Primary(
-                        selected = true,
-                        onClick = null,
+                        selected = state.value,
+                        onClick = {
+                            state.value = true
+                        },
                         enabled = true
                     )
                     CategorySpacer()
                 }
 
                 item {
+                    Text("Selected")
+                    VitaminRadioButtons.Primary(
+                        selected = true,
+                        onClick = null,
+                        enabled = false
+                    )
+                    val state = remember { mutableStateOf(true) }
+                    VitaminRadioButtons.Primary(
+                        selected = state.value,
+                        onClick = {
+                            state.value = true
+                        },
+                        enabled = true
+                    )
+                    CategorySpacer()
+                }
+
+                item {
+                    val state = remember { mutableStateOf(false) }
                     Text("Unselected labeled")
-                    Spacer(Modifier.height(8.dp))
                     VitaminRadioButtons.Primary(
                         selected = false,
                         onClick = null,
@@ -78,10 +81,11 @@ object RadioButtons : Screen {
                             Text(text = "RadioBox", style = VitaminTheme.typography.h6)
                         }
                     )
-                    Spacer(Modifier.height(16.dp))
                     VitaminRadioButtons.Primary(
-                        selected = false,
-                        onClick = null,
+                        selected = state.value,
+                        onClick = {
+                            state.value = true
+                        },
                         enabled = true,
                         endContent = {
                             Text(text = "RadioBox", style = VitaminTheme.typography.h6)
@@ -92,7 +96,6 @@ object RadioButtons : Screen {
 
                 item {
                     Text("Selected labeled")
-                    Spacer(Modifier.height(8.dp))
                     VitaminRadioButtons.Primary(
                         selected = true,
                         onClick = null,
@@ -101,7 +104,6 @@ object RadioButtons : Screen {
                             Text(text = "RadioBox", style = VitaminTheme.typography.h6)
                         }
                     )
-                    Spacer(Modifier.height(16.dp))
                     VitaminRadioButtons.Primary(
                         selected = true,
                         onClick = null,
@@ -115,33 +117,49 @@ object RadioButtons : Screen {
 
                 item {
                     Text(text = "RadioGroup")
-                    Spacer(Modifier.height(8.dp))
-                    val selectedObserver = remember { mutableStateOf(true) }
+                    val states = remember {
+                        listOf(
+                            mutableStateOf(true),
+                            mutableStateOf(false),
+                            mutableStateOf(false)
+                        )
+                    }
                     VitaminRadioButtons.Primary(
-                        selected = selectedObserver.value,
+                        selected = states[0].value,
                         onClick = {
-                            if (!selectedObserver.value) selectedObserver.value =
-                                !selectedObserver.value
+                            states.forEachIndexed { index, mutableState ->
+                                mutableState.value = index == 0
+                            }
                         },
                         enabled = true,
                         endContent = {
                             Text(text = "RadioBox")
                         }
                     )
-                    Spacer(Modifier.height(8.dp))
                     VitaminRadioButtons.Primary(
-                        selected = !selectedObserver.value,
+                        selected = states[1].value,
                         onClick = {
-                            if (selectedObserver.value) selectedObserver.value =
-                                !selectedObserver.value
+                            states.forEachIndexed { index, mutableState ->
+                                mutableState.value = index == 1
+                            }
                         },
                         enabled = true,
                         endContent = {
                             Text(text = "RadioBox 2")
                         }
                     )
-
-                    Spacer(Modifier.height(16.dp))
+                    VitaminRadioButtons.Primary(
+                        selected = states[2].value,
+                        onClick = {
+                            states.forEachIndexed { index, mutableState ->
+                                mutableState.value = index == 2
+                            }
+                        },
+                        enabled = true,
+                        endContent = {
+                            Text(text = "RadioBox 3")
+                        }
+                    )
                 }
             }
         }
