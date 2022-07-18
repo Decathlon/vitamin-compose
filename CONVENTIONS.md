@@ -25,6 +25,19 @@ When you create a common component to centralize the UI logic, it must be `priva
 following specification for the name `Vitamin<Component><Variant>?Impl` where the variant
 is used when you can't have only one common component. e.g. `VitaminProgressBarLinearImpl`.
 
+**Colors and sizes object access**
+When you need to create an object access for colors configurations but you have only one variant,
+it should be named by `primary`, excepted if the design specification defines a name in the Figma
+project.
+
+When you need to create an object access for sizes configurations but you have only one variant,
+it should be named `medium`, excepted if the design specification defines the size in the Figma
+project.
+
+For colors and sizes, functions for each variant shouldn't contains `Colors` and `Sizes` keywords.
+e.g. `Vitamin<Component>Colors.primary()` for colors and `Vitamin<Component>Sizes.medium()` for 
+sizes.
+
 ## Composable variants
 
 A component can be declined in multiple variants. There are two options: create
