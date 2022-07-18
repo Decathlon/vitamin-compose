@@ -51,14 +51,14 @@ object Badges : Screen {
                         VitaminCountBadges.Accent(
                             count = 1000,
                             nbMaxChar = 3,
-                            sizes = VitaminBadgeSizes.largeSize()
+                            sizes = VitaminBadgeSizes.large()
                         ) {
                             Content()
                         }
                         Spacer(Modifier.width(30.dp))
                         VitaminCountBadges.Accent(
                             count = 50,
-                            sizes = VitaminBadgeSizes.mediumSize()
+                            sizes = VitaminBadgeSizes.medium()
                         ) {
                             Content()
                         }
@@ -184,85 +184,85 @@ object Badges : Screen {
                         Column {
                             VitaminStandaloneBadges.Accent(
                                 count = 120,
-                                sizes = VitaminBadgeSizes.largeSize()
+                                sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Accent(
                                 count = 120,
-                                sizes = VitaminBadgeSizes.mediumSize()
+                                sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Accent(
                                 count = 120,
-                                sizes = VitaminBadgeSizes.smallSize()
+                                sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Brand(
                                 count = 50,
-                                sizes = VitaminBadgeSizes.largeSize()
+                                sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Brand(
                                 count = 50,
-                                sizes = VitaminBadgeSizes.mediumSize()
+                                sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Brand(
                                 count = 50,
-                                sizes = VitaminBadgeSizes.smallSize()
+                                sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Alert(
                                 count = 10,
-                                sizes = VitaminBadgeSizes.largeSize()
+                                sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Alert(
                                 count = 10,
-                                sizes = VitaminBadgeSizes.mediumSize()
+                                sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Alert(
                                 count = 10,
-                                sizes = VitaminBadgeSizes.smallSize()
+                                sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Default(
                                 count = 5,
-                                sizes = VitaminBadgeSizes.largeSize()
+                                sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Default(
                                 count = 5,
-                                sizes = VitaminBadgeSizes.mediumSize()
+                                sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Default(
                                 count = 5,
-                                sizes = VitaminBadgeSizes.smallSize()
+                                sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Reversed(
                                 count = 1,
-                                sizes = VitaminBadgeSizes.largeSize()
+                                sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Reversed(
                                 count = 1,
-                                sizes = VitaminBadgeSizes.mediumSize()
+                                sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Reversed(
                                 count = 1,
-                                sizes = VitaminBadgeSizes.smallSize()
+                                sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))

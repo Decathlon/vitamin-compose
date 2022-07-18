@@ -22,7 +22,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.default(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     ) = VitaminCountBadgeImpl(
         count = count,
@@ -48,7 +48,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.accent(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     ) = VitaminCountBadgeImpl(
         count = count,
@@ -74,7 +74,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.brand(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     ) = VitaminCountBadgeImpl(
         count = count,
@@ -100,7 +100,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.reversed(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     ) = VitaminCountBadgeImpl(
         count = count,
@@ -126,7 +126,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.alert(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     ) = VitaminCountBadgeImpl(
         count = count,

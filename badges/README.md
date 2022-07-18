@@ -23,7 +23,7 @@ object VitaminCountBadges {
         modifier: Modifier = Modifier,
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         colors: BadgeColors = VitaminBadgeColors.default(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
         anchor: @Composable BoxScope.() -> Unit,
     )
 }
@@ -46,7 +46,7 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `nbMaxChar: Int = LayoutId.defaultMaxChar` | the number of digit that you want before "+" (nbMaxChar = 2, count= 110, result = 99+ )
 `colors: BadgeColors = VitaminBadgeColors.default()` | the colors of the background and text 
-`sizes: BadgeSizes = VitaminBadgeSizes.smallSize()` | the sizes of the text and padding
+`sizes: BadgeSizes = VitaminBadgeSizes.small()` | the sizes of the text and padding
 `anchor: @Composable BoxScope.() -> Unit`| the icon or content which own the badge
 
 ### VitaminStandaloneBadges
@@ -60,7 +60,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.default(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     )
 }
 ```
@@ -82,7 +82,7 @@ Parameters | Descriptions
 `nbMaxChar: Int = LayoutId.defaultMaxChar` | the number of digit that you want before "+" (nbMaxChar = 2, count= 110, result = 99+ )
 `areHiddenItemsLeft: Boolean`| check if the badge is use to hidden more elements ex (+4)
 `colors: BadgeColors = VitaminBadgeColors.default()` | the colors of the background and text
-`sizes: BadgeSizes = VitaminBadgeSizes.smallSize()` | the sizes of the text and padding
+`sizes: BadgeSizes = VitaminBadgeSizes.small()` | the sizes of the text and padding
 
 ### VitaminBadges without count
 
