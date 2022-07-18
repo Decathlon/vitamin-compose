@@ -45,7 +45,7 @@ object VitaminBadgeSizes {
      * @param textStyle
      */
     @Composable
-    fun largeSize(
+    fun large(
         horizontalPadding: Dp = 6.dp,
         verticalPadding: Dp = 5.dp,
         @Suppress("MagicNumber")
@@ -80,7 +80,7 @@ object VitaminBadgeSizes {
      * @param textStyle
      */
     @Composable
-    fun mediumSize(
+    fun medium(
         horizontalPadding: Dp = 5.dp,
         verticalPadding: Dp = 3.dp,
         @Suppress("MagicNumber")
@@ -115,7 +115,7 @@ object VitaminBadgeSizes {
      * @param textStyle
      */
     @Composable
-    fun smallSize(
+    fun small(
         horizontalPadding: Dp = 4.dp,
         verticalPadding: Dp = 2.dp,
         @Suppress("MagicNumber")

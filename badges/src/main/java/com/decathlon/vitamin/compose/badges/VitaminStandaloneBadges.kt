@@ -21,7 +21,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.default(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     ) = VitaminStandaloneBadgeImpl(
         count = count,
         modifier = modifier,
@@ -46,7 +46,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.accent(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     ) = VitaminStandaloneBadgeImpl(
         count = count,
         modifier = modifier,
@@ -71,7 +71,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.brand(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     ) = VitaminStandaloneBadgeImpl(
         count = count,
         modifier = modifier,
@@ -96,7 +96,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.reversed(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     ) = VitaminStandaloneBadgeImpl(
         count = count,
         modifier = modifier,
@@ -121,7 +121,7 @@ object VitaminStandaloneBadges {
         nbMaxChar: Int = LayoutId.defaultMaxChar,
         areHiddenItemsLeft: Boolean = false,
         colors: BadgeColors = VitaminBadgeColors.alert(),
-        sizes: BadgeSizes = VitaminBadgeSizes.smallSize(),
+        sizes: BadgeSizes = VitaminBadgeSizes.small(),
     ) = VitaminStandaloneBadgeImpl(
         count = count,
         modifier = modifier,
