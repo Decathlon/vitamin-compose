@@ -1,12 +1,11 @@
 package com.decathlon.vitamin.compose.radiobuttons
 
-import androidx.compose.foundation.LocalIndication
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.ProvideTextStyle
@@ -18,6 +17,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 
@@ -48,29 +50,41 @@ object VitaminRadioButtons {
         val rowModifier = endContent?.let {
             modifier
                 .clip(RoundedCornerShape(4.dp))
-                .clickable(
-                    enabled = true,
-                    onClick = { onClick?.invoke() },
-                    interactionSource = interactionSource,
-                    indication = LocalIndication.current
-                )
                 .padding(sizes.contentPadding)
         } ?: run { modifier }
+
         val radioColors = RadioButtonDefaults.colors(
             selectedColor = colors.selectedColor,
             unselectedColor = colors.unselectedColor,
             disabledColor = if (selected) colors.disabledSelectedColor
             else colors.disabledUnselectedColor
         )
-        Row(modifier = rowModifier, verticalAlignment = Alignment.CenterVertically) {
-            endContent?.let {
-                RadioButton(
+
+        Row(
+            modifier = rowModifier
+                .selectable(
                     selected = selected,
-                    onClick = null,
                     enabled = enabled,
-                    interactionSource = interactionSource,
-                    colors = radioColors
+                    role = Role.RadioButton,
+                    onClick = {
+                        onClick?.invoke()
+                    }
                 )
+                .semantics(mergeDescendants = true) {},
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            RadioButton(
+                selected = selected,
+                onClick = {
+                    onClick?.invoke()
+                },
+                enabled = enabled,
+                interactionSource = interactionSource,
+                colors = radioColors,
+                modifier = Modifier.clearAndSetSemantics {}
+            )
+
+            endContent?.let {
                 val alpha = if (enabled) 1f else VtmnStatesDisabled
                 Spacer(modifier = Modifier.width(sizes.labelStartPadding))
                 CompositionLocalProvider(LocalContentAlpha provides alpha) {
@@ -80,14 +94,6 @@ object VitaminRadioButtons {
                         endContent()
                     }
                 }
-            } ?: run {
-                RadioButton(
-                    selected = selected,
-                    onClick = onClick,
-                    enabled = enabled,
-                    interactionSource = interactionSource,
-                    colors = radioColors
-                )
             }
         }
     }
