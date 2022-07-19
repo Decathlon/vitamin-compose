@@ -7,5 +7,6 @@ plugins {
 
 dependencies {
     api(project(":foundation"))
+    api(project(":buttons"))
     implementation(AndroidX.compose.ui.tooling)
 }

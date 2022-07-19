@@ -13,13 +13,14 @@ object VitaminSnackbars {
         text: String,
         modifier: Modifier = Modifier,
         action: @Composable (VitaminSnackbarsActions.() -> Unit)? = null,
-        actionOnNewLine: Boolean = false
+        actionOnNewLine: Boolean = false,
+        color: VitaminSnackbarsColor = VitaminSnackbarsColors.default
     ) = Snackbar(
         modifier = modifier,
         action = { action?.let { VitaminSnackbarsActions.it() } },
         actionOnNewLine = actionOnNewLine,
-        backgroundColor = VitaminTheme.colors.vtmnBackgroundPrimaryReversed,
-        contentColor = VitaminTheme.colors.vtmnContentPrimaryReversed,
+        backgroundColor = color.backgroundColor,
+        contentColor = color.contentColor,
         content = {
             Text(
                 text = text,
