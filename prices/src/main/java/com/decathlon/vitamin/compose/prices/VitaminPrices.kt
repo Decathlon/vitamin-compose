@@ -2,7 +2,6 @@ package com.decathlon.vitamin.compose.prices
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -120,7 +119,7 @@ internal fun VitaminPriceImpl(
         color = colors.contentColor,
         style = textStyle,
         modifier = modifier
-            .background(colors.backgroundColor, RoundedCornerShape(4.dp))
+            .background(colors.backgroundColor, VitaminTheme.shapes.radius100)
             .padding(horizontal = 8.dp, vertical = 2.dp)
             .semantics {
                 if (strikethrough) {

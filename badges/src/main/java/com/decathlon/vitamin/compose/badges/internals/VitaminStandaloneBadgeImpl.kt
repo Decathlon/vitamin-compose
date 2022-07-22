@@ -3,9 +3,7 @@ package com.decathlon.vitamin.compose.badges.internals
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,11 +22,9 @@ internal fun VitaminStandaloneBadgeImpl(
     modifier: Modifier = Modifier
 ) {
     if (count > 0) {
-        val radius = sizes.radius
-        val shape = RoundedCornerShape(radius)
+        val shape = sizes.radius
         Row(
             modifier = modifier
-                .defaultMinSize(minWidth = radius * 2, minHeight = radius * 2)
                 .background(
                     color = colors.backgroundColor,
                     shape = shape
