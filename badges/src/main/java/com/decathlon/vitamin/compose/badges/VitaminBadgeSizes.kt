@@ -1,5 +1,6 @@
 package com.decathlon.vitamin.compose.badges
 
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.remember
@@ -25,7 +26,7 @@ data class BadgeSizes(
     val horizontalPadding: Dp,
     val verticalPadding: Dp,
     val badgeHorizontalOffset: Dp,
-    val radius: Dp,
+    val radius: RoundedCornerShape,
     val textStyle: TextStyle
 )
 
@@ -47,10 +48,10 @@ object VitaminBadgeSizes {
     @Composable
     fun large(
         horizontalPadding: Dp = 6.dp,
-        verticalPadding: Dp = 5.dp,
+        verticalPadding: Dp = 0.dp,
         @Suppress("MagicNumber")
         badgeHorizontalOffset: Dp = (-5).dp,
-        radius: Dp = 14.dp,
+        radius: RoundedCornerShape = VitaminTheme.shapes.radius700,
         textStyle: TextStyle = VitaminTheme.typography.text3.copy(
             fontWeight = FontWeight.W700
         )
@@ -82,10 +83,10 @@ object VitaminBadgeSizes {
     @Composable
     fun medium(
         horizontalPadding: Dp = 5.dp,
-        verticalPadding: Dp = 3.dp,
+        verticalPadding: Dp = 0.dp,
         @Suppress("MagicNumber")
         badgeHorizontalOffset: Dp = (-5).dp,
-        radius: Dp = 12.dp,
+        radius: RoundedCornerShape = VitaminTheme.shapes.radius700,
         textStyle: TextStyle = VitaminTheme.typography.caption.copy(
             fontWeight = FontWeight.W700
         )
@@ -117,10 +118,10 @@ object VitaminBadgeSizes {
     @Composable
     fun small(
         horizontalPadding: Dp = 4.dp,
-        verticalPadding: Dp = 2.dp,
+        verticalPadding: Dp = 0.dp,
         @Suppress("MagicNumber")
         badgeHorizontalOffset: Dp = (-6).dp,
-        radius: Dp = 8.dp,
+        radius: RoundedCornerShape = VitaminTheme.shapes.radius700,
         textStyle: TextStyle = VitaminTheme.typography.caption.copy(
             fontSize = 8.sp,
             fontWeight = FontWeight.W700

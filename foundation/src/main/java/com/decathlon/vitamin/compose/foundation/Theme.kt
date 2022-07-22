@@ -13,7 +13,7 @@ fun VitaminTheme(
     content: @Composable () -> Unit
 ) {
     val palette = if (darkTheme) vtmnDarkColorPalette else vtmnLightColorPalette
-    ProvideVitaminResources(palette, vtmnTypography, vtmnRipples) {
+    ProvideVitaminResources(palette, vtmnTypography, vtmnRipples, vtmnShapes) {
         MaterialTheme(
             colors = debugColors(darkTheme, palette),
             typography = mdTypography,
@@ -28,6 +28,7 @@ fun ProvideVitaminResources(
     colors: VitaminColors,
     typography: VitaminTypography,
     ripples: VitaminRipples,
+    shapes: VitaminShapes,
     content: @Composable () -> Unit
 ) {
     val colorPalette = remember { colors }
@@ -35,7 +36,8 @@ fun ProvideVitaminResources(
     CompositionLocalProvider(
         LocalVitaminColors provides colorPalette,
         LocalVitaminTypographies provides typography,
-        LocalVitaminRipples provides ripples
+        LocalVitaminRipples provides ripples,
+        LocalVitaminShapes provides shapes
     ) {
         ProvideTextStyle(value = typography.text1, content = content)
     }
@@ -53,4 +55,8 @@ object VitaminTheme {
     val ripples: VitaminRipples
         @Composable
         get() = LocalVitaminRipples.current
+
+    val shapes: VitaminShapes
+        @Composable
+        get() = LocalVitaminShapes.current
 }
