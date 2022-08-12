@@ -37,7 +37,7 @@ The primary button should only be used once per view (not including a modal dial
 these buttons have the most emphasis.
 
 The minimal usage of the component is the text of the button but you can add an icon or customize
-the size with a small, medium or large size variants.
+the size with a medium or large size variants.
 
 ```kotlin
 VitaminButtons.Primary(text = "Primary") {

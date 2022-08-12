@@ -66,28 +66,4 @@ object VitaminButtonsSizes {
             contentPadding = contentPadding
         )
     }
-
-    @Composable
-    fun small(
-        fontSize: TextStyle = VitaminTheme.typography.button
-            .copy(fontSize = VitaminTheme.typography.body2.fontSize),
-        minWidth: Dp = 84.dp,
-        height: Dp = 32.dp,
-        iconSize: Dp = 16.dp,
-        contentPadding: PaddingValues = PaddingValues(start = 16.dp, end = 16.dp)
-    ): ButtonSizes = remember(
-        fontSize,
-        minWidth,
-        height,
-        iconSize,
-        contentPadding
-    ) {
-        ButtonSizes(
-            textStyle = fontSize,
-            minWidth = minWidth,
-            height = height,
-            iconSize = iconSize,
-            contentPadding = contentPadding
-        )
-    }
 }

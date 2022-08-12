@@ -31,61 +31,6 @@ class VitaminButtonsPrimaryTest(
     val paparazzi = Paparazzi()
 
     @Test
-    fun small(@TestParameter theme: Theme) {
-        paparazzi.snapshot {
-            VitaminTheme(theme == Theme.Dark) {
-                Scaffold { padding ->
-                    Column(
-                        modifier = Modifier.padding(padding),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small()
-                            )
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small(),
-                                enabled = false
-                            )
-                        }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line)
-                            )
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                                enabled = false
-                            )
-                        }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                                iconSide = IconSide.RIGHT
-                            )
-                            ButtonVariantsFactory.Button(
-                                variant = variant,
-                                size = VitaminButtonsSizes.small(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                                iconSide = IconSide.RIGHT,
-                                enabled = false
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @Test
     fun medium(@TestParameter theme: Theme) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {

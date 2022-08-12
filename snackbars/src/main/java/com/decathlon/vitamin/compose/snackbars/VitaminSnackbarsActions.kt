@@ -23,7 +23,7 @@ object VitaminSnackbarsActions {
             onClick = onClick,
             modifier = modifier,
             colors = colors,
-            sizes = VitaminButtonsSizes.small()
+            sizes = VitaminButtonsSizes.medium()
         )
 }
 
