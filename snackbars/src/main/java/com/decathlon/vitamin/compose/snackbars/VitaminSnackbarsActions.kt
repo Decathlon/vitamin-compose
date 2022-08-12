@@ -29,7 +29,7 @@ object VitaminSnackbarsActions {
 
 @Preview
 @Composable
-fun PreviewSnackbarsActions() {
+internal fun PreviewSnackbarsActions() {
     VitaminTheme {
         VitaminSnackbarsActions.Button(text = "Action", onClick = { /*Click*/ })
     }

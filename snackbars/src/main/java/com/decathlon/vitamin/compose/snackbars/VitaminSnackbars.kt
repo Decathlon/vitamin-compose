@@ -10,7 +10,7 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 object VitaminSnackbars {
 
     /**
-     * The primary snackbar is the main (and the only one for now) to use * when you need to show a snackbar
+     * The primary snackbar is the main (and the only one for now) to use when you need to show a snackbar
      * @param text The text inside the snackbar * @param modifier The [Modifier] to be applied to the component
      * @param actionOnNewLine whether or not action should be put on the separate line.
      * Recommended for action with long action text
@@ -41,7 +41,7 @@ object VitaminSnackbars {
 
 @Preview
 @Composable
-fun PreviewVitaminSnackBarWithTextOnly() {
+internal fun PreviewVitaminSnackBarWithTextOnly() {
     VitaminTheme {
         VitaminSnackbars.Primary(text = "This is the description of the snackbar")
     }
@@ -49,7 +49,7 @@ fun PreviewVitaminSnackBarWithTextOnly() {
 
 @Preview
 @Composable
-fun PreviewVitaminSnackBarWithActionOneLine() {
+internal fun PreviewVitaminSnackBarWithActionOneLine() {
     VitaminTheme {
         VitaminSnackbars.Primary(
             text = "This is the description of the snackbar",
@@ -65,7 +65,7 @@ fun PreviewVitaminSnackBarWithActionOneLine() {
 
 @Preview
 @Composable
-fun PreviewVitaminSnackBarWithActionTwoLine() {
+internal fun PreviewVitaminSnackBarWithActionTwoLine() {
     VitaminTheme {
         VitaminSnackbars.Primary(
             text = "This is the description of the snackbar",

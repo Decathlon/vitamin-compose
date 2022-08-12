@@ -24,23 +24,11 @@ object VitaminSnackbars {
         actionOnNewLine: Boolean = false,
         colors: SnackbarColors = VitaminSnackbarColors.primary(),
         action: @Composable (VitaminSnackbarsActions.() -> Unit)? = null
-    ) = Snackbar(
-        modifier = modifier,
-        action = { action?.let { VitaminSnackbarsActions.it() } },
-        actionOnNewLine = actionOnNewLine,
-        backgroundColor = colors.backgroundColor,
-        contentColor = colors.contentColor,
-        content = {
-            Text(
-                text = text,
-                style = VitaminTheme.typography.body3
-            )
-        }
     )
 }
 ```
 
-Snackbar to show information.
+A snackbar is used to provide non-disruptive feedback about the outcome of an event.
 
 The minimal usage of the component is the value of your text to show in the snackbar but you can add an action and it's position.
 
