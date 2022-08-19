@@ -1,87 +1,99 @@
 package com.decathlon.vitamin.compose.buttons
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 
 object ButtonVariantsFactory {
+
+    @Suppress("LongMethod")
     @Composable
     fun Button(
         variant: VitaminButtonsPrimaryTest.Variant,
         size: ButtonSizes,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        text: String = "My Button"
     ) {
         when(variant) {
             VitaminButtonsPrimaryTest.Variant.Primary -> VitaminButtons.Primary(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.PrimaryReversed -> VitaminButtons.PrimaryReversed(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.Secondary -> VitaminButtons.Secondary(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.Tertiary -> VitaminButtons.Tertiary(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.Ghost -> VitaminButtons.Ghost(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.GhostReversed -> VitaminButtons.GhostReversed(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
             VitaminButtonsPrimaryTest.Variant.Conversion -> VitaminButtons.Conversion(
-                text = "My Button",
+                text = text,
                 sizes = size,
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
-                }
+                },
+                modifier = modifier
             )
         }
     }

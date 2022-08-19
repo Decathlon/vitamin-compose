@@ -17,6 +17,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+
 @RunWith(TestParameterInjector::class)
 class VitaminButtonsPrimaryTest(
     @TestParameter val variant: Variant
@@ -30,6 +31,7 @@ class VitaminButtonsPrimaryTest(
     @get:Rule
     val paparazzi = Paparazzi()
 
+    @Suppress("LongMethod")
     @Test
     fun medium(@TestParameter theme: Theme) {
         paparazzi.snapshot {
@@ -79,12 +81,49 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.medium(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text"
+                            )
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.medium(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text",
+                                enabled = false
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.medium(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                iconSide = IconSide.RIGHT,
+                                text = "Button with long text"
+                            )
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.medium(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text",
+                                iconSide = IconSide.RIGHT,
+                                enabled = false
+                            )
+                        }
                     }
                 }
             }
         }
     }
 
+    @Suppress("LongMethod")
     @Test
     fun large(@TestParameter theme: Theme) {
         paparazzi.snapshot {
@@ -95,39 +134,81 @@ class VitaminButtonsPrimaryTest(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large()
-                        )
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large(),
-                            enabled = false
-                        )
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large(),
-                            icon = painterResource(id = R.drawable.ic_vtmn_android_line)
-                        )
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large(),
-                            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                            enabled = false
-                        )
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large(),
-                            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                            iconSide = IconSide.RIGHT
-                        )
-                        ButtonVariantsFactory.Button(
-                            variant = variant,
-                            size = VitaminButtonsSizes.large(),
-                            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
-                            iconSide = IconSide.RIGHT,
-                            enabled = false
-                        )
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large()
+                            )
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                enabled = false
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line)
+                            )
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                enabled = false
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                iconSide = IconSide.RIGHT
+                            )
+                            ButtonVariantsFactory.Button(
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                iconSide = IconSide.RIGHT,
+                                enabled = false
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text"
+                            )
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text",
+                                enabled = false
+                            )
+                        }
+                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                iconSide = IconSide.RIGHT,
+                                text = "Button with long text"
+                            )
+                            ButtonVariantsFactory.Button(
+                                modifier = Modifier.weight(1f),
+                                variant = variant,
+                                size = VitaminButtonsSizes.large(),
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                text = "Button with long text",
+                                iconSide = IconSide.RIGHT,
+                                enabled = false
+                            )
+                        }
                     }
                 }
             }
