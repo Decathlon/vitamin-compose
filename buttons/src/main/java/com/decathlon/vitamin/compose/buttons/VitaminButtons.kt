@@ -341,6 +341,7 @@ private fun VitaminButtonImpl(
         ) {
             if (iconSide == IconSide.LEFT) iconButton()
             Text(
+                modifier = Modifier.weight(1f, fill = false),
                 text = text,
                 style = sizes.textStyle,
                 overflow = TextOverflow.Ellipsis,
