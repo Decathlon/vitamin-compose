@@ -76,7 +76,7 @@ object VitaminTextInputs {
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         icon: @Composable (() -> Unit)? = null
     ) {
         VitaminTextInputLayoutImpl(
@@ -168,7 +168,7 @@ object VitaminTextInputs {
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
@@ -241,7 +241,7 @@ object VitaminTextInputs {
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         icon: @Composable (() -> Unit)? = null,
     ) {
         VitaminTextInputLayoutImpl(
@@ -333,7 +333,7 @@ object VitaminTextInputs {
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
@@ -385,7 +385,7 @@ internal fun VitaminTextInputLayoutImpl(
         // Vitamin.
         MaterialTheme(
             typography = MaterialTheme.typography.copy(
-                subtitle1 = VitaminTheme.typography.body2,
+                subtitle1 = VitaminTheme.typography.text2,
                 caption = VitaminTheme.typography.caption
             )
         ) {

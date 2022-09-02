@@ -39,7 +39,7 @@ object VitaminCheckboxes {
         enabled: Boolean = true,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: CheckboxColors = VitaminCheckboxColors.primary(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         endContent: (@Composable () -> Unit)? = null
     ) {
         Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {

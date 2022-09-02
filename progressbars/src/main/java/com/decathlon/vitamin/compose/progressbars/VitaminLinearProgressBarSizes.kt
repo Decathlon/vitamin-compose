@@ -20,7 +20,7 @@ object VitaminLinearProgressBarSizes {
     fun small(
         strokeSize: Dp = 4.dp,
         labelBottomPadding: Dp = 4.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body3
+        textStyle: TextStyle = VitaminTheme.typography.text3
     ): LinearProgressBarSizes = remember(strokeSize, labelBottomPadding, textStyle) {
         LinearProgressBarSizes(
             strokeSize = strokeSize,
@@ -33,7 +33,7 @@ object VitaminLinearProgressBarSizes {
     fun medium(
         strokeSize: Dp = 8.dp,
         labelBottomPadding: Dp = 8.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body2
+        textStyle: TextStyle = VitaminTheme.typography.text2
     ): LinearProgressBarSizes = remember(strokeSize, labelBottomPadding, textStyle) {
         LinearProgressBarSizes(
             strokeSize = strokeSize,
@@ -46,7 +46,7 @@ object VitaminLinearProgressBarSizes {
     fun large(
         strokeSize: Dp = 16.dp,
         labelBottomPadding: Dp = 8.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body2
+        textStyle: TextStyle = VitaminTheme.typography.text2
     ): LinearProgressBarSizes = remember(strokeSize, labelBottomPadding, textStyle) {
         LinearProgressBarSizes(
             strokeSize = strokeSize,

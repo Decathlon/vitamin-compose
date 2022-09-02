@@ -199,7 +199,7 @@ internal fun Content(
     content?.let {
         CompositionLocalProvider(
             LocalContentColor provides contentColor,
-            LocalTextStyle provides VitaminTheme.typography.body3
+            LocalTextStyle provides VitaminTheme.typography.text3
         ) {
             it.invoke()
         }

@@ -25,7 +25,7 @@ object VitaminTagSizes {
         clickablePadding: PaddingValues = PaddingValues(vertical = 8.dp),
         iconSize: Dp = 13.dp,
         labelStartPadding: Dp = 6.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body3
+        textStyle: TextStyle = VitaminTheme.typography.text3
     ): TagSizes = remember(
         contentPadding,
         clickablePadding,

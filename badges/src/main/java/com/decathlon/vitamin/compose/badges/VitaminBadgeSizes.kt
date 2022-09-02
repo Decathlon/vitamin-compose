@@ -51,7 +51,7 @@ object VitaminBadgeSizes {
         @Suppress("MagicNumber")
         badgeHorizontalOffset: Dp = (-5).dp,
         radius: Dp = 14.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body3.copy(
+        textStyle: TextStyle = VitaminTheme.typography.text3.copy(
             fontWeight = FontWeight.W700
         )
     ): BadgeSizes = remember(

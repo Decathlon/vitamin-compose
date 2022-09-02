@@ -7,7 +7,6 @@ import androidx.compose.material.TabRow
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -27,7 +26,7 @@ object VitaminTabs {
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
         colors: TabColors = VitaminTabColors.primary(),
-        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textStyle: TextStyle = VitaminTheme.typography.text2Bold,
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
@@ -71,7 +70,7 @@ object VitaminTabs {
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
         colors: TabColors = VitaminTabColors.primary(),
-        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textStyle: TextStyle = VitaminTheme.typography.text2Bold,
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {

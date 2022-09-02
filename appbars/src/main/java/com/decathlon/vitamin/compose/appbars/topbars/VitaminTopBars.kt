@@ -128,7 +128,7 @@ object VitaminTopBars {
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TopBarColors = VitaminTopBarColors.search(),
-        textStyle: TextStyle = VitaminTheme.typography.body2,
+        textStyle: TextStyle = VitaminTheme.typography.text2,
         onValueChange: (String) -> Unit,
         navigationIcon: @Composable VitaminSearchNavigationIconButtons.() -> Unit,
     ) {

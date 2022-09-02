@@ -95,6 +95,42 @@ val vtmnTypography = VitaminTypography(
         fontWeight = FontWeight.W400,
         lineHeight = 20.sp
     ),
+    text1 = TextStyle(
+        fontFamily = roboto,
+        fontSize = 17.sp,
+        fontWeight = FontWeight.W400,
+        lineHeight = 28.sp
+    ),
+    text2 = TextStyle(
+        fontFamily = roboto,
+        fontSize = 16.sp,
+        fontWeight = FontWeight.W400,
+        lineHeight = 24.sp
+    ),
+    text3 = TextStyle(
+        fontFamily = roboto,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.W400,
+        lineHeight = 20.sp
+    ),
+    text1Bold = TextStyle(
+        fontFamily = roboto,
+        fontSize = 17.sp,
+        fontWeight = FontWeight.W700,
+        lineHeight = 28.sp
+    ),
+    text2Bold = TextStyle(
+        fontFamily = roboto,
+        fontSize = 16.sp,
+        fontWeight = FontWeight.W700,
+        lineHeight = 24.sp
+    ),
+    text3Bold = TextStyle(
+        fontFamily = roboto,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.W700,
+        lineHeight = 20.sp
+    ),
     button = TextStyle(
         fontFamily = roboto,
         fontSize = 16.sp,
@@ -112,7 +148,8 @@ val vtmnTypography = VitaminTypography(
         fontSize = 11.sp,
         fontWeight = FontWeight.W400,
         lineHeight = 13.sp
-    )
+    ),
+
 )
 
 @Immutable
@@ -125,9 +162,18 @@ data class VitaminTypography(
     val h6: TextStyle,
     val subtitle1: TextStyle,
     val subtitle2: TextStyle,
+    @Deprecated(message = "body1 TextStyle is deprecated, use text1 instead", replaceWith = ReplaceWith("text1"))
     val body1: TextStyle,
+    @Deprecated(message = "body2 TextStyle is deprecated, use text2 instead", replaceWith = ReplaceWith("text2"))
     val body2: TextStyle,
+    @Deprecated(message = "body3 TextStyle is deprecated, use text3 instead", replaceWith = ReplaceWith("text3"))
     val body3: TextStyle,
+    val text1: TextStyle,
+    val text2: TextStyle,
+    val text3: TextStyle,
+    val text1Bold: TextStyle,
+    val text2Bold: TextStyle,
+    val text3Bold: TextStyle,
     val button: TextStyle,
     val caption: TextStyle,
     val overline: TextStyle
@@ -146,8 +192,8 @@ val mdTypography = Typography(
     h6 = vtmnTypography.h6,
     subtitle1 = vtmnTypography.subtitle1,
     subtitle2 = vtmnTypography.subtitle2,
-    body1 = vtmnTypography.body1,
-    body2 = vtmnTypography.body2,
+    body1 = vtmnTypography.text1,
+    body2 = vtmnTypography.text2,
     button = vtmnTypography.button,
     caption = vtmnTypography.caption,
     overline = vtmnTypography.overline
