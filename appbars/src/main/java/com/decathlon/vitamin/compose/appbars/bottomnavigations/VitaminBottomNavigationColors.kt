@@ -8,18 +8,21 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 object VitaminBottomNavigationColors {
     @Composable
     fun primary(
-        background: Color = VitaminTheme.colors.vtmnBackgroundPrimary,
-        selected: Color = VitaminTheme.colors.vtmnContentActive,
-        unSelected: Color = VitaminTheme.colors.vtmnContentTertiary,
+        backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundPrimary,
+        selectedIconColor: Color = VitaminTheme.colors.vtmnContentActive,
+        selectedTextColor: Color = VitaminTheme.colors.vtmnContentPrimary,
+        unSelectedColor: Color = VitaminTheme.colors.vtmnContentTertiary
     ): BottomNavigationColors = remember(
-        background,
-        selected,
-        unSelected
+        backgroundColor,
+        selectedIconColor,
+        selectedTextColor,
+        unSelectedColor
     ) {
         BottomNavigationColors(
-            background = background,
-            selected = selected,
-            unSelected = unSelected
+            backgroundColor = backgroundColor,
+            selectedIconColor = selectedIconColor,
+            selectedTextColor = selectedTextColor,
+            unselectedColor = unSelectedColor,
         )
     }
 }

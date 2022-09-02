@@ -3,15 +3,17 @@ package com.decathlon.vitamin.compose.appbars.bottomnavigations
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
+import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 open class SelectedActionItem(
     val selected: Boolean = false,
     val icon: Painter,
     val contentDescription: String?,
-    val content: @Composable () -> Unit = {},
+    val text: String,
     val onClick: () -> Boolean
 )
 
@@ -31,17 +33,22 @@ object VitaminBottomNavigations {
     ) {
         BottomNavigation(
             modifier = modifier,
-            backgroundColor = colors.background,
-            contentColor = colors.unSelected
+            backgroundColor = colors.backgroundColor
         ) {
             actions.forEach {
+                val textColor = if (it.selected) colors.selectedTextColor else colors.unselectedColor
+                val iconColor = if (it.selected) colors.selectedIconColor else colors.unselectedColor
                 BottomNavigationItem(
                     selected = it.selected,
                     onClick = { it.onClick() },
-                    icon = { Icon(painter = it.icon, contentDescription = it.contentDescription) },
-                    label = it.content,
-                    selectedContentColor = colors.selected,
-                    unselectedContentColor = colors.unSelected
+                    icon = {
+                        Icon(
+                            painter = it.icon,
+                            tint = iconColor,
+                            contentDescription = it.contentDescription
+                        )
+                    },
+                    label = { Text(text = it.text, color = textColor, style = VitaminTheme.typography.caption) }
                 )
             }
         }
