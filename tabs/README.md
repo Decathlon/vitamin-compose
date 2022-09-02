@@ -22,7 +22,7 @@ object VitaminTabs {
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
         colors: TabColors = VitaminTabColors.primary(),
-        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textStyle: TextStyle = VitaminTheme.typography.text2Bold,
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     )
@@ -52,7 +52,7 @@ Parameters | Descriptions
 `tabItems: List<TabItem>` | The `TabItem` actions of your tabs. `TabItem` define the look to the items
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `colors: TabColors = VitaminTabColors.primary()` | The colors of the icon, label, background and indicator
-`textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold)` | The text style of the label inside tabs
+`textStyle: TextStyle = VitaminTheme.typography.text2Bold` | The text style of the label inside tabs
 `textOverflow: TextOverflow = TextOverflow.Ellipsis` | How visual overflow should be handled
 `onTabClicked: (tabItem: TabItem) -> Unit` | The callback to be called when the user click on a tab
 
@@ -65,7 +65,7 @@ object VitaminTabs {
         tabItems: List<TabItem>,
         modifier: Modifier = Modifier,
         colors: TabColors = VitaminTabColors.primary(),
-        textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold),
+        textStyle: TextStyle = VitaminTheme.typography.text2Bold,
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     )
@@ -96,6 +96,6 @@ Parameters | Descriptions
 `tabItems: List<TabItem>` | The `TabItem` actions of your tabs. `TabItem` define the look to the items
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `colors: TabColors = VitaminTabColors.primary()` | The colors of the icon, label, background and indicator
-`textStyle: TextStyle = VitaminTheme.typography.body2.copy(fontWeight = FontWeight.Bold)` | The text style of the label inside tabs
+`textStyle: TextStyle = VitaminTheme.typography.text2Bold` | The text style of the label inside tabs
 `textOverflow: TextOverflow = TextOverflow.Ellipsis` | How visual overflow should be handled
 `onTabClicked: (tabItem: TabItem) -> Unit` | The callback to be called when the user click on a tab

@@ -22,7 +22,7 @@ object VitaminRadioButtonSizes {
         minimumSize: Dp = 48.dp,
         padding: Dp = 8.dp,
         labelStartPadding: Dp = 6.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body2
+        textStyle: TextStyle = VitaminTheme.typography.text2
     ): RadioButtonSizes = remember(minimumSize, padding, labelStartPadding, textStyle) {
         RadioButtonSizes(
             minimumSize = minimumSize,

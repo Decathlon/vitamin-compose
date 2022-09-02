@@ -22,7 +22,7 @@ object VitaminButtonsSizes {
     @Composable
     fun large(
         fontSize: TextStyle = VitaminTheme.typography.button
-            .copy(fontSize = VitaminTheme.typography.body1.fontSize),
+            .copy(fontSize = VitaminTheme.typography.text1.fontSize),
         minWidth: Dp = 84.dp,
         height: Dp = 64.dp,
         iconSize: Dp = 24.dp,
@@ -46,7 +46,7 @@ object VitaminButtonsSizes {
     @Composable
     fun medium(
         fontSize: TextStyle = VitaminTheme.typography.button
-            .copy(fontSize = VitaminTheme.typography.body2.fontSize),
+            .copy(fontSize = VitaminTheme.typography.text2.fontSize),
         minWidth: Dp = 120.dp,
         height: Dp = 48.dp,
         iconSize: Dp = 20.dp,

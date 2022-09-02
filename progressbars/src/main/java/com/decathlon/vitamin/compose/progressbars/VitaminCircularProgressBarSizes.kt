@@ -22,7 +22,7 @@ object VitaminCircularProgressBarSizes {
         boxSize: Dp = 64.dp,
         strokeSize: Dp = 6.dp,
         contentPadding: Dp = 1.dp,
-        textStyle: TextStyle = VitaminTheme.typography.body1
+        textStyle: TextStyle = VitaminTheme.typography.text1
     ): CircularProgressBarSizes = remember(boxSize, strokeSize, contentPadding, textStyle) {
         CircularProgressBarSizes(
             boxSize = boxSize,

@@ -37,7 +37,7 @@ fun ProvideVitaminResources(
         LocalVitaminTypographies provides typography,
         LocalVitaminRipples provides ripples
     ) {
-        ProvideTextStyle(value = typography.body1, content = content)
+        ProvideTextStyle(value = typography.text1, content = content)
     }
 }
 

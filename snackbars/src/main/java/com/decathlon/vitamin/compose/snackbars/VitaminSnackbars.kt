@@ -33,7 +33,7 @@ object VitaminSnackbars {
         content = {
             Text(
                 text = text,
-                style = VitaminTheme.typography.body3
+                style = VitaminTheme.typography.text3
             )
         }
     )
