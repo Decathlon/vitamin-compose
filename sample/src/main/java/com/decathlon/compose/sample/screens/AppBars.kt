@@ -224,35 +224,48 @@ object AppBars : Screen {
                     )
                 }
                 item {
+                    val selectedId = remember { mutableStateOf("android") }
                     VitaminBottomNavigations.Primary(
                         actions = arrayListOf(
                             SelectedActionItem(
-                                selected = true,
+                                selected = selectedId.value == "android",
                                 icon = painterResource(R.drawable.ic_vtmn_android_line),
                                 contentDescription = null,
-                                content = { Text("Android") },
-                                onClick = { return@SelectedActionItem true }
+                                text = "Android",
+                                onClick = {
+                                    selectedId.value = "android"
+                                    return@SelectedActionItem true
+                                }
                             ),
                             SelectedActionItem(
-                                selected = false,
+                                selected = selectedId.value == "apple",
                                 icon = painterResource(R.drawable.ic_vtmn_apple_line),
                                 contentDescription = null,
-                                content = { Text("Apple") },
-                                onClick = { return@SelectedActionItem true }
+                                text = "Apple",
+                                onClick = {
+                                    selectedId.value = "apple"
+                                    return@SelectedActionItem true
+                                }
                             ),
                             SelectedActionItem(
-                                selected = false,
+                                selected = selectedId.value == "amazon",
                                 icon = painterResource(R.drawable.ic_vtmn_amazon_line),
                                 contentDescription = null,
-                                content = { Text("Amazon") },
-                                onClick = { return@SelectedActionItem true }
+                                text = "Amazon",
+                                onClick = {
+                                    selectedId.value = "amazon"
+                                    return@SelectedActionItem true
+                                }
                             ),
                             SelectedActionItem(
-                                selected = false,
+                                selected = selectedId.value == "facebook",
                                 icon = painterResource(R.drawable.ic_vtmn_facebook_line),
                                 contentDescription = null,
-                                content = { Text("Facebook") },
-                                onClick = { return@SelectedActionItem true }
+                                text = "Facebook",
+                                onClick = {
+                                    selectedId.value = "facebook"
+                                    return@SelectedActionItem true
+                                }
                             )
                         )
                     )

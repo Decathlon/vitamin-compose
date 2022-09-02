@@ -5,7 +5,8 @@ import androidx.compose.ui.graphics.Color
 
 @Immutable
 class BottomNavigationColors(
-    val background: Color,
-    val selected: Color,
-    val unSelected: Color
+    val backgroundColor: Color,
+    val selectedIconColor: Color,
+    val selectedTextColor: Color,
+    val unselectedColor: Color
 )

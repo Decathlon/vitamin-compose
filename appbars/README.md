@@ -53,7 +53,7 @@ VitaminTopBars.Primary(
         ActionItem(
             icon = painterResource(R.drawable.ic_vtmn_android_line),
             contentDescription = null,
-            content = { Text("Android") },
+            text = { Text("Android") },
             onClick = { return@ActionItem true }
         ),
         ActionItem(
@@ -184,21 +184,21 @@ VitaminBottomNavigations.Primary(
             selected = true,
             icon = painterResource(R.drawable.ic_vtmn_android_line),
             contentDescription = null,
-            content = { Text("Android") },
+            content = "Android",
             onClick = { return@SelectedActionItem true }
         ),
         SelectedActionItem(
             selected = false,
             icon = painterResource(R.drawable.ic_vtmn_apple_line),
             contentDescription = null,
-            content = { Text("Apple") },
+            content = "Apple",
             onClick = { return@SelectedActionItem true }
         ),
         SelectedActionItem(
             selected = false,
             icon = painterResource(R.drawable.ic_vtmn_amazon_line),
             contentDescription = null,
-            content = { Text("Amazon") },
+            content = "Amazon",
             onClick = { return@SelectedActionItem true }
         )
     )
