@@ -400,7 +400,7 @@ fun PreviewBrandVitaminTag() {
     VitaminTheme {
         VitaminTags.Brand(
             label = "Brand tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_gift_2_fill)
+            iconPainter = painterResource(id = R.drawable.ic_vtmn_gift_line)
         )
     }
 }

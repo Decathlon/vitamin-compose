@@ -50,7 +50,7 @@ object TextInputs : Screen {
                         counter = 999 to 999,
                         icon = {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                painter = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 contentDescription = null
                             )
                         }
@@ -133,7 +133,7 @@ object TextInputs : Screen {
                         counter = 999 to 999,
                         icon = {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                painter = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 contentDescription = null
                             )
                         }

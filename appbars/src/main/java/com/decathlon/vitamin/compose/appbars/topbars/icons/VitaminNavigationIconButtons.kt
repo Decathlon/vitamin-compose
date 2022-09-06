@@ -24,7 +24,7 @@ object VitaminNavigationIconButtons {
             interactionSource = interactionSource,
             icon = {
                 Icon(
-                    painter = painterResource(R.drawable.ic_vtmn_arrow_left_s_line),
+                    painter = painterResource(R.drawable.ic_vtmn_chevron_left_line),
                     contentDescription = contentDescription
                 )
             }

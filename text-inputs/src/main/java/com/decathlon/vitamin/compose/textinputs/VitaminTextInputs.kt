@@ -191,7 +191,7 @@ object VitaminTextInputs {
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_arrow_drop_down_fill),
+                                painter = painterResource(id = R.drawable.ic_vtmn_chevron_down_line),
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }
@@ -356,7 +356,7 @@ object VitaminTextInputs {
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_arrow_drop_down_fill),
+                                painter = painterResource(id = R.drawable.ic_vtmn_chevron_down_line),
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }

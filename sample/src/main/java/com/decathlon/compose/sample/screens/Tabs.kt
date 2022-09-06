@@ -36,7 +36,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 selected = i == 0
                             )
                         )
@@ -56,7 +56,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 topIcon = true,
                                 selected = i == 0
                             )
@@ -96,7 +96,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 selected = i == 0
                             )
                         )
@@ -116,7 +116,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
                                 topIcon = true,
                                 selected = i == 0
                             )

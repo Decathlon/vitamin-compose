@@ -24,7 +24,7 @@ object VitaminSearchMenuIconButtons {
             interactionSource = interactionSource,
             icon = {
                 Icon(
-                    painter = painterResource(R.drawable.ic_vtmn_mic_vtmn_line),
+                    painter = painterResource(R.drawable.ic_vtmn_mic_line),
                     contentDescription = contentDescription,
                 )
             }
