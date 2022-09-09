@@ -373,7 +373,7 @@ object Modals : Screen {
 
 @Preview
 @Composable
-fun PreviewModals() {
+private fun PreviewModals() {
     VitaminTheme {
         Modals.Screen()
     }
@@ -381,7 +381,7 @@ fun PreviewModals() {
 
 @Preview
 @Composable
-fun PreviewDarkModals() {
+private fun PreviewDarkModals() {
     VitaminTheme(darkTheme = true) {
         Modals.Screen()
     }

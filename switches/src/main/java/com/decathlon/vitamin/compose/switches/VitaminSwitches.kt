@@ -41,7 +41,7 @@ object VitaminSwitches {
 
 @Preview
 @Composable
-fun VitaminSwitchOnPreview() {
+private fun VitaminSwitchOnPreview() {
     VitaminTheme {
         VitaminSwitches.Primary(
             checked = false

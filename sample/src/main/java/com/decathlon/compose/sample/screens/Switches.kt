@@ -62,7 +62,7 @@ object Switches : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun LightSwitchesDefaultPreview() {
+private fun LightSwitchesDefaultPreview() {
     VitaminTheme {
         Switches.Screen()
     }
@@ -70,7 +70,7 @@ fun LightSwitchesDefaultPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun DarkSwitchesDefaultPreview() {
+private fun DarkSwitchesDefaultPreview() {
     VitaminTheme(darkTheme = true) {
         Switches.Screen()
     }

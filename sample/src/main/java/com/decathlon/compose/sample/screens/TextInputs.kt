@@ -207,7 +207,7 @@ object TextInputs : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun TextInputsScreenPreview() {
+private fun TextInputsScreenPreview() {
     VitaminTheme {
         TextInputs.Screen()
     }

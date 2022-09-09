@@ -207,7 +207,7 @@ fun SkeletonTextLines(modifier: Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun SkeletonPreview() {
+private fun SkeletonPreview() {
     VitaminTheme {
         Skeletons.Screen()
     }

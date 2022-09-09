@@ -168,7 +168,7 @@ object RadioButtons : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun RadiobuttonScreenPreview() {
+private fun RadiobuttonScreenPreview() {
     VitaminTheme {
         RadioButtons.Screen()
     }

@@ -264,7 +264,7 @@ object AppBars : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewTopAppBar() {
+private fun PreviewTopAppBar() {
     VitaminTheme {
         AppBars.Screen()
     }
@@ -272,7 +272,7 @@ fun PreviewTopAppBar() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewDarkTopAppBar() {
+private fun PreviewDarkTopAppBar() {
     VitaminTheme(darkTheme = true) {
         AppBars.Screen()
     }

@@ -132,7 +132,7 @@ internal fun VitaminPriceImpl(
 
 @Preview
 @Composable
-fun PreviewPriceDefaultMedium() {
+private fun PreviewPriceDefaultMedium() {
     VitaminTheme {
         VitaminPrices.Default(text = "250,00 €", sizes = VitaminPriceSizes.medium())
     }
@@ -140,7 +140,7 @@ fun PreviewPriceDefaultMedium() {
 
 @Preview
 @Composable
-fun PreviewPriceAccentMedium() {
+private fun PreviewPriceAccentMedium() {
     VitaminTheme {
         VitaminPrices.Accent(
             text = "250,00 €",
@@ -151,7 +151,7 @@ fun PreviewPriceAccentMedium() {
 
 @Preview
 @Composable
-fun PreviewPriceAlertLarge() {
+private fun PreviewPriceAlertLarge() {
     VitaminTheme {
         VitaminPrices.Alert(text = "250,00 €", sizes = VitaminPriceSizes.large())
     }
@@ -159,7 +159,7 @@ fun PreviewPriceAlertLarge() {
 
 @Preview
 @Composable
-fun PreviewPriceStrikethroughSmall() {
+private fun PreviewPriceStrikethroughSmall() {
     VitaminTheme {
         VitaminPrices.Strikethrough(text = "250,00 €", sizes = VitaminPriceSizes.small())
     }

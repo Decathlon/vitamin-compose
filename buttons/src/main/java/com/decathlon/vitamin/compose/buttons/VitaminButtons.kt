@@ -357,7 +357,7 @@ private val ButtonIconPadding = 8.dp
 
 @Preview
 @Composable
-fun VitaminButtonPreview() {
+private fun VitaminButtonPreview() {
     VitaminTheme {
         VitaminButtons.Primary(text = "Gift selection") {}
     }
@@ -365,7 +365,7 @@ fun VitaminButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminPrimaryReversedButtonPreview() {
+private fun VitaminPrimaryReversedButtonPreview() {
     VitaminTheme {
         VitaminButtons.PrimaryReversed(text = "Gift selection") {}
     }
@@ -373,7 +373,7 @@ fun VitaminPrimaryReversedButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminSecondaryButtonPreview() {
+private fun VitaminSecondaryButtonPreview() {
     VitaminTheme {
         VitaminButtons.Secondary(text = "Gift selection") {}
     }
@@ -381,7 +381,7 @@ fun VitaminSecondaryButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminTertiaryButtonPreview() {
+private fun VitaminTertiaryButtonPreview() {
     VitaminTheme {
         VitaminButtons.Tertiary(text = "Gift selection") {}
     }
@@ -389,7 +389,7 @@ fun VitaminTertiaryButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminGhostButtonPreview() {
+private fun VitaminGhostButtonPreview() {
     VitaminTheme {
         VitaminButtons.Ghost(text = "Gift selection") {}
     }
@@ -397,7 +397,7 @@ fun VitaminGhostButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminGhostReversedButtonPreview() {
+private fun VitaminGhostReversedButtonPreview() {
     VitaminTheme {
         VitaminButtons.GhostReversed(text = "Gift selection") {}
     }
@@ -405,7 +405,7 @@ fun VitaminGhostReversedButtonPreview() {
 
 @Preview
 @Composable
-fun VitaminConversionButtonPreview() {
+private fun VitaminConversionButtonPreview() {
     VitaminTheme {
         VitaminButtons.Conversion(text = "Gift selection") {}
     }

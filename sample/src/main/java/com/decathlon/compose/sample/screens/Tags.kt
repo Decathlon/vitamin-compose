@@ -92,7 +92,7 @@ object Tags : Screen {
 
 @Preview
 @Composable
-fun PreviewTagsScreen() {
+private fun PreviewTagsScreen() {
     VitaminTheme(darkTheme = true) {
         Tags.Screen()
     }

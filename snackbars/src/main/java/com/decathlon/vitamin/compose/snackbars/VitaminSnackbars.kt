@@ -41,7 +41,7 @@ object VitaminSnackbars {
 
 @Preview
 @Composable
-internal fun PreviewVitaminSnackBarWithTextOnly() {
+private fun PreviewVitaminSnackBarWithTextOnly() {
     VitaminTheme {
         VitaminSnackbars.Primary(text = "This is the description of the snackbar")
     }
@@ -49,7 +49,7 @@ internal fun PreviewVitaminSnackBarWithTextOnly() {
 
 @Preview
 @Composable
-internal fun PreviewVitaminSnackBarWithActionOneLine() {
+private fun PreviewVitaminSnackBarWithActionOneLine() {
     VitaminTheme {
         VitaminSnackbars.Primary(
             text = "This is the description of the snackbar",
@@ -65,7 +65,7 @@ internal fun PreviewVitaminSnackBarWithActionOneLine() {
 
 @Preview
 @Composable
-internal fun PreviewVitaminSnackBarWithActionTwoLine() {
+private fun PreviewVitaminSnackBarWithActionTwoLine() {
     VitaminTheme {
         VitaminSnackbars.Primary(
             text = "This is the description of the snackbar",

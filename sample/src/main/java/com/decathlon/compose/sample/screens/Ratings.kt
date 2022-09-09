@@ -196,7 +196,7 @@ object Ratings : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewRatings() {
+private fun PreviewRatings() {
     VitaminTheme {
         Ratings.Screen()
     }
