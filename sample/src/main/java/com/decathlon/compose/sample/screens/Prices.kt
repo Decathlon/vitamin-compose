@@ -105,7 +105,7 @@ object Prices : Screen {
 
 @Preview
 @Composable
-fun PreviewPricesScreen() {
+private fun PreviewPricesScreen() {
     VitaminTheme(darkTheme = true) {
         Prices.Screen()
     }

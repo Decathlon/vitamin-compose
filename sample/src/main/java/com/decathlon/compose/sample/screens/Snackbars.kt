@@ -64,7 +64,7 @@ object Snackbars : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewSnackbars() {
+private fun PreviewSnackbars() {
     VitaminTheme {
         Snackbars.Screen()
     }
@@ -72,7 +72,7 @@ fun PreviewSnackbars() {
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewDarkSnackbars() {
+private fun PreviewDarkSnackbars() {
     VitaminTheme(darkTheme = true) {
         Snackbars.Screen()
     }

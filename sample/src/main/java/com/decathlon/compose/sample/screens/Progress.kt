@@ -245,7 +245,7 @@ internal fun Modifier.progressScreenModifier(
 
 @Preview(showBackground = true)
 @Composable
-fun ProgressBarPreview() {
+private fun ProgressBarPreview() {
     VitaminTheme {
         Progress.Screen()
     }

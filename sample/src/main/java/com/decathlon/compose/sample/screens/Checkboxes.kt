@@ -83,7 +83,7 @@ object Checkboxes : Screen {
 
 @Preview
 @Composable
-fun PreviewCheckboxes() {
+private fun PreviewCheckboxes() {
     VitaminTheme {
         Checkboxes.Screen()
     }
@@ -91,7 +91,7 @@ fun PreviewCheckboxes() {
 
 @Preview
 @Composable
-fun PreviewDarkCheckboxes() {
+private fun PreviewDarkCheckboxes() {
     VitaminTheme(darkTheme = false) {
         Checkboxes.Screen()
     }

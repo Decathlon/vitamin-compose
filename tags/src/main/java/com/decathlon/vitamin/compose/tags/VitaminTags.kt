@@ -366,7 +366,7 @@ private fun TagContentImpl(
 
 @Preview
 @Composable
-fun PreviewAccentVitaminTag() {
+private fun PreviewAccentVitaminTag() {
     VitaminTheme {
         VitaminTags.Accent(
             label = "Accent tag",
@@ -377,7 +377,7 @@ fun PreviewAccentVitaminTag() {
 
 @Preview
 @Composable
-fun PreviewAccentClickableVitaminTag() {
+private fun PreviewAccentClickableVitaminTag() {
     VitaminTheme {
         VitaminTags.Accent(
             label = "Accent tag clickable",
@@ -388,7 +388,7 @@ fun PreviewAccentClickableVitaminTag() {
 
 @Preview
 @Composable
-fun PreviewAlertVitaminTag() {
+private fun PreviewAlertVitaminTag() {
     VitaminTheme {
         VitaminTags.Alert(label = "Alert tag")
     }
@@ -396,7 +396,7 @@ fun PreviewAlertVitaminTag() {
 
 @Preview
 @Composable
-fun PreviewBrandVitaminTag() {
+private fun PreviewBrandVitaminTag() {
     VitaminTheme {
         VitaminTags.Brand(
             label = "Brand tag",
@@ -407,7 +407,7 @@ fun PreviewBrandVitaminTag() {
 
 @Preview
 @Composable
-fun PreviewDecorativeVitaminTag() {
+private fun PreviewDecorativeVitaminTag() {
     VitaminTheme {
         VitaminTags.DecorativeEmerald(label = "Decorative Emerald tag")
     }

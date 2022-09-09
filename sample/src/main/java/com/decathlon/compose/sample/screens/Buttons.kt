@@ -189,7 +189,7 @@ object Buttons : Screen {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+private fun DefaultPreview() {
     VitaminTheme {
         Buttons.Screen()
     }

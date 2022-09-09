@@ -101,7 +101,7 @@ fun DummyContent() {
 
 @Preview(showBackground = true)
 @Composable
-fun DividerScreenPreview() {
+private fun DividerScreenPreview() {
     VitaminTheme {
         Dividers.Screen()
     }
