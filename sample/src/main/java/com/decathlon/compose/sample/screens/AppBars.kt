@@ -270,6 +270,63 @@ object AppBars : Screen {
                         )
                     )
                 }
+                item {
+                    val selectedId = remember { mutableStateOf("agenda") }
+                    VitaminBottomNavigations.Primary(
+                        actions = arrayListOf(
+                            SelectedActionItem(
+                                selected = selectedId.value == "agenda",
+                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                contentDescription = null,
+                                text = "Agenda",
+                                onClick = {
+                                    selectedId.value = "agenda"
+                                    return@SelectedActionItem true
+                                }
+                            ),
+                            SelectedActionItem(
+                                selected = selectedId.value == "speakers",
+                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                contentDescription = null,
+                                text = "Speakers",
+                                onClick = {
+                                    selectedId.value = "speakers"
+                                    return@SelectedActionItem true
+                                }
+                            ),
+                            SelectedActionItem(
+                                selected = selectedId.value == "networking",
+                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                contentDescription = null,
+                                text = "Networking",
+                                onClick = {
+                                    selectedId.value = "networking"
+                                    return@SelectedActionItem true
+                                }
+                            ),
+                            SelectedActionItem(
+                                selected = selectedId.value == "partners",
+                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                contentDescription = null,
+                                text = "Partners",
+                                onClick = {
+                                    selectedId.value = "partners"
+                                    return@SelectedActionItem true
+                                }
+                            ),
+                            SelectedActionItem(
+                                selected = selectedId.value == "info",
+                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                contentDescription = null,
+                                text = "Info",
+                                onClick = {
+                                    selectedId.value = "info"
+                                    return@SelectedActionItem true
+                                }
+                            )
+                        )
+                    )
+                }
             }
         }
     }

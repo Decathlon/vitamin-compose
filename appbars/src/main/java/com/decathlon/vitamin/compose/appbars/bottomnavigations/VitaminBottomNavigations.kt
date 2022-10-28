@@ -7,6 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.style.TextOverflow
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 open class SelectedActionItem(
@@ -48,7 +49,15 @@ object VitaminBottomNavigations {
                             contentDescription = it.contentDescription
                         )
                     },
-                    label = { Text(text = it.text, color = textColor, style = VitaminTheme.typography.caption) }
+                    label = {
+                        Text(
+                            text = it.text,
+                            color = textColor,
+                            style = VitaminTheme.typography.caption,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
                 )
             }
         }
