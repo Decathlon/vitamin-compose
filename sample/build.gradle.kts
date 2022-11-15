@@ -68,6 +68,7 @@ dependencies {
     implementation(project(":modals"))
     implementation(project(":snackbars"))
     implementation(project(":badges"))
+    implementation(project(":quantities"))
 
     implementation(AndroidX.appCompat)
     implementation(Google.Android.material)
