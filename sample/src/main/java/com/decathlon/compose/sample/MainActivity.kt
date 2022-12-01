@@ -17,7 +17,7 @@ import com.decathlon.compose.sample.screens.Dividers
 import com.decathlon.compose.sample.screens.Modals
 import com.decathlon.compose.sample.screens.Prices
 import com.decathlon.compose.sample.screens.Progress
-import com.decathlon.compose.sample.screens.Quantities
+import com.decathlon.compose.sample.screens.QuantityPicker
 import com.decathlon.compose.sample.screens.RadioButtons
 import com.decathlon.compose.sample.screens.Ratings
 import com.decathlon.compose.sample.screens.Skeletons
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                         Dividers,
                         Snackbars,
                         Badges,
-                        Quantities
+                        QuantityPicker
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {
