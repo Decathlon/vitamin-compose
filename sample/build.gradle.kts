@@ -77,5 +77,5 @@ dependencies {
     implementation(AndroidX.navigation.compose)
     implementation(AndroidX.compose.ui.tooling)
 
-    implementation(Google.Accompanist.systemuicontroller)
+    implementation(Google.accompanist.systemUiController)
 }
