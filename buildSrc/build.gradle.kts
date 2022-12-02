@@ -23,7 +23,7 @@ gradlePlugin {
 
 dependencies {
     implementation(gradleApi())
-    implementation("com.android.tools.build:gradle:7.2.1")
+    implementation("com.android.tools.build:gradle:7.3.1")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
     implementation("com.vanniktech:gradle-maven-publish-plugin:0.18.0")
     implementation("app.cash.licensee:licensee-gradle-plugin:1.4.1")
