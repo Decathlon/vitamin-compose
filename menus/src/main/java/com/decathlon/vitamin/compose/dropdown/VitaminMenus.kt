@@ -1,12 +1,16 @@
 package com.decathlon.vitamin.compose.dropdown
 
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.DropdownMenu
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import kotlinx.coroutines.flow.filter
 
 object VitaminMenus {
     /**
@@ -22,9 +26,18 @@ object VitaminMenus {
         anchor: @Composable () -> Unit,
         modifier: Modifier = Modifier,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource,
         onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
+        LaunchedEffect(interactionSource) {
+            interactionSource.interactions
+                .filter { it is PressInteraction.Press }
+                .collect {
+                    expanded.value = !expanded.value
+                }
+        }
+
         Box {
             anchor()
             DropdownMenu(

@@ -1,6 +1,7 @@
 package com.decathlon.vitamin.compose.textinputs
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,6 +18,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -36,6 +38,7 @@ import androidx.compose.ui.unit.toSize
 import com.decathlon.vitamin.compose.dropdown.VitaminMenuItems
 import com.decathlon.vitamin.compose.dropdown.VitaminMenus.Dropdown
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import kotlinx.coroutines.flow.filter
 
 object VitaminTextInputs {
     /**
@@ -167,10 +170,12 @@ object VitaminTextInputs {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
+
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
         Dropdown(
             expanded = expanded,
@@ -187,6 +192,7 @@ object VitaminTextInputs {
                     singleLine = true,
                     maxLines = 1,
                     enabled = enabled,
+                    interactionSource = interactionSource,
                     onValueChange = {},
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
@@ -199,7 +205,8 @@ object VitaminTextInputs {
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
-            children = children
+            children = children,
+            interactionSource = interactionSource
         )
     }
 
@@ -332,6 +339,7 @@ object VitaminTextInputs {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
@@ -353,6 +361,7 @@ object VitaminTextInputs {
                     maxLines = 1,
                     enabled = enabled,
                     onValueChange = {},
+                    interactionSource = interactionSource,
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
@@ -360,11 +369,12 @@ object VitaminTextInputs {
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }
-                    }
+                    },
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
-            children = children
+            children = children,
+            interactionSource = interactionSource
         )
     }
 }
