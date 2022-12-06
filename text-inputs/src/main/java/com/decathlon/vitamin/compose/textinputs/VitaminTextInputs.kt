@@ -156,6 +156,7 @@ object VitaminTextInputs {
      * @param modifier The `Modifier` to be applied to the component
      * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
@@ -167,6 +168,7 @@ object VitaminTextInputs {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
@@ -187,6 +189,7 @@ object VitaminTextInputs {
                     singleLine = true,
                     maxLines = 1,
                     enabled = enabled,
+                    interactionSource = interactionSource,
                     onValueChange = {},
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
@@ -199,7 +202,8 @@ object VitaminTextInputs {
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
-            children = children
+            children = children,
+            interactionSource = interactionSource
         )
     }
 
@@ -321,6 +325,7 @@ object VitaminTextInputs {
      * @param modifier The `Modifier` to be applied to the component
      * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
@@ -332,6 +337,7 @@ object VitaminTextInputs {
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
@@ -353,6 +359,7 @@ object VitaminTextInputs {
                     maxLines = 1,
                     enabled = enabled,
                     onValueChange = {},
+                    interactionSource = interactionSource,
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
@@ -360,11 +367,12 @@ object VitaminTextInputs {
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }
-                    }
+                    },
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
-            children = children
+            children = children,
+            interactionSource = interactionSource
         )
     }
 }

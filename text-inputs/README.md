@@ -137,6 +137,7 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can type in the text input, otherwise false
 `expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
 `textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
 `children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown
@@ -265,6 +266,7 @@ Parameters | Descriptions
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can type in the text input, otherwise false
 `expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
 `textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
 `children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown

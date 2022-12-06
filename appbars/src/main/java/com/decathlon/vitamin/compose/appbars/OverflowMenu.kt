@@ -1,5 +1,6 @@
 package com.decathlon.vitamin.compose.appbars
 
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -14,12 +15,14 @@ internal fun OverflowMenu(
     actions: List<ActionItem>,
     modifier: Modifier = Modifier,
     expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     onDismissRequest: (() -> Unit)? = null,
     overflowIcon: @Composable VitaminMenuIconButtons.() -> Unit
 ) {
     VitaminMenus.Dropdown(
         expanded = expanded,
         modifier = modifier,
+        interactionSource = interactionSource,
         onDismissRequest = {
             onDismissRequest?.let { it() }
         },

@@ -22,6 +22,7 @@ object VitaminMenus {
         anchor: @Composable () -> Unit,
         modifier: Modifier = Modifier,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     )
@@ -59,6 +60,7 @@ Parameters | Descriptions
 `anchor: @Composable () -> Unit` | Component where the dropdown menu is attached
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `onDismissRequest: () -> Unit = {}` | The callback to be called when the dropdown menu is dismiss
 `children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown
 
