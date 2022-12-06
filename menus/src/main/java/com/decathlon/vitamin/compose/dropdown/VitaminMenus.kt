@@ -18,6 +18,7 @@ object VitaminMenus {
      * @param anchor Component where the dropdown menu is attached
      * @param modifier The [Modifier] to be applied to this BottomNavigation
      * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param onDismissRequest The callback to be called when the dropdown menu is dismiss
      * @param children Declare your dropdown menu item components inside your dropdown
      */
@@ -26,7 +27,7 @@ object VitaminMenus {
         anchor: @Composable () -> Unit,
         modifier: Modifier = Modifier,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
-        interactionSource: MutableInteractionSource,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     ) {

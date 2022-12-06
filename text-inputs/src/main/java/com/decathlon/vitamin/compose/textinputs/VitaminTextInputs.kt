@@ -1,7 +1,6 @@
 package com.decathlon.vitamin.compose.textinputs
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,7 +17,6 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,7 +36,6 @@ import androidx.compose.ui.unit.toSize
 import com.decathlon.vitamin.compose.dropdown.VitaminMenuItems
 import com.decathlon.vitamin.compose.dropdown.VitaminMenus.Dropdown
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-import kotlinx.coroutines.flow.filter
 
 object VitaminTextInputs {
     /**
@@ -159,6 +156,7 @@ object VitaminTextInputs {
      * @param modifier The `Modifier` to be applied to the component
      * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
@@ -175,7 +173,6 @@ object VitaminTextInputs {
         textStyle: TextStyle = VitaminTheme.typography.text2,
         children: @Composable VitaminMenuItems.() -> Unit
     ) {
-
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
         Dropdown(
             expanded = expanded,
@@ -328,6 +325,7 @@ object VitaminTextInputs {
      * @param modifier The `Modifier` to be applied to the component
      * @param enabled True if you can type in the text input, otherwise false
      * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
      * @param colors The color to notify your user if they are in normal, error or success state
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
