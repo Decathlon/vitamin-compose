@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vtmn_add_button_description">Add</string>
+    <string name="vtmn_subtract_button_description">Subtract</string>
+</resources>
