@@ -26,8 +26,8 @@ object VitaminButtons {
     /**
      * The primary button should only be used once per view (not including a modal dialog),
      * these buttons have the most emphasis.
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -39,8 +39,8 @@ object VitaminButtons {
      */
     @Composable
     fun Primary(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -64,8 +64,8 @@ object VitaminButtons {
 
     /**
      * The primary reversed should be used for primary actions on pictures or dark backgrounds
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -77,8 +77,8 @@ object VitaminButtons {
      */
     @Composable
     fun PrimaryReversed(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -103,8 +103,8 @@ object VitaminButtons {
     /**
      * The secondary button is the standard button for most use cases. The outlined styling
      * places less emphasis on these buttons
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -116,8 +116,8 @@ object VitaminButtons {
      */
     @Composable
     fun Secondary(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -142,8 +142,8 @@ object VitaminButtons {
     /**
      * The tertiary button is usually used for miscellaneous actions: the action is important,
      * but may not be what the user is looking to do right then
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -155,8 +155,8 @@ object VitaminButtons {
      */
     @Composable
     fun Tertiary(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -182,8 +182,8 @@ object VitaminButtons {
     /**
      * The ghost button should be used for secondary actions when combined with a primary button
      * or when you need to list multiple actions in one single view as a preference page
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -195,8 +195,8 @@ object VitaminButtons {
      */
     @Composable
     fun Ghost(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -221,8 +221,8 @@ object VitaminButtons {
 
     /**
      * The ghost reversed should be used on pictures or dark backgrounds
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -234,8 +234,8 @@ object VitaminButtons {
      */
     @Composable
     fun GhostReversed(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
@@ -260,8 +260,8 @@ object VitaminButtons {
 
     /**
      * The conversion button must be used for transactional actions
-     * @param modifier The [Modifier] to be applied to the component
      * @param text The text inside the button
+     * @param modifier The [Modifier] to be applied to the component
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
@@ -273,8 +273,8 @@ object VitaminButtons {
      */
     @Composable
     fun Conversion(
-        modifier: Modifier = Modifier,
         text: String,
+        modifier: Modifier = Modifier,
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,

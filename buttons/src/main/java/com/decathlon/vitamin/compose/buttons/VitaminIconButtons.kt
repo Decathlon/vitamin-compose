@@ -287,7 +287,7 @@ private fun VitaminIconButtonImpl(
                 .height(sizes.height),
             colors = colors,
             border = if (enabled) borders.stroke else borders.disabled,
-            contentPadding =  PaddingValues(),
+            contentPadding = PaddingValues(),
             elevation = elevation,
             onClick = onClick
         ) {
@@ -295,7 +295,6 @@ private fun VitaminIconButtonImpl(
         }
     }
 }
-
 
 @Preview
 @Composable
