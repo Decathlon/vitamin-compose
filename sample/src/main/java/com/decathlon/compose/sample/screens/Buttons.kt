@@ -9,8 +9,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleRow
 import com.decathlon.compose.sample.components.SampleScaffold
-import com.decathlon.vitamin.compose.buttons.IconSide
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
+import com.decathlon.vitamin.compose.buttons.VitaminIconButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 const val BigText =
@@ -62,15 +62,11 @@ object Buttons : Screen {
                 }
                 item {
                     SampleRow {
-                        VitaminButtons.Primary(
-                            text = "Primary",
-                            icon = painterResource(id = R.drawable.ic_add_fill),
-                            iconSide = IconSide.RIGHT
+                        VitaminIconButtons.Primary(
+                            icon = painterResource(id = R.drawable.ic_add_fill)
                         ) {}
-                        VitaminButtons.Primary(
-                            text = "Primary",
+                        VitaminIconButtons.Primary(
                             icon = painterResource(id = R.drawable.ic_add_fill),
-                            iconSide = IconSide.RIGHT,
                             enabled = false
                         ) {}
                     }
@@ -115,6 +111,17 @@ object Buttons : Screen {
                 }
                 item {
                     SampleRow {
+                        VitaminIconButtons.Ghost(
+                            icon = painterResource(id = R.drawable.ic_add_fill)
+                        ) {}
+                        VitaminIconButtons.Ghost(
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            enabled = false
+                        ) {}
+                    }
+                }
+                item {
+                    SampleRow {
                         VitaminButtons.Conversion(text = "Conversion") {}
                         VitaminButtons.Conversion(text = "Conversion", enabled = false) {}
                     }
@@ -138,7 +145,10 @@ object Buttons : Screen {
                         color = VitaminTheme.colors.vtmnBackgroundBrandPrimary
                     ) {
                         VitaminButtons.PrimaryReversed(text = "Primary Reversed") {}
-                        VitaminButtons.PrimaryReversed(text = "Primary Reversed", enabled = false) {}
+                        VitaminButtons.PrimaryReversed(
+                            text = "Primary Reversed",
+                            enabled = false
+                        ) {}
                     }
                 }
                 item {
@@ -149,6 +159,17 @@ object Buttons : Screen {
                         ) {}
                         VitaminButtons.PrimaryReversed(
                             text = "Primary Reversed",
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            enabled = false
+                        ) {}
+                    }
+                }
+                item {
+                    SampleRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
+                        VitaminIconButtons.PrimaryReversed(
+                            icon = painterResource(id = R.drawable.ic_add_fill)
+                        ) {}
+                        VitaminIconButtons.PrimaryReversed(
                             icon = painterResource(id = R.drawable.ic_add_fill),
                             enabled = false
                         ) {}
@@ -177,6 +198,20 @@ object Buttons : Screen {
                         ) {}
                         VitaminButtons.GhostReversed(
                             text = "Ghost",
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            enabled = false
+                        ) {}
+                    }
+                }
+                item {
+                    SampleRow(
+                        lastItem = true,
+                        color = VitaminTheme.colors.vtmnBackgroundBrandPrimary
+                    ) {
+                        VitaminIconButtons.GhostReversed(
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                        ) {}
+                        VitaminIconButtons.GhostReversed(
                             icon = painterResource(id = R.drawable.ic_add_fill),
                             enabled = false
                         ) {}

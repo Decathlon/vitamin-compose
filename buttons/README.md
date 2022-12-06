@@ -15,6 +15,8 @@ implementation("com.decathlon.vitamin.compose:buttons:<versions>")
 
 ### Primary
 
+**Buttons**
+
 ```kotlin
 object VitaminButtons {
     @Composable
@@ -58,9 +60,39 @@ Parameters | Descriptions
 `ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on the component
 `onClick: () -> Unit` | The callback to be called when the user click on the button
 
+
+**Icon Buttons**
+
+```kotlin
+object VitaminIconButtons {
+    @Composable
+    fun Primary(
+        icon: Painter,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        colors: ButtonColors = VitaminButtonsColors.primary(),
+        sizes: VitaminButtonSizes = VitaminButtonsSizes.medium(),
+        borders: ButtonBorders = VitaminButtonsBorders.none(),
+        ripple: RippleTheme = VitaminTheme.ripples.brand,
+        onClick: () -> Unit
+    )
+}
+
+```
+Parameters | Descriptions
+-- | --
+`icon: Painter` | The icon to be displayed inside the button
+`modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
+`enabled: Boolean = true` | True if you can click on the button, otherwise false
+`colors: ButtonColors = VitaminButtonsColors.primary()` | The colors of the background and the content in enabled and disabled
+`sizes: VitaminIconButtonSizes = VitaminIconButtonsSizes.medium()` | The sizes for the icon, paddings and width/height
+`borders: ButtonBorders = VitaminButtonsBorders.none()` | The width and color of the border in enabled and disabled
+`ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on the component
+`onClick: () -> Unit` | The callback to be called when the user click on the button
+
 ### All Variants
 
-There are multiple variants of the button with the same parameters:
+There are multiple variants of the button and the icon button with the same parameters:
 
 * `PrimaryReversed`: The primary reversed should be used for primary actions on pictures or dark backgrounds
 * `Secondary`: The secondary button is the standard button for most use cases. The outlined styling places less emphasis on these buttons

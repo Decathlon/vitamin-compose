@@ -297,34 +297,39 @@ object VitaminButtons {
     )
 }
 
+enum class IconSide { LEFT, RIGHT }
+
+private val ButtonIconPadding = 8.dp
+
 @Composable
-private fun VitaminButtonImpl(
+internal fun VitaminButtonImpl(
     text: String,
-    modifier: Modifier = Modifier,
-    icon: Painter?,
-    iconSide: IconSide,
     enabled: Boolean,
     colors: ButtonColors,
     sizes: ButtonSizes,
-    borders: ButtonBorders = VitaminButtonBorders.none(),
     ripple: RippleTheme,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    icon: Painter? = null,
+    iconSide: IconSide? = null,
+    borders: ButtonBorders = VitaminButtonBorders.none(),
     elevation: ButtonElevation? = ButtonDefaults.elevation(
         defaultElevation = 0.dp,
         pressedElevation = 0.dp,
         disabledElevation = 0.dp
-    ),
-    onClick: () -> Unit
+    )
 ) {
     val iconButton = @Composable {
         icon?.let {
-            if (iconSide == IconSide.RIGHT) Spacer(Modifier.width(ButtonIconPadding))
+            val spacerModifier = Modifier.width(ButtonIconPadding)
+            if (iconSide == IconSide.RIGHT) Spacer(spacerModifier)
             Icon(
                 painter = icon,
                 contentDescription = null,
                 modifier = Modifier.size(sizes.iconSize),
                 tint = colors.contentColor(enabled = enabled).value
             )
-            if (iconSide == IconSide.LEFT) Spacer(Modifier.width(ButtonIconPadding))
+            if (iconSide == IconSide.LEFT) Spacer(spacerModifier)
         }
     }
     CompositionLocalProvider(LocalRippleTheme provides ripple) {
@@ -351,10 +356,6 @@ private fun VitaminButtonImpl(
         }
     }
 }
-
-enum class IconSide { LEFT, RIGHT }
-
-private val ButtonIconPadding = 8.dp
 
 @Preview
 @Composable

@@ -1,5 +1,6 @@
 package com.decathlon.vitamin.compose.buttons
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,6 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.Paparazzi
+import com.decathlon.vitamin.compose.buttons.utils.ButtonVariantsFactory
+import com.decathlon.vitamin.compose.buttons.utils.Theme
+import com.decathlon.vitamin.compose.buttons.utils.Variant
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
@@ -22,12 +26,6 @@ import org.junit.runner.RunWith
 class VitaminButtonsPrimaryTest(
     @TestParameter val variant: Variant
 ) {
-    enum class Variant {
-        Primary, PrimaryReversed, Secondary, Tertiary, Ghost, GhostReversed, Conversion
-    }
-
-    enum class Theme { Light, Dark }
-
     @get:Rule
     val paparazzi = Paparazzi()
 
@@ -42,7 +40,15 @@ class VitaminButtonsPrimaryTest(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        val rowModifier = if (variant == Variant.GhostReversed) {
+                            Modifier.background(VitaminTheme.colors.vtmnBackgroundBrandPrimary)
+                        } else {
+                            Modifier
+                        }
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.medium()
@@ -53,7 +59,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.medium(),
@@ -66,7 +75,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.medium(),
@@ -81,7 +93,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 modifier = Modifier.weight(1f),
                                 variant = variant,
@@ -98,7 +113,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 modifier = Modifier.weight(1f),
                                 variant = variant,
@@ -134,7 +152,15 @@ class VitaminButtonsPrimaryTest(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        val rowModifier = if (variant == Variant.GhostReversed) {
+                            Modifier.background(VitaminTheme.colors.vtmnBackgroundBrandPrimary)
+                        } else {
+                            Modifier
+                        }
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.large()
@@ -145,7 +171,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.large(),
@@ -158,7 +187,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 variant = variant,
                                 size = VitaminButtonsSizes.large(),
@@ -173,7 +205,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 modifier = Modifier.weight(1f),
                                 variant = variant,
@@ -190,7 +225,10 @@ class VitaminButtonsPrimaryTest(
                                 enabled = false
                             )
                         }
-                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(4.dp),
+                            modifier = rowModifier
+                        ) {
                             ButtonVariantsFactory.Button(
                                 modifier = Modifier.weight(1f),
                                 variant = variant,
