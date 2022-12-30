@@ -7,7 +7,7 @@ pluginManagement {
 }
 
 plugins {
-    id("de.fayard.refreshVersions") version "0.40.2"
+    id("de.fayard.refreshVersions") version "0.51.0"
 }
 
 refreshVersions {
@@ -15,6 +15,7 @@ refreshVersions {
 }
 
 rootProject.name = "vitamin-compose"
+include(":vitamin")
 include(":foundation")
 include(":buttons")
 include(":text-inputs")
@@ -35,4 +36,3 @@ include(":menus")
 include(":snackbars")
 include(":badges")
 include(":quantity-pickers")
-include(":vitamin")
