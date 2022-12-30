@@ -82,10 +82,8 @@ private fun QuantityComponent(
             }
         }
     ) {
-        it?.let {
-            if (it.isDigitsOnly()) {
-                quantity = it
-            }
+        if (it.isDigitsOnly()) {
+            quantity = it
         }
     }
 }
