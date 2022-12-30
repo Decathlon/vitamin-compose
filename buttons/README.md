@@ -68,6 +68,7 @@ object VitaminIconButtons {
     @Composable
     fun Primary(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primary(),
@@ -77,11 +78,20 @@ object VitaminIconButtons {
         onClick: () -> Unit
     )
 }
-
 ```
+The minimal usage of the component is an icon and the associated contentDescription
+
+```kotlin
+VitaminIconButtons.Primary(
+    icon = painterResource(id = R.drawable.ic_add_fill),
+    contentDescription = "Add"
+) {}
+```
+
 Parameters | Descriptions
 -- | --
 `icon: Painter` | The icon to be displayed inside the button
+`contentDescription: String?` | The content description of the icon for accessibility
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can click on the button, otherwise false
 `colors: ButtonColors = VitaminButtonsColors.primary()` | The colors of the background and the content in enabled and disabled

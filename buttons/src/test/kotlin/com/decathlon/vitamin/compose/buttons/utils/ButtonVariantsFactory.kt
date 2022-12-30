@@ -112,12 +112,14 @@ object ButtonVariantsFactory {
         size: IconButtonSizes,
         modifier: Modifier = Modifier,
         icon: Painter,
+        contentDescription: String?,
         enabled: Boolean = true
     ) {
         when (variant) {
             Variant.Primary -> VitaminIconButtons.Primary(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -127,6 +129,7 @@ object ButtonVariantsFactory {
             Variant.PrimaryReversed -> VitaminIconButtons.PrimaryReversed(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -136,6 +139,7 @@ object ButtonVariantsFactory {
             Variant.Secondary -> VitaminIconButtons.Secondary(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -145,6 +149,7 @@ object ButtonVariantsFactory {
             Variant.Tertiary -> VitaminIconButtons.Tertiary(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -154,6 +159,7 @@ object ButtonVariantsFactory {
             Variant.Ghost -> VitaminIconButtons.Ghost(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -163,6 +169,7 @@ object ButtonVariantsFactory {
             Variant.GhostReversed -> VitaminIconButtons.GhostReversed(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
@@ -172,6 +179,7 @@ object ButtonVariantsFactory {
             Variant.Conversion -> VitaminIconButtons.Conversion(
                 sizes = size,
                 icon = icon,
+                contentDescription = contentDescription,
                 enabled = enabled,
                 onClick = {
                     // Nothing to do here
