@@ -18,8 +18,8 @@ data class IconButtonSizes(
 object VitaminIconButtonsSizes {
     @Composable
     fun large(
-        width: Dp = 64.dp,
-        height: Dp = 64.dp,
+        width: Dp = 56.dp,
+        height: Dp = 56.dp,
         iconSize: Dp = 24.dp,
         contentPadding: PaddingValues = PaddingValues(start = 40.dp, end = 40.dp)
     ): IconButtonSizes = remember(
