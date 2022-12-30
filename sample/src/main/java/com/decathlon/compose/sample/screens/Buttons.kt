@@ -63,10 +63,12 @@ object Buttons : Screen {
                 item {
                     SampleRow {
                         VitaminIconButtons.Primary(
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.Primary(
                             icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add",
                             enabled = false
                         ) {}
                     }
@@ -100,7 +102,7 @@ object Buttons : Screen {
                     SampleRow {
                         VitaminButtons.Ghost(
                             text = "Ghost",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = painterResource(id = R.drawable.ic_add_fill),
                         ) {}
                         VitaminButtons.Ghost(
                             text = "Ghost",
@@ -112,10 +114,12 @@ object Buttons : Screen {
                 item {
                     SampleRow {
                         VitaminIconButtons.Ghost(
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.Ghost(
                             icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add",
                             enabled = false
                         ) {}
                     }
@@ -167,10 +171,12 @@ object Buttons : Screen {
                 item {
                     SampleRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
                         VitaminIconButtons.PrimaryReversed(
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.PrimaryReversed(
                             icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add",
                             enabled = false
                         ) {}
                     }
@@ -210,9 +216,11 @@ object Buttons : Screen {
                     ) {
                         VitaminIconButtons.GhostReversed(
                             icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.GhostReversed(
                             icon = painterResource(id = R.drawable.ic_add_fill),
+                            contentDescription = "Add",
                             enabled = false
                         ) {}
                     }

@@ -25,6 +25,7 @@ object VitaminIconButtons {
      * The primary button should only be used once per view (not including a modal dialog),
      * these buttons have the most emphasis.
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -36,6 +37,7 @@ object VitaminIconButtons {
     @Composable
     fun Primary(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primary(),
@@ -46,6 +48,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -57,6 +60,7 @@ object VitaminIconButtons {
     /**
      * The primary reversed should be used for primary actions on pictures or dark backgrounds
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -68,6 +72,7 @@ object VitaminIconButtons {
     @Composable
     fun PrimaryReversed(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
@@ -78,6 +83,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -90,6 +96,7 @@ object VitaminIconButtons {
      * The secondary button is the standard button for most use cases. The outlined styling
      * places less emphasis on these buttons
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -101,6 +108,7 @@ object VitaminIconButtons {
     @Composable
     fun Secondary(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.secondary(),
@@ -111,6 +119,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -123,6 +132,7 @@ object VitaminIconButtons {
      * The tertiary button is usually used for miscellaneous actions: the action is important,
      * but may not be what the user is looking to do right then
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -134,6 +144,7 @@ object VitaminIconButtons {
     @Composable
     fun Tertiary(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.tertiary(),
@@ -144,6 +155,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -157,6 +169,7 @@ object VitaminIconButtons {
      * The ghost button should be used for secondary actions when combined with a primary button
      * or when you need to list multiple actions in one single view as a preference page
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -168,6 +181,7 @@ object VitaminIconButtons {
     @Composable
     fun Ghost(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.ghost(),
@@ -178,6 +192,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -190,6 +205,7 @@ object VitaminIconButtons {
     /**
      * The ghost reversed should be used on pictures or dark backgrounds
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -201,6 +217,7 @@ object VitaminIconButtons {
     @Composable
     fun GhostReversed(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.ghostReversed(),
@@ -211,6 +228,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -223,6 +241,7 @@ object VitaminIconButtons {
     /**
      * The conversion button must be used for transactional actions
      * @param icon The icon to be displayed inside the button container
+     * @param contentDescription The content description of the icon for accessibility
      * @param modifier The [Modifier] to be applied to the component
      * @param enabled True if you can click on the button, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
@@ -234,6 +253,7 @@ object VitaminIconButtons {
     @Composable
     fun Conversion(
         icon: Painter,
+        contentDescription: String?,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ButtonColors = VitaminButtonsColors.conversion(),
@@ -244,6 +264,7 @@ object VitaminIconButtons {
     ) = VitaminIconButtonImpl(
         modifier = modifier,
         icon = icon,
+        contentDescription = contentDescription,
         enabled = enabled,
         colors = colors,
         sizes = sizes,
@@ -256,6 +277,7 @@ object VitaminIconButtons {
 @Composable
 private fun VitaminIconButtonImpl(
     icon: Painter?,
+    contentDescription: String?,
     enabled: Boolean,
     colors: ButtonColors,
     sizes: IconButtonSizes,
@@ -273,7 +295,7 @@ private fun VitaminIconButtonImpl(
         icon?.let {
             Icon(
                 painter = icon,
-                contentDescription = null,
+                contentDescription = contentDescription,
                 modifier = Modifier.size(sizes.iconSize),
                 tint = colors.contentColor(enabled = enabled).value
             )
@@ -300,7 +322,10 @@ private fun VitaminIconButtonImpl(
 @Composable
 private fun VitaminButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.Primary(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.Primary(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -308,7 +333,10 @@ private fun VitaminButtonPreview() {
 @Composable
 private fun VitaminPrimaryReversedIconButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.PrimaryReversed(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.PrimaryReversed(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -316,7 +344,10 @@ private fun VitaminPrimaryReversedIconButtonPreview() {
 @Composable
 private fun VitaminSecondaryIconButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.Secondary(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.Secondary(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -324,7 +355,10 @@ private fun VitaminSecondaryIconButtonPreview() {
 @Composable
 private fun VitaminTertiaryIconButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.Tertiary(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.Tertiary(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -332,7 +366,10 @@ private fun VitaminTertiaryIconButtonPreview() {
 @Composable
 private fun VitaminGhostIconButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.Ghost(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.Ghost(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -340,7 +377,10 @@ private fun VitaminGhostIconButtonPreview() {
 @Composable
 private fun VitaminGhostReversedButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.GhostReversed(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.GhostReversed(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }
 
@@ -348,6 +388,9 @@ private fun VitaminGhostReversedButtonPreview() {
 @Composable
 private fun VitaminConversionButtonPreview() {
     VitaminTheme {
-        VitaminIconButtons.Conversion(icon = painterResource(id = R.drawable.ic_vtmn_android_line)) {}
+        VitaminIconButtons.Conversion(
+            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            contentDescription = "Android"
+        ) {}
     }
 }

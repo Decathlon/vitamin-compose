@@ -54,12 +54,14 @@ class VitaminIconButtonsPrimaryTest(
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.medium(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line)
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                contentDescription = "Add"
                             )
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.medium(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                contentDescription = "Add",
                                 enabled = false
                             )
                         }
@@ -89,12 +91,14 @@ class VitaminIconButtonsPrimaryTest(
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.large(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line)
+                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                contentDescription = "Add"
                             )
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.large(),
                                 icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                contentDescription = "Add",
                                 enabled = false
                             )
                         }
