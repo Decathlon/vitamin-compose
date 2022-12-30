@@ -24,4 +24,5 @@ dependencies {
     api(project(":tabs"))
     api(project(":tags"))
     api(project(":text-inputs"))
+    api(project(":quantity-pickers"))
 }
