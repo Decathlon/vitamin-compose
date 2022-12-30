@@ -52,23 +52,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":buttons"))
-    implementation(project(":text-inputs"))
-    implementation(project(":checkboxes"))
-    implementation(project(":switches"))
-    implementation(project(":progressbars"))
-    implementation(project(":radiobuttons"))
-    implementation(project(":appbars"))
-    implementation(project(":dividers"))
-    implementation(project(":tabs"))
-    implementation(project(":skeletons"))
-    implementation(project(":tags"))
-    implementation(project(":ratings"))
-    implementation(project(":prices"))
-    implementation(project(":modals"))
-    implementation(project(":snackbars"))
-    implementation(project(":badges"))
-    implementation(project(":quantity-pickers"))
+    implementation(project(":vitamin"))
 
     implementation(AndroidX.appCompat)
     implementation(Google.Android.material)
@@ -77,5 +61,5 @@ dependencies {
     implementation(AndroidX.navigation.compose)
     implementation(AndroidX.compose.ui.tooling)
 
-    implementation(Google.Accompanist.systemuicontroller)
+    implementation(Google.accompanist.systemUiController)
 }

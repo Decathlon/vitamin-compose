@@ -3,9 +3,9 @@ repositories {
 }
 
 plugins {
-    id("org.sonarqube") version "3.3"
-    id("org.jlleitschuh.gradle.ktlint") version "10.2.0"
-    id("io.gitlab.arturbosch.detekt") version "1.19.0"
+    id("org.sonarqube")
+    id("org.jlleitschuh.gradle.ktlint")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 subprojects {
