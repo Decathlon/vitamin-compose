@@ -15,7 +15,7 @@
 - [ ] I have tested on a phone device/emulator.
 - [ ] I have tested on a tablet device/emulator.
 - [ ] I have tested on a large screen device/emulator.
-- [ ] If it includes design changes, please ask for a review with a core team designer.
+- [ ] If it includes design changes, please ask for a review `design-system-core-team-design` GitHub team.
 
 ## Screenshots 📸
 <!--- Put your phone screenshots here -->
