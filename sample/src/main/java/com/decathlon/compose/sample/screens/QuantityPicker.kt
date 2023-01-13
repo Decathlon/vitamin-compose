@@ -3,6 +3,7 @@ package com.decathlon.compose.sample.screens
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -18,6 +19,7 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.quantity.pickers.QuantityColors
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantitiesColors
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickers
+import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickersSizes
 
 object QuantityPicker : Screen {
     override val name: String
@@ -35,7 +37,7 @@ object QuantityPicker : Screen {
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
                 item {
-                    QuantityComponent()
+                    QuantityComponent(modifier = Modifier.width(VitaminQuantityPickersSizes.minWidth))
                 }
                 item {
                     QuantityComponent(
@@ -60,10 +62,12 @@ object QuantityPicker : Screen {
 
 @Composable
 private fun QuantityComponent(
+    modifier: Modifier = Modifier,
     colors: QuantityColors = VitaminQuantitiesColors.normal()
 ) {
     var quantity by remember { mutableStateOf("1") }
     VitaminQuantityPickers.Primary(
+        modifier = modifier,
         value = quantity,
         colors = colors,
         addEnabled = quantity.toIntOrNull()?.let {

@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -64,7 +65,7 @@ internal fun MiddleTextField(
                 modifier = Modifier
                     .onFocusChanged { focusState ->
                         focus.value = focusState.isFocused
-                    },
+                    }.fillMaxWidth(),
                 onValueChange = onValueChange,
                 enabled = enabled,
                 textStyle = textStyle.copy(

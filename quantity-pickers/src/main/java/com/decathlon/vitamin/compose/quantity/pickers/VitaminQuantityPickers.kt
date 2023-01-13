@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.text.KeyboardActions
@@ -69,7 +69,7 @@ object VitaminQuantityPickers {
             Row(
                 modifier = modifier
                     .height(48.dp)
-                    .width(154.dp)
+                    .widthIn(min = VitaminQuantityPickersSizes.minWidth)
             ) {
                 IconButton(
                     painter = painterResource(id = R.drawable.ic_vtmn_subtract_fill),
