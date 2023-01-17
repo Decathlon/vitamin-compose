@@ -24,7 +24,7 @@ object VitaminButtonsSizes {
         fontSize: TextStyle = VitaminTheme.typography.button
             .copy(fontSize = VitaminTheme.typography.text1.fontSize),
         minWidth: Dp = 84.dp,
-        height: Dp = 64.dp,
+        height: Dp = 56.dp,
         iconSize: Dp = 24.dp,
         contentPadding: PaddingValues = PaddingValues(start = 40.dp, end = 40.dp)
     ): ButtonSizes = remember(
