@@ -18,6 +18,21 @@ data class CircularProgressBarSizes(
 
 object VitaminCircularProgressBarSizes {
     @Composable
+    fun extraSmall(
+        boxSize: Dp = 48.dp,
+        strokeSize: Dp = 4.5.dp,
+        contentPadding: Dp = 0.75.dp,
+        textStyle: TextStyle = VitaminTheme.typography.text3
+    ): CircularProgressBarSizes = remember(boxSize, strokeSize, contentPadding, textStyle) {
+        CircularProgressBarSizes(
+            boxSize = boxSize,
+            strokeSize = strokeSize,
+            contentPadding = contentPadding,
+            textStyle = textStyle
+        )
+    }
+
+    @Composable
     fun small(
         boxSize: Dp = 64.dp,
         strokeSize: Dp = 6.dp,

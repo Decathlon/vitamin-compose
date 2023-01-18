@@ -172,6 +172,31 @@ object Progress : Screen {
                         VitaminProgressBars.Circular(
                             progress = 0.6f,
                             modifier = Modifier.progressScreenModifier(),
+                            sizes = VitaminCircularProgressBarSizes.extraSmall(),
+                            content = {
+                                ImageCircular(
+                                    painter = painterResource(id = R.drawable.store_decathlon),
+                                    contentDescription = "Decathlon Store"
+                                )
+                            }
+                        )
+                        VitaminProgressBars.Circular(
+                            modifier = Modifier.progressScreenModifier(),
+                            sizes = VitaminCircularProgressBarSizes.extraSmall(),
+                            content = {
+                                ImageCircular(
+                                    painter = painterResource(id = R.drawable.store_decathlon),
+                                    contentDescription = "Decathlon Store"
+                                )
+                            }
+                        )
+                    }
+                }
+                item {
+                    ProgressRow {
+                        VitaminProgressBars.Circular(
+                            progress = 0.6f,
+                            modifier = Modifier.progressScreenModifier(),
                             sizes = VitaminCircularProgressBarSizes.medium(),
                             content = {
                                 ProgressIndicatorText()
@@ -206,12 +231,33 @@ object Progress : Screen {
                 item {
                     ProgressRow {
                         VitaminProgressBars.Circular(
+                            progress = 0.6f,
+                            modifier = Modifier.progressScreenModifier(),
+                            sizes = VitaminCircularProgressBarSizes.extraSmall(),
+                        )
+                        VitaminProgressBars.Circular(
+                            progress = 0.9f,
+                            modifier = Modifier.progressScreenModifier(),
+                            sizes = VitaminCircularProgressBarSizes.extraSmall(),
+                            content = {
+                                ProgressIndicatorText()
+                            }
+                        )
+                    }
+                }
+                item {
+                    ProgressRow {
+                        VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
                             sizes = VitaminCircularProgressBarSizes.medium(),
                         )
                         VitaminProgressBars.Circular(
                             modifier = Modifier.progressScreenModifier(),
                             sizes = VitaminCircularProgressBarSizes.small(),
+                        )
+                        VitaminProgressBars.Circular(
+                            modifier = Modifier.progressScreenModifier(),
+                            sizes = VitaminCircularProgressBarSizes.extraSmall(),
                         )
                     }
                 }
