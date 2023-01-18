@@ -20,11 +20,34 @@ data class TagSizes(
 
 object VitaminTagSizes {
     @Composable
+    fun small(
+        contentPadding: PaddingValues = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
+        clickablePadding: PaddingValues = PaddingValues(vertical = 10.dp),
+        iconSize: Dp = 16.dp,
+        labelStartPadding: Dp = 4.dp,
+        textStyle: TextStyle = VitaminTheme.typography.caption
+    ): TagSizes = remember(
+        contentPadding,
+        clickablePadding,
+        iconSize,
+        labelStartPadding,
+        textStyle
+    ) {
+        TagSizes(
+            contentPadding = contentPadding,
+            clickablePadding = clickablePadding,
+            iconSize = iconSize,
+            labelStartPadding = labelStartPadding,
+            textStyle = textStyle
+        )
+    }
+
+    @Composable
     fun medium(
         contentPadding: PaddingValues = PaddingValues(horizontal = 8.dp, vertical = 2.dp),
         clickablePadding: PaddingValues = PaddingValues(vertical = 8.dp),
-        iconSize: Dp = 13.dp,
-        labelStartPadding: Dp = 6.dp,
+        iconSize: Dp = 16.dp,
+        labelStartPadding: Dp = 4.dp,
         textStyle: TextStyle = VitaminTheme.typography.text3
     ): TagSizes = remember(
         contentPadding,
