@@ -11,6 +11,7 @@ dependencies {
     api(project(":buttons"))
     api(project(":checkboxes"))
     api(project(":dividers"))
+    api(project(":fabs"))
     api(project(":foundation"))
     api(project(":menus"))
     api(project(":modals"))
