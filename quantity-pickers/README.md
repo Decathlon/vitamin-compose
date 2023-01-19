@@ -24,6 +24,7 @@ object VitaminQuantityPickers {
         addEnabled: Boolean = true,
         subtractEnabled: Boolean = true,
         editTextEnabled: Boolean = true,
+        isExpanded: Boolean = false,
         keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         colors: QuantityColors = VitaminQuantitiesColors.normal(),
@@ -57,6 +58,7 @@ Parameters | Descriptions
 `addEnabled: (Boolean)` | Whether add button is enable or not
 `subtractEnabled: (Boolean)` | Whether substract button is enable or not
 `editTextEnabled: (Boolean)` | Whether textField is enable or not
+`isExpanded: Boolean = false` | If true, component will fill max width, otherwise get default width
 `keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)` | Software keyboard options that contains such as KeyboardType and ImeAction
 `keyboardActions: KeyboardActions = KeyboardActions.Default` | When the text input emit an IME action, the corresponding callback is called
 `colors: QuantityColors = VitaminQuantitiesColors.normal()` | The color to notify your user if they are in normal or error state
