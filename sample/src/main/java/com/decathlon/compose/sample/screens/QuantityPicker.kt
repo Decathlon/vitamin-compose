@@ -17,10 +17,8 @@ import androidx.core.text.isDigitsOnly
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.quantity.pickers.QuantityColors
-import com.decathlon.vitamin.compose.quantity.pickers.QuantityPickerSizes
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantitiesColors
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickers
-import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickersSizes
 
 object QuantityPicker : Screen {
     override val name: String
@@ -39,7 +37,7 @@ object QuantityPicker : Screen {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 item {
-                    QuantityComponent(sizes = VitaminQuantityPickersSizes.fillMaxWidth())
+                    QuantityComponent(isExpanded = true)
                 }
                 item {
                     QuantityComponent()
@@ -67,14 +65,14 @@ object QuantityPicker : Screen {
 
 @Composable
 private fun QuantityComponent(
-    sizes: QuantityPickerSizes = VitaminQuantityPickersSizes.fixed(),
+    isExpanded: Boolean = false,
     colors: QuantityColors = VitaminQuantitiesColors.normal()
 ) {
     var quantity by remember { mutableStateOf("1") }
     VitaminQuantityPickers.Primary(
         value = quantity,
         colors = colors,
-        sizes = sizes,
+        isExpanded = isExpanded,
         addEnabled = quantity.toIntOrNull()?.let {
             @Suppress("MagicNumber")
             it < 10

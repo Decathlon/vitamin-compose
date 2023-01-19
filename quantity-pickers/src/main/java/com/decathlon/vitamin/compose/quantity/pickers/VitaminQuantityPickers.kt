@@ -5,9 +5,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.text.KeyboardActions
@@ -38,10 +39,10 @@ object VitaminQuantityPickers {
      * @param addEnabled Whether add button is enable or not
      * @param subtractEnabled Whether substract button is enable or not
      * @param editTextEnabled Whether textField is enable or not
+     * @param isExpanded if true, component will fill max width, otherwise get default width
      * @param keyboardOptions Software keyboard options that contains such as KeyboardType and ImeAction
      * @param keyboardActions When the text input emit an IME action, the corresponding callback is called
      * @param colors The color to notify your user if they are in normal or error state
-     * @param sizes Customize the size strategy with a fixed or fillMaxWidth variants
      * @param shape The shape for icon buttons
      * @param textStyle The typography of the text inside the text input
      * @param ripple The ripple effect applied on buttons
@@ -56,10 +57,10 @@ object VitaminQuantityPickers {
         addEnabled: Boolean = true,
         subtractEnabled: Boolean = true,
         editTextEnabled: Boolean = true,
+        isExpanded: Boolean = false,
         keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         colors: QuantityColors = VitaminQuantitiesColors.normal(),
-        sizes: QuantityPickerSizes = VitaminQuantityPickersSizes.fixed(),
         shape: CornerBasedShape = VitaminTheme.shapes.radius100,
         textStyle: TextStyle = VitaminTheme.typography.text2,
         ripple: RippleTheme = VitaminTheme.ripples.brand,
@@ -70,8 +71,14 @@ object VitaminQuantityPickers {
         CompositionLocalProvider(LocalRippleTheme provides ripple) {
             Row(
                 modifier = modifier
-                    .height(sizes.height)
-                    .widthIn(min = sizes.minWidth, max = sizes.maxWidth)
+                    .height(48.dp)
+                    .then(
+                        if (isExpanded) {
+                            modifier.fillMaxWidth()
+                        } else {
+                            modifier.width(156.dp)
+                        }
+                    )
             ) {
                 IconButton(
                     painter = painterResource(id = R.drawable.ic_vtmn_subtract_fill),
