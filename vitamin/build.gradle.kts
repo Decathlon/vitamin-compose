@@ -13,7 +13,7 @@ dependencies {
     api(project(":chips"))
     api(project(":dividers"))
     api(project(":fabs"))
-    api(project(":foundation"))
+    api(project(":foundation:foundation"))
     api(project(":menus"))
     api(project(":modals"))
     api(project(":prices"))
