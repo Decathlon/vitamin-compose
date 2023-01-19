@@ -3,13 +3,13 @@ package com.decathlon.compose.sample.screens
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -17,6 +17,7 @@ import androidx.core.text.isDigitsOnly
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.quantity.pickers.QuantityColors
+import com.decathlon.vitamin.compose.quantity.pickers.QuantityPickerSizes
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantitiesColors
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickers
 import com.decathlon.vitamin.compose.quantity.pickers.VitaminQuantityPickersSizes
@@ -34,10 +35,14 @@ object QuantityPicker : Screen {
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(8.dp),
-                verticalArrangement = Arrangement.spacedBy(20.dp)
+                verticalArrangement = Arrangement.spacedBy(20.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 item {
-                    QuantityComponent(modifier = Modifier.width(VitaminQuantityPickersSizes.minWidth))
+                    QuantityComponent(sizes = VitaminQuantityPickersSizes.fillMaxWidth())
+                }
+                item {
+                    QuantityComponent()
                 }
                 item {
                     QuantityComponent(
@@ -62,14 +67,14 @@ object QuantityPicker : Screen {
 
 @Composable
 private fun QuantityComponent(
-    modifier: Modifier = Modifier,
+    sizes: QuantityPickerSizes = VitaminQuantityPickersSizes.fixed(),
     colors: QuantityColors = VitaminQuantitiesColors.normal()
 ) {
     var quantity by remember { mutableStateOf("1") }
     VitaminQuantityPickers.Primary(
-        modifier = modifier,
         value = quantity,
         colors = colors,
+        sizes = sizes,
         addEnabled = quantity.toIntOrNull()?.let {
             @Suppress("MagicNumber")
             it < 10

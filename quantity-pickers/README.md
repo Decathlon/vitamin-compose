@@ -27,6 +27,7 @@ object VitaminQuantityPickers {
         keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         colors: QuantityColors = VitaminQuantitiesColors.normal(),
+        sizes: QuantityPickerSizes = VitaminQuantityPickersSizes.fixed(),
         shape: CornerBasedShape = VitaminTheme.shapes.radius100,
         textStyle: TextStyle = VitaminTheme.typography.text2,
         ripple: RippleTheme = VitaminTheme.ripples.brand,
@@ -60,6 +61,7 @@ Parameters | Descriptions
 `keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)` | Software keyboard options that contains such as KeyboardType and ImeAction
 `keyboardActions: KeyboardActions = KeyboardActions.Default` | When the text input emit an IME action, the corresponding callback is called
 `colors: QuantityColors = VitaminQuantitiesColors.normal()` | The color to notify your user if they are in normal or error state
+`sizes: QuantityPickerSizes = VitaminQuantityPickersSizes.fixed()`| Customize the size strategy with a fixed or fillMaxWidth variants
 `shape: CornerBasedShape = VitaminTheme.shapes.radius100` | The shape for icon buttons
 `textStyle: TextStyle = VitaminTheme.typography.text2` | The typography of the text inside the text input
 `ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on buttons
