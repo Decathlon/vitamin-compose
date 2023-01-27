@@ -20,6 +20,8 @@ object VitaminTabs {
      * @param textStyle The text style of the label inside tabs
      * @param textOverflow How visual overflow should be handled
      * @param onTabClicked The callback to be called when the user click on a tab
+     *
+     * @throws IllegalArgumentException if tabItems not have at least 2 items
      */
     @Composable
     fun Fixed(
@@ -30,8 +32,10 @@ object VitaminTabs {
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
+        validateTabItems(tabItems)
         val selectedTab = tabItems.firstOrNull { it.selected } ?: tabItems.first()
         val indexOfSelectedTab = tabItems.indexOf(selectedTab)
+
         TabRow(
             selectedTabIndex = indexOfSelectedTab,
             backgroundColor = colors.backgroundColor,
@@ -64,6 +68,8 @@ object VitaminTabs {
      * @param textStyle The text style of the label inside tabs
      * @param textOverflow How visual overflow should be handled
      * @param onTabClicked The callback to be called when the user click on a tab
+     *
+     * @throws IllegalArgumentException if tabItems not have at least 2 items
      */
     @Composable
     fun Scrollable(
@@ -74,6 +80,7 @@ object VitaminTabs {
         textOverflow: TextOverflow = TextOverflow.Ellipsis,
         onTabClicked: (tabItem: TabItem) -> Unit
     ) {
+        validateTabItems(tabItems)
         val selectedTab = tabItems.firstOrNull { it.selected } ?: tabItems.first()
         val indexOfSelectedTab = tabItems.indexOf(selectedTab)
 
@@ -106,4 +113,10 @@ object VitaminTabs {
 
     private fun getTabHeight(list: List<TabItem>) =
         if (list.any { it.topIcon }) 72.dp else 48.dp
+
+    private fun validateTabItems(tabItems: List<TabItem>) {
+        if (tabItems.size < 2) {
+            throw IllegalArgumentException("tabItems must have at least 2 items")
+        }
+    }
 }
