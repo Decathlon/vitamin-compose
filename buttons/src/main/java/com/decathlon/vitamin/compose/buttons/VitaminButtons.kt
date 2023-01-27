@@ -47,7 +47,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.primary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.brand,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -85,7 +85,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.brandReversed,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -124,7 +124,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.secondary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.primary(),
-        ripple: RippleTheme = VitaminTheme.ripples.primary,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -163,7 +163,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.tertiary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.tertiary,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -203,7 +203,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.ghost(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -242,7 +242,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.ghostReversed(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.primaryReversed,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
@@ -281,7 +281,7 @@ object VitaminButtons {
         colors: ButtonColors = VitaminButtonsColors.conversion(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
-        ripple: RippleTheme = VitaminTheme.ripples.accent,
+        ripple: RippleTheme = LocalRippleTheme.current,
         onClick: () -> Unit
     ) = VitaminButtonImpl(
         text = text,
