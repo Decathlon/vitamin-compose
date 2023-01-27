@@ -23,9 +23,9 @@ gradlePlugin {
 
 dependencies {
     implementation(gradleApi())
-    implementation("com.android.tools.build:gradle:7.3.1")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0")
+    implementation("com.android.tools.build:gradle:7.4.0")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
     implementation("com.vanniktech:gradle-maven-publish-plugin:0.18.0")
     implementation("app.cash.licensee:licensee-gradle-plugin:1.4.1")
-    implementation("app.cash.paparazzi:paparazzi-gradle-plugin:1.0.0")
+    implementation("app.cash.paparazzi:paparazzi-gradle-plugin:1.2.0")
 }
