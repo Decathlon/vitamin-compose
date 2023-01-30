@@ -34,6 +34,8 @@ The fixed tabs displays all tabs in a set simultaneously.
 The minimal usage of the component is the list of tab items with a label and optionally an icon.
 You can configure all tabs content if you want something more complex.
 
+This component need to have at least 2 tabItems. Otherwise an [IllegalArgumentException] will be thrown.
+
 ```kotlin
 val icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line)
 val list = remember {
@@ -77,6 +79,8 @@ text labels and a larger number of tabs. They are best used for browsing on touc
 
 The minimal usage of the component is the list of tab items with a label and optionally an icon.
 You can configure all tabs content if you want something more complex.
+
+This component need to have at least 2 tabItems. Otherwise an [IllegalArgumentException] will be thrown.
 
 ```kotlin
 val icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line)
