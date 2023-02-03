@@ -11,6 +11,7 @@ dependencies {
     api(project(":buttons"))
     api(project(":checkboxes"))
     api(project(":chips"))
+    api(project(":cards"))
     api(project(":dividers"))
     api(project(":fabs"))
     api(project(":foundation:foundation"))
