@@ -15,7 +15,8 @@ object VitaminModalButtons {
     @Composable
     fun Primary(
         text: String,
-        onClick: () -> Unit
+        onClick: () -> Unit,
+        enabled: Boolean = true
     ) {
         VitaminButtons.Ghost(
             text = text,
@@ -23,7 +24,8 @@ object VitaminModalButtons {
                 minWidth = 0.dp,
                 contentPadding = PaddingValues(0.dp)
             ),
-            onClick = onClick
+            onClick = onClick,
+            enabled = enabled
         )
     }
 }

@@ -1,12 +1,12 @@
 package com.decathlon.vitamin.compose.modals.impl
 
 import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
@@ -23,22 +23,22 @@ internal fun VitaminModalImpl(
     title: String?,
     painter: Painter?,
     contentScrollState: ScrollState,
-    positiveButton: (@Composable () -> Unit)?,
-    negativeButton: (@Composable () -> Unit)?,
-    neutralButton: (@Composable () -> Unit)?,
+    rightButton: (@Composable () -> Unit)?,
+    middleButton: (@Composable () -> Unit)?,
+    leftButton: (@Composable () -> Unit)?,
     buttonsOrientation: ModalButtonsOrientation,
     sizes: ModalSizes,
     colors: ModalColors
-) {
-    Dialog(
-        onDismissRequest = onDismissRequest,
-        content = {
+) = Dialog(
+    onDismissRequest = onDismissRequest,
+    content = {
+        Surface(
+            shape = sizes.cornerRadius,
+            color = colors.background
+        ) {
             Column(
                 modifier = modifier
                     .fillMaxWidth()
-                    .background(
-                        color = colors.background
-                    )
                     .padding(
                         horizontal = sizes.horizontalPadding,
                         vertical = sizes.verticalPadding
@@ -67,15 +67,18 @@ internal fun VitaminModalImpl(
                         contentColor = colors.contentColor
                     )
                 }
-                Buttons(
-                    modifier = modifier,
-                    positiveButton = positiveButton,
-                    negativeButton = negativeButton,
-                    neutralButton = neutralButton,
-                    buttonsOrientation = buttonsOrientation,
-                    topPadding = sizes.spacerSize
-                )
+                if (rightButton != null) {
+                    ModalButtons.Buttons(
+                        modifier = modifier,
+                        right = rightButton,
+                        middle = middleButton,
+                        left = leftButton,
+                        buttonsOrientation = buttonsOrientation,
+                        topPadding = sizes.spacerSize,
+                        buttonsSpacer = sizes.buttonsSpacer
+                    )
+                }
             }
         }
-    )
-}
+    }
+)
