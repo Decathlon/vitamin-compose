@@ -21,7 +21,7 @@ object VitaminDividers {
     fun FullBleed(
         modifier: Modifier = Modifier,
         thickness: Dp = 1.dp,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+        color: Color = VitaminTheme.colors.vtmnBorderPrimary,
     ) = VitaminDividerImpl(modifier, color, thickness, 0.dp, 0.dp)
 
     /**
@@ -36,7 +36,7 @@ object VitaminDividers {
         modifier: Modifier = Modifier,
         thickness: Dp = 1.dp,
         startIndent: Dp = 64.dp,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+        color: Color = VitaminTheme.colors.vtmnBorderPrimary,
     ) = VitaminDividerImpl(modifier, color, thickness, startIndent, 0.dp)
 
     /**
@@ -53,7 +53,7 @@ object VitaminDividers {
         thickness: Dp = 1.dp,
         startIndent: Dp = 32.dp,
         endIndent: Dp = 32.dp,
-        color: Color = VitaminTheme.colors.vtmnBorderSecondary,
+        color: Color = VitaminTheme.colors.vtmnBorderPrimary,
     ) = VitaminDividerImpl(modifier, color, thickness, startIndent, endIndent)
 }
 
