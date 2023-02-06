@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.snackbars.VitaminSnackbars
@@ -20,8 +21,13 @@ object Snackbars : Screen {
         get() = "snackbars"
 
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = AppBars.name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = AppBars.name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -66,7 +72,7 @@ object Snackbars : Screen {
 @Composable
 private fun PreviewSnackbars() {
     VitaminTheme {
-        Snackbars.Screen()
+        Snackbars.Screen(null)
     }
 }
 
@@ -74,6 +80,6 @@ private fun PreviewSnackbars() {
 @Composable
 private fun PreviewDarkSnackbars() {
     VitaminTheme(darkTheme = true) {
-        Snackbars.Screen()
+        Snackbars.Screen(null)
     }
 }

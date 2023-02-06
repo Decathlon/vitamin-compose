@@ -13,6 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.checkboxes.VitaminCheckboxes
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -24,8 +25,13 @@ object Checkboxes : Screen {
         get() = "checkboxes"
 
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(
                 modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -85,7 +91,7 @@ object Checkboxes : Screen {
 @Composable
 private fun PreviewCheckboxes() {
     VitaminTheme {
-        Checkboxes.Screen()
+        Checkboxes.Screen(null)
     }
 }
 
@@ -93,6 +99,6 @@ private fun PreviewCheckboxes() {
 @Composable
 private fun PreviewDarkCheckboxes() {
     VitaminTheme(darkTheme = false) {
-        Checkboxes.Screen()
+        Checkboxes.Screen(null)
     }
 }

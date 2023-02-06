@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminAssets
 import com.decathlon.vitamin.compose.VitaminIcons
@@ -52,8 +53,13 @@ object Chips : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 // ACTION CHIPS
                 item {
@@ -471,6 +477,6 @@ private fun SingleChoiceChips() {
 @Composable
 fun ChipsPreview() {
     VitaminTheme {
-        Chips.Screen()
+        Chips.Screen(null)
     }
 }

@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -29,8 +30,13 @@ object TextInputs : Screen {
 
     @SuppressWarnings("LongMethod", "MagicNumber")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             val painter = rememberVectorPainter(VitaminIcons.Line.Heart)
             LazyColumn(
                 modifier = Modifier
@@ -212,6 +218,6 @@ object TextInputs : Screen {
 @Composable
 private fun TextInputsScreenPreview() {
     VitaminTheme {
-        TextInputs.Screen()
+        TextInputs.Screen(null)
     }
 }

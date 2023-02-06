@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.fabs.VitaminFabSizes
@@ -29,8 +30,13 @@ object Fabs : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             Column(modifier = Modifier.fillMaxSize()) {
                 Text(
                     modifier = Modifier.padding(start = 16.dp, top = 16.dp),
@@ -115,6 +121,6 @@ object Fabs : Screen {
 @Composable
 private fun DefaultPreview() {
     VitaminTheme {
-        Fabs.Screen()
+        Fabs.Screen(null)
     }
 }

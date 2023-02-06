@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleRow
 import com.decathlon.compose.sample.components.SampleScaffold
@@ -35,8 +36,13 @@ object Buttons : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 item {
                     SampleRow(firstItem = true) {
@@ -238,6 +244,6 @@ object Buttons : Screen {
 @Composable
 private fun DefaultPreview() {
     VitaminTheme {
-        Buttons.Screen()
+        Buttons.Screen(null)
     }
 }

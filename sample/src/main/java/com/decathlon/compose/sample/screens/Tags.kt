@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -41,7 +42,7 @@ object Tags : Screen {
 
     @Suppress("LongMethod")
     @Composable
-    override fun Screen() {
+    override fun Screen(navController: NavController?) {
         val allTagColors = listOf(
             Pair("Accent", VitaminTagColors.accent()),
             Pair("Alert", VitaminTagColors.alert()),
@@ -61,7 +62,12 @@ object Tags : Screen {
             Size.Small -> VitaminTagSizes.small()
             Size.Medium -> VitaminTagSizes.medium()
         }
-        SampleScaffold(title = name) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             val icon = rememberVectorPainter(VitaminIcons.Line.Football)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -140,6 +146,6 @@ object Tags : Screen {
 @Composable
 private fun PreviewTagsScreen() {
     VitaminTheme(darkTheme = true) {
-        Tags.Screen()
+        Tags.Screen(null)
     }
 }

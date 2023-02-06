@@ -23,6 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
@@ -71,8 +72,13 @@ object Modals : Screen {
     }
 
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -378,7 +384,7 @@ object Modals : Screen {
 @Composable
 private fun PreviewModals() {
     VitaminTheme {
-        Modals.Screen()
+        Modals.Screen(null)
     }
 }
 
@@ -386,6 +392,6 @@ private fun PreviewModals() {
 @Composable
 private fun PreviewDarkModals() {
     VitaminTheme(darkTheme = true) {
-        Modals.Screen()
+        Modals.Screen(null)
     }
 }
