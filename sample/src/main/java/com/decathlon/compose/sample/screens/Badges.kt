@@ -1,6 +1,5 @@
 package com.decathlon.compose.sample.screens
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -41,7 +39,6 @@ object Badges : Screen {
         SampleScaffold(title = name) {
             LazyColumn(
                 modifier = Modifier
-                    .background(Color(red = 234, green = 242, blue = 248))
                     .fillMaxSize()
                     .padding(8.dp)
             ) {
