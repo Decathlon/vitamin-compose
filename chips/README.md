@@ -54,7 +54,7 @@ VitaminChips.Action(
     onClick = {},
     leadingIcon = {
         Icon(
-            painter = painterResource(id = R.drawable.ic_vtmn_share_line),
+            imageVector = VitaminIcons.Line.Share,
             contentDescription = null
         )
     }
@@ -162,9 +162,7 @@ VitaminChips.InputWithIcon(
     },
     leadingIcon = {
         Icon(
-            painter = painterResource(
-                id = R.drawable.ic_vtmn_walk_line
-            ),
+            imageVector = VitaminIcons.Line.Walk,
             contentDescription = null
         )
     }
@@ -180,7 +178,7 @@ VitaminChips.InputWithImage(
     },
     leadingContent = {
         Image(
-            painter = painterResource(R.drawable.vtmn_flag_fr),
+            imageVector = VitaminAssets.Flags.Fr,
             contentScale = ContentScale.Crop,
             alignment = Alignment.Center,
             contentDescription = null

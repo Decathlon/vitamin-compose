@@ -3,7 +3,10 @@ package com.decathlon.vitamin.compose.chips
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import com.decathlon.vitamin.compose.VitaminIcons
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Check
+import com.decathlon.vitamin.compose.vitaminicons.line.Close
 
 internal object VitaminChipButtons {
     @Composable
@@ -13,7 +16,7 @@ internal object VitaminChipButtons {
     ) {
         Icon(
             modifier = modifier,
-            painter = painterResource(R.drawable.ic_vtmn_close_line),
+            imageVector = VitaminIcons.Line.Close,
             contentDescription = contentDescription
         )
     }
@@ -25,7 +28,7 @@ internal object VitaminChipButtons {
     ) {
         Icon(
             modifier = modifier,
-            painter = painterResource(R.drawable.ic_vtmn_check_line),
+            imageVector = VitaminIcons.Line.Check,
             contentDescription = contentDescription
         )
     }

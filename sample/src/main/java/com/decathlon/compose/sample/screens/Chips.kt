@@ -23,15 +23,25 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminAssets
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.chips.ChipSizes
 import com.decathlon.vitamin.compose.chips.VitaminChipSizes
 import com.decathlon.vitamin.compose.chips.VitaminChips
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminassets.Flags
+import com.decathlon.vitamin.compose.vitaminassets.flags.Be
+import com.decathlon.vitamin.compose.vitaminassets.flags.Es
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Calendar
+import com.decathlon.vitamin.compose.vitaminicons.line.Car
+import com.decathlon.vitamin.compose.vitaminicons.line.Earth
+import com.decathlon.vitamin.compose.vitaminicons.line.Refresh
+import com.decathlon.vitamin.compose.vitaminicons.line.Share
+import com.decathlon.vitamin.compose.vitaminicons.line.Walk
 
 object Chips : Screen {
     override val name: String
@@ -160,7 +170,7 @@ private fun ActionRow(enabled: Boolean, sizes: ChipSizes) {
             onClick = {},
             leadingIcon = {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_vtmn_calendar_line),
+                    imageVector = VitaminIcons.Line.Calendar,
                     contentDescription = null
                 )
             }
@@ -172,7 +182,7 @@ private fun ActionRow(enabled: Boolean, sizes: ChipSizes) {
             onClick = {},
             leadingIcon = {
                 Icon(
-                    painter = painterResource(id = R.drawable.ic_vtmn_share_line),
+                    imageVector = VitaminIcons.Line.Share,
                     contentDescription = null
                 )
             }
@@ -272,7 +282,7 @@ private fun InputRowsWithLeadingImage(enabled: Boolean, sizes: ChipSizes) {
             },
             leadingContent = {
                 Image(
-                    painter = painterResource(R.drawable.vtmn_flag_es),
+                    imageVector = VitaminAssets.Flags.Es,
                     contentScale = ContentScale.Crop,
                     alignment = Alignment.Center,
                     contentDescription = null
@@ -287,7 +297,7 @@ private fun InputRowsWithLeadingImage(enabled: Boolean, sizes: ChipSizes) {
             },
             leadingContent = {
                 Image(
-                    painter = painterResource(R.drawable.vtmn_flag_be),
+                    imageVector = VitaminAssets.Flags.Be,
                     contentScale = ContentScale.Crop,
                     alignment = Alignment.Center,
                     contentDescription = null
@@ -315,9 +325,7 @@ private fun InputRowsWithLeadingIcon(enabled: Boolean, sizes: ChipSizes) {
             sizes = sizes,
             leadingIcon = {
                 Icon(
-                    painter = painterResource(
-                        id = R.drawable.ic_vtmn_earth_line
-                    ),
+                    imageVector = VitaminIcons.Line.Earth,
                     contentDescription = null
                 )
             },
@@ -332,9 +340,7 @@ private fun InputRowsWithLeadingIcon(enabled: Boolean, sizes: ChipSizes) {
             },
             leadingIcon = {
                 Icon(
-                    painter = painterResource(
-                        id = R.drawable.ic_vtmn_car_line
-                    ),
+                    imageVector = VitaminIcons.Line.Car,
                     contentDescription = null
                 )
             }
@@ -347,9 +353,7 @@ private fun InputRowsWithLeadingIcon(enabled: Boolean, sizes: ChipSizes) {
             },
             leadingIcon = {
                 Icon(
-                    painter = painterResource(
-                        id = R.drawable.ic_vtmn_walk_line
-                    ),
+                    imageVector = VitaminIcons.Line.Walk,
                     contentDescription = null
                 )
             }
@@ -382,7 +386,7 @@ private fun InputRows(
                 },
                 leadingIcon = {
                     Icon(
-                        painter = painterResource(id = R.drawable.ic_vtmn_refresh_line),
+                        imageVector = VitaminIcons.Line.Refresh,
                         contentDescription = null
                     )
                 }
