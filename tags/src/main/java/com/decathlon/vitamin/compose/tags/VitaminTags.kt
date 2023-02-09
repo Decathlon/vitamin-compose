@@ -11,9 +11,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Football
+import com.decathlon.vitamin.compose.vitaminicons.line.Gift
 
 @Suppress("TooManyFunctions")
 object VitaminTags {
@@ -368,7 +372,7 @@ private fun PreviewAccentVitaminTag() {
     VitaminTheme {
         VitaminTags.Accent(
             label = "Accent tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_fill),
+            iconPainter = rememberVectorPainter(VitaminIcons.Line.Football),
         )
     }
 }
@@ -398,7 +402,7 @@ private fun PreviewBrandVitaminTag() {
     VitaminTheme {
         VitaminTags.Brand(
             label = "Brand tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_gift_line)
+            iconPainter = rememberVectorPainter(VitaminIcons.Line.Gift)
         )
     }
 }
