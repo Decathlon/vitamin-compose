@@ -14,6 +14,8 @@ dependencies {
     api(project(":dividers"))
     api(project(":fabs"))
     api(project(":foundation:foundation"))
+    api(project(":foundation:foundation-icons"))
+    api(project(":foundation:foundation-assets"))
     api(project(":menus"))
     api(project(":modals"))
     api(project(":prices"))

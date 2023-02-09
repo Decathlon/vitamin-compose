@@ -109,7 +109,6 @@ import com.decathlon.vitamin.compose.vitaminicons.fill.KakaoTalk
 import com.decathlon.vitamin.compose.vitaminicons.fill.Leaf
 import com.decathlon.vitamin.compose.vitaminicons.fill.Lightbulb
 import com.decathlon.vitamin.compose.vitaminicons.fill.Line
-import com.decathlon.vitamin.compose.vitaminicons.fill.LineChart
 import com.decathlon.vitamin.compose.vitaminicons.fill.Link
 import com.decathlon.vitamin.compose.vitaminicons.fill.ListCheck
 import com.decathlon.vitamin.compose.vitaminicons.fill.ListSettings
@@ -244,7 +243,7 @@ public val FillGroup.AllAssets: ____KtList<ImageVector>
       return __AllAssets!!
     }
     __AllAssets= listOf(Truck, PlayCircle, Eye, ArrowLeftDown, SelectedByDecathlon, Sparkles,
-        MailSend, Smartphone, ArrowUpCircle, EmotionNormal, LineChart, CustomerService, Star, Group,
+        MailSend, Smartphone, ArrowUpCircle, EmotionNormal, CustomerService, Star, Group,
         ShareIos, ArrowRightUp, ArrowUpDown, Calendar, Github, Film, RadioButton, Showers, Twitter,
         CloseCircle, ShutDown, Link, Music2, Feedback, Home, Slack, ShareAndroid, Phone, Run, Stop,
         CloudWindy, Google, Image, ExternalLink, Emotion, Ie, Pause, FilterOff, Play, Football,
