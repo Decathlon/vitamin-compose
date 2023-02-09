@@ -15,10 +15,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Android
 
 object VitaminIconButtons {
     /**
@@ -323,7 +326,7 @@ private fun VitaminIconButtonImpl(
 private fun VitaminButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.Primary(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -334,7 +337,7 @@ private fun VitaminButtonPreview() {
 private fun VitaminPrimaryReversedIconButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.PrimaryReversed(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -345,7 +348,7 @@ private fun VitaminPrimaryReversedIconButtonPreview() {
 private fun VitaminSecondaryIconButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.Secondary(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -356,7 +359,7 @@ private fun VitaminSecondaryIconButtonPreview() {
 private fun VitaminTertiaryIconButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.Tertiary(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -367,7 +370,7 @@ private fun VitaminTertiaryIconButtonPreview() {
 private fun VitaminGhostIconButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.Ghost(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -378,7 +381,7 @@ private fun VitaminGhostIconButtonPreview() {
 private fun VitaminGhostReversedButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.GhostReversed(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
@@ -389,7 +392,7 @@ private fun VitaminGhostReversedButtonPreview() {
 private fun VitaminConversionButtonPreview() {
     VitaminTheme {
         VitaminIconButtons.Conversion(
-            icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(VitaminIcons.Line.Android),
             contentDescription = "Android"
         ) {}
     }
