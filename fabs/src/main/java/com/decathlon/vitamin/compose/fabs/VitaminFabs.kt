@@ -5,15 +5,16 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.FloatingActionButtonDefaults
 import androidx.compose.material.Icon
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.fill.Add
 
 object VitaminFabs {
 
@@ -85,7 +86,7 @@ object VitaminFabs {
 private fun VitaminEnabledFabPreview() {
     VitaminTheme {
         VitaminFabs.Primary(
-            icon = rememberVectorPainter(image = Icons.Filled.Add),
+            icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
             contentDescription = "Add"
         ) {}
     }
@@ -96,7 +97,7 @@ private fun VitaminEnabledFabPreview() {
 private fun VitaminDisabledFabPreview() {
     VitaminTheme {
         VitaminFabs.Primary(
-            icon = rememberVectorPainter(image = Icons.Filled.Add),
+            icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
             contentDescription = "Add",
             enabled = false
         ) {}
@@ -109,7 +110,7 @@ private fun VitaminEnabledMiniFabPreview() {
     VitaminTheme {
         VitaminFabs.Primary(
             sizes = VitaminFabSizes.mini(),
-            icon = rememberVectorPainter(image = Icons.Filled.Add),
+            icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
             contentDescription = "Add"
         ) {}
     }
@@ -121,7 +122,7 @@ private fun VitaminDisabledMiniFabPreview() {
     VitaminTheme {
         VitaminFabs.Primary(
             sizes = VitaminFabSizes.mini(),
-            icon = rememberVectorPainter(image = Icons.Filled.Add),
+            icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
             contentDescription = "Add",
             enabled = false
         ) {}
