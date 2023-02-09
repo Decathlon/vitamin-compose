@@ -1,11 +1,15 @@
 package com.decathlon.vitamin.compose.textinputs
 
-import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Check
+import com.decathlon.vitamin.compose.vitaminicons.line.ErrorWarning
 
 enum class State { NORMAL, ERROR, SUCCESS }
 
@@ -17,7 +21,7 @@ class TextInputStateColors(
     val focusBorderColor: Color,
     val helperColor: Color,
     val iconColor: Color,
-    @DrawableRes val icon: Int?,
+    val imageVector: ImageVector?,
     val state: State
 )
 
@@ -40,7 +44,7 @@ object TextInputsState {
             focusBorderColor = focusBorderColor,
             helperColor = helperColor,
             iconColor = iconColor,
-            icon = null,
+            imageVector = null,
             state = State.NORMAL
         )
     }
@@ -53,7 +57,7 @@ object TextInputsState {
         focusBorderColor: Color = VitaminTheme.colors.vtmnBorderNegative,
         helperColor: Color = VitaminTheme.colors.vtmnContentTertiary,
         iconColor: Color = VitaminTheme.colors.vtmnBorderNegative,
-        @DrawableRes icon: Int = R.drawable.ic_vtmn_error_warning_line
+        imageVector: ImageVector = VitaminIcons.Line.ErrorWarning
     ): TextInputStateColors = remember(
         textColor, focusTextColor, borderColor, focusBorderColor, helperColor, iconColor
     ) {
@@ -64,7 +68,7 @@ object TextInputsState {
             focusBorderColor = focusBorderColor,
             helperColor = helperColor,
             iconColor = iconColor,
-            icon = icon,
+            imageVector = imageVector,
             state = State.ERROR
         )
     }
@@ -77,7 +81,7 @@ object TextInputsState {
         focusBorderColor: Color = VitaminTheme.colors.vtmnBorderPositive,
         helperColor: Color = VitaminTheme.colors.vtmnContentTertiary,
         iconColor: Color = VitaminTheme.colors.vtmnBorderPositive,
-        @DrawableRes icon: Int = R.drawable.ic_vtmn_check_line
+        imageVector: ImageVector = VitaminIcons.Line.Check
     ): TextInputStateColors = remember(
         textColor, focusTextColor, borderColor, focusBorderColor, helperColor, iconColor
     ) {
@@ -88,7 +92,7 @@ object TextInputsState {
             focusBorderColor = focusBorderColor,
             helperColor = helperColor,
             iconColor = iconColor,
-            icon = icon,
+            imageVector = imageVector,
             state = State.SUCCESS
         )
     }

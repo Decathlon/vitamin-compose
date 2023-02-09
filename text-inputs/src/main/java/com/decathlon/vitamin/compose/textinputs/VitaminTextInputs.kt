@@ -26,16 +26,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.dropdown.VitaminMenuItems
 import com.decathlon.vitamin.compose.dropdown.VitaminMenus.Dropdown
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.ChevronDown
 
 object VitaminTextInputs {
     /**
@@ -133,11 +135,11 @@ object VitaminTextInputs {
                         if (icon != null && colors.state != State.SUCCESS) {
                             icon()
                         } else if (
-                            colors.icon != null &&
+                            colors.imageVector != null &&
                             (colors.state == State.SUCCESS || colors.state == State.ERROR)
                         ) {
                             Icon(
-                                painter = painterResource(id = colors.icon),
+                                imageVector = colors.imageVector,
                                 contentDescription = null
                             )
                         }
@@ -194,7 +196,7 @@ object VitaminTextInputs {
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_chevron_down_line),
+                                imageVector = VitaminIcons.Line.ChevronDown,
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }
@@ -302,11 +304,11 @@ object VitaminTextInputs {
                         if (icon != null && colors.state != State.SUCCESS) {
                             icon()
                         } else if (
-                            colors.icon != null &&
+                            colors.imageVector != null &&
                             (colors.state == State.SUCCESS || colors.state == State.ERROR)
                         ) {
                             Icon(
-                                painter = painterResource(id = colors.icon),
+                                imageVector = colors.imageVector,
                                 contentDescription = null
                             )
                         }
@@ -363,7 +365,7 @@ object VitaminTextInputs {
                     icon = {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_chevron_down_line),
+                                imageVector = VitaminIcons.Line.ChevronDown,
                                 contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
                             )
                         }
