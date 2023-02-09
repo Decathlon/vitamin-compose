@@ -18,12 +18,12 @@ implementation("com.decathlon.vitamin.compose:modals:<versions>")
 ```kotlin
 object VitaminModals {
     @Composable
-    fun Primary(
+    fun Primary2(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
         title: String? = null,
-        @DrawableRes iconRes: Int? = null,
+        painter: Painter? = null,
         buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,
         contentScrollState: ScrollState = rememberScrollState(),
         colors: ModalColors = VitaminModalColors.primary(),
@@ -49,7 +49,7 @@ VitaminModals.Primary(
     onDismissRequest = {},
     modifier = Modifier,
     title = "Amazon",
-    iconRes = R.drawable.ic_vtmn_amazon_line,
+    painter = rememberVectorPainter(VitaminIcons.Line.MapPin),
     contentScrollState = rememberScrollState(),
     positiveButton = {
         VitaminModalButtons.Primary(
@@ -81,7 +81,7 @@ Parameters | Descriptions
 `onDismissRequest: () -> Unit` | The callback to be called when the user need to dismiss the modal
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `title: String? = null` | The optional title to be displayed at the top of the modal
-`@DrawableRes iconRes: Int? = null` | The optional leading icon to be displayed at the start of the title
+`painter: Painter? = null` | The optional leading icon to be displayed at the start of the title
 `buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL` | The optional buttons orientation to display buttons vertically or horizontally
 `contentScrollState: ScrollState = rememberScrollState()` | The optional scroll state to observe the scrolling
 `colors: ModalColors = VitaminModalColors.primary()` | The optional sizes used to define colors of icon, title, content and background of the modal
