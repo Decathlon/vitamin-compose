@@ -53,6 +53,8 @@ android {
 
 dependencies {
     implementation(project(":vitamin"))
+    implementation(Libs.vitamin_icons)
+    implementation(Libs.vitamin_assets)
 
     implementation(AndroidX.appCompat)
     implementation(Google.Android.material)

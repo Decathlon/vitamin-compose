@@ -9,6 +9,4 @@ dependencies {
     implementation(AndroidX.core)
     api(AndroidX.compose.ui)
     api(AndroidX.compose.material)
-    api(Libs.vitamin_icons)
-    api(Libs.vitamin_assets)
 }
