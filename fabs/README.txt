@@ -38,7 +38,7 @@ The minimal usage of the component is the fab with an icon and a content descrip
 
 ```kotlin
 VitaminFabs.Primary(
-    icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+    icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
     contentDescription = "Add"
 ) {
     // Click event

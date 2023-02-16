@@ -5,10 +5,12 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
-import com.decathlon.vitamin.compose.appbars.R
+import com.decathlon.vitamin.compose.VitaminIcons
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Close
+import com.decathlon.vitamin.compose.vitaminicons.line.Mic
 
-object VitaminSearchMenuIconButtons {
+internal object VitaminSearchMenuIconButtons {
     @Composable
     fun Microphone(
         onClick: () -> Unit,
@@ -24,8 +26,8 @@ object VitaminSearchMenuIconButtons {
             interactionSource = interactionSource,
             icon = {
                 Icon(
-                    painter = painterResource(R.drawable.ic_vtmn_mic_line),
-                    contentDescription = contentDescription,
+                    imageVector = VitaminIcons.Line.Mic,
+                    contentDescription = contentDescription
                 )
             }
         )
@@ -46,8 +48,8 @@ object VitaminSearchMenuIconButtons {
             interactionSource = interactionSource,
             icon = {
                 Icon(
-                    painter = painterResource(R.drawable.ic_vtmn_close_line),
-                    contentDescription = contentDescription,
+                    imageVector = VitaminIcons.Line.Close,
+                    contentDescription = contentDescription
                 )
             }
         )

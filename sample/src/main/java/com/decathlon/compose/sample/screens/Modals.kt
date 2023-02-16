@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -22,14 +23,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.modals.ModalButtonsOrientation
 import com.decathlon.vitamin.compose.modals.VitaminModalButtons
 import com.decathlon.vitamin.compose.modals.VitaminModals
 import com.decathlon.vitamin.compose.radiobuttons.VitaminRadioButtons
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.MapPin
 
 object Modals : Screen {
 
@@ -113,7 +116,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 content = {
                     Text(
                         text = message
@@ -121,7 +124,7 @@ object Modals : Screen {
                 },
                 onDismissRequest = { showDialog.value = false },
                 title = title,
-                iconRes = R.drawable.ic_vtmn_map_pin_line
+                painter = rememberVectorPainter(VitaminIcons.Line.MapPin)
             )
         }
     }
@@ -138,7 +141,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 content = {
                     Text(
@@ -161,7 +164,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -185,7 +188,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -227,7 +230,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -270,7 +273,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {
@@ -313,7 +316,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Primary(
+            VitaminModals.Primary2(
                 onDismissRequest = { showDialog.value = false },
                 title = title,
                 content = {

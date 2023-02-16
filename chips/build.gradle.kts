@@ -7,7 +7,9 @@ plugins {
 }
 
 dependencies {
-    api(project(":foundation"))
+    api(project(":foundation:foundation"))
+    api(project(":foundation:foundation-icons"))
     implementation(AndroidX.compose.ui.tooling)
+    testImplementation(project(":foundation:foundation-assets"))
     testImplementation("com.google.testparameterinjector:test-parameter-injector:1.8")
 }

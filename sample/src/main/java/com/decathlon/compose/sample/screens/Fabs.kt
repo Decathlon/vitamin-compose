@@ -8,15 +8,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.fabs.VitaminFabSizes
 import com.decathlon.vitamin.compose.fabs.VitaminFabs
 import com.decathlon.vitamin.compose.fabs.VitaminFabsExtended
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.fill.Add
 
 object Fabs : Screen {
     override val name: String
@@ -39,11 +41,11 @@ object Fabs : Screen {
                 Row(modifier = Modifier.padding(start = 16.dp, top = 16.dp)) {
                     VitaminFabs.Primary(
                         modifier = Modifier.padding(end = 16.dp),
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                         contentDescription = "Add"
                     ) {}
                     VitaminFabs.Primary(
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                         contentDescription = "Add",
                         enabled = false
                     ) {}
@@ -58,12 +60,12 @@ object Fabs : Screen {
                 Row(modifier = Modifier.padding(start = 16.dp, top = 16.dp)) {
                     VitaminFabs.Primary(
                         modifier = Modifier.padding(end = 16.dp),
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                         contentDescription = "Add",
                         sizes = VitaminFabSizes.mini()
                     ) {}
                     VitaminFabs.Primary(
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                         contentDescription = "Add",
                         sizes = VitaminFabSizes.mini(),
                         enabled = false
@@ -80,11 +82,11 @@ object Fabs : Screen {
                     VitaminFabsExtended.Primary(
                         modifier = Modifier.padding(end = 16.dp),
                         text = "Label",
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill)
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add)
                     ) {}
                     VitaminFabsExtended.Primary(
                         text = "Label",
-                        icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                        icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                         enabled = false
                     ) {}
                 }
@@ -93,7 +95,7 @@ object Fabs : Screen {
                         .fillMaxWidth()
                         .padding(start = 16.dp, top = 16.dp, end = 16.dp),
                     text = "Label",
-                    icon = painterResource(id = R.drawable.ic_vtmn_add_fill)
+                    icon = rememberVectorPainter(image = VitaminIcons.Fill.Add)
                 ) {}
 
                 VitaminFabsExtended.Primary(
@@ -101,7 +103,7 @@ object Fabs : Screen {
                         .fillMaxWidth()
                         .padding(start = 16.dp, top = 16.dp, end = 16.dp),
                     text = "Label",
-                    icon = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                    icon = rememberVectorPainter(image = VitaminIcons.Fill.Add),
                     enabled = false
                 ) {}
             }

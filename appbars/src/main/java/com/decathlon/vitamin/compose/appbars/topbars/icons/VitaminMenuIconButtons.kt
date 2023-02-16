@@ -5,8 +5,9 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
-import com.decathlon.vitamin.compose.appbars.R
+import com.decathlon.vitamin.compose.VitaminIcons
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.More2
 
 object VitaminMenuIconButtons {
     @Composable
@@ -24,7 +25,7 @@ object VitaminMenuIconButtons {
             interactionSource = interactionSource,
             icon = {
                 Icon(
-                    painter = painterResource(R.drawable.ic_vtmn_more_2_line),
+                    imageVector = VitaminIcons.Line.More2,
                     contentDescription = contentDescription
                 )
             }

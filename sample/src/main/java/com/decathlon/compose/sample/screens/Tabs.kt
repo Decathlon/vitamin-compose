@@ -7,12 +7,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
 import com.decathlon.compose.sample.components.SampleScaffold
-import com.decathlon.vitamin.compose.tabs.R
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.tabs.TabItem
 import com.decathlon.vitamin.compose.tabs.VitaminTabs
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Heart
 
 object Tabs : Screen {
     override val name: String
@@ -36,7 +38,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                icon = rememberVectorPainter(VitaminIcons.Line.Heart),
                                 selected = i == 0
                             )
                         )
@@ -56,7 +58,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                icon = rememberVectorPainter(VitaminIcons.Line.Heart),
                                 topIcon = true,
                                 selected = i == 0
                             )
@@ -96,7 +98,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                icon = rememberVectorPainter(VitaminIcons.Line.Heart),
                                 selected = i == 0
                             )
                         )
@@ -116,7 +118,7 @@ object Tabs : Screen {
                         list.add(
                             TabItem(
                                 label = "Label $i",
-                                icon = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                icon = rememberVectorPainter(VitaminIcons.Line.Heart),
                                 topIcon = true,
                                 selected = i == 0
                             )

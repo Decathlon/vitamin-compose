@@ -6,7 +6,7 @@ plugins {
 }
 
 dependencies {
-    api(project(":foundation"))
+    api(project(":foundation:foundation"))
     implementation(AndroidX.compose.ui.tooling)
     implementation(AndroidX.compose.ui.util)
     implementation(Google.accompanist.module("accompanist-placeholder"))

@@ -11,13 +11,18 @@ import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.Paparazzi
+import com.decathlon.vitamin.compose.VitaminAssets
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.chips.utils.ChipsVariantsFactory
 import com.decathlon.vitamin.compose.chips.utils.Theme
 import com.decathlon.vitamin.compose.chips.utils.Variant
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminassets.Flags
+import com.decathlon.vitamin.compose.vitaminassets.flags.Es
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Earth
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
 import org.junit.Rule
@@ -67,15 +72,13 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 size = VitaminChipSizes.medium(),
                                 icon = {
                                     Icon(
-                                        painter = painterResource(
-                                            id = R.drawable.ic_vtmn_earth_line
-                                        ),
+                                        imageVector = VitaminIcons.Line.Earth,
                                         contentDescription = null
                                     )
                                 },
                                 image = {
                                     Image(
-                                        painter = painterResource(R.drawable.vtmn_flag_es),
+                                        imageVector = VitaminAssets.Flags.Es,
                                         contentScale = ContentScale.Crop,
                                         alignment = Alignment.Center,
                                         contentDescription = null
@@ -88,15 +91,13 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 enabled = false,
                                 icon = {
                                     Icon(
-                                        painter = painterResource(
-                                            id = R.drawable.ic_vtmn_earth_line
-                                        ),
+                                        imageVector = VitaminIcons.Line.Earth,
                                         contentDescription = null
                                     )
                                 },
                                 image = {
                                     Image(
-                                        painter = painterResource(R.drawable.vtmn_flag_es),
+                                        imageVector = VitaminAssets.Flags.Es,
                                         contentScale = ContentScale.Crop,
                                         alignment = Alignment.Center,
                                         contentDescription = null
@@ -148,15 +149,13 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 size = VitaminChipSizes.small(),
                                 icon = {
                                     Icon(
-                                        painter = painterResource(
-                                            id = R.drawable.ic_vtmn_earth_line
-                                        ),
+                                        imageVector = VitaminIcons.Line.Earth,
                                         contentDescription = null
                                     )
                                 },
                                 image = {
                                     Image(
-                                        painter = painterResource(R.drawable.vtmn_flag_es),
+                                        imageVector = VitaminAssets.Flags.Es,
                                         contentScale = ContentScale.Crop,
                                         alignment = Alignment.Center,
                                         contentDescription = null
@@ -169,15 +168,13 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 enabled = false,
                                 icon = {
                                     Icon(
-                                        painter = painterResource(
-                                            id = R.drawable.ic_vtmn_earth_line
-                                        ),
+                                        imageVector = VitaminIcons.Line.Earth,
                                         contentDescription = null
                                     )
                                 },
                                 image = {
                                     Image(
-                                        painter = painterResource(R.drawable.vtmn_flag_es),
+                                        imageVector = VitaminAssets.Flags.Es,
                                         contentScale = ContentScale.Crop,
                                         alignment = Alignment.Center,
                                         contentDescription = null

@@ -11,11 +11,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.badges.VitaminBadgeSizes
 import com.decathlon.vitamin.compose.badges.VitaminBadges.Accent
 import com.decathlon.vitamin.compose.badges.VitaminBadges.Alert
@@ -25,6 +24,8 @@ import com.decathlon.vitamin.compose.badges.VitaminBadges.Reversed
 import com.decathlon.vitamin.compose.badges.VitaminCountBadges
 import com.decathlon.vitamin.compose.badges.VitaminStandaloneBadges
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.fill.Heart
 
 object Badges : Screen {
     override val name: String
@@ -273,7 +274,7 @@ object Badges : Screen {
     @Composable
     private fun Content() {
         Icon(
-            painter = painterResource(id = R.drawable.ic_vtmn_earth_fill),
+            imageVector = VitaminIcons.Fill.Heart,
             contentDescription = ""
         )
     }

@@ -37,7 +37,7 @@ You can configure all tabs content if you want something more complex.
 This component need to have at least 2 tabItems. Otherwise an [IllegalArgumentException] will be thrown.
 
 ```kotlin
-val icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line)
+val icon = rememberVectorPainter(VitaminIcons.Line.Heart)
 val list = remember {
     (0..2).map {
         TabItem(label = "Label $it", icon = icon, selected = it == 0)
@@ -83,7 +83,7 @@ You can configure all tabs content if you want something more complex.
 This component need to have at least 2 tabItems. Otherwise an [IllegalArgumentException] will be thrown.
 
 ```kotlin
-val icon = painterResource(id = R.drawable.ic_vtmn_heart_3_line)
+val icon = rememberVectorPainter(VitaminIcons.Line.Heart)
 val list = remember {
     (0..10).map {
         TabItem(label = "Label $it", icon = icon, selected = it == 0)

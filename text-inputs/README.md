@@ -55,7 +55,7 @@ VitaminTextInputs.Outlined(
     counter = 999 to 999,
     icon = {
         Icon(
-            painter = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+            imageVector = rememberVectorPainter(VitaminIcons.Line.Heart),
             contentDescription = null
         )
     },
@@ -184,7 +184,7 @@ VitaminTextInputs.Filled(
     counter = 999 to 999,
     icon = {
         Icon(
-            painter = painterResource(id = R.drawable.ic_vtmn_heart_3_line),
+            imageVector = rememberVectorPainter(VitaminIcons.Line.Heart),
             contentDescription = null
         )
     },

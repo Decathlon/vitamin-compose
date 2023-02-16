@@ -18,16 +18,20 @@ import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 import com.decathlon.vitamin.compose.quantity.pickers.internals.IconButton
 import com.decathlon.vitamin.compose.quantity.pickers.internals.MiddleTextField
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.fill.Add
+import com.decathlon.vitamin.compose.vitaminicons.fill.Subtract
 
 internal const val VtmnStatesEnabled = 1.0f
 
@@ -81,7 +85,7 @@ object VitaminQuantityPickers {
                     )
             ) {
                 IconButton(
-                    painter = painterResource(id = R.drawable.ic_vtmn_subtract_fill),
+                    painter = rememberVectorPainter(VitaminIcons.Fill.Subtract),
                     contentDescription = stringResource(id = R.string.vtmn_subtract_button_description),
                     enabled = subtractEnabled,
                     colors = colors,
@@ -113,7 +117,7 @@ object VitaminQuantityPickers {
                 )
 
                 IconButton(
-                    painter = painterResource(id = R.drawable.ic_vtmn_add_fill),
+                    painter = rememberVectorPainter(VitaminIcons.Fill.Add),
                     contentDescription = stringResource(id = R.string.vtmn_add_button_description),
                     enabled = addEnabled,
                     colors = colors,
