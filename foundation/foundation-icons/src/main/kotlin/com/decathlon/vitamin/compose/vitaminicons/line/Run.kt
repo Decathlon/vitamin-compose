@@ -7,7 +7,6 @@ import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
-import androidx.compose.ui.graphics.vector.group
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.vitaminicons.LineGroup
@@ -18,50 +17,48 @@ public val LineGroup.Run: ImageVector
             return _run!!
         }
         _run = Builder(name = "Run", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp, viewportWidth
-                = 16.0f, viewportHeight = 16.0f).apply {
-            group {
-                path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
-                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                        pathFillType = NonZero) {
-                    moveTo(6.5533f, 5.86f)
-                    lineTo(5.3333f, 6.304f)
-                    verticalLineTo(8.6667f)
-                    horizontalLineTo(4.0f)
-                    verticalLineTo(5.3667f)
-                    horizontalLineTo(4.01f)
-                    lineTo(7.522f, 4.088f)
-                    curveTo(7.6846f, 4.026f, 7.862f, 3.9947f, 8.0433f, 4.0007f)
-                    curveTo(8.4056f, 4.0097f, 8.7562f, 4.1314f, 9.0461f, 4.3489f)
-                    curveTo(9.3361f, 4.5663f, 9.5511f, 4.8687f, 9.6613f, 5.214f)
-                    curveTo(9.7853f, 5.6027f, 9.8986f, 5.8653f, 10.0013f, 6.002f)
-                    curveTo(10.3116f, 6.4158f, 10.714f, 6.7515f, 11.1767f, 6.9826f)
-                    curveTo(11.6393f, 7.2137f, 12.1495f, 7.3338f, 12.6666f, 7.3333f)
-                    verticalLineTo(8.6667f)
-                    curveTo(11.9782f, 8.6674f, 11.2981f, 8.5155f, 10.6754f, 8.2219f)
-                    curveTo(10.0526f, 7.9283f, 9.5028f, 7.5003f, 9.0653f, 6.9687f)
-                    lineTo(8.678f, 9.1667f)
-                    lineTo(10.0f, 10.4467f)
-                    verticalLineTo(15.3333f)
-                    horizontalLineTo(8.6666f)
-                    verticalLineTo(11.3427f)
-                    lineTo(7.3f, 10.018f)
-                    lineTo(6.6686f, 12.8833f)
-                    lineTo(2.0726f, 12.0733f)
-                    lineTo(2.3046f, 10.76f)
-                    lineTo(5.5873f, 11.3387f)
-                    lineTo(6.5533f, 5.86f)
-                    close()
-                    moveTo(9.0f, 3.6667f)
-                    curveTo(8.6463f, 3.6667f, 8.3072f, 3.5262f, 8.0572f, 3.2761f)
-                    curveTo(7.8071f, 3.0261f, 7.6666f, 2.687f, 7.6666f, 2.3333f)
-                    curveTo(7.6666f, 1.9797f, 7.8071f, 1.6406f, 8.0572f, 1.3905f)
-                    curveTo(8.3072f, 1.1405f, 8.6463f, 1.0f, 9.0f, 1.0f)
-                    curveTo(9.3536f, 1.0f, 9.6927f, 1.1405f, 9.9428f, 1.3905f)
-                    curveTo(10.1928f, 1.6406f, 10.3333f, 1.9797f, 10.3333f, 2.3333f)
-                    curveTo(10.3333f, 2.687f, 10.1928f, 3.0261f, 9.9428f, 3.2761f)
-                    curveTo(9.6927f, 3.5262f, 9.3536f, 3.6667f, 9.0f, 3.6667f)
-                    close()
-                }
+                = 24.0f, viewportHeight = 24.0f).apply {
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(9.83f, 8.79f)
+                lineTo(8.0f, 9.456f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(6.0f)
+                verticalLineTo(8.05f)
+                horizontalLineTo(6.015f)
+                lineTo(11.283f, 6.132f)
+                curveTo(11.527f, 6.039f, 11.793f, 5.992f, 12.065f, 6.001f)
+                curveTo(12.6085f, 6.0146f, 13.1343f, 6.1971f, 13.5693f, 6.5233f)
+                curveTo(14.0042f, 6.8495f, 14.3267f, 7.3031f, 14.492f, 7.821f)
+                curveTo(14.678f, 8.404f, 14.848f, 8.798f, 15.002f, 9.003f)
+                curveTo(15.4674f, 9.6236f, 16.0711f, 10.1272f, 16.7651f, 10.4739f)
+                curveTo(17.459f, 10.8205f, 18.2243f, 11.0007f, 19.0f, 11.0f)
+                verticalLineTo(13.0f)
+                curveTo(17.9673f, 13.0011f, 16.9472f, 12.7733f, 16.0131f, 12.3329f)
+                curveTo(15.079f, 11.8925f, 14.2542f, 11.2504f, 13.598f, 10.453f)
+                lineTo(13.017f, 13.75f)
+                lineTo(15.0f, 15.67f)
+                verticalLineTo(23.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(17.014f)
+                lineTo(10.95f, 15.027f)
+                lineTo(10.003f, 19.325f)
+                lineTo(3.109f, 18.11f)
+                lineTo(3.457f, 16.14f)
+                lineTo(8.381f, 17.008f)
+                lineTo(9.83f, 8.79f)
+                close()
+                moveTo(13.5f, 5.5f)
+                curveTo(12.9696f, 5.5f, 12.4609f, 5.2893f, 12.0858f, 4.9142f)
+                curveTo(11.7107f, 4.5391f, 11.5f, 4.0304f, 11.5f, 3.5f)
+                curveTo(11.5f, 2.9696f, 11.7107f, 2.4609f, 12.0858f, 2.0858f)
+                curveTo(12.4609f, 1.7107f, 12.9696f, 1.5f, 13.5f, 1.5f)
+                curveTo(14.0304f, 1.5f, 14.5391f, 1.7107f, 14.9142f, 2.0858f)
+                curveTo(15.2893f, 2.4609f, 15.5f, 2.9696f, 15.5f, 3.5f)
+                curveTo(15.5f, 4.0304f, 15.2893f, 4.5391f, 14.9142f, 4.9142f)
+                curveTo(14.5391f, 5.2893f, 14.0304f, 5.5f, 13.5f, 5.5f)
+                close()
             }
         }
         .build()

@@ -17,21 +17,21 @@ public val FillGroup.RadioButton: ImageVector
             return _radioButton!!
         }
         _radioButton = Builder(name = "RadioButton", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.3333f, 8.0f)
-                curveTo(1.3333f, 11.682f, 4.3179f, 14.6666f, 7.9999f, 14.6666f)
-                curveTo(11.6819f, 14.6666f, 14.6666f, 11.682f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 4.318f, 11.6819f, 1.3333f, 7.9999f, 1.3333f)
-                curveTo(4.3179f, 1.3333f, 1.3333f, 4.318f, 1.3333f, 8.0f)
+                moveTo(2.0f, 12.0f)
+                curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
                 close()
-                moveTo(10.6666f, 8.0f)
-                curveTo(10.6666f, 9.4727f, 9.4727f, 10.6666f, 7.9999f, 10.6666f)
-                curveTo(6.5272f, 10.6666f, 5.3333f, 9.4727f, 5.3333f, 8.0f)
-                curveTo(5.3333f, 6.5272f, 6.5272f, 5.3333f, 7.9999f, 5.3333f)
-                curveTo(9.4727f, 5.3333f, 10.6666f, 6.5272f, 10.6666f, 8.0f)
+                moveTo(16.0f, 12.0f)
+                curveTo(16.0f, 14.2091f, 14.2091f, 16.0f, 12.0f, 16.0f)
+                curveTo(9.7909f, 16.0f, 8.0f, 14.2091f, 8.0f, 12.0f)
+                curveTo(8.0f, 9.7909f, 9.7909f, 8.0f, 12.0f, 8.0f)
+                curveTo(14.2091f, 8.0f, 16.0f, 9.7909f, 16.0f, 12.0f)
                 close()
             }
         }

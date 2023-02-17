@@ -17,27 +17,27 @@ public val FillGroup.Drive: ImageVector
             return _drive!!
         }
         _drive = Builder(name = "Drive", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(5.6787f, 2.0966f)
-                lineTo(9.6393f, 8.96f)
-                horizontalLineTo(14.2814f)
-                lineTo(10.3214f, 2.0966f)
-                horizontalLineTo(5.6787f)
+                moveTo(8.518f, 3.145f)
+                lineTo(14.459f, 13.44f)
+                horizontalLineTo(21.422f)
+                lineTo(15.482f, 3.145f)
+                horizontalLineTo(8.518f)
                 close()
-                moveTo(5.2934f, 2.764f)
-                lineTo(7.6147f, 6.784f)
-                lineTo(3.6547f, 13.646f)
-                lineTo(1.3334f, 9.6267f)
-                lineTo(5.2934f, 2.764f)
+                moveTo(7.94f, 4.146f)
+                lineTo(11.422f, 10.176f)
+                lineTo(5.482f, 20.469f)
+                lineTo(2.0f, 14.44f)
+                lineTo(7.94f, 4.146f)
                 close()
-                moveTo(6.7441f, 9.6266f)
-                horizontalLineTo(14.6668f)
-                lineTo(12.3455f, 13.646f)
-                horizontalLineTo(4.4234f)
-                lineTo(6.7441f, 9.6266f)
+                moveTo(10.116f, 14.44f)
+                horizontalLineTo(22.0f)
+                lineTo(18.518f, 20.469f)
+                horizontalLineTo(6.635f)
+                lineTo(10.116f, 14.44f)
                 close()
             }
         }

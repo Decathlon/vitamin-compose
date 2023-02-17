@@ -17,25 +17,25 @@ public val LineGroup.Stop: ImageVector
             return _stop!!
         }
         _stop = Builder(name = "Stop", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(12.0f, 3.3333f)
-                horizontalLineTo(4.0f)
-                curveTo(3.6319f, 3.3333f, 3.3334f, 3.6318f, 3.3334f, 4.0f)
-                verticalLineTo(12.0f)
-                curveTo(3.3334f, 12.3682f, 3.6319f, 12.6666f, 4.0f, 12.6666f)
-                horizontalLineTo(12.0f)
-                curveTo(12.3682f, 12.6666f, 12.6667f, 12.3682f, 12.6667f, 12.0f)
-                verticalLineTo(4.0f)
-                curveTo(12.6667f, 3.6318f, 12.3682f, 3.3333f, 12.0f, 3.3333f)
+                moveTo(18.0f, 5.0f)
+                horizontalLineTo(6.0f)
+                curveTo(5.4477f, 5.0f, 5.0f, 5.4477f, 5.0f, 6.0f)
+                verticalLineTo(18.0f)
+                curveTo(5.0f, 18.5523f, 5.4477f, 19.0f, 6.0f, 19.0f)
+                horizontalLineTo(18.0f)
+                curveTo(18.5523f, 19.0f, 19.0f, 18.5523f, 19.0f, 18.0f)
+                verticalLineTo(6.0f)
+                curveTo(19.0f, 5.4477f, 18.5523f, 5.0f, 18.0f, 5.0f)
                 close()
-                moveTo(4.6667f, 11.3333f)
-                verticalLineTo(4.6666f)
-                horizontalLineTo(11.3334f)
-                verticalLineTo(11.3333f)
-                horizontalLineTo(4.6667f)
+                moveTo(7.0f, 17.0f)
+                verticalLineTo(7.0f)
+                horizontalLineTo(17.0f)
+                verticalLineTo(17.0f)
+                horizontalLineTo(7.0f)
                 close()
             }
         }

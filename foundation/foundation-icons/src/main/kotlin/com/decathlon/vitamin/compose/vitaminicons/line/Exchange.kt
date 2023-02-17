@@ -20,55 +20,55 @@ public val LineGroup.Exchange: ImageVector
             return _exchange!!
         }
         _exchange = Builder(name = "Exchange", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(1.3301f, 1.9965f)
-                curveTo(1.3301f, 1.6284f, 1.6285f, 1.33f, 1.9966f, 1.33f)
-                horizontalLineTo(13.9936f)
-                curveTo(14.3617f, 1.33f, 14.6601f, 1.6284f, 14.6601f, 1.9965f)
-                verticalLineTo(13.9935f)
-                curveTo(14.6601f, 14.3616f, 14.3617f, 14.66f, 13.9936f, 14.66f)
-                horizontalLineTo(1.9966f)
-                curveTo(1.6285f, 14.66f, 1.3301f, 14.3616f, 1.3301f, 13.9935f)
-                verticalLineTo(1.9965f)
+                moveTo(2.0f, 3.0f)
+                curveTo(2.0f, 2.4477f, 2.4477f, 2.0f, 3.0f, 2.0f)
+                horizontalLineTo(21.0f)
+                curveTo(21.5523f, 2.0f, 22.0f, 2.4477f, 22.0f, 3.0f)
+                verticalLineTo(21.0f)
+                curveTo(22.0f, 21.5523f, 21.5523f, 22.0f, 21.0f, 22.0f)
+                horizontalLineTo(3.0f)
+                curveTo(2.4477f, 22.0f, 2.0f, 21.5523f, 2.0f, 21.0f)
+                verticalLineTo(3.0f)
                 close()
-                moveTo(2.6631f, 2.663f)
-                verticalLineTo(13.327f)
-                horizontalLineTo(13.3271f)
-                verticalLineTo(2.663f)
-                horizontalLineTo(2.6631f)
-                close()
-            }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
-                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                    pathFillType = NonZero) {
-                moveTo(6.1708f, 7.5446f)
-                lineTo(7.1534f, 8.4454f)
-                lineTo(6.3443f, 9.328f)
-                horizontalLineTo(11.3276f)
-                verticalLineTo(10.661f)
-                horizontalLineTo(6.3443f)
-                lineTo(7.1534f, 11.5436f)
-                lineTo(6.1708f, 12.4444f)
-                lineTo(3.9251f, 9.9945f)
-                lineTo(6.1708f, 7.5446f)
+                moveTo(4.0f, 4.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(4.0f)
+                horizontalLineTo(4.0f)
                 close()
             }
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(9.8194f, 8.4454f)
-                lineTo(12.0651f, 5.9955f)
-                lineTo(9.8194f, 3.5456f)
-                lineTo(8.8368f, 4.4464f)
-                lineTo(9.6458f, 5.329f)
-                horizontalLineTo(4.6626f)
-                verticalLineTo(6.662f)
-                horizontalLineTo(9.6459f)
-                lineTo(8.8368f, 7.5446f)
-                lineTo(9.8194f, 8.4454f)
+                moveTo(9.2628f, 11.3243f)
+                lineTo(10.7372f, 12.6757f)
+                lineTo(9.5232f, 14.0f)
+                horizontalLineTo(17.0f)
+                verticalLineTo(16.0f)
+                horizontalLineTo(9.5232f)
+                lineTo(10.7372f, 17.3243f)
+                lineTo(9.2628f, 18.6757f)
+                lineTo(5.8934f, 15.0f)
+                lineTo(9.2628f, 11.3243f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(14.7372f, 12.6757f)
+                lineTo(13.2628f, 11.3243f)
+                lineTo(14.4768f, 10.0f)
+                horizontalLineTo(7.0f)
+                verticalLineTo(8.0f)
+                horizontalLineTo(14.4768f)
+                lineTo(13.2628f, 6.6757f)
+                lineTo(14.7372f, 5.3243f)
+                lineTo(18.1066f, 9.0f)
+                lineTo(14.7372f, 12.6757f)
                 close()
             }
         }

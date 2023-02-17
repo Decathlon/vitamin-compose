@@ -17,27 +17,27 @@ public val FillGroup.Checkbox: ImageVector
             return _checkbox!!
         }
         _checkbox = Builder(name = "Checkbox", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(13.3333f, 2.0f)
-                horizontalLineTo(2.6667f)
-                curveTo(2.2985f, 2.0f, 2.0f, 2.2985f, 2.0f, 2.6667f)
-                verticalLineTo(13.3333f)
-                curveTo(2.0f, 13.7015f, 2.2985f, 14.0f, 2.6667f, 14.0f)
-                horizontalLineTo(13.3333f)
-                curveTo(13.7015f, 14.0f, 14.0f, 13.7015f, 14.0f, 13.3333f)
-                verticalLineTo(2.6667f)
-                curveTo(14.0f, 2.2985f, 13.7015f, 2.0f, 13.3333f, 2.0f)
+                moveTo(20.0f, 3.0f)
+                horizontalLineTo(4.0f)
+                curveTo(3.4477f, 3.0f, 3.0f, 3.4477f, 3.0f, 4.0f)
+                verticalLineTo(20.0f)
+                curveTo(3.0f, 20.5523f, 3.4477f, 21.0f, 4.0f, 21.0f)
+                horizontalLineTo(20.0f)
+                curveTo(20.5523f, 21.0f, 21.0f, 20.5523f, 21.0f, 20.0f)
+                verticalLineTo(4.0f)
+                curveTo(21.0f, 3.4477f, 20.5523f, 3.0f, 20.0f, 3.0f)
                 close()
-                moveTo(12.0487f, 5.9527f)
-                lineTo(7.3353f, 10.6667f)
-                lineTo(4.5067f, 7.838f)
-                lineTo(5.4493f, 6.8954f)
-                lineTo(7.3353f, 8.7814f)
-                lineTo(11.106f, 5.01f)
-                lineTo(12.0487f, 5.9527f)
+                moveTo(18.073f, 8.929f)
+                lineTo(11.003f, 16.0f)
+                lineTo(6.76f, 11.757f)
+                lineTo(8.174f, 10.343f)
+                lineTo(11.003f, 13.172f)
+                lineTo(16.659f, 7.515f)
+                lineTo(18.073f, 8.929f)
                 close()
             }
         }

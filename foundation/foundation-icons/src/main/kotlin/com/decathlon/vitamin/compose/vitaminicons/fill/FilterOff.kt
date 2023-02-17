@@ -17,31 +17,31 @@ public val FillGroup.FilterOff: ImageVector
             return _filterOff!!
         }
         _filterOff = Builder(name = "FilterOff", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.0467f, 10.0947f)
-                lineTo(4.6193f, 0.6667f)
-                lineTo(3.6767f, 1.6093f)
-                lineTo(5.0567f, 2.99f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(4.3233f)
-                horizontalLineTo(2.6667f)
-                lineTo(6.6667f, 10.3234f)
-                verticalLineTo(14.99f)
-                horizontalLineTo(9.3333f)
-                verticalLineTo(10.3234f)
-                lineTo(10.5553f, 8.4894f)
-                lineTo(13.104f, 11.0374f)
-                lineTo(14.0467f, 10.0947f)
-                close()
-                moveTo(14.0f, 4.3233f)
-                verticalLineTo(2.99f)
-                horizontalLineTo(8.8087f)
-                lineTo(12.0567f, 6.238f)
-                lineTo(13.3334f, 4.3233f)
+                moveTo(21.07f, 15.142f)
+                lineTo(6.929f, 1.0f)
+                lineTo(5.515f, 2.414f)
+                lineTo(7.585f, 4.485f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(6.485f)
+                horizontalLineTo(4.0f)
+                lineTo(10.0f, 15.485f)
+                verticalLineTo(22.485f)
                 horizontalLineTo(14.0f)
+                verticalLineTo(15.485f)
+                lineTo(15.833f, 12.734f)
+                lineTo(19.656f, 16.556f)
+                lineTo(21.07f, 15.142f)
+                close()
+                moveTo(21.0f, 6.485f)
+                verticalLineTo(4.485f)
+                horizontalLineTo(13.213f)
+                lineTo(18.085f, 9.357f)
+                lineTo(20.0f, 6.485f)
+                horizontalLineTo(21.0f)
                 close()
             }
         }

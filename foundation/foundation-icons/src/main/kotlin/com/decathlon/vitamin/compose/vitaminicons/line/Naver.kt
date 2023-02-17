@@ -17,33 +17,33 @@ public val LineGroup.Naver: ImageVector
             return _naver!!
         }
         _naver = Builder(name = "Naver", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.3334f, 2.0f)
-                horizontalLineTo(6.4837f)
-                lineTo(9.227f, 6.0945f)
-                verticalLineTo(2.0f)
-                horizontalLineTo(14.6667f)
-                verticalLineTo(14.1824f)
-                horizontalLineTo(9.5094f)
-                lineTo(6.7663f, 10.0832f)
-                verticalLineTo(14.1824f)
-                horizontalLineTo(1.3334f)
-                verticalLineTo(2.0f)
+                moveTo(2.0f, 3.0f)
+                horizontalLineTo(9.7254f)
+                lineTo(13.8405f, 9.1417f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(22.0f)
+                verticalLineTo(21.2736f)
+                horizontalLineTo(14.2641f)
+                lineTo(10.1493f, 15.1248f)
+                verticalLineTo(21.2736f)
+                horizontalLineTo(2.0f)
+                verticalLineTo(3.0f)
                 close()
-                moveTo(2.5455f, 3.2121f)
-                verticalLineTo(12.9703f)
-                horizontalLineTo(5.5542f)
-                verticalLineTo(6.0924f)
-                lineTo(10.1568f, 12.9703f)
-                horizontalLineTo(13.4546f)
-                verticalLineTo(3.2121f)
-                horizontalLineTo(10.4392f)
-                verticalLineTo(10.0812f)
-                lineTo(5.8368f, 3.2121f)
-                horizontalLineTo(2.5455f)
+                moveTo(3.8182f, 4.8182f)
+                verticalLineTo(19.4555f)
+                horizontalLineTo(8.3312f)
+                verticalLineTo(9.1387f)
+                lineTo(15.2351f, 19.4555f)
+                horizontalLineTo(20.1818f)
+                verticalLineTo(4.8182f)
+                horizontalLineTo(15.6587f)
+                verticalLineTo(15.1218f)
+                lineTo(8.7551f, 4.8182f)
+                horizontalLineTo(3.8182f)
                 close()
             }
         }

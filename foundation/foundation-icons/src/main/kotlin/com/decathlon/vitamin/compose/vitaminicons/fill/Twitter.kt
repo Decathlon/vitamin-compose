@@ -17,29 +17,30 @@ public val FillGroup.Twitter: ImageVector
             return _twitter!!
         }
         _twitter = Builder(name = "Twitter", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(14.7747f, 3.7706f)
-                curveTo(14.2657f, 3.9958f, 13.726f, 4.1436f, 13.1734f, 4.2093f)
-                curveTo(13.7559f, 3.8609f, 14.1918f, 3.3127f, 14.4f, 2.6667f)
-                curveTo(13.8534f, 2.992f, 13.254f, 3.22f, 12.6294f, 3.3433f)
-                curveTo(11.7666f, 2.4202f, 10.3909f, 2.1927f, 9.2769f, 2.7889f)
-                curveTo(8.1629f, 3.3852f, 7.5891f, 4.6561f, 7.8787f, 5.886f)
-                curveTo(5.6367f, 5.7736f, 3.5479f, 4.7147f, 2.132f, 2.9727f)
-                curveTo(1.8842f, 3.3983f, 1.754f, 3.8821f, 1.7547f, 4.3747f)
-                curveTo(1.7547f, 5.3413f, 2.2467f, 6.1953f, 2.9947f, 6.6953f)
-                curveTo(2.552f, 6.6814f, 2.1191f, 6.5618f, 1.732f, 6.3467f)
-                verticalLineTo(6.3813f)
-                curveTo(1.7323f, 7.7087f, 2.6677f, 8.8521f, 3.9687f, 9.1153f)
-                curveTo(3.5578f, 9.2267f, 3.1269f, 9.2431f, 2.7087f, 9.1633f)
-                curveTo(3.0735f, 10.2994f, 4.1203f, 11.0778f, 5.3134f, 11.1f)
-                curveTo(4.1453f, 12.0173f, 2.6605f, 12.4327f, 1.186f, 12.2547f)
-                curveTo(2.4605f, 13.0743f, 3.9441f, 13.5094f, 5.4594f, 13.508f)
-                curveTo(10.588f, 13.508f, 13.3927f, 9.2593f, 13.3927f, 5.5746f)
-                curveTo(13.3927f, 5.4546f, 13.3894f, 5.3333f, 13.384f, 5.2147f)
-                curveTo(13.9299f, 4.8201f, 14.4004f, 4.3307f, 14.7747f, 3.7706f)
+                moveTo(22.1621f, 5.656f)
+                curveTo(21.3986f, 5.9937f, 20.589f, 6.2155f, 19.7601f, 6.314f)
+                curveTo(20.6338f, 5.7914f, 21.2878f, 4.969f, 21.6001f, 4.0f)
+                curveTo(20.7801f, 4.488f, 19.8811f, 4.83f, 18.9441f, 5.015f)
+                curveTo(17.6499f, 3.6303f, 15.5863f, 3.2891f, 13.9153f, 4.1835f)
+                curveTo(12.2443f, 5.0778f, 11.3837f, 6.9841f, 11.8181f, 8.829f)
+                curveTo(8.4551f, 8.6604f, 5.3218f, 7.072f, 3.1981f, 4.459f)
+                curveTo(2.8263f, 5.0975f, 2.631f, 5.8232f, 2.6321f, 6.562f)
+                curveTo(2.6321f, 8.012f, 3.37f, 9.293f, 4.4921f, 10.043f)
+                curveTo(3.8281f, 10.0221f, 3.1787f, 9.8428f, 2.5981f, 9.52f)
+                verticalLineTo(9.572f)
+                curveTo(2.5985f, 11.563f, 4.0016f, 13.2781f, 5.9531f, 13.673f)
+                curveTo(5.3367f, 13.84f, 4.6904f, 13.8647f, 4.063f, 13.745f)
+                curveTo(4.6102f, 15.4492f, 6.1805f, 16.6168f, 7.97f, 16.65f)
+                curveTo(6.218f, 18.026f, 3.9908f, 18.6491f, 1.779f, 18.382f)
+                curveTo(3.6907f, 19.6114f, 5.9162f, 20.2641f, 8.189f, 20.262f)
+                curveTo(15.8821f, 20.262f, 20.0891f, 13.889f, 20.0891f, 8.362f)
+                curveTo(20.0891f, 8.182f, 20.0841f, 8.0f, 20.0761f, 7.822f)
+                curveTo(20.8949f, 7.2302f, 21.6017f, 6.497f, 22.1631f, 5.657f)
+                lineTo(22.1621f, 5.656f)
                 close()
             }
         }

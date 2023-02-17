@@ -17,20 +17,20 @@ public val FillGroup.ArrowLeft: ImageVector
             return _arrowLeft!!
         }
         _arrowLeft = Builder(name = "ArrowLeft", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(5.2186f, 7.3334f)
-                horizontalLineTo(13.3333f)
-                verticalLineTo(8.6667f)
-                horizontalLineTo(5.2186f)
-                lineTo(8.7946f, 12.2427f)
-                lineTo(7.852f, 13.1854f)
-                lineTo(2.6666f, 8.0f)
-                lineTo(7.852f, 2.8147f)
-                lineTo(8.7946f, 3.7574f)
-                lineTo(5.2186f, 7.3334f)
+                moveTo(7.828f, 11.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(7.828f)
+                lineTo(13.192f, 18.364f)
+                lineTo(11.778f, 19.778f)
+                lineTo(4.0f, 12.0f)
+                lineTo(11.778f, 4.222f)
+                lineTo(13.192f, 5.636f)
+                lineTo(7.828f, 11.0f)
                 close()
             }
         }

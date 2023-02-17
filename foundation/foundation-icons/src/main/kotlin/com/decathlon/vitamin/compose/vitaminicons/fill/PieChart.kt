@@ -17,22 +17,22 @@ public val FillGroup.PieChart: ImageVector
             return _pieChart!!
         }
         _pieChart = Builder(name = "PieChart", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.3333f, 1.3667f)
-                verticalLineTo(8.6667f)
-                horizontalLineTo(14.6333f)
-                curveTo(14.2993f, 12.0353f, 11.4566f, 14.6667f, 7.9999f, 14.6667f)
-                curveTo(4.3179f, 14.6667f, 1.3333f, 11.682f, 1.3333f, 8.0f)
-                curveTo(1.3333f, 4.5433f, 3.9646f, 1.7007f, 7.3333f, 1.3667f)
+                moveTo(11.0f, 2.05f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(21.95f)
+                curveTo(21.449f, 18.053f, 17.185f, 22.0f, 12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.815f, 5.947f, 2.551f, 11.0f, 2.05f)
                 close()
-                moveTo(8.6666f, 1.3667f)
-                curveTo(10.1966f, 1.5208f, 11.6263f, 2.199f, 12.7136f, 3.2863f)
-                curveTo(13.801f, 4.3736f, 14.4791f, 5.8033f, 14.6333f, 7.3333f)
-                horizontalLineTo(8.6666f)
-                verticalLineTo(1.3667f)
+                moveTo(13.0f, 2.05f)
+                curveTo(15.295f, 2.2812f, 17.4396f, 3.2984f, 19.0706f, 4.9294f)
+                curveTo(20.7016f, 6.5605f, 21.7188f, 8.705f, 21.95f, 11.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(2.05f)
                 close()
             }
         }

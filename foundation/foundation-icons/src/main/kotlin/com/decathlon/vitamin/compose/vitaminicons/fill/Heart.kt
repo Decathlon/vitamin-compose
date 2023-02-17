@@ -17,17 +17,17 @@ public val FillGroup.Heart: ImageVector
             return _heart!!
         }
         _heart = Builder(name = "Heart", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(11.0f, 2.0f)
-                curveTo(13.0254f, 2.0f, 14.6667f, 3.6667f, 14.6667f, 6.0f)
-                curveTo(14.6667f, 10.6667f, 9.6667f, 13.3333f, 8.0f, 14.3333f)
-                curveTo(6.3334f, 13.3333f, 1.3334f, 10.6667f, 1.3334f, 6.0f)
-                curveTo(1.3334f, 3.6667f, 3.0f, 2.0f, 5.0f, 2.0f)
-                curveTo(6.24f, 2.0f, 7.3334f, 2.6667f, 8.0f, 3.3333f)
-                curveTo(8.6667f, 2.6667f, 9.76f, 2.0f, 11.0f, 2.0f)
+                moveTo(16.5f, 3.0f)
+                curveTo(19.538f, 3.0f, 22.0f, 5.5f, 22.0f, 9.0f)
+                curveTo(22.0f, 16.0f, 14.5f, 20.0f, 12.0f, 21.5f)
+                curveTo(9.5f, 20.0f, 2.0f, 16.0f, 2.0f, 9.0f)
+                curveTo(2.0f, 5.5f, 4.5f, 3.0f, 7.5f, 3.0f)
+                curveTo(9.36f, 3.0f, 11.0f, 4.0f, 12.0f, 5.0f)
+                curveTo(13.0f, 4.0f, 14.64f, 3.0f, 16.5f, 3.0f)
                 close()
             }
         }

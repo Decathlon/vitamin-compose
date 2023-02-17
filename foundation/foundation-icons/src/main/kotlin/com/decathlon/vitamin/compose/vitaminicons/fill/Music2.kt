@@ -17,25 +17,25 @@ public val FillGroup.Music2: ImageVector
             return _music2!!
         }
         _music2 = Builder(name = "Music2", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(13.3334f, 2.0f)
-                verticalLineTo(11.3333f)
-                curveTo(13.3331f, 12.5402f, 12.5223f, 13.5965f, 11.3564f, 13.9087f)
-                curveTo(10.1906f, 14.2208f, 8.9605f, 13.7111f, 8.3571f, 12.6658f)
-                curveTo(7.7538f, 11.6205f, 7.9277f, 10.3004f, 8.7812f, 9.447f)
-                curveTo(9.6346f, 8.5937f, 10.9548f, 8.4199f, 12.0f, 9.0233f)
-                verticalLineTo(4.0f)
-                horizontalLineTo(6.0f)
-                verticalLineTo(11.3333f)
-                curveTo(5.9998f, 12.5402f, 5.1889f, 13.5965f, 4.0231f, 13.9087f)
-                curveTo(2.8573f, 14.2208f, 1.6271f, 13.7111f, 1.0238f, 12.6658f)
-                curveTo(0.4205f, 11.6205f, 0.5944f, 10.3004f, 1.4478f, 9.447f)
-                curveTo(2.3013f, 8.5937f, 3.6215f, 8.4199f, 4.6667f, 9.0233f)
-                verticalLineTo(2.0f)
-                horizontalLineTo(13.3334f)
+                moveTo(20.0f, 3.0f)
+                verticalLineTo(17.0f)
+                curveTo(19.9996f, 18.8103f, 18.7833f, 20.3947f, 17.0346f, 20.863f)
+                curveTo(15.2859f, 21.3312f, 13.4406f, 20.5666f, 12.5356f, 18.9987f)
+                curveTo(11.6307f, 17.4308f, 11.8915f, 15.4505f, 13.1717f, 14.1705f)
+                curveTo(14.4519f, 12.8905f, 16.4322f, 12.6298f, 18.0f, 13.535f)
+                verticalLineTo(6.0f)
+                horizontalLineTo(9.0f)
+                verticalLineTo(17.0f)
+                curveTo(8.9996f, 18.8103f, 7.7833f, 20.3947f, 6.0346f, 20.863f)
+                curveTo(4.2859f, 21.3312f, 2.4406f, 20.5666f, 1.5357f, 18.9987f)
+                curveTo(0.6307f, 17.4308f, 0.8915f, 15.4505f, 2.1717f, 14.1705f)
+                curveTo(3.4519f, 12.8905f, 5.4322f, 12.6298f, 7.0f, 13.535f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(20.0f)
                 close()
             }
         }

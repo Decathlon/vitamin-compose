@@ -17,20 +17,20 @@ public val FillGroup.User: ImageVector
             return _user!!
         }
         _user = Builder(name = "User", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(4.0f, 5.3334f)
-                curveTo(4.0f, 7.5434f, 5.79f, 9.3334f, 8.0f, 9.3334f)
-                curveTo(10.21f, 9.3334f, 12.0f, 7.5434f, 12.0f, 5.3334f)
-                curveTo(12.0f, 3.1234f, 10.21f, 1.3334f, 8.0f, 1.3334f)
-                curveTo(5.79f, 1.3334f, 4.0f, 3.1234f, 4.0f, 5.3334f)
+                moveTo(6.0f, 8.0f)
+                curveTo(6.0f, 11.315f, 8.685f, 14.0f, 12.0f, 14.0f)
+                curveTo(15.315f, 14.0f, 18.0f, 11.315f, 18.0f, 8.0f)
+                curveTo(18.0f, 4.685f, 15.315f, 2.0f, 12.0f, 2.0f)
+                curveTo(8.685f, 2.0f, 6.0f, 4.685f, 6.0f, 8.0f)
                 close()
-                moveTo(8.0f, 10.0f)
-                curveTo(5.0544f, 10.0f, 2.6666f, 12.3879f, 2.6666f, 15.3334f)
-                horizontalLineTo(13.3333f)
-                curveTo(13.3333f, 12.3879f, 10.9455f, 10.0f, 8.0f, 10.0f)
+                moveTo(12.0f, 15.0f)
+                curveTo(7.5817f, 15.0f, 4.0f, 18.5817f, 4.0f, 23.0f)
+                horizontalLineTo(20.0f)
+                curveTo(20.0f, 18.5817f, 16.4183f, 15.0f, 12.0f, 15.0f)
                 close()
             }
         }

@@ -17,24 +17,24 @@ public val FillGroup.Edit: ImageVector
             return _edit!!
         }
         _edit = Builder(name = "Edit", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(2.0f, 12.0f)
-                horizontalLineTo(4.8287f)
-                lineTo(12.452f, 4.3767f)
-                curveTo(12.7123f, 4.1164f, 12.7123f, 3.6944f, 12.452f, 3.434f)
-                lineTo(10.566f, 1.548f)
-                curveTo(10.3057f, 1.2878f, 9.8837f, 1.2878f, 9.6233f, 1.548f)
-                lineTo(2.0f, 9.1713f)
-                verticalLineTo(12.0f)
+                moveTo(3.0f, 18.0f)
+                horizontalLineTo(7.243f)
+                lineTo(18.678f, 6.565f)
+                curveTo(19.0684f, 6.1745f, 19.0684f, 5.5415f, 18.678f, 5.151f)
+                lineTo(15.849f, 2.322f)
+                curveTo(15.4585f, 1.9316f, 14.8255f, 1.9316f, 14.435f, 2.322f)
+                lineTo(3.0f, 13.757f)
+                verticalLineTo(18.0f)
                 close()
-                moveTo(14.0f, 13.3333f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(14.6667f)
-                horizontalLineTo(14.0f)
-                verticalLineTo(13.3333f)
+                moveTo(21.0f, 20.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(22.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(20.0f)
                 close()
             }
         }

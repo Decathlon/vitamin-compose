@@ -17,20 +17,20 @@ public val FillGroup.ArrowRightDown: ImageVector
             return _arrowRightDown!!
         }
         _arrowRightDown = Builder(name = "ArrowRightDown", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(9.7267f, 10.6694f)
-                lineTo(3.988f, 4.9314f)
-                lineTo(4.9307f, 3.9887f)
-                lineTo(10.6687f, 9.726f)
-                verticalLineTo(4.6694f)
-                horizontalLineTo(12.002f)
-                verticalLineTo(12.0027f)
-                horizontalLineTo(4.6687f)
-                verticalLineTo(10.6694f)
-                horizontalLineTo(9.7267f)
+                moveTo(14.5901f, 16.004f)
+                lineTo(5.9821f, 7.397f)
+                lineTo(7.3961f, 5.983f)
+                lineTo(16.0031f, 14.589f)
+                verticalLineTo(7.004f)
+                horizontalLineTo(18.0031f)
+                verticalLineTo(18.004f)
+                horizontalLineTo(7.0031f)
+                verticalLineTo(16.004f)
+                horizontalLineTo(14.5901f)
                 close()
             }
         }

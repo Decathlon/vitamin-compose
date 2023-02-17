@@ -37,7 +37,6 @@ import com.decathlon.vitamin.compose.vitaminicons.line.CalendarCheck
 import com.decathlon.vitamin.compose.vitaminicons.line.CalendarDate
 import com.decathlon.vitamin.compose.vitaminicons.line.Camera
 import com.decathlon.vitamin.compose.vitaminicons.line.Car
-import com.decathlon.vitamin.compose.vitaminicons.line.ChartLine
 import com.decathlon.vitamin.compose.vitaminicons.line.Check
 import com.decathlon.vitamin.compose.vitaminicons.line.Checkbox
 import com.decathlon.vitamin.compose.vitaminicons.line.CheckboxBlank
@@ -110,6 +109,7 @@ import com.decathlon.vitamin.compose.vitaminicons.line.KakaoTalk
 import com.decathlon.vitamin.compose.vitaminicons.line.Leaf
 import com.decathlon.vitamin.compose.vitaminicons.line.Lightbulb
 import com.decathlon.vitamin.compose.vitaminicons.line.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.LineChart
 import com.decathlon.vitamin.compose.vitaminicons.line.Link
 import com.decathlon.vitamin.compose.vitaminicons.line.ListCheck
 import com.decathlon.vitamin.compose.vitaminicons.line.ListSettings
@@ -243,31 +243,31 @@ public val LineGroup.AllAssets: ____KtList<ImageVector>
     if (__AllAssets != null) {
       return __AllAssets!!
     }
-    __AllAssets= listOf(Truck, PlayCircle, Eye, ArrowLeftDown, SelectedByDecathlon, Sparkles,
-        MailSend, Smartphone, ArrowUpCircle, EmotionNormal, CustomerService, Star, Group, ShareIos,
-        ArrowRightUp, ArrowUpDown, Calendar, Github, Film, RadioButton, Showers, Twitter,
-        CloseCircle, ShutDown, Link, Music2, Feedback, Home, Slack, ShareAndroid, Phone, Run, Stop,
-        CloudWindy, Google, Image, ExternalLink, Emotion, Ie, Pause, FilterOff, Play, Football,
-        TempCold, ShoppingCart, Pinterest, Calendar2, ArrowRightDown, FileCopy, ArrowDown, Message,
-        Scales, ChevronDown, VolumeAlert, Barcode, PriceTag, Mist, Check, Flashlight, Telegram,
-        Checkbox, ShieldCheck, Suitcase, MoneyPoundBox, Ruler, ArrowGoBack, MoonCloudy, Time, Grid,
-        Refund, User, EmotionUnhappy, Mail, MapPin, Menu, Package, Seed2, Seed3, ThumbDown,
-        CalendarCheck, Database, CheckboxCircle, ArrowDownCircle, Rainy, MoneyEuroBox, BankCard,
-        DeleteBin, Foggy, Whatsapp, Lightbulb, CheckboxMultiple, ListCheck, Facebook, ShoppingBag,
-        VolumeMute, Distance, ChevronLeft, StarHalf, Train, Add, Notification, Heart, Mac,
-        ArrowLeft, Repeat, VolumeDown, Firefox, VolumeUp, ListSettings, Refresh, SecurePayment,
-        Attachment, Close, More2, Macbook, Rss, ThumbUp, ChartLine, ZoomIn, Moon, Leaf, Download,
-        Mastercard, ArrowLeftCircle, Task, Windy, Tools, SendPlane2, TShirt, Recycle, Equalizer,
-        File, Safari, Wallet, Earth, Cloud, AddCircle, EmotionSad, MoneyDollarBox, Snowy,
-        HeartPulse, MoneyCnyBox, Fullscreen, ChevronRight, PauseCircle, ChevronUp, Drive, Viber,
-        Hourglass, ArrowUp, Hail, ErrorWarning, History, Snapchat, ArrowLeftRight, Messenger,
-        BarChart, Trophy, Alert, Edit, QrScan, Information, Subtract, Seed1, Counter, Question, Mic,
-        StopCircle, Timer, Youtube, Sun, EyeOff, ArrowRightCircle, SunCloudy, Rocket, Visa,
-        BodyScan, Navigation, Exchange, CheckboxBlank, EmotionLaugh, TempHot, Music, KakaoTalk,
-        Filter, Line, Direction, Share, Naver, ZoomOut, Car, Function, Upload, Apple, Riding,
-        Logout, Thunderstorms, CalendarDate, Focus, More, Tablet, Printer, Forbid, Bill, Gift, Walk,
-        Unlink, Camera, Award, PieChart, Lock, Drizzle, Settings, CheckboxBlankCircle, Android,
-        ArrowLeftUp, Store, Return, Tiktok, Fire, ArrowGoForward, Search, Chrome, ArrowRight,
-        SendPlane, Amazon, Instagram)
+    __AllAssets= listOf(Grid, Search, VolumeMute, Task, PlayCircle, Earth, Flashlight, MailSend,
+        Snowy, Windy, PauseCircle, ShareIos, PriceTag, EyeOff, Mac, Information, Tools, Repeat,
+        CustomerService, Hourglass, Distance, RadioButton, User, Fullscreen, MoneyPoundBox, Android,
+        ThumbDown, VolumeUp, MoneyEuroBox, Home, ArrowLeftUp, Naver, Alert, Music, Smartphone,
+        TShirt, FilterOff, ArrowGoForward, Visa, Recycle, ShoppingBag, Function, Logout, Viber,
+        Counter, Github, Thunderstorms, ArrowUpCircle, Database, QrScan, File, ZoomIn,
+        EmotionNormal, Sparkles, Question, Lock, Fire, StopCircle, Package, ArrowLeft, Instagram,
+        Link, CalendarDate, Store, Return, ArrowLeftRight, Safari, DeleteBin, Group, KakaoTalk,
+        Settings, ShareAndroid, PieChart, Mail, Download, Time, ExternalLink, SecurePayment,
+        CloseCircle, BarChart, Seed2, Scales, ArrowDownCircle, ArrowGoBack, ArrowUp, Calendar2,
+        Train, Wallet, ChevronRight, ListSettings, Telegram, ChevronLeft, Exchange, Refund, Stop,
+        Seed3, ShutDown, ArrowRight, Ruler, CalendarCheck, Direction, Seed1, Trophy, Check, Focus,
+        EmotionSad, TempHot, Rss, EmotionUnhappy, CloudWindy, ShoppingCart, Add, CheckboxMultiple,
+        Close, BodyScan, Mic, Emotion, TempCold, ArrowUpDown, Subtract, VolumeDown, Refresh,
+        Snapchat, Image, SelectedByDecathlon, Lightbulb, Drizzle, Music2, VolumeAlert, Navigation,
+        ChevronUp, Message, Award, Showers, ArrowDown, Play, Notification, Forbid, Barcode, Bill,
+        MoneyDollarBox, Facebook, Mist, Feedback, Camera, Printer, Amazon, CheckboxCircle, FileCopy,
+        Pinterest, Truck, Mastercard, Hail, Whatsapp, Google, More, Line, ThumbUp, Attachment,
+        Rainy, Leaf, Star, SendPlane2, Sun, Edit, Unlink, CheckboxBlank, Checkbox, MapPin,
+        ChevronDown, Youtube, Equalizer, BankCard, SendPlane, ArrowRightCircle, ListCheck, Phone,
+        Football, ArrowRightDown, Macbook, Eye, SunCloudy, ArrowLeftCircle, Gift, Car, Drive,
+        ArrowLeftDown, MoneyCnyBox, Share, ShieldCheck, Riding, Twitter, Filter, HeartPulse,
+        ErrorWarning, Calendar, ArrowRightUp, AddCircle, Slack, Cloud, Ie, Suitcase,
+        CheckboxBlankCircle, Upload, Messenger, Walk, Pause, MoonCloudy, Rocket, Tablet, More2,
+        Menu, LineChart, Chrome, Apple, ZoomOut, History, Timer, Tiktok, Run, Film, Moon, Firefox,
+        StarHalf, EmotionLaugh, Heart, Foggy)
     return __AllAssets!!
   }

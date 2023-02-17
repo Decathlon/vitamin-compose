@@ -17,29 +17,29 @@ public val FillGroup.HeartPulse: ImageVector
             return _heartPulse!!
         }
         _heartPulse = Builder(name = "HeartPulse", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(11.0f, 2.0f)
-                curveTo(13.0254f, 2.0f, 14.6667f, 3.6667f, 14.6667f, 6.0f)
-                curveTo(14.6667f, 10.6667f, 9.6667f, 13.3333f, 8.0f, 14.3333f)
-                curveTo(6.6814f, 13.542f, 3.2774f, 11.7087f, 1.912f, 8.6667f)
-                horizontalLineTo(5.044f)
-                lineTo(5.6667f, 7.6293f)
-                lineTo(7.6667f, 10.9627f)
-                lineTo(9.044f, 8.6667f)
-                horizontalLineTo(11.3334f)
-                verticalLineTo(7.3333f)
-                horizontalLineTo(8.2894f)
-                lineTo(7.6667f, 8.3707f)
-                lineTo(5.6667f, 5.0373f)
-                lineTo(4.2894f, 7.3333f)
-                horizontalLineTo(1.4734f)
-                curveTo(1.3827f, 6.9087f, 1.3334f, 6.464f, 1.3334f, 6.0f)
-                curveTo(1.3334f, 3.6667f, 3.0f, 2.0f, 5.0f, 2.0f)
-                curveTo(6.24f, 2.0f, 7.3334f, 2.6667f, 8.0f, 3.3333f)
-                curveTo(8.6667f, 2.6667f, 9.76f, 2.0f, 11.0f, 2.0f)
+                moveTo(16.5f, 3.0f)
+                curveTo(19.538f, 3.0f, 22.0f, 5.5f, 22.0f, 9.0f)
+                curveTo(22.0f, 16.0f, 14.5f, 20.0f, 12.0f, 21.5f)
+                curveTo(10.022f, 20.313f, 4.916f, 17.563f, 2.868f, 13.0f)
+                horizontalLineTo(7.566f)
+                lineTo(8.5f, 11.444f)
+                lineTo(11.5f, 16.444f)
+                lineTo(13.566f, 13.0f)
+                horizontalLineTo(17.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(12.434f)
+                lineTo(11.5f, 12.556f)
+                lineTo(8.5f, 7.556f)
+                lineTo(6.434f, 11.0f)
+                horizontalLineTo(2.21f)
+                curveTo(2.074f, 10.363f, 2.0f, 9.696f, 2.0f, 9.0f)
+                curveTo(2.0f, 5.5f, 4.5f, 3.0f, 7.5f, 3.0f)
+                curveTo(9.36f, 3.0f, 11.0f, 4.0f, 12.0f, 5.0f)
+                curveTo(13.0f, 4.0f, 14.64f, 3.0f, 16.5f, 3.0f)
                 close()
             }
         }

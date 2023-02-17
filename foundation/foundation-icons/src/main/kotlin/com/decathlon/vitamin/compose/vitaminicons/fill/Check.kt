@@ -17,17 +17,17 @@ public val FillGroup.Check: ImageVector
             return _check!!
         }
         _check = Builder(name = "Check", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(6.6667f, 10.1147f)
-                lineTo(12.7947f, 3.986f)
-                lineTo(13.7381f, 4.9287f)
-                lineTo(6.6667f, 12.0f)
-                lineTo(2.4241f, 7.7574f)
-                lineTo(3.3667f, 6.8147f)
-                lineTo(6.6667f, 10.1147f)
+                moveTo(10.0f, 15.172f)
+                lineTo(19.192f, 5.979f)
+                lineTo(20.607f, 7.393f)
+                lineTo(10.0f, 18.0f)
+                lineTo(3.636f, 11.636f)
+                lineTo(5.05f, 10.222f)
+                lineTo(10.0f, 15.172f)
                 close()
             }
         }

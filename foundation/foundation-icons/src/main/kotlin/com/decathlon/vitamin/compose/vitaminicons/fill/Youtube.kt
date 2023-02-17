@@ -17,28 +17,28 @@ public val FillGroup.Youtube: ImageVector
             return _youtube!!
         }
         _youtube = Builder(name = "Youtube", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.6666f, 8.0f)
-                curveTo(14.6666f, 8.0f, 14.6666f, 5.52f, 14.3619f, 4.332f)
-                curveTo(14.1946f, 3.6773f, 13.6999f, 3.1613f, 13.0699f, 2.984f)
-                curveTo(11.9306f, 2.6667f, 7.9999f, 2.6667f, 7.9999f, 2.6667f)
-                curveTo(7.9999f, 2.6667f, 4.0712f, 2.6667f, 2.9299f, 2.984f)
-                curveTo(2.3026f, 3.1587f, 1.8073f, 3.6753f, 1.6379f, 4.332f)
-                curveTo(1.3333f, 5.52f, 1.3333f, 8.0f, 1.3333f, 8.0f)
-                curveTo(1.3333f, 8.0f, 1.3333f, 10.48f, 1.6379f, 11.668f)
-                curveTo(1.8053f, 12.3227f, 2.2999f, 12.8387f, 2.9299f, 13.016f)
-                curveTo(4.0712f, 13.3333f, 7.9999f, 13.3333f, 7.9999f, 13.3333f)
-                curveTo(7.9999f, 13.3333f, 11.9306f, 13.3333f, 13.0699f, 13.016f)
-                curveTo(13.6973f, 12.8413f, 14.1926f, 12.3247f, 14.3619f, 11.668f)
-                curveTo(14.6666f, 10.48f, 14.6666f, 8.0f, 14.6666f, 8.0f)
+                moveTo(22.0f, 12.0f)
+                curveTo(22.0f, 12.0f, 22.0f, 8.28f, 21.543f, 6.498f)
+                curveTo(21.292f, 5.516f, 20.55f, 4.742f, 19.605f, 4.476f)
+                curveTo(17.896f, 4.0f, 12.0f, 4.0f, 12.0f, 4.0f)
+                curveTo(12.0f, 4.0f, 6.107f, 4.0f, 4.395f, 4.476f)
+                curveTo(3.454f, 4.738f, 2.711f, 5.513f, 2.457f, 6.498f)
+                curveTo(2.0f, 8.28f, 2.0f, 12.0f, 2.0f, 12.0f)
+                curveTo(2.0f, 12.0f, 2.0f, 15.72f, 2.457f, 17.502f)
+                curveTo(2.708f, 18.484f, 3.45f, 19.258f, 4.395f, 19.524f)
+                curveTo(6.107f, 20.0f, 12.0f, 20.0f, 12.0f, 20.0f)
+                curveTo(12.0f, 20.0f, 17.896f, 20.0f, 19.605f, 19.524f)
+                curveTo(20.546f, 19.262f, 21.289f, 18.487f, 21.543f, 17.502f)
+                curveTo(22.0f, 15.72f, 22.0f, 12.0f, 22.0f, 12.0f)
                 close()
-                moveTo(10.6666f, 8.0f)
-                lineTo(6.6666f, 10.3333f)
-                verticalLineTo(5.6667f)
-                lineTo(10.6666f, 8.0f)
+                moveTo(16.0f, 12.0f)
+                lineTo(10.0f, 15.5f)
+                verticalLineTo(8.5f)
+                lineTo(16.0f, 12.0f)
                 close()
             }
         }

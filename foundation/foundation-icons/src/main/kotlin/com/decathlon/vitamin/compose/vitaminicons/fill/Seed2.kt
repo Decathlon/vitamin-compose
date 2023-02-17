@@ -7,7 +7,6 @@ import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.ImageVector.Builder
-import androidx.compose.ui.graphics.vector.group
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.vitaminicons.FillGroup
@@ -18,31 +17,29 @@ public val FillGroup.Seed2: ImageVector
             return _seed2!!
         }
         _seed2 = Builder(name = "Seed2", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
-            group {
-                path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
-                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                        pathFillType = NonZero) {
-                    moveTo(14.0f, 5.4444f)
-                    verticalLineTo(6.9722f)
-                    curveTo(14.0f, 9.1661f, 12.254f, 10.9444f, 10.1f, 10.9444f)
-                    horizontalLineTo(8.6f)
-                    verticalLineTo(14.0f)
-                    horizontalLineTo(7.4f)
-                    verticalLineTo(9.7222f)
-                    lineTo(7.4114f, 9.1111f)
-                    curveTo(7.5644f, 7.0602f, 9.2474f, 5.4444f, 11.3f, 5.4444f)
-                    horizontalLineTo(14.0f)
-                    close()
-                    moveTo(4.4f, 3.0f)
-                    curveTo(6.2552f, 3.0f, 7.8296f, 4.2253f, 8.3858f, 5.9248f)
-                    curveTo(7.4858f, 6.7039f, 6.8918f, 7.8363f, 6.8096f, 9.1111f)
-                    horizontalLineTo(6.2f)
-                    curveTo(3.8804f, 9.1111f, 2.0f, 7.1959f, 2.0f, 4.8333f)
-                    verticalLineTo(3.0f)
-                    horizontalLineTo(4.4f)
-                    close()
-                }
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(22.0f, 7.0f)
+                verticalLineTo(9.5f)
+                curveTo(22.0f, 13.09f, 19.09f, 16.0f, 15.5f, 16.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(14.0f)
+                lineTo(11.019f, 13.0f)
+                curveTo(11.274f, 9.644f, 14.079f, 7.0f, 17.5f, 7.0f)
+                horizontalLineTo(22.0f)
+                close()
+                moveTo(6.0f, 3.0f)
+                curveTo(9.092f, 3.0f, 11.716f, 5.005f, 12.643f, 7.786f)
+                curveTo(11.143f, 9.061f, 10.153f, 10.914f, 10.016f, 13.0f)
+                horizontalLineTo(9.0f)
+                curveTo(5.134f, 13.0f, 2.0f, 9.866f, 2.0f, 6.0f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(6.0f)
+                close()
             }
         }
         .build()

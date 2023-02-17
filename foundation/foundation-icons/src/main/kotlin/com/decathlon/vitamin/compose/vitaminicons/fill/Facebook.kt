@@ -17,27 +17,27 @@ public val FillGroup.Facebook: ImageVector
             return _facebook!!
         }
         _facebook = Builder(name = "Facebook", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(9.3333f, 9.0f)
-                horizontalLineTo(11.0f)
-                lineTo(11.6666f, 6.3333f)
-                horizontalLineTo(9.3333f)
-                verticalLineTo(5.0f)
-                curveTo(9.3333f, 4.3133f, 9.3333f, 3.6667f, 10.6666f, 3.6667f)
-                horizontalLineTo(11.6666f)
-                verticalLineTo(1.4267f)
-                curveTo(11.4493f, 1.398f, 10.6286f, 1.3333f, 9.762f, 1.3333f)
-                curveTo(7.952f, 1.3333f, 6.6666f, 2.438f, 6.6666f, 4.4667f)
-                verticalLineTo(6.3333f)
-                horizontalLineTo(4.6666f)
-                verticalLineTo(9.0f)
-                horizontalLineTo(6.6666f)
-                verticalLineTo(14.6667f)
-                horizontalLineTo(9.3333f)
-                verticalLineTo(9.0f)
+                moveTo(14.0f, 13.5f)
+                horizontalLineTo(16.5f)
+                lineTo(17.5f, 9.5f)
+                horizontalLineTo(14.0f)
+                verticalLineTo(7.5f)
+                curveTo(14.0f, 6.47f, 14.0f, 5.5f, 16.0f, 5.5f)
+                horizontalLineTo(17.5f)
+                verticalLineTo(2.14f)
+                curveTo(17.174f, 2.097f, 15.943f, 2.0f, 14.643f, 2.0f)
+                curveTo(11.928f, 2.0f, 10.0f, 3.657f, 10.0f, 6.7f)
+                verticalLineTo(9.5f)
+                horizontalLineTo(7.0f)
+                verticalLineTo(13.5f)
+                horizontalLineTo(10.0f)
+                verticalLineTo(22.0f)
+                horizontalLineTo(14.0f)
+                verticalLineTo(13.5f)
                 close()
             }
         }

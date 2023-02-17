@@ -20,36 +20,36 @@ public val FillGroup.Upload: ImageVector
             return _upload!!
         }
         _upload = Builder(name = "Upload", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(2.6668f, 12.6667f)
-                horizontalLineTo(13.3335f)
-                verticalLineTo(8.0f)
-                horizontalLineTo(14.6668f)
-                verticalLineTo(13.3333f)
-                curveTo(14.6668f, 13.5101f, 14.5966f, 13.6797f, 14.4716f, 13.8047f)
-                curveTo(14.3465f, 13.9298f, 14.177f, 14.0f, 14.0002f, 14.0f)
-                horizontalLineTo(2.0002f)
-                curveTo(1.8233f, 14.0f, 1.6538f, 13.9298f, 1.5288f, 13.8047f)
-                curveTo(1.4037f, 13.6797f, 1.3335f, 13.5101f, 1.3335f, 13.3333f)
-                verticalLineTo(8.0f)
-                horizontalLineTo(2.6668f)
-                verticalLineTo(12.6667f)
+                moveTo(4.0f, 19.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(12.0f)
+                horizontalLineTo(22.0f)
+                verticalLineTo(20.0f)
+                curveTo(22.0f, 20.2652f, 21.8946f, 20.5196f, 21.7071f, 20.7071f)
+                curveTo(21.5196f, 20.8946f, 21.2652f, 21.0f, 21.0f, 21.0f)
+                horizontalLineTo(3.0f)
+                curveTo(2.7348f, 21.0f, 2.4804f, 20.8946f, 2.2929f, 20.7071f)
+                curveTo(2.1054f, 20.5196f, 2.0f, 20.2652f, 2.0f, 20.0f)
+                verticalLineTo(12.0f)
+                horizontalLineTo(4.0f)
+                verticalLineTo(19.0f)
                 close()
             }
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(12.9497f, 5.9749f)
-                lineTo(8.0f, 1.0251f)
-                lineTo(3.0503f, 5.9749f)
-                lineTo(7.3331f, 5.9749f)
-                lineTo(7.3334f, 10.2832f)
-                lineTo(8.6666f, 10.2832f)
-                lineTo(8.6662f, 5.9749f)
-                lineTo(12.9497f, 5.9749f)
+                moveTo(19.4246f, 8.9622f)
+                lineTo(12.0f, 1.5376f)
+                lineTo(4.5754f, 8.9622f)
+                lineTo(10.9997f, 8.9622f)
+                lineTo(11.0002f, 15.9247f)
+                lineTo(12.9999f, 15.9247f)
+                lineTo(12.9994f, 8.9622f)
+                lineTo(19.4246f, 8.9622f)
                 close()
             }
         }

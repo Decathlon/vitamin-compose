@@ -17,32 +17,32 @@ public val FillGroup.History: ImageVector
             return _history!!
         }
         _history = Builder(name = "History", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0f, 1.3333f)
-                curveTo(11.682f, 1.3333f, 14.6667f, 4.318f, 14.6667f, 8.0f)
-                curveTo(14.6667f, 11.682f, 11.682f, 14.6666f, 8.0f, 14.6666f)
-                curveTo(4.318f, 14.6666f, 1.3334f, 11.682f, 1.3334f, 8.0f)
-                horizontalLineTo(2.6667f)
-                curveTo(2.6667f, 10.9453f, 5.0547f, 13.3333f, 8.0f, 13.3333f)
-                curveTo(10.9454f, 13.3333f, 13.3334f, 10.9453f, 13.3334f, 8.0f)
-                curveTo(13.3334f, 5.0546f, 10.9454f, 2.6667f, 8.0f, 2.6667f)
-                curveTo(6.3574f, 2.6667f, 4.888f, 3.4093f, 3.91f, 4.5767f)
-                lineTo(5.3334f, 6.0f)
-                horizontalLineTo(1.3334f)
-                verticalLineTo(2.0f)
-                lineTo(2.9647f, 3.6307f)
-                curveTo(4.1867f, 2.224f, 5.9894f, 1.3333f, 8.0f, 1.3333f)
+                moveTo(12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                horizontalLineTo(4.0f)
+                curveTo(4.0f, 16.418f, 7.582f, 20.0f, 12.0f, 20.0f)
+                curveTo(16.418f, 20.0f, 20.0f, 16.418f, 20.0f, 12.0f)
+                curveTo(20.0f, 7.582f, 16.418f, 4.0f, 12.0f, 4.0f)
+                curveTo(9.536f, 4.0f, 7.332f, 5.114f, 5.865f, 6.865f)
+                lineTo(8.0f, 9.0f)
+                horizontalLineTo(2.0f)
+                verticalLineTo(3.0f)
+                lineTo(4.447f, 5.446f)
+                curveTo(6.28f, 3.336f, 8.984f, 2.0f, 12.0f, 2.0f)
                 close()
-                moveTo(8.6667f, 4.6666f)
-                verticalLineTo(7.7233f)
-                lineTo(10.8287f, 9.8853f)
-                lineTo(9.8854f, 10.8286f)
-                lineTo(7.3334f, 8.2753f)
-                verticalLineTo(4.6666f)
-                horizontalLineTo(8.6667f)
+                moveTo(13.0f, 7.0f)
+                verticalLineTo(11.585f)
+                lineTo(16.243f, 14.828f)
+                lineTo(14.828f, 16.243f)
+                lineTo(11.0f, 12.413f)
+                verticalLineTo(7.0f)
+                horizontalLineTo(13.0f)
                 close()
             }
         }

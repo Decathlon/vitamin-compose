@@ -17,15 +17,15 @@ public val LineGroup.Subtract: ImageVector
             return _subtract!!
         }
         _subtract = Builder(name = "Subtract", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(3.3334f, 7.3333f)
-                horizontalLineTo(12.6667f)
-                verticalLineTo(8.6666f)
-                horizontalLineTo(3.3334f)
-                verticalLineTo(7.3333f)
+                moveTo(5.0f, 11.0f)
+                horizontalLineTo(19.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(5.0f)
+                verticalLineTo(11.0f)
                 close()
             }
         }

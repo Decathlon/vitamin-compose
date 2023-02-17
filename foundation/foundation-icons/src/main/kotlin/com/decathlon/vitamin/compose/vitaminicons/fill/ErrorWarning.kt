@@ -17,27 +17,27 @@ public val FillGroup.ErrorWarning: ImageVector
             return _errorWarning!!
         }
         _errorWarning = Builder(name = "ErrorWarning", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.995f, 14.66f)
-                curveTo(4.3139f, 14.66f, 1.33f, 11.6761f, 1.33f, 7.995f)
-                curveTo(1.33f, 4.3139f, 4.3139f, 1.33f, 7.995f, 1.33f)
-                curveTo(11.676f, 1.33f, 14.66f, 4.3139f, 14.66f, 7.995f)
-                curveTo(14.66f, 11.6761f, 11.676f, 14.66f, 7.995f, 14.66f)
+                moveTo(12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
                 close()
-                moveTo(7.3285f, 9.9945f)
-                verticalLineTo(11.3275f)
-                horizontalLineTo(8.6615f)
-                verticalLineTo(9.9945f)
-                horizontalLineTo(7.3285f)
+                moveTo(11.0f, 15.0f)
+                verticalLineTo(17.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(15.0f)
+                horizontalLineTo(11.0f)
                 close()
-                moveTo(7.3285f, 4.6625f)
-                verticalLineTo(8.6615f)
-                horizontalLineTo(8.6615f)
-                verticalLineTo(4.6625f)
-                horizontalLineTo(7.3285f)
+                moveTo(11.0f, 7.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(7.0f)
+                horizontalLineTo(11.0f)
                 close()
             }
         }

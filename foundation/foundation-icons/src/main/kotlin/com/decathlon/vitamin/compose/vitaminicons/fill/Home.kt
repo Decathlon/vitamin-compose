@@ -17,21 +17,21 @@ public val FillGroup.Home: ImageVector
             return _home!!
         }
         _home = Builder(name = "Home", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(13.3333f, 13.7656f)
-                curveTo(13.3333f, 14.1338f, 13.0348f, 14.4322f, 12.6666f, 14.4322f)
-                horizontalLineTo(3.3333f)
-                curveTo(2.9651f, 14.4322f, 2.6666f, 14.1338f, 2.6666f, 13.7656f)
-                verticalLineTo(7.7656f)
-                horizontalLineTo(0.6666f)
-                lineTo(7.5513f, 1.5069f)
-                curveTo(7.8056f, 1.2755f, 8.1943f, 1.2755f, 8.4486f, 1.5069f)
-                lineTo(15.3333f, 7.7656f)
-                horizontalLineTo(13.3333f)
-                verticalLineTo(13.7656f)
+                moveTo(20.0f, 20.6484f)
+                curveTo(20.0f, 21.2006f, 19.5523f, 21.6484f, 19.0f, 21.6484f)
+                horizontalLineTo(5.0f)
+                curveTo(4.4477f, 21.6484f, 4.0f, 21.2006f, 4.0f, 20.6484f)
+                verticalLineTo(11.6484f)
+                horizontalLineTo(1.0f)
+                lineTo(11.327f, 2.2604f)
+                curveTo(11.7085f, 1.9132f, 12.2915f, 1.9132f, 12.673f, 2.2604f)
+                lineTo(23.0f, 11.6484f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(20.6484f)
                 close()
             }
         }

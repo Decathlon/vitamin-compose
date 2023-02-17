@@ -17,29 +17,29 @@ public val FillGroup.ShieldCheck: ImageVector
             return _shieldCheck!!
         }
         _shieldCheck = Builder(name = "ShieldCheck", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(13.478f, 1.884f)
-                lineTo(8.0f, 0.6667f)
-                lineTo(2.522f, 1.884f)
-                curveTo(2.2173f, 1.952f, 2.0f, 2.222f, 2.0f, 2.5347f)
-                verticalLineTo(9.1933f)
-                curveTo(2.0f, 10.53f, 2.668f, 11.7787f, 3.7813f, 12.5207f)
-                lineTo(8.0f, 15.3334f)
-                lineTo(12.2187f, 12.5207f)
-                curveTo(13.3313f, 11.7794f, 14.0f, 10.53f, 14.0f, 9.1927f)
-                verticalLineTo(2.5347f)
-                curveTo(14.0f, 2.222f, 13.7827f, 1.952f, 13.478f, 1.884f)
+                moveTo(20.217f, 2.826f)
+                lineTo(12.0f, 1.0f)
+                lineTo(3.783f, 2.826f)
+                curveTo(3.326f, 2.928f, 3.0f, 3.333f, 3.0f, 3.802f)
+                verticalLineTo(13.79f)
+                curveTo(3.0f, 15.795f, 4.002f, 17.668f, 5.672f, 18.781f)
+                lineTo(12.0f, 23.0f)
+                lineTo(18.328f, 18.781f)
+                curveTo(19.997f, 17.669f, 21.0f, 15.795f, 21.0f, 13.789f)
+                verticalLineTo(3.802f)
+                curveTo(21.0f, 3.333f, 20.674f, 2.928f, 20.217f, 2.826f)
                 close()
-                moveTo(7.6681f, 8.7807f)
-                lineTo(10.9681f, 5.4814f)
-                lineTo(11.9114f, 6.424f)
-                lineTo(7.6687f, 10.6667f)
-                lineTo(4.8401f, 7.838f)
-                lineTo(5.7828f, 6.8954f)
-                lineTo(7.6681f, 8.7807f)
+                moveTo(11.502f, 13.171f)
+                lineTo(16.452f, 8.222f)
+                lineTo(17.867f, 9.636f)
+                lineTo(11.503f, 16.0f)
+                lineTo(7.26f, 11.757f)
+                lineTo(8.674f, 10.343f)
+                lineTo(11.502f, 13.171f)
                 close()
             }
         }

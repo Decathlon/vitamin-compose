@@ -17,30 +17,30 @@ public val FillGroup.Telegram: ImageVector
             return _telegram!!
         }
         _telegram = Builder(name = "Telegram", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.9999f, 14.6667f)
-                curveTo(4.3179f, 14.6667f, 1.3333f, 11.682f, 1.3333f, 8.0f)
-                curveTo(1.3333f, 4.318f, 4.3179f, 1.3333f, 7.9999f, 1.3333f)
-                curveTo(11.6819f, 1.3333f, 14.6666f, 4.318f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 11.682f, 11.6819f, 14.6667f, 7.9999f, 14.6667f)
+                moveTo(12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
                 close()
-                moveTo(5.9266f, 8.78f)
-                lineTo(5.9352f, 8.7753f)
-                lineTo(6.5153f, 10.6887f)
-                curveTo(6.5899f, 10.896f, 6.6926f, 10.9333f, 6.8172f, 10.916f)
-                curveTo(6.9426f, 10.8993f, 7.0086f, 10.832f, 7.0906f, 10.7533f)
-                lineTo(7.8826f, 9.988f)
-                lineTo(9.5826f, 11.2467f)
-                curveTo(9.8933f, 11.418f, 10.1166f, 11.3293f, 10.1939f, 10.9587f)
-                lineTo(11.2986f, 5.744f)
-                curveTo(11.4206f, 5.2587f, 11.2073f, 5.064f, 10.8306f, 5.2187f)
-                lineTo(4.3419f, 7.7253f)
-                curveTo(3.8993f, 7.9027f, 3.9019f, 8.1507f, 4.2619f, 8.2607f)
-                lineTo(5.9266f, 8.7807f)
-                verticalLineTo(8.78f)
+                moveTo(8.89f, 13.17f)
+                lineTo(8.903f, 13.163f)
+                lineTo(9.773f, 16.033f)
+                curveTo(9.885f, 16.344f, 10.039f, 16.4f, 10.226f, 16.374f)
+                curveTo(10.414f, 16.349f, 10.513f, 16.248f, 10.636f, 16.13f)
+                lineTo(11.824f, 14.982f)
+                lineTo(14.374f, 16.87f)
+                curveTo(14.84f, 17.127f, 15.175f, 16.994f, 15.291f, 16.438f)
+                lineTo(16.948f, 8.616f)
+                curveTo(17.131f, 7.888f, 16.811f, 7.596f, 16.246f, 7.828f)
+                lineTo(6.513f, 11.588f)
+                curveTo(5.849f, 11.854f, 5.853f, 12.226f, 6.393f, 12.391f)
+                lineTo(8.89f, 13.171f)
+                verticalLineTo(13.17f)
                 close()
             }
         }

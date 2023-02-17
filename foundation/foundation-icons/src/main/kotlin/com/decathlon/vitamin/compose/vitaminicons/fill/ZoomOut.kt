@@ -17,25 +17,25 @@ public val FillGroup.ZoomOut: ImageVector
             return _zoomOut!!
         }
         _zoomOut = Builder(name = "ZoomOut", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(12.0206f, 11.078f)
-                lineTo(14.8759f, 13.9327f)
-                lineTo(13.9326f, 14.876f)
-                lineTo(11.0779f, 12.0207f)
-                curveTo(10.0157f, 12.8722f, 8.6946f, 13.3353f, 7.3333f, 13.3334f)
-                curveTo(4.0212f, 13.3334f, 1.3333f, 10.6454f, 1.3333f, 7.3334f)
-                curveTo(1.3333f, 4.0214f, 4.0212f, 1.3334f, 7.3333f, 1.3334f)
-                curveTo(10.6452f, 1.3334f, 13.3332f, 4.0214f, 13.3332f, 7.3334f)
-                curveTo(13.3352f, 8.6947f, 12.8721f, 10.0159f, 12.0206f, 11.078f)
+                moveTo(18.031f, 16.617f)
+                lineTo(22.314f, 20.899f)
+                lineTo(20.899f, 22.314f)
+                lineTo(16.617f, 18.031f)
+                curveTo(15.0237f, 19.3082f, 13.042f, 20.0029f, 11.0f, 20.0f)
+                curveTo(6.032f, 20.0f, 2.0f, 15.968f, 2.0f, 11.0f)
+                curveTo(2.0f, 6.032f, 6.032f, 2.0f, 11.0f, 2.0f)
+                curveTo(15.968f, 2.0f, 20.0f, 6.032f, 20.0f, 11.0f)
+                curveTo(20.0029f, 13.042f, 19.3082f, 15.0237f, 18.031f, 16.617f)
                 close()
-                moveTo(4.6666f, 6.6667f)
-                verticalLineTo(8.0f)
-                horizontalLineTo(9.9999f)
-                verticalLineTo(6.6667f)
-                horizontalLineTo(4.6666f)
+                moveTo(7.0f, 10.0f)
+                verticalLineTo(12.0f)
+                horizontalLineTo(15.0f)
+                verticalLineTo(10.0f)
+                horizontalLineTo(7.0f)
                 close()
             }
         }

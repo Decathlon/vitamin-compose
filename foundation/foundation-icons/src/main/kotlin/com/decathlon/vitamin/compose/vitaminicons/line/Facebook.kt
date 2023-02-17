@@ -17,31 +17,31 @@ public val LineGroup.Facebook: ImageVector
             return _facebook!!
         }
         _facebook = Builder(name = "Facebook", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.6667f, 6.0f)
-                horizontalLineTo(11.6667f)
-                lineTo(11.3334f, 7.3333f)
-                horizontalLineTo(8.6667f)
-                verticalLineTo(13.3333f)
-                horizontalLineTo(7.3334f)
-                verticalLineTo(7.3333f)
-                horizontalLineTo(4.6667f)
-                verticalLineTo(6.0f)
-                horizontalLineTo(7.3334f)
-                verticalLineTo(4.752f)
-                curveTo(7.3334f, 3.5633f, 7.4573f, 3.132f, 7.6894f, 2.6973f)
-                curveTo(7.9167f, 2.2679f, 8.2679f, 1.9167f, 8.6973f, 1.6893f)
-                curveTo(9.132f, 1.4573f, 9.5633f, 1.3333f, 10.752f, 1.3333f)
-                curveTo(11.1f, 1.3333f, 11.4054f, 1.3667f, 11.6667f, 1.4333f)
-                verticalLineTo(2.6667f)
-                horizontalLineTo(10.752f)
-                curveTo(9.8694f, 2.6667f, 9.6007f, 2.7187f, 9.3267f, 2.8653f)
-                curveTo(9.124f, 2.9733f, 8.9733f, 3.124f, 8.8653f, 3.3267f)
-                curveTo(8.7187f, 3.6007f, 8.6667f, 3.8693f, 8.6667f, 4.752f)
-                verticalLineTo(6.0f)
+                moveTo(13.0f, 9.0f)
+                horizontalLineTo(17.5f)
+                lineTo(17.0f, 11.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(7.0f)
+                verticalLineTo(9.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(7.128f)
+                curveTo(11.0f, 5.345f, 11.186f, 4.698f, 11.534f, 4.046f)
+                curveTo(11.875f, 3.4018f, 12.4018f, 2.875f, 13.046f, 2.534f)
+                curveTo(13.698f, 2.186f, 14.345f, 2.0f, 16.128f, 2.0f)
+                curveTo(16.65f, 2.0f, 17.108f, 2.05f, 17.5f, 2.15f)
+                verticalLineTo(4.0f)
+                horizontalLineTo(16.128f)
+                curveTo(14.804f, 4.0f, 14.401f, 4.078f, 13.99f, 4.298f)
+                curveTo(13.686f, 4.46f, 13.46f, 4.686f, 13.298f, 4.99f)
+                curveTo(13.078f, 5.401f, 13.0f, 5.804f, 13.0f, 7.128f)
+                verticalLineTo(9.0f)
                 close()
             }
         }

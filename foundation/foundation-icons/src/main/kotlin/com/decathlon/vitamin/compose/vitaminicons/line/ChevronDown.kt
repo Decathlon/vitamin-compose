@@ -17,17 +17,17 @@ public val LineGroup.ChevronDown: ImageVector
             return _chevronDown!!
         }
         _chevronDown = Builder(name = "ChevronDown", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.9999f, 8.7814f)
-                lineTo(11.2999f, 5.4814f)
-                lineTo(12.2425f, 6.424f)
-                lineTo(7.9999f, 10.6667f)
-                lineTo(3.7572f, 6.424f)
-                lineTo(4.6999f, 5.4814f)
-                lineTo(7.9999f, 8.7814f)
+                moveTo(12.0f, 13.172f)
+                lineTo(16.95f, 8.222f)
+                lineTo(18.364f, 9.636f)
+                lineTo(12.0f, 16.0f)
+                lineTo(5.636f, 9.636f)
+                lineTo(7.05f, 8.222f)
+                lineTo(12.0f, 13.172f)
                 close()
             }
         }

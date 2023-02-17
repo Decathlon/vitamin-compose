@@ -17,27 +17,27 @@ public val LineGroup.More: ImageVector
             return _more!!
         }
         _more = Builder(name = "More", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(3.0f, 7.3333f)
-                curveTo(2.45f, 7.3333f, 2.0f, 7.7833f, 2.0f, 8.3333f)
-                curveTo(2.0f, 8.8833f, 2.45f, 9.3333f, 3.0f, 9.3333f)
-                curveTo(3.55f, 9.3333f, 4.0f, 8.8833f, 4.0f, 8.3333f)
-                curveTo(4.0f, 7.7833f, 3.55f, 7.3333f, 3.0f, 7.3333f)
+                moveTo(4.5f, 11.0f)
+                curveTo(3.675f, 11.0f, 3.0f, 11.675f, 3.0f, 12.5f)
+                curveTo(3.0f, 13.325f, 3.675f, 14.0f, 4.5f, 14.0f)
+                curveTo(5.325f, 14.0f, 6.0f, 13.325f, 6.0f, 12.5f)
+                curveTo(6.0f, 11.675f, 5.325f, 11.0f, 4.5f, 11.0f)
                 close()
-                moveTo(13.0f, 7.3333f)
-                curveTo(12.45f, 7.3333f, 12.0f, 7.7833f, 12.0f, 8.3333f)
-                curveTo(12.0f, 8.8833f, 12.45f, 9.3333f, 13.0f, 9.3333f)
-                curveTo(13.55f, 9.3333f, 14.0f, 8.8833f, 14.0f, 8.3333f)
-                curveTo(14.0f, 7.7833f, 13.55f, 7.3333f, 13.0f, 7.3333f)
+                moveTo(19.5f, 11.0f)
+                curveTo(18.675f, 11.0f, 18.0f, 11.675f, 18.0f, 12.5f)
+                curveTo(18.0f, 13.325f, 18.675f, 14.0f, 19.5f, 14.0f)
+                curveTo(20.325f, 14.0f, 21.0f, 13.325f, 21.0f, 12.5f)
+                curveTo(21.0f, 11.675f, 20.325f, 11.0f, 19.5f, 11.0f)
                 close()
-                moveTo(7.0f, 8.3333f)
-                curveTo(7.0f, 7.7833f, 7.45f, 7.3333f, 8.0f, 7.3333f)
-                curveTo(8.55f, 7.3333f, 9.0f, 7.7833f, 9.0f, 8.3333f)
-                curveTo(9.0f, 8.8833f, 8.55f, 9.3333f, 8.0f, 9.3333f)
-                curveTo(7.45f, 9.3333f, 7.0f, 8.8833f, 7.0f, 8.3333f)
+                moveTo(10.5f, 12.5f)
+                curveTo(10.5f, 11.675f, 11.175f, 11.0f, 12.0f, 11.0f)
+                curveTo(12.825f, 11.0f, 13.5f, 11.675f, 13.5f, 12.5f)
+                curveTo(13.5f, 13.325f, 12.825f, 14.0f, 12.0f, 14.0f)
+                curveTo(11.175f, 14.0f, 10.5f, 13.325f, 10.5f, 12.5f)
                 close()
             }
         }

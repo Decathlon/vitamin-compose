@@ -17,23 +17,23 @@ public val FillGroup.Macbook: ImageVector
             return _macbook!!
         }
         _macbook = Builder(name = "Macbook", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.9946f, 2.0f)
-                curveTo(1.6366f, 2.0f, 1.3333f, 2.3f, 1.3333f, 2.6713f)
-                verticalLineTo(11.3333f)
-                horizontalLineTo(14.6666f)
-                verticalLineTo(2.6713f)
-                curveTo(14.6666f, 2.3f, 14.3706f, 2.0f, 14.0053f, 2.0f)
-                horizontalLineTo(1.9946f)
+                moveTo(2.992f, 3.0f)
+                curveTo(2.455f, 3.0f, 2.0f, 3.45f, 2.0f, 4.007f)
+                verticalLineTo(17.0f)
+                horizontalLineTo(22.0f)
+                verticalLineTo(4.007f)
+                curveTo(22.0f, 3.45f, 21.556f, 3.0f, 21.008f, 3.0f)
+                horizontalLineTo(2.992f)
                 close()
-                moveTo(15.3333f, 12.6667f)
-                horizontalLineTo(0.6666f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(15.3333f)
-                verticalLineTo(12.6667f)
+                moveTo(23.0f, 19.0f)
+                horizontalLineTo(1.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(23.0f)
+                verticalLineTo(19.0f)
                 close()
             }
         }

@@ -17,28 +17,28 @@ public val FillGroup.Rss: ImageVector
             return _rss!!
         }
         _rss = Builder(name = "Rss", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp, viewportWidth
-                = 16.0f, viewportHeight = 16.0f).apply {
+                = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(2.0f, 2.0f)
-                curveTo(8.6273f, 2.0f, 14.0f, 7.3727f, 14.0f, 14.0f)
-                horizontalLineTo(12.0f)
-                curveTo(12.0f, 8.4773f, 7.5227f, 4.0f, 2.0f, 4.0f)
-                verticalLineTo(2.0f)
+                moveTo(3.0f, 3.0f)
+                curveTo(12.941f, 3.0f, 21.0f, 11.059f, 21.0f, 21.0f)
+                horizontalLineTo(18.0f)
+                curveTo(18.0f, 12.716f, 11.284f, 6.0f, 3.0f, 6.0f)
+                verticalLineTo(3.0f)
                 close()
-                moveTo(2.0f, 6.6667f)
-                curveTo(6.05f, 6.6667f, 9.3333f, 9.95f, 9.3333f, 14.0f)
-                horizontalLineTo(7.3333f)
-                curveTo(7.3333f, 12.5855f, 6.7714f, 11.229f, 5.7712f, 10.2288f)
-                curveTo(4.771f, 9.2286f, 3.4145f, 8.6667f, 2.0f, 8.6667f)
-                verticalLineTo(6.6667f)
+                moveTo(3.0f, 10.0f)
+                curveTo(9.075f, 10.0f, 14.0f, 14.925f, 14.0f, 21.0f)
+                horizontalLineTo(11.0f)
+                curveTo(11.0f, 18.8783f, 10.1571f, 16.8434f, 8.6568f, 15.3431f)
+                curveTo(7.1566f, 13.8429f, 5.1217f, 13.0f, 3.0f, 13.0f)
+                verticalLineTo(10.0f)
                 close()
-                moveTo(2.0f, 11.3333f)
-                curveTo(2.7072f, 11.3333f, 3.3855f, 11.6143f, 3.8856f, 12.1144f)
-                curveTo(4.3857f, 12.6145f, 4.6667f, 13.2928f, 4.6667f, 14.0f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(11.3333f)
+                moveTo(3.0f, 17.0f)
+                curveTo(4.0609f, 17.0f, 5.0783f, 17.4214f, 5.8284f, 18.1716f)
+                curveTo(6.5786f, 18.9217f, 7.0f, 19.9391f, 7.0f, 21.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(17.0f)
                 close()
             }
         }

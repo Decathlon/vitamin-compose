@@ -17,33 +17,33 @@ public val FillGroup.Calendar: ImageVector
             return _calendar!!
         }
         _calendar = Builder(name = "Calendar", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.0002f, 2.6667f)
-                horizontalLineTo(11.3335f)
-                verticalLineTo(1.3334f)
-                horizontalLineTo(10.0002f)
-                verticalLineTo(2.6667f)
-                horizontalLineTo(6.0002f)
-                verticalLineTo(1.3334f)
-                horizontalLineTo(4.6668f)
-                verticalLineTo(2.6667f)
-                horizontalLineTo(2.0002f)
-                curveTo(1.632f, 2.6667f, 1.3335f, 2.9652f, 1.3335f, 3.3334f)
-                verticalLineTo(14.0f)
-                curveTo(1.3335f, 14.3682f, 1.632f, 14.6667f, 2.0002f, 14.6667f)
-                horizontalLineTo(14.0002f)
-                curveTo(14.3684f, 14.6667f, 14.6668f, 14.3682f, 14.6668f, 14.0f)
-                verticalLineTo(3.3334f)
-                curveTo(14.6668f, 2.9652f, 14.3684f, 2.6667f, 14.0002f, 2.6667f)
+                moveTo(21.0f, 4.0f)
+                horizontalLineTo(17.0f)
+                verticalLineTo(2.0f)
+                horizontalLineTo(15.0f)
+                verticalLineTo(4.0f)
+                horizontalLineTo(9.0f)
+                verticalLineTo(2.0f)
+                horizontalLineTo(7.0f)
+                verticalLineTo(4.0f)
+                horizontalLineTo(3.0f)
+                curveTo(2.4477f, 4.0f, 2.0f, 4.4477f, 2.0f, 5.0f)
+                verticalLineTo(21.0f)
+                curveTo(2.0f, 21.5523f, 2.4477f, 22.0f, 3.0f, 22.0f)
+                horizontalLineTo(21.0f)
+                curveTo(21.5523f, 22.0f, 22.0f, 21.5523f, 22.0f, 21.0f)
+                verticalLineTo(5.0f)
+                curveTo(22.0f, 4.4477f, 21.5523f, 4.0f, 21.0f, 4.0f)
                 close()
-                moveTo(2.6668f, 6.6667f)
-                horizontalLineTo(13.3335f)
-                verticalLineTo(13.3334f)
-                horizontalLineTo(2.6668f)
-                verticalLineTo(6.6667f)
+                moveTo(4.0f, 10.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(4.0f)
+                verticalLineTo(10.0f)
                 close()
             }
         }

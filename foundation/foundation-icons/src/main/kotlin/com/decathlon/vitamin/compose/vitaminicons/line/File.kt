@@ -17,28 +17,28 @@ public val LineGroup.File: ImageVector
             return _file!!
         }
         _file = Builder(name = "File", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.0f, 13.9953f)
-                verticalLineTo(5.3333f)
-                lineTo(9.998f, 1.3333f)
-                horizontalLineTo(2.668f)
-                curveTo(2.2993f, 1.3333f, 2.0f, 1.6367f, 2.0f, 1.9947f)
-                verticalLineTo(14.0053f)
-                curveTo(2.0004f, 14.3707f, 2.2966f, 14.6667f, 2.662f, 14.6667f)
-                horizontalLineTo(13.338f)
-                curveTo(13.5148f, 14.6654f, 13.6839f, 14.594f, 13.808f, 14.4681f)
-                curveTo(13.9322f, 14.3422f, 14.0012f, 14.1721f, 14.0f, 13.9953f)
+                moveTo(21.0f, 20.993f)
+                verticalLineTo(8.0f)
+                lineTo(14.997f, 2.0f)
+                horizontalLineTo(4.002f)
+                curveTo(3.449f, 2.0f, 3.0f, 2.455f, 3.0f, 2.992f)
+                verticalLineTo(21.008f)
+                curveTo(3.0006f, 21.556f, 3.445f, 22.0f, 3.993f, 22.0f)
+                horizontalLineTo(20.007f)
+                curveTo(20.2722f, 21.9981f, 20.5258f, 21.891f, 20.7121f, 21.7022f)
+                curveTo(20.8983f, 21.5133f, 21.0019f, 21.2582f, 21.0f, 20.993f)
                 close()
-                moveTo(9.3333f, 6.0f)
-                horizontalLineTo(12.6667f)
-                verticalLineTo(13.3333f)
-                horizontalLineTo(3.3333f)
-                verticalLineTo(2.6667f)
-                horizontalLineTo(9.3333f)
-                verticalLineTo(6.0f)
+                moveTo(14.0f, 9.0f)
+                horizontalLineTo(19.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(5.0f)
+                verticalLineTo(4.0f)
+                horizontalLineTo(14.0f)
+                verticalLineTo(9.0f)
                 close()
             }
         }

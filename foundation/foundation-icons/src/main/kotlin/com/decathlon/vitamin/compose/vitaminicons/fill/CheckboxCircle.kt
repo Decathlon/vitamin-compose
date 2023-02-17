@@ -17,23 +17,23 @@ public val FillGroup.CheckboxCircle: ImageVector
             return _checkboxCircle!!
         }
         _checkboxCircle = Builder(name = "CheckboxCircle", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.3333f, 8.0f)
-                curveTo(1.3333f, 11.682f, 4.3179f, 14.6666f, 7.9999f, 14.6666f)
-                curveTo(11.6819f, 14.6666f, 14.6666f, 11.682f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 4.318f, 11.6819f, 1.3333f, 7.9999f, 1.3333f)
-                curveTo(4.3179f, 1.3333f, 1.3333f, 4.318f, 1.3333f, 8.0f)
+                moveTo(2.0f, 12.0f)
+                curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
                 close()
-                moveTo(12.0486f, 5.9527f)
-                lineTo(7.3352f, 10.6667f)
-                lineTo(4.5066f, 7.838f)
-                lineTo(5.4493f, 6.8953f)
-                lineTo(7.3352f, 8.7814f)
-                lineTo(11.1059f, 5.01f)
-                lineTo(12.0486f, 5.9527f)
+                moveTo(18.073f, 8.929f)
+                lineTo(11.003f, 16.0f)
+                lineTo(6.76f, 11.757f)
+                lineTo(8.174f, 10.343f)
+                lineTo(11.003f, 13.172f)
+                lineTo(16.659f, 7.515f)
+                lineTo(18.073f, 8.929f)
                 close()
             }
         }

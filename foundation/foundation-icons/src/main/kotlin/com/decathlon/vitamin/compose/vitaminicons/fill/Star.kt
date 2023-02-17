@@ -17,21 +17,21 @@ public val FillGroup.Star: ImageVector
             return _star!!
         }
         _star = Builder(name = "Star", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0f, 12.1733f)
-                lineTo(3.298f, 14.8053f)
-                lineTo(4.348f, 9.52f)
-                lineTo(0.3914f, 5.8613f)
-                lineTo(5.7427f, 5.2267f)
-                lineTo(8.0f, 0.3333f)
-                lineTo(10.2574f, 5.2267f)
-                lineTo(15.6087f, 5.8613f)
-                lineTo(11.652f, 9.52f)
-                lineTo(12.702f, 14.8053f)
-                lineTo(8.0f, 12.1733f)
+                moveTo(11.9999f, 18.26f)
+                lineTo(4.9469f, 22.208f)
+                lineTo(6.5219f, 14.28f)
+                lineTo(0.5869f, 8.792f)
+                lineTo(8.6139f, 7.84f)
+                lineTo(11.9999f, 0.5f)
+                lineTo(15.3859f, 7.84f)
+                lineTo(23.4129f, 8.792f)
+                lineTo(17.4779f, 14.28f)
+                lineTo(19.0529f, 22.208f)
+                lineTo(11.9999f, 18.26f)
                 close()
             }
         }

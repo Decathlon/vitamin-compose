@@ -17,29 +17,29 @@ public val LineGroup.Filter: ImageVector
             return _filter!!
         }
         _filter = Builder(name = "Filter", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.0f, 3.3333f)
-                verticalLineTo(2.0f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(3.3333f)
-                horizontalLineTo(2.6667f)
-                lineTo(6.0f, 8.3333f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(10.0f)
-                verticalLineTo(8.3333f)
-                lineTo(13.3333f, 3.3333f)
-                horizontalLineTo(14.0f)
+                moveTo(21.0f, 5.0f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(5.0f)
+                horizontalLineTo(4.0f)
+                lineTo(9.0f, 12.5f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(15.0f)
+                verticalLineTo(12.5f)
+                lineTo(20.0f, 5.0f)
+                horizontalLineTo(21.0f)
                 close()
-                moveTo(7.3333f, 7.9293f)
-                lineTo(4.2693f, 3.3333f)
-                horizontalLineTo(11.7306f)
-                lineTo(8.6666f, 7.9293f)
-                verticalLineTo(12.6667f)
-                horizontalLineTo(7.3333f)
-                verticalLineTo(7.9293f)
+                moveTo(11.0f, 11.894f)
+                lineTo(6.404f, 5.0f)
+                horizontalLineTo(17.596f)
+                lineTo(13.0f, 11.894f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(11.894f)
                 close()
             }
         }

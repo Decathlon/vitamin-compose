@@ -17,34 +17,34 @@ public val LineGroup.History: ImageVector
             return _history!!
         }
         _history = Builder(name = "History", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0f, 1.3333f)
-                curveTo(11.682f, 1.3333f, 14.6666f, 4.318f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 11.682f, 11.682f, 14.6666f, 8.0f, 14.6666f)
-                curveTo(4.318f, 14.6666f, 1.3333f, 11.682f, 1.3333f, 8.0f)
-                horizontalLineTo(2.6667f)
-                curveTo(2.6667f, 10.9453f, 5.0546f, 13.3333f, 8.0f, 13.3333f)
-                curveTo(10.9453f, 13.3333f, 13.3333f, 10.9453f, 13.3333f, 8.0f)
-                curveTo(13.3333f, 5.0546f, 10.9453f, 2.6667f, 8.0f, 2.6667f)
-                curveTo(6.1666f, 2.6667f, 4.5493f, 3.5913f, 3.59f, 5.0f)
-                horizontalLineTo(5.3333f)
-                verticalLineTo(6.3333f)
-                horizontalLineTo(1.3333f)
-                verticalLineTo(2.3333f)
-                horizontalLineTo(2.6667f)
-                verticalLineTo(4.0f)
-                curveTo(3.8826f, 2.38f, 5.8193f, 1.3333f, 8.0f, 1.3333f)
+                moveTo(12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                horizontalLineTo(4.0f)
+                curveTo(4.0f, 16.418f, 7.582f, 20.0f, 12.0f, 20.0f)
+                curveTo(16.418f, 20.0f, 20.0f, 16.418f, 20.0f, 12.0f)
+                curveTo(20.0f, 7.582f, 16.418f, 4.0f, 12.0f, 4.0f)
+                curveTo(9.25f, 4.0f, 6.824f, 5.387f, 5.385f, 7.5f)
+                horizontalLineTo(8.0f)
+                verticalLineTo(9.5f)
+                horizontalLineTo(2.0f)
+                verticalLineTo(3.5f)
+                horizontalLineTo(4.0f)
+                verticalLineTo(6.0f)
+                curveTo(5.824f, 3.57f, 8.729f, 2.0f, 12.0f, 2.0f)
                 close()
-                moveTo(8.6666f, 4.6666f)
-                verticalLineTo(7.7233f)
-                lineTo(10.8286f, 9.8853f)
-                lineTo(9.8853f, 10.8286f)
-                lineTo(7.3333f, 8.2753f)
-                verticalLineTo(4.6666f)
-                horizontalLineTo(8.6666f)
+                moveTo(13.0f, 7.0f)
+                verticalLineTo(11.585f)
+                lineTo(16.243f, 14.828f)
+                lineTo(14.828f, 16.243f)
+                lineTo(11.0f, 12.413f)
+                verticalLineTo(7.0f)
+                horizontalLineTo(13.0f)
                 close()
             }
         }

@@ -17,27 +17,27 @@ public val LineGroup.Search: ImageVector
             return _search!!
         }
         _search = Builder(name = "Search", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.876f, 13.9326f)
-                lineTo(12.0207f, 11.078f)
-                curveTo(12.8722f, 10.0158f, 13.3353f, 8.6946f, 13.3334f, 7.3333f)
-                curveTo(13.3334f, 4.0213f, 10.6454f, 1.3333f, 7.3334f, 1.3333f)
-                curveTo(4.0214f, 1.3333f, 1.3334f, 4.0213f, 1.3334f, 7.3333f)
-                curveTo(1.3334f, 10.6453f, 4.0214f, 13.3333f, 7.3334f, 13.3333f)
-                curveTo(8.6947f, 13.3352f, 10.0159f, 12.8721f, 11.078f, 12.0206f)
-                lineTo(13.9327f, 14.876f)
-                lineTo(14.876f, 13.9326f)
+                moveTo(22.314f, 20.899f)
+                lineTo(18.031f, 16.617f)
+                curveTo(19.3082f, 15.0237f, 20.0029f, 13.042f, 20.0f, 11.0f)
+                curveTo(20.0f, 6.032f, 15.968f, 2.0f, 11.0f, 2.0f)
+                curveTo(6.032f, 2.0f, 2.0f, 6.032f, 2.0f, 11.0f)
+                curveTo(2.0f, 15.968f, 6.032f, 20.0f, 11.0f, 20.0f)
+                curveTo(13.042f, 20.0029f, 15.0237f, 19.3082f, 16.617f, 18.031f)
+                lineTo(20.899f, 22.314f)
+                lineTo(22.314f, 20.899f)
                 close()
-                moveTo(12.0f, 7.3333f)
-                curveTo(12.002f, 8.5469f, 11.5294f, 9.7132f, 10.6834f, 10.5833f)
-                lineTo(10.5834f, 10.6833f)
-                curveTo(9.7133f, 11.5294f, 8.547f, 12.0019f, 7.3334f, 12.0f)
-                curveTo(4.7547f, 12.0f, 2.6667f, 9.9113f, 2.6667f, 7.3333f)
-                curveTo(2.6667f, 4.7547f, 4.7547f, 2.6667f, 7.3334f, 2.6667f)
-                curveTo(9.9114f, 2.6667f, 12.0f, 4.7547f, 12.0f, 7.3333f)
+                moveTo(18.0f, 11.0f)
+                curveTo(18.0029f, 12.8204f, 17.2941f, 14.5699f, 16.025f, 15.875f)
+                lineTo(15.875f, 16.025f)
+                curveTo(14.5699f, 17.2941f, 12.8204f, 18.0029f, 11.0f, 18.0f)
+                curveTo(7.132f, 18.0f, 4.0f, 14.867f, 4.0f, 11.0f)
+                curveTo(4.0f, 7.132f, 7.132f, 4.0f, 11.0f, 4.0f)
+                curveTo(14.867f, 4.0f, 18.0f, 7.132f, 18.0f, 11.0f)
                 close()
             }
         }
