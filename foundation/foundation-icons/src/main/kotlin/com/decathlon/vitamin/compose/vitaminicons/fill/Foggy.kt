@@ -17,32 +17,32 @@ public val FillGroup.Foggy: ImageVector
             return _foggy!!
         }
         _foggy = Builder(name = "Foggy", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(1.056f, 8.6714f)
-                curveTo(0.5337f, 7.3565f, 0.5551f, 5.888f, 1.1156f, 4.589f)
-                curveTo(1.676f, 3.2899f, 2.7295f, 2.2667f, 4.0444f, 1.7444f)
-                curveTo(5.3592f, 1.2221f, 6.8277f, 1.2435f, 8.1268f, 1.8039f)
-                curveTo(9.4258f, 2.3643f, 10.4491f, 3.4179f, 10.9714f, 4.7327f)
-                curveTo(11.5301f, 4.6247f, 12.1063f, 4.6483f, 12.6544f, 4.8016f)
-                curveTo(13.2025f, 4.9548f, 13.7074f, 5.2335f, 14.1291f, 5.6157f)
-                curveTo(14.5508f, 5.9978f, 14.8778f, 6.4728f, 15.0841f, 7.0032f)
-                curveTo(15.2905f, 7.5336f, 15.3706f, 8.1047f, 15.318f, 8.6714f)
-                horizontalLineTo(1.056f)
+                moveTo(1.584f, 13.007f)
+                curveTo(0.8006f, 11.0347f, 0.8327f, 8.832f, 1.6733f, 6.8834f)
+                curveTo(2.514f, 4.9348f, 4.0942f, 3.4f, 6.0665f, 2.6165f)
+                curveTo(8.0388f, 1.8331f, 10.2415f, 1.8652f, 12.1901f, 2.7058f)
+                curveTo(14.1387f, 3.5464f, 15.6736f, 5.1267f, 16.457f, 7.099f)
+                curveTo(17.2952f, 6.937f, 18.1595f, 6.9724f, 18.9816f, 7.2023f)
+                curveTo(19.8037f, 7.4321f, 20.561f, 7.8502f, 21.1936f, 8.4234f)
+                curveTo(21.8262f, 8.9966f, 22.3167f, 9.7092f, 22.6262f, 10.5048f)
+                curveTo(22.9357f, 11.3003f, 23.0559f, 12.157f, 22.977f, 13.007f)
+                horizontalLineTo(1.584f)
                 close()
-                moveTo(2.6667f, 12.6667f)
-                horizontalLineTo(14.0f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(2.6667f)
-                verticalLineTo(12.6667f)
+                moveTo(4.0f, 19.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(4.0f)
+                verticalLineTo(19.0f)
                 close()
-                moveTo(1.3333f, 10.0f)
-                horizontalLineTo(15.3334f)
-                verticalLineTo(11.3334f)
-                horizontalLineTo(1.3333f)
-                verticalLineTo(10.0f)
+                moveTo(2.0f, 15.0f)
+                horizontalLineTo(23.0f)
+                verticalLineTo(17.0f)
+                horizontalLineTo(2.0f)
+                verticalLineTo(15.0f)
                 close()
             }
         }

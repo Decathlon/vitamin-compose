@@ -11,31 +11,38 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.vitaminicons.LineGroup
 
-public val LineGroup.ArrowDown: ImageVector
+public val LineGroup.LineChart: ImageVector
     get() {
-        if (_arrowDown != null) {
-            return _arrowDown!!
+        if (_lineChart != null) {
+            return _lineChart!!
         }
-        _arrowDown = Builder(name = "ArrowDown", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
+        _lineChart = Builder(name = "LineChart", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
                 viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(13.0f, 16.172f)
-                lineTo(18.364f, 10.808f)
-                lineTo(19.778f, 12.222f)
-                lineTo(12.0f, 20.0f)
-                lineTo(4.222f, 12.222f)
-                lineTo(5.636f, 10.808f)
-                lineTo(11.0f, 16.172f)
-                verticalLineTo(4.0f)
-                horizontalLineTo(13.0f)
-                verticalLineTo(16.172f)
+                moveTo(5.0f, 3.0f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(5.0f)
+                close()
+                moveTo(20.293f, 6.293f)
+                lineTo(21.707f, 7.707f)
+                lineTo(16.0f, 13.414f)
+                lineTo(13.0f, 10.415f)
+                lineTo(8.707f, 14.707f)
+                lineTo(7.293f, 13.293f)
+                lineTo(13.0f, 7.586f)
+                lineTo(16.0f, 10.585f)
+                lineTo(20.293f, 6.293f)
                 close()
             }
         }
         .build()
-        return _arrowDown!!
+        return _lineChart!!
     }
 
-private var _arrowDown: ImageVector? = null
+private var _lineChart: ImageVector? = null

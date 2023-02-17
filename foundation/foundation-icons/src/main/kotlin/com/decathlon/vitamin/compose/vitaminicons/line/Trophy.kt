@@ -21,64 +21,64 @@ public val LineGroup.Trophy: ImageVector
             return _trophy!!
         }
         _trophy = Builder(name = "Trophy", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.5698f, 11.292f)
-                verticalLineTo(12.6667f)
-                horizontalLineTo(11.4186f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(4.5814f)
-                verticalLineTo(12.6667f)
-                horizontalLineTo(7.4302f)
-                verticalLineTo(11.292f)
-                curveTo(6.3287f, 11.1295f, 5.3157f, 10.5022f, 4.5814f, 9.5278f)
-                curveTo(3.8471f, 8.5535f, 3.4419f, 7.2991f, 3.4419f, 6.0f)
-                verticalLineTo(2.0f)
-                horizontalLineTo(12.5581f)
-                verticalLineTo(6.0f)
-                curveTo(12.5581f, 7.2991f, 12.1529f, 8.5535f, 11.4186f, 9.5278f)
-                curveTo(10.6843f, 10.5022f, 9.6713f, 11.1295f, 8.5698f, 11.292f)
+                moveTo(12.875f, 16.938f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(17.25f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(6.75f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(11.125f)
+                verticalLineTo(16.938f)
+                curveTo(9.4334f, 16.6942f, 7.8777f, 15.7533f, 6.75f, 14.2917f)
+                curveTo(5.6223f, 12.8302f, 5.0f, 10.9486f, 5.0f, 9.0f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(19.0f)
+                verticalLineTo(9.0f)
+                curveTo(19.0f, 10.9486f, 18.3777f, 12.8302f, 17.25f, 14.2917f)
+                curveTo(16.1223f, 15.7533f, 14.5666f, 16.6942f, 12.875f, 16.938f)
                 close()
-                moveTo(4.5814f, 3.3333f)
-                verticalLineTo(6.0f)
-                curveTo(4.5814f, 7.0609f, 4.9416f, 8.0783f, 5.5827f, 8.8284f)
-                curveTo(6.2238f, 9.5786f, 7.0933f, 10.0f, 8.0f, 10.0f)
-                curveTo(8.9067f, 10.0f, 9.7762f, 9.5786f, 10.4173f, 8.8284f)
-                curveTo(11.0584f, 8.0783f, 11.4186f, 7.0609f, 11.4186f, 6.0f)
-                verticalLineTo(3.3333f)
-                horizontalLineTo(4.5814f)
-                close()
-            }
-            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
-                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                    pathFillType = EvenOdd) {
-                moveTo(1.0f, 3.5f)
-                horizontalLineTo(2.7902f)
-                lineTo(2.7907f, 4.5f)
-                horizontalLineTo(1.993f)
-                curveTo(2.0456f, 5.2658f, 2.2167f, 5.6938f, 2.3739f, 5.9186f)
-                curveTo(2.5547f, 6.1772f, 2.71f, 6.1677f, 2.7218f, 6.166f)
-                lineTo(2.8596f, 7.156f)
-                curveTo(2.4372f, 7.2177f, 1.9414f, 7.0181f, 1.5796f, 6.5006f)
-                curveTo(1.2255f, 5.9941f, 1.0f, 5.1941f, 1.0f, 4.0f)
-                verticalLineTo(3.5f)
+                moveTo(6.75f, 5.0f)
+                verticalLineTo(9.0f)
+                curveTo(6.75f, 10.5913f, 7.3031f, 12.1174f, 8.2877f, 13.2426f)
+                curveTo(9.2723f, 14.3679f, 10.6076f, 15.0f, 12.0f, 15.0f)
+                curveTo(13.3924f, 15.0f, 14.7277f, 14.3679f, 15.7123f, 13.2426f)
+                curveTo(16.6969f, 12.1174f, 17.25f, 10.5913f, 17.25f, 9.0f)
+                verticalLineTo(5.0f)
+                horizontalLineTo(6.75f)
                 close()
             }
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(15.0f, 3.5f)
-                horizontalLineTo(13.2098f)
-                lineTo(13.2093f, 4.5f)
-                horizontalLineTo(14.007f)
-                curveTo(13.9544f, 5.2658f, 13.7833f, 5.6938f, 13.6261f, 5.9186f)
-                curveTo(13.4453f, 6.1772f, 13.29f, 6.1677f, 13.2782f, 6.166f)
-                lineTo(13.1404f, 7.156f)
-                curveTo(13.5627f, 7.2177f, 14.0586f, 7.0181f, 14.4204f, 6.5006f)
-                curveTo(14.7745f, 5.9941f, 15.0f, 5.1941f, 15.0f, 4.0f)
-                verticalLineTo(3.5f)
+                moveTo(1.25f, 5.25f)
+                horizontalLineTo(3.9992f)
+                lineTo(4.0f, 6.75f)
+                horizontalLineTo(2.775f)
+                curveTo(2.8558f, 7.8987f, 3.1186f, 8.5407f, 3.3599f, 8.8778f)
+                curveTo(3.6375f, 9.2658f, 3.8761f, 9.2516f, 3.8942f, 9.249f)
+                lineTo(4.1059f, 10.734f)
+                curveTo(3.4572f, 10.8265f, 2.6958f, 10.5272f, 2.1401f, 9.7509f)
+                curveTo(1.5963f, 8.9911f, 1.25f, 7.7911f, 1.25f, 6.0f)
+                verticalLineTo(5.25f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
+                moveTo(22.75f, 5.25f)
+                horizontalLineTo(20.0008f)
+                lineTo(20.0f, 6.75f)
+                horizontalLineTo(21.225f)
+                curveTo(21.1442f, 7.8987f, 20.8814f, 8.5407f, 20.6401f, 8.8778f)
+                curveTo(20.3625f, 9.2658f, 20.1239f, 9.2516f, 20.1058f, 9.249f)
+                lineTo(19.8942f, 10.734f)
+                curveTo(20.5428f, 10.8265f, 21.3042f, 10.5272f, 21.8599f, 9.7509f)
+                curveTo(22.4037f, 8.9911f, 22.75f, 7.7911f, 22.75f, 6.0f)
+                verticalLineTo(5.25f)
                 close()
             }
         }

@@ -17,20 +17,20 @@ public val LineGroup.ArrowRight: ImageVector
             return _arrowRight!!
         }
         _arrowRight = Builder(name = "ArrowRight", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(10.7814f, 7.3334f)
-                lineTo(7.2053f, 3.7574f)
-                lineTo(8.148f, 2.8147f)
-                lineTo(13.3334f, 8.0f)
-                lineTo(8.148f, 13.1854f)
-                lineTo(7.2053f, 12.2427f)
-                lineTo(10.7814f, 8.6667f)
-                horizontalLineTo(2.6667f)
-                verticalLineTo(7.3334f)
-                horizontalLineTo(10.7814f)
+                moveTo(16.172f, 11.0f)
+                lineTo(10.808f, 5.636f)
+                lineTo(12.222f, 4.222f)
+                lineTo(20.0f, 12.0f)
+                lineTo(12.222f, 19.778f)
+                lineTo(10.808f, 18.364f)
+                lineTo(16.172f, 13.0f)
+                horizontalLineTo(4.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(16.172f)
                 close()
             }
         }

@@ -17,19 +17,19 @@ public val FillGroup.Stop: ImageVector
             return _stop!!
         }
         _stop = Builder(name = "Stop", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(3.9999f, 3.3333f)
-                horizontalLineTo(11.9999f)
-                curveTo(12.3681f, 3.3333f, 12.6666f, 3.6318f, 12.6666f, 4.0f)
-                verticalLineTo(12.0f)
-                curveTo(12.6666f, 12.3682f, 12.3681f, 12.6666f, 11.9999f, 12.6666f)
-                horizontalLineTo(3.9999f)
-                curveTo(3.6317f, 12.6666f, 3.3333f, 12.3682f, 3.3333f, 12.0f)
-                verticalLineTo(4.0f)
-                curveTo(3.3333f, 3.6318f, 3.6317f, 3.3333f, 3.9999f, 3.3333f)
+                moveTo(6.0f, 5.0f)
+                horizontalLineTo(18.0f)
+                curveTo(18.5523f, 5.0f, 19.0f, 5.4477f, 19.0f, 6.0f)
+                verticalLineTo(18.0f)
+                curveTo(19.0f, 18.5523f, 18.5523f, 19.0f, 18.0f, 19.0f)
+                horizontalLineTo(6.0f)
+                curveTo(5.4477f, 19.0f, 5.0f, 18.5523f, 5.0f, 18.0f)
+                verticalLineTo(6.0f)
+                curveTo(5.0f, 5.4477f, 5.4477f, 5.0f, 6.0f, 5.0f)
                 close()
             }
         }

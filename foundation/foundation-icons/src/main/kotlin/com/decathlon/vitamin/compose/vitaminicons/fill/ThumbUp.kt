@@ -17,34 +17,34 @@ public val FillGroup.ThumbUp: ImageVector
             return _thumbUp!!
         }
         _thumbUp = Builder(name = "ThumbUp", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(9.1286f, 0.8713f)
-                lineTo(4.862f, 5.138f)
-                curveTo(4.7369f, 5.2629f, 4.6667f, 5.4325f, 4.6666f, 5.6093f)
-                verticalLineTo(13.3333f)
-                curveTo(4.6666f, 13.7015f, 4.9651f, 14.0f, 5.3333f, 14.0f)
-                horizontalLineTo(12.5533f)
-                curveTo(12.8235f, 14.0001f, 13.067f, 13.8371f, 13.17f, 13.5873f)
-                lineTo(15.2333f, 8.5773f)
-                curveTo(15.2995f, 8.4161f, 15.3335f, 8.2435f, 15.3333f, 8.0693f)
-                verticalLineTo(6.6666f)
-                curveTo(15.3333f, 5.9302f, 14.7363f, 5.3333f, 14.0f, 5.3333f)
-                horizontalLineTo(9.7333f)
-                lineTo(10.502f, 2.3133f)
-                curveTo(10.6017f, 1.922f, 10.4562f, 1.5091f, 10.1333f, 1.2666f)
-                lineTo(9.5646f, 0.84f)
-                curveTo(9.4318f, 0.7403f, 9.2459f, 0.7537f, 9.1286f, 0.8713f)
+                moveTo(13.693f, 1.307f)
+                lineTo(7.293f, 7.707f)
+                curveTo(7.1055f, 7.8945f, 7.0001f, 8.1488f, 7.0f, 8.414f)
+                verticalLineTo(20.0f)
+                curveTo(7.0f, 20.5523f, 7.4477f, 21.0f, 8.0f, 21.0f)
+                horizontalLineTo(18.83f)
+                curveTo(19.2353f, 21.0002f, 19.6006f, 20.7557f, 19.755f, 20.381f)
+                lineTo(22.85f, 12.866f)
+                curveTo(22.9493f, 12.6242f, 23.0003f, 12.3654f, 23.0f, 12.104f)
+                verticalLineTo(10.0f)
+                curveTo(23.0f, 8.8954f, 22.1046f, 8.0f, 21.0f, 8.0f)
+                horizontalLineTo(14.6f)
+                lineTo(15.753f, 3.47f)
+                curveTo(15.9026f, 2.883f, 15.6844f, 2.2637f, 15.2f, 1.9f)
+                lineTo(14.347f, 1.26f)
+                curveTo(14.1477f, 1.1106f, 13.8689f, 1.1306f, 13.693f, 1.307f)
                 close()
-                moveTo(3.3333f, 6.0f)
-                horizontalLineTo(1.3333f)
-                curveTo(0.9651f, 6.0f, 0.6666f, 6.2985f, 0.6666f, 6.6667f)
-                verticalLineTo(13.3333f)
-                curveTo(0.6666f, 13.7015f, 0.9651f, 14.0f, 1.3333f, 14.0f)
-                horizontalLineTo(3.3333f)
-                verticalLineTo(6.0f)
+                moveTo(5.0f, 9.0f)
+                horizontalLineTo(2.0f)
+                curveTo(1.4477f, 9.0f, 1.0f, 9.4477f, 1.0f, 10.0f)
+                verticalLineTo(20.0f)
+                curveTo(1.0f, 20.5523f, 1.4477f, 21.0f, 2.0f, 21.0f)
+                horizontalLineTo(5.0f)
+                verticalLineTo(9.0f)
                 close()
             }
         }

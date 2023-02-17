@@ -17,31 +17,31 @@ public val FillGroup.Database: ImageVector
             return _database!!
         }
         _database = Builder(name = "Database", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(2.0f, 5.0f)
-                curveTo(2.0f, 6.6567f, 4.6867f, 8.0f, 8.0f, 8.0f)
-                curveTo(11.3133f, 8.0f, 14.0f, 6.6567f, 14.0f, 5.0f)
-                curveTo(14.0f, 3.3433f, 11.3133f, 2.0f, 8.0f, 2.0f)
-                curveTo(4.6867f, 2.0f, 2.0f, 3.3433f, 2.0f, 5.0f)
+                moveTo(3.0f, 7.5f)
+                curveTo(3.0f, 9.985f, 7.03f, 12.0f, 12.0f, 12.0f)
+                curveTo(16.97f, 12.0f, 21.0f, 9.985f, 21.0f, 7.5f)
+                curveTo(21.0f, 5.015f, 16.97f, 3.0f, 12.0f, 3.0f)
+                curveTo(7.03f, 3.0f, 3.0f, 5.015f, 3.0f, 7.5f)
                 close()
-                moveTo(14.0f, 6.3333f)
-                verticalLineTo(8.3333f)
-                curveTo(14.0f, 9.99f, 11.3133f, 11.3333f, 8.0f, 11.3333f)
-                curveTo(4.6867f, 11.3333f, 2.0f, 9.99f, 2.0f, 8.3333f)
-                verticalLineTo(6.3333f)
-                curveTo(2.0f, 7.99f, 4.6867f, 9.3333f, 8.0f, 9.3333f)
-                curveTo(11.3133f, 9.3333f, 14.0f, 7.99f, 14.0f, 6.3333f)
+                moveTo(21.0f, 9.5f)
+                verticalLineTo(12.5f)
+                curveTo(21.0f, 14.985f, 16.97f, 17.0f, 12.0f, 17.0f)
+                curveTo(7.03f, 17.0f, 3.0f, 14.985f, 3.0f, 12.5f)
+                verticalLineTo(9.5f)
+                curveTo(3.0f, 11.985f, 7.03f, 14.0f, 12.0f, 14.0f)
+                curveTo(16.97f, 14.0f, 21.0f, 11.985f, 21.0f, 9.5f)
                 close()
-                moveTo(2.0f, 9.6667f)
-                curveTo(2.0f, 11.3233f, 4.6867f, 12.6667f, 8.0f, 12.6667f)
-                curveTo(11.3133f, 12.6667f, 14.0f, 11.3233f, 14.0f, 9.6667f)
-                verticalLineTo(11.6667f)
-                curveTo(14.0f, 13.3233f, 11.3133f, 14.6667f, 8.0f, 14.6667f)
-                curveTo(4.6867f, 14.6667f, 2.0f, 13.3233f, 2.0f, 11.6667f)
-                verticalLineTo(9.6667f)
+                moveTo(3.0f, 14.5f)
+                curveTo(3.0f, 16.985f, 7.03f, 19.0f, 12.0f, 19.0f)
+                curveTo(16.97f, 19.0f, 21.0f, 16.985f, 21.0f, 14.5f)
+                verticalLineTo(17.5f)
+                curveTo(21.0f, 19.985f, 16.97f, 22.0f, 12.0f, 22.0f)
+                curveTo(7.03f, 22.0f, 3.0f, 19.985f, 3.0f, 17.5f)
+                verticalLineTo(14.5f)
                 close()
             }
         }

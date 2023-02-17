@@ -17,22 +17,22 @@ public val FillGroup.Moon: ImageVector
             return _moon!!
         }
         _moon = Builder(name = "Moon", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.5866f, 1.346f)
-                curveTo(7.0953f, 1.8037f, 6.7013f, 2.3557f, 6.4281f, 2.969f)
-                curveTo(6.1548f, 3.5824f, 6.0078f, 4.2444f, 5.996f, 4.9158f)
-                curveTo(5.9841f, 5.5872f, 6.1076f, 6.254f, 6.3591f, 6.8766f)
-                curveTo(6.6106f, 7.4992f, 6.9849f, 8.0647f, 7.4597f, 8.5395f)
-                curveTo(7.9345f, 9.0143f, 8.5f, 9.3886f, 9.1226f, 9.6401f)
-                curveTo(9.7452f, 9.8916f, 10.4121f, 10.0151f, 11.0834f, 10.0032f)
-                curveTo(11.7548f, 9.9914f, 12.4168f, 9.8444f, 13.0302f, 9.5711f)
-                curveTo(13.6435f, 9.2979f, 14.1955f, 8.9039f, 14.6533f, 8.4126f)
-                curveTo(14.4413f, 11.9026f, 11.5439f, 14.6666f, 8.0006f, 14.6666f)
-                curveTo(4.3179f, 14.6666f, 1.3333f, 11.6819f, 1.3333f, 7.9999f)
-                curveTo(1.3333f, 4.4566f, 4.0972f, 1.5593f, 7.5866f, 1.346f)
+                moveTo(11.38f, 2.019f)
+                curveTo(10.6431f, 2.7057f, 10.0521f, 3.5337f, 9.6422f, 4.4537f)
+                curveTo(9.2323f, 5.3737f, 9.0119f, 6.3668f, 8.9941f, 7.3738f)
+                curveTo(8.9763f, 8.3808f, 9.1616f, 9.3811f, 9.5388f, 10.315f)
+                curveTo(9.916f, 11.2489f, 10.4774f, 12.0972f, 11.1896f, 12.8094f)
+                curveTo(11.9018f, 13.5216f, 12.7501f, 14.0831f, 13.684f, 14.4603f)
+                curveTo(14.6179f, 14.8375f, 15.6182f, 15.0227f, 16.6252f, 15.005f)
+                curveTo(17.6323f, 14.9872f, 18.6254f, 14.7668f, 19.5454f, 14.3569f)
+                curveTo(20.4654f, 13.9469f, 21.2934f, 13.3559f, 21.98f, 12.619f)
+                curveTo(21.662f, 17.854f, 17.316f, 22.0f, 12.001f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.685f, 6.146f, 2.339f, 11.38f, 2.019f)
                 close()
             }
         }

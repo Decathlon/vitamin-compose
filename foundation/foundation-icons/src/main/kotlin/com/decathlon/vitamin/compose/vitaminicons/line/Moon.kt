@@ -17,34 +17,34 @@ public val LineGroup.Moon: ImageVector
             return _moon!!
         }
         _moon = Builder(name = "Moon", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(6.6667f, 4.6667f)
-                curveTo(6.6666f, 5.5938f, 6.9426f, 6.4999f, 7.4595f, 7.2695f)
-                curveTo(7.9765f, 8.0391f, 8.7109f, 8.6373f, 9.5692f, 8.9878f)
-                curveTo(10.4275f, 9.3382f, 11.3708f, 9.4251f, 12.2786f, 9.2373f)
-                curveTo(13.1865f, 9.0495f, 14.0179f, 8.5956f, 14.6667f, 7.9334f)
-                verticalLineTo(8.0f)
-                curveTo(14.6667f, 11.682f, 11.682f, 14.6667f, 8.0f, 14.6667f)
-                curveTo(4.318f, 14.6667f, 1.3334f, 11.682f, 1.3334f, 8.0f)
-                curveTo(1.3334f, 4.318f, 4.318f, 1.3334f, 8.0f, 1.3334f)
-                horizontalLineTo(8.0667f)
-                curveTo(7.6227f, 1.7675f, 7.2701f, 2.286f, 7.0297f, 2.8585f)
-                curveTo(6.7892f, 3.431f, 6.6658f, 4.0458f, 6.6667f, 4.6667f)
+                moveTo(10.0f, 7.0f)
+                curveTo(9.9998f, 8.3906f, 10.4138f, 9.7498f, 11.1892f, 10.9042f)
+                curveTo(11.9646f, 12.0586f, 13.0663f, 12.9559f, 14.3538f, 13.4816f)
+                curveTo(15.6412f, 14.0073f, 17.0561f, 14.1376f, 18.4179f, 13.8559f)
+                curveTo(19.7797f, 13.5742f, 21.0268f, 12.8933f, 22.0f, 11.9f)
+                verticalLineTo(12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                horizontalLineTo(12.1f)
+                curveTo(11.434f, 2.6511f, 10.9051f, 3.429f, 10.5445f, 4.2877f)
+                curveTo(10.1838f, 5.1464f, 9.9987f, 6.0686f, 10.0f, 7.0f)
                 close()
-                moveTo(2.6667f, 8.0f)
-                curveTo(2.6662f, 9.19f, 3.0637f, 10.346f, 3.796f, 11.284f)
-                curveTo(4.5282f, 12.222f, 5.5531f, 12.8882f, 6.7077f, 13.1766f)
-                curveTo(7.8622f, 13.465f, 9.08f, 13.3589f, 10.1673f, 12.8754f)
-                curveTo(11.2546f, 12.3918f, 12.1489f, 11.5585f, 12.708f, 10.508f)
-                curveTo(11.713f, 10.7425f, 10.6746f, 10.7188f, 9.6913f, 10.4392f)
-                curveTo(8.7079f, 10.1596f, 7.8124f, 9.6334f, 7.0895f, 8.9106f)
-                curveTo(6.3667f, 8.1877f, 5.8405f, 7.2921f, 5.5609f, 6.3088f)
-                curveTo(5.2813f, 5.3255f, 5.2576f, 4.2871f, 5.492f, 3.292f)
-                curveTo(4.6384f, 3.7468f, 3.9246f, 4.4251f, 3.4269f, 5.2545f)
-                curveTo(2.9292f, 6.0838f, 2.6664f, 7.0328f, 2.6667f, 8.0f)
+                moveTo(4.0f, 12.0f)
+                curveTo(3.9993f, 13.785f, 4.5955f, 15.5189f, 5.6939f, 16.926f)
+                curveTo(6.7923f, 18.333f, 8.3296f, 19.3323f, 10.0614f, 19.7648f)
+                curveTo(11.7932f, 20.1974f, 13.6199f, 20.0383f, 15.2508f, 19.313f)
+                curveTo(16.8818f, 18.5876f, 18.2233f, 17.3377f, 19.062f, 15.762f)
+                curveTo(17.5694f, 16.1136f, 16.0118f, 16.0781f, 14.5368f, 15.6587f)
+                curveTo(13.0619f, 15.2394f, 11.7185f, 14.4501f, 10.6342f, 13.3658f)
+                curveTo(9.5499f, 12.2815f, 8.7606f, 10.9381f, 8.3413f, 9.4632f)
+                curveTo(7.9219f, 7.9882f, 7.8864f, 6.4306f, 8.238f, 4.938f)
+                curveTo(6.9576f, 5.6201f, 5.8868f, 6.6377f, 5.1403f, 7.8816f)
+                curveTo(4.3937f, 9.1256f, 3.9996f, 10.5492f, 4.0f, 12.0f)
                 close()
             }
         }

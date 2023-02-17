@@ -17,17 +17,17 @@ public val FillGroup.Flashlight: ImageVector
             return _flashlight!!
         }
         _flashlight = Builder(name = "Flashlight", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.6666f, 6.6666f)
-                horizontalLineTo(13.3333f)
-                lineTo(7.3333f, 15.3333f)
-                verticalLineTo(9.3333f)
-                horizontalLineTo(2.6666f)
-                lineTo(8.6666f, 0.6666f)
-                verticalLineTo(6.6666f)
+                moveTo(13.0f, 10.0f)
+                horizontalLineTo(20.0f)
+                lineTo(11.0f, 23.0f)
+                verticalLineTo(14.0f)
+                horizontalLineTo(4.0f)
+                lineTo(13.0f, 1.0f)
+                verticalLineTo(10.0f)
                 close()
             }
         }

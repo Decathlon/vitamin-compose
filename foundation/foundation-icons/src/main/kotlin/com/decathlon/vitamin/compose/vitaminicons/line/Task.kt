@@ -17,33 +17,33 @@ public val LineGroup.Task: ImageVector
             return _task!!
         }
         _task = Builder(name = "Task", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.0f, 1.9947f)
-                verticalLineTo(14.0053f)
-                curveTo(13.9971f, 14.3696f, 13.7023f, 14.6641f, 13.338f, 14.6666f)
-                horizontalLineTo(2.662f)
-                curveTo(2.2966f, 14.6666f, 2.0004f, 14.3707f, 2.0f, 14.0053f)
-                verticalLineTo(1.9947f)
-                curveTo(2.0029f, 1.6303f, 2.2977f, 1.3359f, 2.662f, 1.3333f)
-                horizontalLineTo(13.338f)
-                curveTo(13.7033f, 1.3333f, 14.0f, 1.6293f, 14.0f, 1.9947f)
+                moveTo(21.0f, 2.992f)
+                verticalLineTo(21.008f)
+                curveTo(20.9956f, 21.5544f, 20.5534f, 21.9962f, 20.007f, 22.0f)
+                horizontalLineTo(3.993f)
+                curveTo(3.445f, 22.0f, 3.0006f, 21.556f, 3.0f, 21.008f)
+                verticalLineTo(2.992f)
+                curveTo(3.0044f, 2.4456f, 3.4466f, 2.0038f, 3.993f, 2.0f)
+                horizontalLineTo(20.007f)
+                curveTo(20.555f, 2.0f, 21.0f, 2.444f, 21.0f, 2.992f)
                 close()
-                moveTo(12.6667f, 2.6667f)
-                horizontalLineTo(3.3333f)
-                verticalLineTo(13.3333f)
-                horizontalLineTo(12.6667f)
-                verticalLineTo(2.6667f)
+                moveTo(19.0f, 4.0f)
+                horizontalLineTo(5.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(19.0f)
+                verticalLineTo(4.0f)
                 close()
-                moveTo(10.3574f, 5.9193f)
-                lineTo(7.5287f, 8.7473f)
-                lineTo(5.8787f, 7.0973f)
-                lineTo(4.9354f, 8.04f)
-                lineTo(7.5287f, 10.6333f)
-                lineTo(11.3001f, 6.862f)
-                lineTo(10.3574f, 5.9193f)
+                moveTo(15.536f, 8.879f)
+                lineTo(11.293f, 13.121f)
+                lineTo(8.818f, 10.646f)
+                lineTo(7.403f, 12.06f)
+                lineTo(11.293f, 15.95f)
+                lineTo(16.95f, 10.293f)
+                lineTo(15.536f, 8.879f)
                 close()
             }
         }

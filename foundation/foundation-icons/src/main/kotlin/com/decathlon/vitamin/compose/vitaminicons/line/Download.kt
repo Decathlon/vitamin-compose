@@ -17,26 +17,26 @@ public val LineGroup.Download: ImageVector
             return _download!!
         }
         _download = Builder(name = "Download", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(12.714f, 4.7333f)
-                lineTo(8.6667f, 8.7813f)
-                verticalLineTo(1.3333f)
-                horizontalLineTo(7.3333f)
-                verticalLineTo(8.78f)
-                lineTo(3.286f, 4.7333f)
-                lineTo(2.3433f, 5.6767f)
-                lineTo(8.0f, 11.3333f)
-                lineTo(13.6567f, 5.676f)
-                lineTo(12.714f, 4.7333f)
+                moveTo(19.071f, 7.1f)
+                lineTo(13.0f, 13.172f)
+                verticalLineTo(2.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(13.17f)
+                lineTo(4.929f, 7.1f)
+                lineTo(3.515f, 8.515f)
+                lineTo(12.0f, 17.0f)
+                lineTo(20.485f, 8.514f)
+                lineTo(19.071f, 7.1f)
                 close()
-                moveTo(14.0f, 12.6666f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(14.0f)
-                verticalLineTo(12.6666f)
+                moveTo(21.0f, 21.0f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(21.0f)
                 close()
             }
         }

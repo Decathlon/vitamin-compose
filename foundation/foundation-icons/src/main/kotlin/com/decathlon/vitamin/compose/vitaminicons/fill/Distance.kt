@@ -17,21 +17,21 @@ public val FillGroup.Distance: ImageVector
             return _distance!!
         }
         _distance = Builder(name = "Distance", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(5.3333f, 7.3327f)
-                verticalLineTo(4.6667f)
-                lineTo(2.0f, 8.0f)
-                lineTo(5.3333f, 11.3334f)
-                verticalLineTo(8.6667f)
-                horizontalLineTo(10.6667f)
-                verticalLineTo(11.3334f)
-                lineTo(14.0f, 8.0f)
-                lineTo(10.6667f, 4.6667f)
-                verticalLineTo(7.3332f)
-                lineTo(5.3333f, 7.3327f)
+                moveTo(8.0f, 10.999f)
+                verticalLineTo(7.0f)
+                lineTo(3.0f, 12.0f)
+                lineTo(8.0f, 17.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(16.0f)
+                verticalLineTo(17.0f)
+                lineTo(21.0f, 12.0f)
+                lineTo(16.0f, 7.0f)
+                verticalLineTo(10.9998f)
+                lineTo(8.0f, 10.999f)
                 close()
             }
         }

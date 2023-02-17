@@ -17,24 +17,24 @@ public val FillGroup.ArrowGoForward: ImageVector
             return _arrowGoForward!!
         }
         _arrowGoForward = Builder(name = "ArrowGoForward", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(10.6667f, 4.6667f)
-                horizontalLineTo(7.3333f)
-                curveTo(5.1242f, 4.6667f, 3.3333f, 6.4576f, 3.3333f, 8.6667f)
-                curveTo(3.3333f, 10.8758f, 5.1242f, 12.6667f, 7.3333f, 12.6667f)
-                horizontalLineTo(13.3333f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(7.3333f)
-                curveTo(4.3878f, 14.0f, 2.0f, 11.6122f, 2.0f, 8.6667f)
-                curveTo(2.0f, 5.7212f, 4.3878f, 3.3333f, 7.3333f, 3.3333f)
-                horizontalLineTo(10.6667f)
-                verticalLineTo(0.6667f)
-                lineTo(14.6667f, 4.0f)
-                lineTo(10.6667f, 7.3334f)
-                verticalLineTo(4.6667f)
+                moveTo(16.0f, 7.0f)
+                horizontalLineTo(11.0f)
+                curveTo(7.6863f, 7.0f, 5.0f, 9.6863f, 5.0f, 13.0f)
+                curveTo(5.0f, 16.3137f, 7.6863f, 19.0f, 11.0f, 19.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(11.0f)
+                curveTo(6.5817f, 21.0f, 3.0f, 17.4183f, 3.0f, 13.0f)
+                curveTo(3.0f, 8.5817f, 6.5817f, 5.0f, 11.0f, 5.0f)
+                horizontalLineTo(16.0f)
+                verticalLineTo(1.0f)
+                lineTo(22.0f, 6.0f)
+                lineTo(16.0f, 11.0f)
+                verticalLineTo(7.0f)
                 close()
             }
         }

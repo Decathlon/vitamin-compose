@@ -17,23 +17,23 @@ public val FillGroup.Close: ImageVector
             return _close!!
         }
         _close = Builder(name = "Close", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0f, 7.0573f)
-                lineTo(11.3f, 3.7573f)
-                lineTo(12.2427f, 4.7f)
-                lineTo(8.9427f, 8.0f)
-                lineTo(12.2427f, 11.3f)
-                lineTo(11.3f, 12.2427f)
-                lineTo(8.0f, 8.9427f)
-                lineTo(4.7f, 12.2427f)
-                lineTo(3.7573f, 11.3f)
-                lineTo(7.0573f, 8.0f)
-                lineTo(3.7573f, 4.7f)
-                lineTo(4.7f, 3.7573f)
-                lineTo(8.0f, 7.0573f)
+                moveTo(12.0f, 10.586f)
+                lineTo(16.95f, 5.636f)
+                lineTo(18.364f, 7.05f)
+                lineTo(13.414f, 12.0f)
+                lineTo(18.364f, 16.95f)
+                lineTo(16.95f, 18.364f)
+                lineTo(12.0f, 13.414f)
+                lineTo(7.05f, 18.364f)
+                lineTo(5.636f, 16.95f)
+                lineTo(10.586f, 12.0f)
+                lineTo(5.636f, 7.05f)
+                lineTo(7.05f, 5.636f)
+                lineTo(12.0f, 10.586f)
                 close()
             }
         }

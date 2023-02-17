@@ -17,21 +17,21 @@ public val FillGroup.Naver: ImageVector
             return _naver!!
         }
         _naver = Builder(name = "Naver", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(1.3333f, 2.0f)
-                verticalLineTo(14.0673f)
-                horizontalLineTo(5.9761f)
-                verticalLineTo(8.03f)
-                lineTo(10.0163f, 14.0673f)
-                horizontalLineTo(14.6666f)
-                verticalLineTo(2.0f)
-                horizontalLineTo(10.0163f)
-                verticalLineTo(8.03f)
-                lineTo(5.9761f, 2.0f)
-                horizontalLineTo(1.3333f)
+                moveTo(2.0f, 3.0f)
+                verticalLineTo(21.101f)
+                horizontalLineTo(8.9643f)
+                verticalLineTo(12.0449f)
+                lineTo(15.0246f, 21.101f)
+                horizontalLineTo(22.0f)
+                verticalLineTo(3.0f)
+                horizontalLineTo(15.0246f)
+                verticalLineTo(12.0449f)
+                lineTo(8.9643f, 3.0f)
+                horizontalLineTo(2.0f)
                 close()
             }
         }

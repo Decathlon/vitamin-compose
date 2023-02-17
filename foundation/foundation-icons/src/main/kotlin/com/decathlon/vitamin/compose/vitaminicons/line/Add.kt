@@ -17,23 +17,23 @@ public val LineGroup.Add: ImageVector
             return _add!!
         }
         _add = Builder(name = "Add", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp, viewportWidth
-                = 16.0f, viewportHeight = 16.0f).apply {
+                = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(7.3333f, 7.3333f)
-                verticalLineTo(3.3333f)
-                horizontalLineTo(8.6666f)
-                verticalLineTo(7.3333f)
-                horizontalLineTo(12.6666f)
-                verticalLineTo(8.6666f)
-                horizontalLineTo(8.6666f)
-                verticalLineTo(12.6666f)
-                horizontalLineTo(7.3333f)
-                verticalLineTo(8.6666f)
-                horizontalLineTo(3.3333f)
-                verticalLineTo(7.3333f)
-                horizontalLineTo(7.3333f)
+                moveTo(11.0f, 11.0f)
+                verticalLineTo(5.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(19.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(13.0f)
+                verticalLineTo(19.0f)
+                horizontalLineTo(11.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(5.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(11.0f)
                 close()
             }
         }

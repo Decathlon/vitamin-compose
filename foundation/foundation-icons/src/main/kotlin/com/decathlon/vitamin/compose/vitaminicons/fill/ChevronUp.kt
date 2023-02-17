@@ -17,17 +17,17 @@ public val FillGroup.ChevronUp: ImageVector
             return _chevronUp!!
         }
         _chevronUp = Builder(name = "ChevronUp", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0f, 7.2186f)
-                lineTo(4.7f, 10.5186f)
-                lineTo(3.7573f, 9.576f)
-                lineTo(8.0f, 5.3333f)
-                lineTo(12.2427f, 9.576f)
-                lineTo(11.3f, 10.5186f)
-                lineTo(8.0f, 7.2186f)
+                moveTo(12.0f, 10.828f)
+                lineTo(7.05f, 15.778f)
+                lineTo(5.636f, 14.364f)
+                lineTo(12.0f, 8.0f)
+                lineTo(18.364f, 14.364f)
+                lineTo(16.95f, 15.778f)
+                lineTo(12.0f, 10.828f)
                 close()
             }
         }

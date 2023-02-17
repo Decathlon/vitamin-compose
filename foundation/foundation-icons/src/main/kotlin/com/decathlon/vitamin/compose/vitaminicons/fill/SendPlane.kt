@@ -17,20 +17,20 @@ public val FillGroup.SendPlane: ImageVector
             return _sendPlane!!
         }
         _sendPlane = Builder(name = "SendPlane", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(1.2973f, 6.21f)
-                curveTo(0.9493f, 6.094f, 0.946f, 5.9067f, 1.304f, 5.7873f)
-                lineTo(14.0286f, 1.546f)
-                curveTo(14.3813f, 1.4287f, 14.5833f, 1.626f, 14.4846f, 1.9713f)
-                lineTo(10.8486f, 14.6953f)
-                curveTo(10.7486f, 15.048f, 10.5453f, 15.06f, 10.396f, 14.7253f)
-                lineTo(8.0f, 9.3333f)
-                lineTo(12.0f, 4.0f)
-                lineTo(6.6666f, 8.0f)
-                lineTo(1.2973f, 6.21f)
+                moveTo(1.9461f, 9.315f)
+                curveTo(1.4241f, 9.141f, 1.4191f, 8.86f, 1.9561f, 8.681f)
+                lineTo(21.0431f, 2.319f)
+                curveTo(21.5721f, 2.143f, 21.8751f, 2.439f, 21.7271f, 2.957f)
+                lineTo(16.2731f, 22.043f)
+                curveTo(16.1231f, 22.572f, 15.8181f, 22.59f, 15.5941f, 22.088f)
+                lineTo(12.0001f, 14.0f)
+                lineTo(18.0001f, 6.0f)
+                lineTo(10.0001f, 12.0f)
+                lineTo(1.9461f, 9.315f)
                 close()
             }
         }

@@ -17,20 +17,20 @@ public val FillGroup.Play: ImageVector
             return _play!!
         }
         _play = Builder(name = "Play", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(12.9173f, 8.2773f)
-                lineTo(5.8513f, 12.988f)
-                curveTo(5.749f, 13.0561f, 5.6176f, 13.0624f, 5.5093f, 13.0044f)
-                curveTo(5.4009f, 12.9464f, 5.3333f, 12.8335f, 5.3333f, 12.7107f)
-                verticalLineTo(3.2893f)
-                curveTo(5.3333f, 3.1665f, 5.4009f, 3.0536f, 5.5093f, 2.9956f)
-                curveTo(5.6176f, 2.9377f, 5.749f, 2.9439f, 5.8513f, 3.012f)
-                lineTo(12.9173f, 7.7227f)
-                curveTo(13.01f, 7.7845f, 13.0657f, 7.8886f, 13.0657f, 8.0f)
-                curveTo(13.0657f, 8.1115f, 13.01f, 8.2155f, 12.9173f, 8.2773f)
+                moveTo(19.376f, 12.416f)
+                lineTo(8.777f, 19.482f)
+                curveTo(8.6236f, 19.5841f, 8.4265f, 19.5935f, 8.264f, 19.5065f)
+                curveTo(8.1015f, 19.4196f, 8.0001f, 19.2503f, 8.0f, 19.066f)
+                verticalLineTo(4.934f)
+                curveTo(8.0001f, 4.7497f, 8.1015f, 4.5805f, 8.264f, 4.4935f)
+                curveTo(8.4265f, 4.4065f, 8.6236f, 4.4159f, 8.777f, 4.518f)
+                lineTo(19.376f, 11.584f)
+                curveTo(19.5151f, 11.6767f, 19.5986f, 11.8328f, 19.5986f, 12.0f)
+                curveTo(19.5986f, 12.1672f, 19.5151f, 12.3233f, 19.376f, 12.416f)
                 close()
             }
         }

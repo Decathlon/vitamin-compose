@@ -17,17 +17,17 @@ public val FillGroup.ChevronRight: ImageVector
             return _chevronRight!!
         }
         _chevronRight = Builder(name = "ChevronRight", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.7815f, 8.0f)
-                lineTo(5.4815f, 4.7f)
-                lineTo(6.4241f, 3.7573f)
-                lineTo(10.6668f, 8.0f)
-                lineTo(6.4241f, 12.2427f)
-                lineTo(5.4815f, 11.3f)
-                lineTo(8.7815f, 8.0f)
+                moveTo(13.1719f, 12.0f)
+                lineTo(8.2219f, 7.05f)
+                lineTo(9.6359f, 5.636f)
+                lineTo(15.9999f, 12.0f)
+                lineTo(9.6359f, 18.364f)
+                lineTo(8.2219f, 16.95f)
+                lineTo(13.1719f, 12.0f)
                 close()
             }
         }

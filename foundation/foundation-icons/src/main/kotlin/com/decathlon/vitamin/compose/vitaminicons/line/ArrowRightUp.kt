@@ -17,20 +17,20 @@ public val LineGroup.ArrowRightUp: ImageVector
             return _arrowRightUp!!
         }
         _arrowRightUp = Builder(name = "ArrowRightUp", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(10.6693f, 6.276f)
-                lineTo(4.9313f, 12.014f)
-                lineTo(3.9887f, 11.0713f)
-                lineTo(9.726f, 5.3333f)
-                horizontalLineTo(4.6693f)
-                verticalLineTo(4.0f)
-                horizontalLineTo(12.0026f)
-                verticalLineTo(11.3333f)
-                horizontalLineTo(10.6693f)
-                verticalLineTo(6.276f)
+                moveTo(16.004f, 9.414f)
+                lineTo(7.397f, 18.021f)
+                lineTo(5.983f, 16.607f)
+                lineTo(14.589f, 8.0f)
+                horizontalLineTo(7.004f)
+                verticalLineTo(6.0f)
+                horizontalLineTo(18.004f)
+                verticalLineTo(17.0f)
+                horizontalLineTo(16.004f)
+                verticalLineTo(9.414f)
                 close()
             }
         }

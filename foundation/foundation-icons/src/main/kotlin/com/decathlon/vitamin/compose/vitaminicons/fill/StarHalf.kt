@@ -17,29 +17,29 @@ public val FillGroup.StarHalf: ImageVector
             return _starHalf!!
         }
         _starHalf = Builder(name = "StarHalf", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(3.298f, 14.8053f)
-                lineTo(8.0f, 12.1733f)
-                lineTo(12.702f, 14.8053f)
-                lineTo(11.652f, 9.52f)
-                lineTo(15.6087f, 5.8613f)
-                lineTo(10.2574f, 5.2267f)
-                lineTo(8.0f, 0.3333f)
-                lineTo(5.7427f, 5.2267f)
-                lineTo(0.3914f, 5.8613f)
-                lineTo(4.348f, 9.52f)
-                lineTo(3.298f, 14.8053f)
+                moveTo(4.9469f, 22.208f)
+                lineTo(11.9999f, 18.26f)
+                lineTo(19.0529f, 22.208f)
+                lineTo(17.4779f, 14.28f)
+                lineTo(23.4129f, 8.792f)
+                lineTo(15.3859f, 7.84f)
+                lineTo(11.9999f, 0.5f)
+                lineTo(8.6139f, 7.84f)
+                lineTo(0.5869f, 8.792f)
+                lineTo(6.5219f, 14.28f)
+                lineTo(4.9469f, 22.208f)
                 close()
-                moveTo(10.8313f, 12.23f)
-                lineTo(8.0f, 10.6453f)
-                verticalLineTo(3.5167f)
-                lineTo(9.3587f, 6.4627f)
-                lineTo(12.5807f, 6.8447f)
-                lineTo(10.1987f, 9.048f)
-                lineTo(10.8313f, 12.23f)
+                moveTo(16.2469f, 18.345f)
+                lineTo(11.9999f, 15.968f)
+                verticalLineTo(5.275f)
+                lineTo(14.0379f, 9.694f)
+                lineTo(18.8709f, 10.267f)
+                lineTo(15.2979f, 13.572f)
+                lineTo(16.2469f, 18.345f)
                 close()
             }
         }

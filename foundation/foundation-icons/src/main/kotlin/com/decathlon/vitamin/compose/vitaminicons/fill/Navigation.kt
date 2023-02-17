@@ -17,27 +17,27 @@ public val FillGroup.Navigation: ImageVector
             return _navigation!!
         }
         _navigation = Builder(name = "Navigation", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(1.9333f, 1.5333f)
-                lineTo(14.47f, 5.712f)
-                curveTo(14.5349f, 5.7335f, 14.5916f, 5.7744f, 14.6324f, 5.8293f)
-                curveTo(14.6733f, 5.8841f, 14.6963f, 5.9501f, 14.6983f, 6.0185f)
-                curveTo(14.7003f, 6.0868f, 14.6813f, 6.1541f, 14.6438f, 6.2112f)
-                curveTo(14.6063f, 6.2684f, 14.5521f, 6.3127f, 14.4887f, 6.338f)
-                lineTo(8.6666f, 8.6667f)
-                lineTo(5.7167f, 14.5667f)
-                curveTo(5.6866f, 14.6267f, 5.6392f, 14.6763f, 5.5805f, 14.709f)
-                curveTo(5.5218f, 14.7416f, 5.4546f, 14.7558f, 5.3877f, 14.7496f)
-                curveTo(5.3208f, 14.7434f, 5.2574f, 14.7171f, 5.2057f, 14.6743f)
-                curveTo(5.154f, 14.6314f, 5.1164f, 14.5739f, 5.098f, 14.5093f)
-                lineTo(1.5066f, 1.9407f)
-                curveTo(1.49f, 1.8823f, 1.4897f, 1.8204f, 1.5056f, 1.7619f)
-                curveTo(1.5215f, 1.7033f, 1.5531f, 1.6501f, 1.597f, 1.6082f)
-                curveTo(1.641f, 1.5663f, 1.6955f, 1.5372f, 1.7548f, 1.524f)
-                curveTo(1.814f, 1.5108f, 1.8758f, 1.514f, 1.9333f, 1.5333f)
+                moveTo(2.9f, 2.3f)
+                lineTo(21.705f, 8.568f)
+                curveTo(21.8023f, 8.6003f, 21.8874f, 8.6617f, 21.9486f, 8.7439f)
+                curveTo(22.0099f, 8.8261f, 22.0444f, 8.9252f, 22.0474f, 9.0277f)
+                curveTo(22.0505f, 9.1302f, 22.022f, 9.2311f, 21.9657f, 9.3169f)
+                curveTo(21.9095f, 9.4026f, 21.8282f, 9.469f, 21.733f, 9.507f)
+                lineTo(13.0f, 13.0f)
+                lineTo(8.575f, 21.85f)
+                curveTo(8.53f, 21.9401f, 8.4587f, 22.0145f, 8.3707f, 22.0635f)
+                curveTo(8.2827f, 22.1124f, 8.1819f, 22.1337f, 8.0816f, 22.1244f)
+                curveTo(7.9813f, 22.1151f, 7.8861f, 22.0757f, 7.8085f, 22.0114f)
+                curveTo(7.731f, 21.9471f, 7.6747f, 21.8608f, 7.647f, 21.764f)
+                lineTo(2.26f, 2.911f)
+                curveTo(2.235f, 2.8234f, 2.2345f, 2.7307f, 2.2584f, 2.6428f)
+                curveTo(2.2823f, 2.5549f, 2.3297f, 2.4752f, 2.3956f, 2.4123f)
+                curveTo(2.4615f, 2.3495f, 2.5433f, 2.3057f, 2.6321f, 2.2859f)
+                curveTo(2.721f, 2.2661f, 2.8136f, 2.271f, 2.9f, 2.3f)
                 close()
             }
         }

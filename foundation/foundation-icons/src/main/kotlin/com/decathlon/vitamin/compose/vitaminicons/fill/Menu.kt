@@ -17,27 +17,27 @@ public val FillGroup.Menu: ImageVector
             return _menu!!
         }
         _menu = Builder(name = "Menu", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(2.0f, 2.6667f)
-                horizontalLineTo(14.0f)
+                moveTo(3.0f, 4.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(6.0f)
+                horizontalLineTo(3.0f)
                 verticalLineTo(4.0f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(2.6667f)
                 close()
-                moveTo(2.0f, 7.3334f)
-                horizontalLineTo(14.0f)
-                verticalLineTo(8.6667f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(7.3334f)
+                moveTo(3.0f, 11.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(11.0f)
                 close()
-                moveTo(14.0f, 12.0f)
-                horizontalLineTo(2.0f)
-                verticalLineTo(13.3334f)
-                horizontalLineTo(14.0f)
-                verticalLineTo(12.0f)
+                moveTo(21.0f, 18.0f)
+                horizontalLineTo(3.0f)
+                verticalLineTo(20.0f)
+                horizontalLineTo(21.0f)
+                verticalLineTo(18.0f)
                 close()
             }
         }

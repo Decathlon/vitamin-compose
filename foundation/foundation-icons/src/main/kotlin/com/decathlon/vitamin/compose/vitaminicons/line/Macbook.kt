@@ -17,29 +17,29 @@ public val LineGroup.Macbook: ImageVector
             return _macbook!!
         }
         _macbook = Builder(name = "Macbook", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.3333f, 2.6713f)
-                curveTo(1.3333f, 2.3007f, 1.6367f, 2.0f, 1.9947f, 2.0f)
-                horizontalLineTo(14.0054f)
-                curveTo(14.3707f, 2.0f, 14.6667f, 2.2993f, 14.6667f, 2.6713f)
-                verticalLineTo(12.0f)
-                horizontalLineTo(1.3333f)
-                verticalLineTo(2.6713f)
+                moveTo(2.0f, 4.007f)
+                curveTo(2.0f, 3.451f, 2.455f, 3.0f, 2.992f, 3.0f)
+                horizontalLineTo(21.008f)
+                curveTo(21.556f, 3.0f, 22.0f, 3.449f, 22.0f, 4.007f)
+                verticalLineTo(18.0f)
+                horizontalLineTo(2.0f)
+                verticalLineTo(4.007f)
                 close()
-                moveTo(2.6667f, 3.3333f)
-                verticalLineTo(10.6667f)
-                horizontalLineTo(13.3334f)
-                verticalLineTo(3.3333f)
-                horizontalLineTo(2.6667f)
+                moveTo(4.0f, 5.0f)
+                verticalLineTo(16.0f)
+                horizontalLineTo(20.0f)
+                verticalLineTo(5.0f)
+                horizontalLineTo(4.0f)
                 close()
-                moveTo(15.3334f, 12.6667f)
-                horizontalLineTo(0.6667f)
-                verticalLineTo(14.0f)
-                horizontalLineTo(15.3334f)
-                verticalLineTo(12.6667f)
+                moveTo(23.0f, 19.0f)
+                horizontalLineTo(1.0f)
+                verticalLineTo(21.0f)
+                horizontalLineTo(23.0f)
+                verticalLineTo(19.0f)
                 close()
             }
         }

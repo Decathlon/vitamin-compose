@@ -17,29 +17,29 @@ public val FillGroup.CloseCircle: ImageVector
             return _closeCircle!!
         }
         _closeCircle = Builder(name = "CloseCircle", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(1.3333f, 8.0f)
-                curveTo(1.3333f, 11.682f, 4.3179f, 14.6666f, 7.9999f, 14.6666f)
-                curveTo(11.6819f, 14.6666f, 14.6666f, 11.682f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 4.318f, 11.6819f, 1.3333f, 7.9999f, 1.3333f)
-                curveTo(4.3179f, 1.3333f, 1.3333f, 4.318f, 1.3333f, 8.0f)
+                moveTo(2.0f, 12.0f)
+                curveTo(2.0f, 17.523f, 6.477f, 22.0f, 12.0f, 22.0f)
+                curveTo(17.523f, 22.0f, 22.0f, 17.523f, 22.0f, 12.0f)
+                curveTo(22.0f, 6.477f, 17.523f, 2.0f, 12.0f, 2.0f)
+                curveTo(6.477f, 2.0f, 2.0f, 6.477f, 2.0f, 12.0f)
                 close()
-                moveTo(6.1146f, 5.1713f)
-                lineTo(7.9999f, 7.0573f)
-                lineTo(9.8853f, 5.1713f)
-                lineTo(10.8286f, 6.1146f)
-                lineTo(8.9426f, 7.9999f)
-                lineTo(10.8286f, 9.8853f)
-                lineTo(9.8853f, 10.8286f)
-                lineTo(7.9999f, 8.9426f)
-                lineTo(6.1146f, 10.8286f)
-                lineTo(5.1713f, 9.8853f)
-                lineTo(7.0573f, 7.9999f)
-                lineTo(5.1713f, 6.1146f)
-                lineTo(6.1146f, 5.1713f)
+                moveTo(9.172f, 7.757f)
+                lineTo(12.0f, 10.586f)
+                lineTo(14.828f, 7.757f)
+                lineTo(16.243f, 9.172f)
+                lineTo(13.414f, 12.0f)
+                lineTo(16.243f, 14.828f)
+                lineTo(14.828f, 16.243f)
+                lineTo(12.0f, 13.414f)
+                lineTo(9.172f, 16.243f)
+                lineTo(7.757f, 14.828f)
+                lineTo(10.586f, 12.0f)
+                lineTo(7.757f, 9.172f)
+                lineTo(9.172f, 7.757f)
                 close()
             }
         }

@@ -17,21 +17,21 @@ public val FillGroup.Forbid: ImageVector
             return _forbid!!
         }
         _forbid = Builder(name = "Forbid", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(8.0002f, 14.6667f)
-                curveTo(4.3182f, 14.6667f, 1.3335f, 11.682f, 1.3335f, 8.0f)
-                curveTo(1.3335f, 4.318f, 4.3182f, 1.3334f, 8.0002f, 1.3334f)
-                curveTo(11.6822f, 1.3334f, 14.6668f, 4.318f, 14.6668f, 8.0f)
-                curveTo(14.6668f, 11.682f, 11.6822f, 14.6667f, 8.0002f, 14.6667f)
+                moveTo(12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
                 close()
-                moveTo(5.6822f, 4.7394f)
-                curveTo(5.318f, 4.9991f, 4.9996f, 5.3177f, 4.7402f, 5.682f)
-                lineTo(10.3188f, 11.2607f)
-                curveTo(10.6832f, 11.001f, 11.0018f, 10.6825f, 11.2615f, 10.318f)
-                lineTo(5.6822f, 4.7394f)
+                moveTo(8.523f, 7.109f)
+                curveTo(7.9767f, 7.4986f, 7.4992f, 7.9765f, 7.11f, 8.523f)
+                lineTo(15.478f, 16.891f)
+                curveTo(16.0246f, 16.5015f, 16.5025f, 16.0236f, 16.892f, 15.477f)
+                lineTo(8.523f, 7.109f)
                 close()
             }
         }

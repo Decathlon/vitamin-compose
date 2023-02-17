@@ -17,23 +17,23 @@ public val FillGroup.Leaf: ImageVector
             return _leaf!!
         }
         _leaf = Builder(name = "Leaf", defaultWidth = 24.0.dp, defaultHeight = 24.0.dp,
-                viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(14.0f, 2.0f)
-                verticalLineTo(3.3333f)
-                curveTo(14.0f, 9.7513f, 10.418f, 12.6667f, 6.0f, 12.6667f)
-                horizontalLineTo(4.732f)
-                curveTo(4.8733f, 10.6587f, 5.4987f, 9.4433f, 7.1307f, 7.9993f)
-                curveTo(7.9333f, 7.2893f, 7.8653f, 6.8793f, 7.47f, 7.1147f)
-                curveTo(4.7473f, 8.7347f, 3.3953f, 10.924f, 3.3353f, 14.42f)
-                lineTo(3.3333f, 14.6667f)
-                horizontalLineTo(2.0f)
-                curveTo(2.0f, 13.758f, 2.0773f, 12.9333f, 2.2307f, 12.1787f)
-                curveTo(2.0773f, 11.316f, 2.0f, 10.1453f, 2.0f, 8.6667f)
-                curveTo(2.0f, 4.9847f, 4.9847f, 2.0f, 8.6667f, 2.0f)
-                curveTo(10.0f, 2.0f, 11.3333f, 2.6667f, 14.0f, 2.0f)
+                moveTo(21.0f, 3.0f)
+                verticalLineTo(5.0f)
+                curveTo(21.0f, 14.627f, 15.627f, 19.0f, 9.0f, 19.0f)
+                horizontalLineTo(7.098f)
+                curveTo(7.31f, 15.988f, 8.248f, 14.165f, 10.696f, 11.999f)
+                curveTo(11.9f, 10.934f, 11.798f, 10.319f, 11.205f, 10.672f)
+                curveTo(7.121f, 13.102f, 5.093f, 16.386f, 5.003f, 21.63f)
+                lineTo(5.0f, 22.0f)
+                horizontalLineTo(3.0f)
+                curveTo(3.0f, 20.637f, 3.116f, 19.4f, 3.346f, 18.268f)
+                curveTo(3.116f, 16.974f, 3.0f, 15.218f, 3.0f, 13.0f)
+                curveTo(3.0f, 7.477f, 7.477f, 3.0f, 13.0f, 3.0f)
+                curveTo(15.0f, 3.0f, 17.0f, 4.0f, 21.0f, 3.0f)
                 close()
             }
         }

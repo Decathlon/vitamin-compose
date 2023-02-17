@@ -17,24 +17,24 @@ public val FillGroup.ArrowLeftCircle: ImageVector
             return _arrowLeftCircle!!
         }
         _arrowLeftCircle = Builder(name = "ArrowLeftCircle", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
-                moveTo(14.6666f, 8.0f)
-                curveTo(14.6666f, 4.32f, 11.6799f, 1.3333f, 7.9999f, 1.3333f)
-                curveTo(4.3199f, 1.3333f, 1.3333f, 4.32f, 1.3333f, 8.0f)
-                curveTo(1.3333f, 11.68f, 4.3199f, 14.6666f, 7.9999f, 14.6666f)
-                curveTo(11.6799f, 14.6666f, 14.6666f, 11.68f, 14.6666f, 8.0f)
+                moveTo(22.0f, 12.0f)
+                curveTo(22.0f, 6.48f, 17.52f, 2.0f, 12.0f, 2.0f)
+                curveTo(6.48f, 2.0f, 2.0f, 6.48f, 2.0f, 12.0f)
+                curveTo(2.0f, 17.52f, 6.48f, 22.0f, 12.0f, 22.0f)
+                curveTo(17.52f, 22.0f, 22.0f, 17.52f, 22.0f, 12.0f)
                 close()
-                moveTo(7.9999f, 5.3333f)
-                verticalLineTo(7.3333f)
-                horizontalLineTo(10.6666f)
-                verticalLineTo(8.6666f)
-                horizontalLineTo(7.9999f)
-                verticalLineTo(10.6666f)
-                lineTo(5.3333f, 8.0f)
-                lineTo(7.9999f, 5.3333f)
+                moveTo(12.0f, 8.0f)
+                verticalLineTo(11.0f)
+                horizontalLineTo(16.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(12.0f)
+                verticalLineTo(16.0f)
+                lineTo(8.0f, 12.0f)
+                lineTo(12.0f, 8.0f)
                 close()
             }
         }

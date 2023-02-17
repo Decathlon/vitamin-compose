@@ -1,7 +1,7 @@
 package com.decathlon.vitamin.compose.vitaminicons.line
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
+import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
@@ -17,37 +17,37 @@ public val LineGroup.EmotionLaugh: ImageVector
             return _emotionLaugh!!
         }
         _emotionLaugh = Builder(name = "EmotionLaugh", defaultWidth = 24.0.dp, defaultHeight =
-                24.0.dp, viewportWidth = 16.0f, viewportHeight = 16.0f).apply {
+                24.0.dp, viewportWidth = 24.0f, viewportHeight = 24.0f).apply {
             path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                    pathFillType = EvenOdd) {
-                moveTo(8.0f, 1.3334f)
-                curveTo(11.682f, 1.3334f, 14.6666f, 4.318f, 14.6666f, 8.0f)
-                curveTo(14.6666f, 11.682f, 11.682f, 14.6667f, 8.0f, 14.6667f)
-                curveTo(4.318f, 14.6667f, 1.3333f, 11.682f, 1.3333f, 8.0f)
-                curveTo(1.3333f, 4.318f, 4.318f, 1.3334f, 8.0f, 1.3334f)
+                    pathFillType = NonZero) {
+                moveTo(12.0f, 2.0f)
+                curveTo(17.523f, 2.0f, 22.0f, 6.477f, 22.0f, 12.0f)
+                curveTo(22.0f, 17.523f, 17.523f, 22.0f, 12.0f, 22.0f)
+                curveTo(6.477f, 22.0f, 2.0f, 17.523f, 2.0f, 12.0f)
+                curveTo(2.0f, 6.477f, 6.477f, 2.0f, 12.0f, 2.0f)
                 close()
-                moveTo(8.0f, 2.6667f)
-                curveTo(5.0545f, 2.6667f, 2.6667f, 5.0545f, 2.6667f, 8.0f)
-                curveTo(2.6667f, 10.9456f, 5.0545f, 13.3334f, 8.0f, 13.3334f)
-                curveTo(10.9455f, 13.3334f, 13.3333f, 10.9456f, 13.3333f, 8.0f)
-                curveTo(13.3333f, 5.0545f, 10.9455f, 2.6667f, 8.0f, 2.6667f)
+                moveTo(12.0f, 4.0f)
+                curveTo(7.5817f, 4.0f, 4.0f, 7.5817f, 4.0f, 12.0f)
+                curveTo(4.0f, 16.4183f, 7.5817f, 20.0f, 12.0f, 20.0f)
+                curveTo(16.4183f, 20.0f, 20.0f, 16.4183f, 20.0f, 12.0f)
+                curveTo(20.0f, 7.5817f, 16.4183f, 4.0f, 12.0f, 4.0f)
                 close()
-                moveTo(11.3333f, 8.0f)
-                curveTo(10.4446f, 7.5554f, 9.3333f, 7.3334f, 8.0f, 7.3334f)
-                curveTo(6.6666f, 7.3334f, 5.5553f, 7.5554f, 4.6666f, 8.0f)
-                curveTo(4.6666f, 9.841f, 6.159f, 11.3334f, 8.0f, 11.3334f)
-                curveTo(9.8409f, 11.3334f, 11.3333f, 9.841f, 11.3333f, 8.0f)
+                moveTo(17.0f, 12.0f)
+                curveTo(15.667f, 11.333f, 14.0f, 11.0f, 12.0f, 11.0f)
+                curveTo(10.0f, 11.0f, 8.333f, 11.333f, 7.0f, 12.0f)
+                curveTo(7.0f, 14.7614f, 9.2386f, 17.0f, 12.0f, 17.0f)
+                curveTo(14.7614f, 17.0f, 17.0f, 14.7614f, 17.0f, 12.0f)
                 close()
-                moveTo(5.6667f, 4.6667f)
-                curveTo(6.4588f, 4.6666f, 7.1416f, 5.2239f, 7.3f, 6.0f)
-                horizontalLineTo(4.0334f)
-                curveTo(4.1918f, 5.2239f, 4.8746f, 4.6666f, 5.6667f, 4.6667f)
+                moveTo(8.5f, 7.0f)
+                curveTo(9.6882f, 6.9998f, 10.7124f, 7.8358f, 10.95f, 9.0f)
+                horizontalLineTo(6.05f)
+                curveTo(6.2876f, 7.8358f, 7.3118f, 6.9998f, 8.5f, 7.0f)
                 close()
-                moveTo(11.9667f, 6.0f)
-                curveTo(11.8083f, 5.2239f, 11.1255f, 4.6666f, 10.3334f, 4.6667f)
-                curveTo(9.5413f, 4.6666f, 8.8585f, 5.2239f, 8.7001f, 6.0f)
-                horizontalLineTo(11.9667f)
+                moveTo(17.95f, 9.0f)
+                curveTo(17.7124f, 7.8358f, 16.6882f, 6.9998f, 15.5f, 7.0f)
+                curveTo(14.3118f, 6.9998f, 13.2876f, 7.8358f, 13.05f, 9.0f)
+                horizontalLineTo(17.95f)
                 close()
             }
         }
