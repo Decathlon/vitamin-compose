@@ -6,17 +6,14 @@ on:
       - edited
       - reopened
       - synchronize
+      
 jobs:
-  semantic-check:
-    runs-on: [self-hosted, decathlon]
+  commitlint:
+    runs-on: ubuntu-latest
     steps:
-      - name: Check Conventional Commits specification
-        uses: gsactions/commit-message-checker@v1
+      - uses: actions/checkout@v3
         with:
-          pattern: '^(feat|fix|refactor|test|docs|chore|style){1}(\([\w\-\.]+\))?(!)?: \b'
-          # debug this regex => https://regexr.com/6p3k3
-          flags: 'g'
-          error: 'The commit message or PR title does not respect the naming convention defined https://www.conventionalcommits.org/en/v1.0.0/'
-          excludeDescription: 'true' # exclude the PR description
-          checkAllCommitMessages: 'true'
-          accessToken: ${{ secrets.DKTUNITED_TOKEN }}
+          fetch-depth: 0
+      - name: Check Conventional Commits specification
+        uses: wagoid/commitlint-github-action@v5
+
