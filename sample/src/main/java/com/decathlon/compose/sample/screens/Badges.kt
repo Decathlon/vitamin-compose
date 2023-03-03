@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.badges.VitaminBadgeSizes
@@ -36,8 +37,10 @@ object Badges : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(title = name, onBackClick = {
+            navController?.popBackStack()
+        }) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -47,16 +50,13 @@ object Badges : Screen {
                     Spacer(Modifier.height(20.dp))
                     Row {
                         VitaminCountBadges.Accent(
-                            count = 1000,
-                            nbMaxChar = 3,
-                            sizes = VitaminBadgeSizes.large()
+                            count = 1000, nbMaxChar = 3, sizes = VitaminBadgeSizes.large()
                         ) {
                             Content()
                         }
                         Spacer(Modifier.width(30.dp))
                         VitaminCountBadges.Accent(
-                            count = 50,
-                            sizes = VitaminBadgeSizes.medium()
+                            count = 50, sizes = VitaminBadgeSizes.medium()
                         ) {
                             Content()
                         }
@@ -181,86 +181,71 @@ object Badges : Screen {
                     Row {
                         Column {
                             VitaminStandaloneBadges.Accent(
-                                count = 120,
-                                sizes = VitaminBadgeSizes.large()
+                                count = 120, sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Accent(
-                                count = 120,
-                                sizes = VitaminBadgeSizes.medium()
+                                count = 120, sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Accent(
-                                count = 120,
-                                sizes = VitaminBadgeSizes.small()
+                                count = 120, sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Brand(
-                                count = 50,
-                                sizes = VitaminBadgeSizes.large()
+                                count = 50, sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Brand(
-                                count = 50,
-                                sizes = VitaminBadgeSizes.medium()
+                                count = 50, sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Brand(
-                                count = 50,
-                                sizes = VitaminBadgeSizes.small()
+                                count = 50, sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Alert(
-                                count = 10,
-                                sizes = VitaminBadgeSizes.large()
+                                count = 10, sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Alert(
-                                count = 10,
-                                sizes = VitaminBadgeSizes.medium()
+                                count = 10, sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Alert(
-                                count = 10,
-                                sizes = VitaminBadgeSizes.small()
+                                count = 10, sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Default(
-                                count = 5,
-                                sizes = VitaminBadgeSizes.large()
+                                count = 5, sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Default(
-                                count = 5,
-                                sizes = VitaminBadgeSizes.medium()
+                                count = 5, sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Default(
-                                count = 5,
-                                sizes = VitaminBadgeSizes.small()
+                                count = 5, sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
                         Column {
                             VitaminStandaloneBadges.Reversed(
-                                count = 1,
-                                sizes = VitaminBadgeSizes.large()
+                                count = 1, sizes = VitaminBadgeSizes.large()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Reversed(
-                                count = 1,
-                                sizes = VitaminBadgeSizes.medium()
+                                count = 1, sizes = VitaminBadgeSizes.medium()
                             )
                             Spacer(Modifier.height(3.dp))
                             VitaminStandaloneBadges.Reversed(
-                                count = 1,
-                                sizes = VitaminBadgeSizes.small()
+                                count = 1, sizes = VitaminBadgeSizes.small()
                             )
                         }
                         Spacer(Modifier.width(30.dp))
@@ -274,8 +259,7 @@ object Badges : Screen {
     @Composable
     private fun Content() {
         Icon(
-            imageVector = VitaminIcons.Fill.Heart,
-            contentDescription = ""
+            imageVector = VitaminIcons.Fill.Heart, contentDescription = ""
         )
     }
 }
@@ -284,6 +268,6 @@ object Badges : Screen {
 @Composable
 private fun BadgesScreenPreview() {
     VitaminTheme {
-        Badges.Screen()
+        Badges.Screen(null)
     }
 }

@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
@@ -41,8 +42,10 @@ object AppBars : Screen {
     @OptIn(ExperimentalAnimationApi::class)
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(title = name, onBackClick = {
+            navController?.popBackStack()
+        }) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -344,7 +347,7 @@ object AppBars : Screen {
 @Composable
 private fun PreviewTopAppBar() {
     VitaminTheme {
-        AppBars.Screen()
+        AppBars.Screen(null)
     }
 }
 
@@ -352,6 +355,6 @@ private fun PreviewTopAppBar() {
 @Composable
 private fun PreviewDarkTopAppBar() {
     VitaminTheme(darkTheme = true) {
-        AppBars.Screen()
+        AppBars.Screen(null)
     }
 }

@@ -10,12 +10,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.decathlon.compose.sample.screens.AppBars
+import com.decathlon.compose.sample.screens.Assets
 import com.decathlon.compose.sample.screens.Badges
 import com.decathlon.compose.sample.screens.Buttons
 import com.decathlon.compose.sample.screens.Checkboxes
 import com.decathlon.compose.sample.screens.Chips
 import com.decathlon.compose.sample.screens.Dividers
 import com.decathlon.compose.sample.screens.Fabs
+import com.decathlon.compose.sample.screens.Icons
 import com.decathlon.compose.sample.screens.Modals
 import com.decathlon.compose.sample.screens.Prices
 import com.decathlon.compose.sample.screens.Progress
@@ -71,7 +73,9 @@ class MainActivity : AppCompatActivity() {
                         Badges,
                         QuantityPicker,
                         Fabs,
-                        Chips
+                        Chips,
+                        Icons,
+                        Assets
                     )
                 }
                 NavHost(navController = navController, startDestination = "dashboard") {
@@ -79,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                         DashboardScreen(navController, screens.sortedBy { it.name })
                     }
                     screens.forEach { screen ->
-                        composable(screen.navigationKey) { screen.Screen() }
+                        composable(screen.navigationKey) { screen.Screen(navController) }
                     }
                 }
             }
