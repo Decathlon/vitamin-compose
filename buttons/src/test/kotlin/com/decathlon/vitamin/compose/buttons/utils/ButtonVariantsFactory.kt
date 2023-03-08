@@ -22,6 +22,7 @@ object ButtonVariantsFactory {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         text: String = "My Button"
     ) {
         when (variant) {
@@ -31,6 +32,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
@@ -42,6 +44,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
@@ -64,6 +67,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
@@ -75,6 +79,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
@@ -86,6 +91,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
@@ -97,6 +103,7 @@ object ButtonVariantsFactory {
                 icon = icon,
                 iconSide = iconSide,
                 enabled = enabled,
+                loading = loading,
                 onClick = {
                     // Nothing to do here
                 },
