@@ -1,5 +1,9 @@
 package com.decathlon.vitamin.compose.buttons
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
@@ -15,7 +19,9 @@ import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,6 +37,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -44,6 +51,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.primary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -55,6 +63,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -69,6 +78,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -82,6 +92,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.primaryReversed(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -93,6 +104,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -108,6 +120,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -121,6 +134,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.secondary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.primary(),
@@ -132,6 +146,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -147,6 +162,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -160,6 +176,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.tertiary(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -171,6 +188,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -187,6 +205,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -200,6 +219,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.ghost(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -211,6 +231,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -226,6 +247,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -239,6 +261,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.ghostReversed(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -250,6 +273,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -265,6 +289,7 @@ object VitaminButtons {
      * @param icon The optional icon to be displayed at the start or the end of the button container
      * @param iconSide If an icon is added, you can configure the side at the start or end of the button
      * @param enabled True if you can click on the button, otherwise false
+     * @param loading True if the button display a loader and disable the onClick callback, otherwise false
      * @param colors The colors of the background and the content in enabled and disabled
      * @param sizes The sizes for the text, paddings and width/height
      * @param borders The width and color of the border in enabled and disabled
@@ -278,6 +303,7 @@ object VitaminButtons {
         icon: Painter? = null,
         iconSide: IconSide = IconSide.LEFT,
         enabled: Boolean = true,
+        loading: Boolean = false,
         colors: ButtonColors = VitaminButtonsColors.conversion(),
         sizes: ButtonSizes = VitaminButtonsSizes.medium(),
         borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -289,6 +315,7 @@ object VitaminButtons {
         icon = icon,
         iconSide = iconSide,
         enabled = enabled,
+        loading = loading,
         colors = colors,
         sizes = sizes,
         borders = borders,
@@ -303,13 +330,14 @@ private val ButtonIconPadding = 8.dp
 
 @Composable
 internal fun VitaminButtonImpl(
+    modifier: Modifier = Modifier,
     text: String,
     enabled: Boolean,
+    loading: Boolean,
     colors: ButtonColors,
     sizes: ButtonSizes,
     ripple: RippleTheme,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier,
     icon: Painter? = null,
     iconSide: IconSide? = null,
     borders: ButtonBorders = VitaminButtonBorders.none(),
@@ -342,17 +370,46 @@ internal fun VitaminButtonImpl(
             border = if (enabled) borders.stroke else borders.disabled,
             contentPadding = sizes.contentPadding,
             elevation = elevation,
-            onClick = onClick
+            onClick = { if (!loading) onClick.invoke() }
         ) {
-            if (iconSide == IconSide.LEFT) iconButton()
-            Text(
-                modifier = Modifier.weight(1f, fill = false),
+            ButtonContent(
                 text = text,
-                style = sizes.textStyle,
-                overflow = TextOverflow.Ellipsis,
-                maxLines = 1
-            )
-            if (iconSide == IconSide.RIGHT) iconButton()
+                loading = loading,
+                sizes = sizes,
+                contentColor = colors.contentColor(enabled = enabled).value,
+                iconSide= iconSide,
+                iconButton = iconButton)
+        }
+    }
+}
+
+@Composable
+private fun RowScope.ButtonContent(
+    text: String,
+    loading: Boolean = false,
+    sizes: ButtonSizes,
+    contentColor: Color,
+    iconSide: IconSide? = null,
+    iconButton: @Composable () -> Unit?
+) {
+    Crossfade(targetState = loading, label = "cross fade") { loadingState ->
+        when {
+            loadingState -> VitaminButtonLoader(contentColor)
+            else -> Row(
+                Modifier.weight(1f),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterHorizontally)
+            ) {
+                if (iconSide == IconSide.LEFT) iconButton()
+                Text(
+                    modifier = Modifier.weight(1f, fill = false),
+                    text = text,
+                    style = sizes.textStyle,
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1
+                )
+                if (iconSide == IconSide.RIGHT) iconButton()
+            }
         }
     }
 }
@@ -367,9 +424,25 @@ private fun VitaminButtonPreview() {
 
 @Preview
 @Composable
+private fun VitaminButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.Primary(text = "Gift selection", loading = true) {}
+    }
+}
+
+@Preview
+@Composable
 private fun VitaminPrimaryReversedButtonPreview() {
     VitaminTheme {
         VitaminButtons.PrimaryReversed(text = "Gift selection") {}
+    }
+}
+
+@Preview
+@Composable
+private fun VitaminPrimaryReversedButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.PrimaryReversed(text = "Gift selection", loading = true) {}
     }
 }
 
@@ -383,9 +456,25 @@ private fun VitaminSecondaryButtonPreview() {
 
 @Preview
 @Composable
+private fun VitaminSecondaryButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.Secondary(text = "Gift selection", loading = true) {}
+    }
+}
+
+@Preview
+@Composable
 private fun VitaminTertiaryButtonPreview() {
     VitaminTheme {
         VitaminButtons.Tertiary(text = "Gift selection") {}
+    }
+}
+
+@Preview
+@Composable
+private fun VitaminTertiaryButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.Tertiary(text = "Gift selection", loading = true) {}
     }
 }
 
@@ -399,6 +488,14 @@ private fun VitaminGhostButtonPreview() {
 
 @Preview
 @Composable
+private fun VitaminGhostButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.Ghost(text = "Gift selection", loading = true) {}
+    }
+}
+
+@Preview
+@Composable
 private fun VitaminGhostReversedButtonPreview() {
     VitaminTheme {
         VitaminButtons.GhostReversed(text = "Gift selection") {}
@@ -407,8 +504,24 @@ private fun VitaminGhostReversedButtonPreview() {
 
 @Preview
 @Composable
+private fun VitaminGhostReversedButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.GhostReversed(text = "Gift selection", loading = true) {}
+    }
+}
+
+@Preview
+@Composable
 private fun VitaminConversionButtonPreview() {
     VitaminTheme {
         VitaminButtons.Conversion(text = "Gift selection") {}
+    }
+}
+
+@Preview
+@Composable
+private fun VitaminConversionButtonLoadingPreview() {
+    VitaminTheme {
+        VitaminButtons.Conversion(text = "Gift selection", loading = true) {}
     }
 }
