@@ -27,11 +27,11 @@ import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 @Composable
 internal fun VitaminChipImpl(
     label: String,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     colors: VtmnChipColorsContract = VitaminChipColors.default(),
     sizes: ChipSizes = VitaminChipSizes.medium(),
-    onClick: () -> Unit,
     leadingIcon: (@Composable () -> Unit)? = null
 ) {
     CompositionLocalProvider(

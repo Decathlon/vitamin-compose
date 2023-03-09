@@ -50,12 +50,12 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                                 modifier = Modifier
                             ) {
-                                ChipsVariantsFactory.chip(
+                                ChipsVariantsFactory.Chip(
                                     variant = variant,
                                     size = VitaminChipSizes.medium(),
                                     selected = true
                                 )
-                                ChipsVariantsFactory.chip(
+                                ChipsVariantsFactory.Chip(
                                     variant = variant,
                                     size = VitaminChipSizes.medium(),
                                     enabled = false,
@@ -67,7 +67,7 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                             horizontalArrangement = Arrangement.spacedBy(4.dp),
                             modifier = Modifier
                         ) {
-                            ChipsVariantsFactory.chip(
+                            ChipsVariantsFactory.Chip(
                                 variant = variant,
                                 size = VitaminChipSizes.medium(),
                                 icon = {
@@ -85,7 +85,7 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                     )
                                 }
                             )
-                            ChipsVariantsFactory.chip(
+                            ChipsVariantsFactory.Chip(
                                 variant = variant,
                                 size = VitaminChipSizes.medium(),
                                 enabled = false,
@@ -127,12 +127,12 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                                 modifier = Modifier
                             ) {
-                                ChipsVariantsFactory.chip(
+                                ChipsVariantsFactory.Chip(
                                     variant = variant,
                                     size = VitaminChipSizes.small(),
                                     selected = true
                                 )
-                                ChipsVariantsFactory.chip(
+                                ChipsVariantsFactory.Chip(
                                     variant = variant,
                                     size = VitaminChipSizes.small(),
                                     enabled = false,
@@ -144,7 +144,7 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                             horizontalArrangement = Arrangement.spacedBy(4.dp),
                             modifier = Modifier
                         ) {
-                            ChipsVariantsFactory.chip(
+                            ChipsVariantsFactory.Chip(
                                 variant = variant,
                                 size = VitaminChipSizes.small(),
                                 icon = {
@@ -162,7 +162,7 @@ class VitaminChipsPrimaryTest(@TestParameter val variant: Variant) {
                                     )
                                 }
                             )
-                            ChipsVariantsFactory.chip(
+                            ChipsVariantsFactory.Chip(
                                 variant = variant,
                                 size = VitaminChipSizes.small(),
                                 enabled = false,

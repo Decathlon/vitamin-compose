@@ -32,12 +32,12 @@ import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
 @Composable
 internal fun VitaminFilterChipImpl(
     label: String,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     selected: Boolean = false,
     colors: VtmnSelectableChipColorsContract = VitaminChipColors.selectable(),
     sizes: ChipSizes = VitaminChipSizes.medium(),
-    onClick: () -> Unit,
     leadingIcon: (@Composable () -> Unit)? = null,
     leadingContent: (@Composable () -> Unit)? = null,
     selectedIcon: (@Composable () -> Unit)? = null,

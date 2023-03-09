@@ -10,15 +10,15 @@ object ChipsVariantsFactory {
 
     @Suppress("LongMethod")
     @Composable
-    fun chip(
+    fun Chip(
         variant: Variant,
         size: ChipSizes,
         modifier: Modifier = Modifier,
         selected: Boolean = false,
+        enabled: Boolean = true,
+        text: String = "My Button",
         icon: (@Composable () -> Unit)? = null,
         image: (@Composable () -> Unit)? = null,
-        enabled: Boolean = true,
-        text: String = "My Button"
     ) {
         when (variant) {
             Variant.Action -> VitaminChips.Action(

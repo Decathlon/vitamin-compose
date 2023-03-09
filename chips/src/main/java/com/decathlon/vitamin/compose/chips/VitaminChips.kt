@@ -19,21 +19,21 @@ object VitaminChips {
      * It appears dynamically and contextually in the interface.
      *
      * @param label Text to be displayed into the Chip
+     * @param onClick Callback to be called when the action Chip is clicked
      * @param [Modifier] to be applied to the component
      * @param enabled True if you can click on the Chip, otherwise false
      * @param colors Colors to be applied to the Chip
      * @param sizes Sizes to be applied to the Chip. (VitaminChipSizes.medium() | VitaminChipSizes.small())
-     * @param onClick Callback to be called when the action Chip is clicked
      * @param leadingIcon Optional Icon Content to be displayed before label into the Chip
      */
     @Composable
     fun Action(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ChipColors = VitaminChipColors.default(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit,
         leadingIcon: (@Composable () -> Unit)? = null
     ) {
         VitaminChipImpl(
@@ -52,22 +52,22 @@ object VitaminChips {
      * or filters, like person, place, thing, attributes, or text.
      *
      * @param label Text to be displayed into the Chip
+     * @param onClick Callback to be called when the Chip is clicked
      * @param [Modifier] to be applied to the component
      * @param enabled True if you can click on the Chip, otherwise false
      * @param colors Colors to be applied to the Chip
      * @param sizes Sizes to be applied to the Chip. (VitaminChipSizes.medium() | VitaminChipSizes.small())
-     * @param onClick Callback to be called when the Chip is clicked
      * @param leadingIcon Icon Content to be displayed before label into the Chip
      * @param leadingContent Image Content to be displayed before label into the Chip
      */
     @Composable
     fun Input(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit,
         leadingIcon: (@Composable () -> Unit)? = null,
         leadingContent: (@Composable () -> Unit)? = null
     ) {
@@ -98,22 +98,22 @@ object VitaminChips {
      * A selected Filter Chip displays a tick as start content.
      *
      * @param label Text to be displayed into the Chip
+     * @param onClick Callback to be called when the Chip is clicked
      * @param [Modifier] to be applied to the component
      * @param enabled True if you can click on the Chip, otherwise false
      * @param selected If True, leading tick Icon will be displayed.
      * @param colors Colors to be applied to the Chip
      * @param sizes Sizes to be applied to the Chip. (VitaminChipSizes.medium() | VitaminChipSizes.small())
-     * @param onClick Callback to be called when the Chip is clicked
      */
     @Composable
     fun Filter(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         selected: Boolean = false,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit
     ) {
         VitaminFilterChipImpl(
             label = label,
@@ -137,22 +137,22 @@ object VitaminChips {
      * Single choice chips allow the selection of a single chip from a set of options.
      *
      * @param label Text to be displayed into the Chip
+     * @param onClick Callback to be called when the Chip is clicked
      * @param [Modifier] to be applied to the component
      * @param enabled True if you can click on the Chip, otherwise false
      * @param selected If True, leading tick Icon will be displayed.
      * @param colors Colors to be applied to the Chip
      * @param sizes Sizes to be applied to the Chip. (VitaminChipSizes.medium() | VitaminChipSizes.small())
-     * @param onClick Callback to be called when the Chip is clicked
      */
     @Composable
     fun SingleChoice(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         selected: Boolean = false,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit
     ) {
         VitaminFilterChipImpl(
             label = label,

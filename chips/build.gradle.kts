@@ -10,6 +10,7 @@ dependencies {
     api(project(":foundation:foundation"))
     api(project(":foundation:foundation-icons"))
     implementation(AndroidX.compose.ui.tooling)
+    lintChecks(Libs.compose_lint_checks)
     testImplementation(project(":foundation:foundation-assets"))
     testImplementation("com.google.testparameterinjector:test-parameter-injector:1.8")
 }

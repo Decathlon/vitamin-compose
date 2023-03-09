@@ -23,15 +23,14 @@ It appears dynamically and contextually in the interface.
 
 ```kotlin
 object VitaminChips {
-    
     @Composable
     fun Action(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: ChipColors = VitaminChipColors.default(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit,
         leadingIcon: (@Composable () -> Unit)? = null
     )
 }
@@ -40,11 +39,11 @@ object VitaminChips {
 Parameters | Descriptions
 -- | --
 `label: String` | Text to be displayed into the Chip
+`onClick: () -> Unit` | Callback to be called when the action Chip is clicked
 `modifier: Modifier` | `Modifier` to be applied to the component
 `enabled: Boolean` | True if you can click on the Chip. Default is true.
 `colors: ChipColors` | Colors to be applied to the Chip
 `sizes: ChipSizes` | Sizes to be applied to the Chip. (default VitaminChipSizes.medium() | VitaminChipSizes.small())
-`onClick: (() -> Unit)?` | Callback to be called when the action Chip is clicked
 `leadingIcon: (@Composable () -> Unit)?` | Optional Content to be displayed before label into the Chip
 
 _In your project :_
@@ -69,16 +68,15 @@ A selected Filter Chip displays a tick as start content.
 
 ```kotlin
 object VitaminChips {
-
     @Composable
     fun Filter(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         selected: Boolean = false,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit
     )
 }
 
@@ -87,12 +85,12 @@ object VitaminChips {
 Parameters | Descriptions
 -- | --
 `label: String` | Text to be displayed into the Chip
+`onClick: () -> Unit` | Callback to be called when the Chip is clicked
 `modifier: Modifier` | `Modifier` to be applied to the component
 `enabled: Boolean` | True if you can click on the Chip. Default is true.
 `selected: Boolean` | If True, leading tick Icon will be displayed. Default is false.
 `colors: SelectableChipColors` | Colors to be applied to the Chip, default selectable()
 `sizes: ChipSizes` | Sizes to be applied to the Chip. (default VitaminChipSizes.medium() | VitaminChipSizes.small())
-`onClick: (() -> Unit)?` | Callback to be called when the Chip is clicked
 
 _In your project :_
 ```kotlin
@@ -114,15 +112,14 @@ If both icon and Content are given, the icon will be displayed.
 
 ```kotlin
 object VitaminChips {
-
     @Composable
     fun Input(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit,
         leadingIcon: (@Composable () -> Unit)? = null,
         leadingContent: (@Composable () -> Unit)? = null
     )
@@ -132,12 +129,12 @@ object VitaminChips {
 Parameters | Descriptions
 -- | --
 `label: String` | Text to be displayed into the Chip
-`selected: Boolean,` | True if the Chip is selected, otherwise false
+`selected: Boolean` | True if the Chip is selected, otherwise false
+`onClick: () -> Unit` | Callback to be called when the Chip is clicked
 `modifier: Modifier` | `Modifier` to be applied to the component
 `enabled: Boolean` | True if you can click on the Chip. Default is true.
 `colors: ChipColors` | Colors to be applied to the Chip
 `sizes: ChipSizes` | Sizes to be applied to the Chip. (default VitaminChipSizes.medium() | VitaminChipSizes.small())
-`onClick: (() -> Unit)?` | Callback to be called when the Chip is clicked
 `leadingIcon: (@Composable () -> Unit)` | Icon Content to be displayed before label into the Chip
 `leadingContent: (@Composable () -> Unit)` | Content to be displayed before label into the Chip
 
@@ -193,16 +190,15 @@ Single choice chips allow the selection of a single chip from a set of options.
 
 ```kotlin
 object VitaminChips {
-    
     @Composable
     fun SingleChoice(
         label: String,
+        onClick: () -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         selected: Boolean = false,
         colors: SelectableChipColors = VitaminChipColors.selectable(),
         sizes: ChipSizes = VitaminChipSizes.medium(),
-        onClick: () -> Unit
     )
 }
 ```
@@ -210,12 +206,12 @@ object VitaminChips {
 Parameters | Descriptions
 -- | --
 `label: String` | Text to be displayed into the Chip
+`onClick: () -> Unit` | Callback to be called when the action Chip is clicked
 `modifier: Modifier` | `Modifier` to be applied to the component
 `enabled: Boolean` | True if you can click on the Chip. Default is true.
 `selected: Boolean` | True if the Chip is selected. Default is false.
 `colors: ChipColors` | Colors to be applied to the Chip
 `sizes: ChipSizes` | Sizes to be applied to the Chip. (default VitaminChipSizes.medium() | VitaminChipSizes.small())
-`onClick: (() -> Unit)?` | Callback to be called when the action Chip is clicked
 
 _In your project :_
 ```kotlin
