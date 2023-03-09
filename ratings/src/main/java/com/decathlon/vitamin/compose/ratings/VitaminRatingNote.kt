@@ -2,6 +2,7 @@ package com.decathlon.vitamin.compose.ratings
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import kotlin.math.roundToInt
 
@@ -35,13 +36,15 @@ internal object VitaminRatingNote {
         maxValue: Int,
         colors: RatingColors,
         sizes: RatingSizes,
+        modifier: Modifier = Modifier,
         rounded: Float = 10.0f
     ) {
         val numberRounded = (number * rounded).roundToInt() / rounded
         Text(
             text = "$numberRounded/$maxValue",
             style = sizes.textStyle.copy(fontWeight = FontWeight.Bold),
-            color = colors.noteColor
+            color = colors.noteColor,
+            modifier = modifier
         )
     }
 
@@ -49,12 +52,14 @@ internal object VitaminRatingNote {
     fun Comments(
         nbComments: Int,
         colors: RatingColors,
-        sizes: RatingSizes
+        sizes: RatingSizes,
+        modifier: Modifier = Modifier,
     ) {
         Text(
             text = "($nbComments)",
             style = sizes.textStyle,
-            color = colors.commentsColor
+            color = colors.commentsColor,
+            modifier = modifier
         )
     }
 }
