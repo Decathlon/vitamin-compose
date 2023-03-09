@@ -32,6 +32,7 @@ import com.decathlon.vitamin.compose.vitaminicons.fill.Mic
 import com.decathlon.vitamin.compose.vitaminicons.line.Amazon
 import com.decathlon.vitamin.compose.vitaminicons.line.Android
 import com.decathlon.vitamin.compose.vitaminicons.line.Search
+import kotlinx.collections.immutable.persistentListOf
 
 object AppBars : Screen {
     override val name: String
@@ -53,10 +54,10 @@ object AppBars : Screen {
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 item {
-                    VitaminTopBars.Primary(title = "Vitamin")
+                    VitaminTopBars.PrimaryImmutable(title = "Vitamin")
                 }
                 item {
-                    VitaminTopBars.Primary(
+                    VitaminTopBars.PrimaryImmutable(
                         title = "Vitamin",
                         navigationIcon = {
                             Drawer(
@@ -68,7 +69,7 @@ object AppBars : Screen {
                 }
                 item {
                     val expanded = remember { mutableStateOf(false) }
-                    VitaminTopBars.Primary(
+                    VitaminTopBars.PrimaryImmutable(
                         title = "Vitamin",
                         navigationIcon = {
                             Context(
@@ -76,7 +77,7 @@ object AppBars : Screen {
                                 contentDescription = "Back"
                             )
                         },
-                        actions = arrayListOf(
+                        actions = persistentListOf(
                             ActionItem(
                                 icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
                                 contentDescription = null,
@@ -107,7 +108,7 @@ object AppBars : Screen {
                 }
                 item {
                     val expanded = remember { mutableStateOf(false) }
-                    VitaminTopBars.Primary(
+                    VitaminTopBars.PrimaryImmutable(
                         title = "Vitamin",
                         navigationIcon = {
                             Close(
@@ -115,7 +116,7 @@ object AppBars : Screen {
                                 contentDescription = "Close"
                             )
                         },
-                        actions = arrayListOf(
+                        actions = persistentListOf(
                             ActionItem(
                                 icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
                                 contentDescription = null,
@@ -147,7 +148,7 @@ object AppBars : Screen {
                 }
                 item {
                     val searching = remember { mutableStateOf("") }
-                    VitaminTopBars.Search(
+                    VitaminTopBars.SearchImmutable(
                         value = searching.value,
                         placeholder = "Placeholder",
                         onValueChange = {
@@ -160,7 +161,7 @@ object AppBars : Screen {
                                 Context(onClick = {}, contentDescription = null)
                             }
                         },
-                        actions = arrayListOf(
+                        actions = persistentListOf(
                             SearchActionItem.Microphone(
                                 contentDescription = null,
                                 onClick = {}
@@ -170,7 +171,7 @@ object AppBars : Screen {
                 }
                 item {
                     val searching = remember { mutableStateOf("Search Terms") }
-                    VitaminTopBars.Search(
+                    VitaminTopBars.SearchImmutable(
                         value = searching.value,
                         placeholder = "Placeholder",
                         onValueChange = {
@@ -183,7 +184,7 @@ object AppBars : Screen {
                                 Context(onClick = {}, contentDescription = null)
                             }
                         },
-                        actions = arrayListOf(
+                        actions = persistentListOf(
                             SearchActionItem.Microphone(
                                 contentDescription = null,
                                 onClick = {}
@@ -202,9 +203,9 @@ object AppBars : Screen {
                         targetState = searchMode.value,
                         content = {
                             if (!it) {
-                                VitaminTopBars.Primary(
+                                VitaminTopBars.PrimaryImmutable(
                                     title = "Vitamin",
-                                    actions = arrayListOf(
+                                    actions = persistentListOf(
                                         ActionItem(
                                             icon = rememberVectorPainter(VitaminIcons.Line.Search),
                                             contentDescription = null,
@@ -214,7 +215,7 @@ object AppBars : Screen {
                                     )
                                 )
                             } else {
-                                VitaminTopBars.Search(
+                                VitaminTopBars.SearchImmutable(
                                     value = searching.value,
                                     placeholder = "Placeholder",
                                     onValueChange = {
@@ -236,8 +237,8 @@ object AppBars : Screen {
                 }
                 item {
                     val selectedId = remember { mutableStateOf("android") }
-                    VitaminBottomNavigations.Primary(
-                        actions = arrayListOf(
+                    VitaminBottomNavigations.PrimaryImmutable(
+                        actions = persistentListOf(
                             SelectedActionItem(
                                 selected = selectedId.value == "android",
                                 icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
@@ -283,8 +284,8 @@ object AppBars : Screen {
                 }
                 item {
                     val selectedId = remember { mutableStateOf("agenda") }
-                    VitaminBottomNavigations.Primary(
-                        actions = arrayListOf(
+                    VitaminBottomNavigations.PrimaryImmutable(
+                        actions = persistentListOf(
                             SelectedActionItem(
                                 selected = selectedId.value == "agenda",
                                 icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),

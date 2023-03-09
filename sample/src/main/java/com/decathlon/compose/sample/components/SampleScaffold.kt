@@ -5,7 +5,6 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBars
-import com.decathlon.vitamin.compose.appbars.topbars.icons.VitaminNavigationIconButtons.PreviousPage
 
 @Composable
 fun SampleScaffold(
@@ -16,7 +15,7 @@ fun SampleScaffold(
 ) {
     Scaffold(
         topBar = {
-            VitaminTopBars.Primary(
+            VitaminTopBars.PrimaryImmutable(
                 navigationIcon = onBackClick?.let {
                     {
                         PreviousPage(

@@ -25,6 +25,7 @@ import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBars
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.vitaminicons.Line
 import com.decathlon.vitamin.compose.vitaminicons.line.Search
+import kotlinx.collections.immutable.persistentListOf
 
 @Composable
 fun ResourcesScreen(
@@ -55,7 +56,7 @@ fun ResourcesScreen(
                     onBackClick = { searchMode.value = false }
                 )
             } else {
-                VitaminTopBars.Primary(
+                VitaminTopBars.PrimaryImmutable(
                     title = name,
                     navigationIcon = {
                         PreviousPage(
@@ -63,7 +64,7 @@ fun ResourcesScreen(
                             contentDescription = "Click to return to previous page"
                         )
                     },
-                    actions = arrayListOf(
+                    actions = persistentListOf(
                         ActionItem(
                             icon = rememberVectorPainter(image = VitaminIcons.Line.Search),
                             contentDescription = null,

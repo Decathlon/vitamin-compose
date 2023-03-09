@@ -20,12 +20,12 @@ implementation("com.decathlon.vitamin.compose:appbars:<versions>")
 ```kotlin
 object VitaminTopBars {
     @Composable
-    fun Primary(
+    fun PrimaryImmutable(
         title: String,
         modifier: Modifier = Modifier,
         maxActions: Int = 3,
-        actions: List<ActionItem> = emptyList(),
-        expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) },
+        actions: ImmutableList<ActionItem> = persistentListOf(),
+        expandedMenu: State<Boolean> = remember { mutableStateOf(false) },
         colors: TopBarsColors = VitaminTopBarColors.primary(),
         onDismissOverflowMenu: (() -> Unit)? = null,
         overflowIcon: (@Composable VitaminMenuIconButtons.() -> Unit)? = null,
@@ -41,7 +41,7 @@ configure all top app bars content if you want something more complex.
 
 ```kotlin
 val expanded = remember { mutableStateOf(false) }
-VitaminTopBars.Primary(
+VitaminTopBars.PrimaryImmutable(
     title = "My title",
     navigationIcon = {
         Context(
@@ -49,7 +49,7 @@ VitaminTopBars.Primary(
             contentDescription = "Back"
         )
     },
-    actions = arrayListOf(
+    actions = persistentListOf(
         ActionItem(
             icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
             contentDescription = null,
@@ -84,7 +84,7 @@ Parameters | Descriptions
 `title: String` | The title of your screen
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `maxActions: Int = 2` | The max number of icon actions at the right of the TopBar
-`actions: List<ActionItem> = emptyList()` | The `ActionItem` actions of your topBar. `ActionItem` define the look and the event associated to an item in the topBar
+`actions: ImmutableList<ActionItem> = persistentListOf()` | The `ActionItem` actions of your topBar. `ActionItem` define the look and the event associated to an item in the topBar
 `expandedMenu: MutableState<Boolean> = remember { mutableStateOf(false) }` | Open menu for actions greater than `maxActions` value
 `colors: TopBarsColors = VitaminTopBarColors.primary()` | The colors of the background and the content elements in enabled and disabled mode
 `onDismissOverflowMenu: (() -> Unit)? = null` | The callback called when the menu should be removed
@@ -96,12 +96,12 @@ Parameters | Descriptions
 ```kotlin
 object VitaminTopBars {
     @Composable
-    fun Search(
+    fun SearchImmutable(
         value: String,
         placeholder: String,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        actions: List<SearchActionItem> = emptyList(),
+        actions: ImmutableList<SearchActionItem> = persistentListOf(),
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
@@ -121,7 +121,7 @@ you can configure your text input and add actions at the right of the text input
 
 ```kotlin
 val searching = remember { mutableStateOf("Search Terms") }
-VitaminTopBars.Search(
+VitaminTopBars.SearchImmutable(
     value = searching.value,
     placeholder = "Placeholder",
     onValueChange = {
@@ -134,7 +134,7 @@ VitaminTopBars.Search(
             Context(onClick = {}, contentDescription = "Back")
         }
     },
-    actions = arrayListOf(
+    actions = persistentListOf(
         SearchActionItem.Microphone(
             contentDescription = "Microphone",
             onClick = {}
@@ -153,7 +153,7 @@ Parameters | Descriptions
 `placeholder: String` | The placeholder value inside the text input of the TopBar
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can type in the search bar, otherwise false
-`actions: List<SearchActionItem> = emptyList()` | The `SearchActionItem` actions of your topBar. `SearchActionItem` define the look and the event associated to an item in the topBar
+`actions: ImmutableList<SearchActionItem> = persistentListOf()` | The `SearchActionItem` actions of your topBar. `SearchActionItem` define the look and the event associated to an item in the topBar
 `keyboardOptions: KeyboardOptions = KeyboardOptions.Default` | Software keyboard options that contains options such as KeyboardType or ImeAction
 `keyboardActions: KeyboardActions = KeyboardActions.Default` | When the text input emit an IME action, the corresponding callback is called
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
@@ -167,8 +167,8 @@ Parameters | Descriptions
 ```kotlin
 object VitaminBottomNavigations {
     @Composable
-    fun Primary(
-        actions: List<SelectedActionItem>,
+    fun PrimaryImmutable(
+        actions: ImmutableList<SelectedActionItem>,
         modifier: Modifier = Modifier,
         colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()
     )
@@ -178,8 +178,8 @@ object VitaminBottomNavigations {
 The bottom navigation allow the user to switch between destinations in an app.
 
 ```kotlin
-VitaminBottomNavigations.Primary(
-    actions = arrayListOf(
+VitaminBottomNavigations.PrimaryImmutable(
+    actions = persistentListOf(
         SelectedActionItem(
             selected = true,
             icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
@@ -208,6 +208,6 @@ VitaminBottomNavigations.Primary(
 
 Parameters | Descriptions
 -- | --
-`actions: List<SelectedActionItem>` | The `SelectedActionItem` actions of your bottom navigation. `SelectedActionItem` define the look and the event associated to an item in the bottom navigation
+`actions: ImmutableList<SelectedActionItem>` | The `SelectedActionItem` actions of your bottom navigation. `SelectedActionItem` define the look and the event associated to an item in the bottom navigation
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()` | The colors of the background and the content elements in selected and unselected mode

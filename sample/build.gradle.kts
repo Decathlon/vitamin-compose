@@ -53,6 +53,7 @@ android {
 
 dependencies {
     implementation(project(":vitamin"))
+    implementation(KotlinX.collections.immutable)
     implementation(Libs.vitamin_icons)
     implementation(Libs.vitamin_assets)
 

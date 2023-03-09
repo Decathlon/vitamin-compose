@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.style.TextOverflow
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import kotlinx.collections.immutable.ImmutableList
 
 open class SelectedActionItem(
     val selected: Boolean = false,
@@ -26,9 +27,57 @@ object VitaminBottomNavigations {
      * @param modifier The [Modifier] to be applied to this BottomNavigation
      * @param colors The colors of the background and the content elements in selected and unselected mode
      */
+    @Deprecated(
+        message = "Use Primary variant with immutable list for actions."
+    )
     @Composable
     fun Primary(
+        //noinspection ComposeUnstableCollections
         actions: List<SelectedActionItem>,
+        modifier: Modifier = Modifier,
+        colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()
+    ) {
+        BottomNavigation(
+            modifier = modifier,
+            backgroundColor = colors.backgroundColor
+        ) {
+            actions.forEach {
+                val textColor = if (it.selected) colors.selectedTextColor else colors.unselectedColor
+                val iconColor = if (it.selected) colors.selectedIconColor else colors.unselectedColor
+                BottomNavigationItem(
+                    selected = it.selected,
+                    onClick = { it.onClick() },
+                    icon = {
+                        Icon(
+                            painter = it.icon,
+                            tint = iconColor,
+                            contentDescription = it.contentDescription
+                        )
+                    },
+                    label = {
+                        Text(
+                            text = it.text,
+                            color = textColor,
+                            style = VitaminTheme.typography.caption,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                )
+            }
+        }
+    }
+
+    /**
+     * The bottom navigation allow the user to switch between destinations in an app.
+     * @param actions The [SelectedActionItem] actions of your bottom navigation.
+     * [SelectedActionItem] define the look and the event associated to an item in the bottom navigation
+     * @param modifier The [Modifier] to be applied to this BottomNavigation
+     * @param colors The colors of the background and the content elements in selected and unselected mode
+     */
+    @Composable
+    fun PrimaryImmutable(
+        actions: ImmutableList<SelectedActionItem>,
         modifier: Modifier = Modifier,
         colors: BottomNavigationColors = VitaminBottomNavigationColors.primary()
     ) {
