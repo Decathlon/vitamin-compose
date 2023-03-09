@@ -57,6 +57,8 @@ object VitaminQuantityPickers {
     @Composable
     fun Primary(
         value: String,
+        onAddClicked: () -> Unit,
+        onSubtractClicked: () -> Unit,
         modifier: Modifier = Modifier,
         addEnabled: Boolean = true,
         subtractEnabled: Boolean = true,
@@ -68,8 +70,6 @@ object VitaminQuantityPickers {
         shape: CornerBasedShape = VitaminTheme.shapes.radius100,
         textStyle: TextStyle = VitaminTheme.typography.text2,
         ripple: RippleTheme = VitaminTheme.ripples.brand,
-        onAddClicked: () -> Unit,
-        onSubtractClicked: () -> Unit,
         onValueChange: (String) -> Unit
     ) {
         CompositionLocalProvider(LocalRippleTheme provides ripple) {

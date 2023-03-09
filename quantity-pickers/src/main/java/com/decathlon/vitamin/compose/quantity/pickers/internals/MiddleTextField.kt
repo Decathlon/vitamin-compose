@@ -25,7 +25,6 @@ import com.decathlon.vitamin.compose.quantity.pickers.VtmnStatesEnabled
 
 @Composable
 internal fun MiddleTextField(
-    modifier: Modifier,
     value: String,
     addEnabled: Boolean,
     subtractEnabled: Boolean,
@@ -34,7 +33,8 @@ internal fun MiddleTextField(
     textStyle: TextStyle,
     keyboardOptions: KeyboardOptions,
     keyboardActions: KeyboardActions,
-    onValueChange: (String) -> Unit
+    onValueChange: (String) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val focus = remember { mutableStateOf(false) }
     val dividerEnable = if (addEnabled || subtractEnabled) VtmnStatesEnabled else VtmnStatesDisabled

@@ -20,6 +20,8 @@ object VitaminQuantityPickers {
     @Composable
     fun Primary(
         value: String,
+        onAddClicked: () -> Unit,
+        onSubtractClicked: () -> Unit,
         modifier: Modifier = Modifier,
         addEnabled: Boolean = true,
         subtractEnabled: Boolean = true,
@@ -31,8 +33,6 @@ object VitaminQuantityPickers {
         shape: CornerBasedShape = VitaminTheme.shapes.radius100,
         textStyle: TextStyle = VitaminTheme.typography.text2,
         ripple: RippleTheme = VitaminTheme.ripples.brand,
-        onAddClicked: () -> Unit,
-        onSubtractClicked: () -> Unit,
         onValueChange: (String) -> Unit
     )
 }
@@ -54,6 +54,8 @@ The default quantity allows users to choose between typing into the text field o
 Parameters | Descriptions
 -- | --
 `value: String` | Value of the quantity picker
+`onAddClicked: (Boolean) -> Unit` | The callback to be called when add button is clicked
+`onSubtractClicked: (Boolean) -> Unit` | The callback to be called when substract button is clicked
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `addEnabled: (Boolean)` | Whether add button is enable or not
 `subtractEnabled: (Boolean)` | Whether substract button is enable or not
@@ -65,6 +67,4 @@ Parameters | Descriptions
 `shape: CornerBasedShape = VitaminTheme.shapes.radius100` | The shape for icon buttons
 `textStyle: TextStyle = VitaminTheme.typography.text2` | The typography of the text inside the text input
 `ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on buttons
-`onAddClicked: (Boolean) -> Unit` | The callback to be called when add button is clicked
-`onSubtractClicked: (Boolean) -> Unit` | The callback to be called when substract button is clicked
 `onValueChange: (String)-> Unit ` | The callback to be called when text is set into textfield
