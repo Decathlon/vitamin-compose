@@ -29,4 +29,5 @@ dependencies {
     api(project(":tags"))
     api(project(":text-inputs"))
     api(project(":quantity-pickers"))
+    lintChecks(Libs.compose_lint_checks)
 }
