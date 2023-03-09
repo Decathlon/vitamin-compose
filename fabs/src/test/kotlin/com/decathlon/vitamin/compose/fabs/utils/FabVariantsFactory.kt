@@ -37,11 +37,11 @@ object FabVariantsFactory {
     @Suppress("LongMethod")
     @Composable
     fun FabExtended(
+        variant: Variant,
+        size: FabExtendedSizes,
         modifier: Modifier = Modifier,
         text: String = "Label",
         icon: Painter? = null,
-        variant: Variant,
-        size: FabExtendedSizes,
         enabled: Boolean = true
     ) {
         when (variant) {
