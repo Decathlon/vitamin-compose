@@ -6,6 +6,8 @@ object Libs {
 
     const val compose_ui_util =  "androidx.compose.ui:ui-util:_"
 
+    const val compose_lint_checks = "com.slack.lint.compose:compose-lint-checks:_"
+
     const val core = "androidx.core:core-ktx:_"
     const val savedstate = "androidx.savedstate:savedstate-ktx:_"
     const val lifecycle_runtime = "androidx.lifecycle:lifecycle-runtime-ktx:_"
