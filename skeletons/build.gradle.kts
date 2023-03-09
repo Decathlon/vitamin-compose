@@ -10,4 +10,5 @@ dependencies {
     implementation(AndroidX.compose.ui.tooling)
     implementation(AndroidX.compose.ui.util)
     implementation(Google.accompanist.module("accompanist-placeholder"))
+    lintChecks(Libs.compose_lint_checks)
 }

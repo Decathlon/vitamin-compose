@@ -48,11 +48,11 @@ object VitaminSkeletons {
 private fun VitaminSkeletonShapeImpl(
     colors: SkeletonColors,
     shape: Shape,
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
     Box(
         modifier = modifier
-            .vtmnSkeleton(
+            .vtmnSkeleton2(
                 visible = true,
                 colors = colors,
                 shape = shape

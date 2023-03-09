@@ -20,8 +20,9 @@ import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.foundation.vtmnTypography
+import com.decathlon.vitamin.compose.skeletons.VitaminSkeletonColors
 import com.decathlon.vitamin.compose.skeletons.VitaminSkeletons
-import com.decathlon.vitamin.compose.skeletons.vtmnSkeleton
+import com.decathlon.vitamin.compose.skeletons.vtmnSkeleton2
 
 object Skeletons : Screen {
 
@@ -176,7 +177,7 @@ object Skeletons : Screen {
                         .padding(top = 16.dp)
                         .height(200.dp)
                         .fillMaxWidth()
-                        .vtmnSkeleton()
+                        .vtmnSkeleton2(colors = VitaminSkeletonColors.primary())
                 )
             }
         }
