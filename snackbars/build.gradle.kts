@@ -9,4 +9,5 @@ dependencies {
     api(project(":foundation:foundation"))
     api(project(":buttons"))
     implementation(AndroidX.compose.ui.tooling)
+    lintChecks(Libs.compose_lint_checks)
 }
