@@ -68,6 +68,7 @@ object Tags : Screen {
                 navController?.popBackStack()
             }
         ) {
+            val expanded = remember { mutableStateOf(false) }
             val icon = rememberVectorPainter(VitaminIcons.Line.Football)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -78,9 +79,22 @@ object Tags : Screen {
                     VitaminTextInputs.FilledDropdown(
                         value = sizeState.type,
                         label = "Size",
+                        endIcon = {
+                            Expand(
+                                onClick = { expanded.value = !expanded.value },
+                                contentDescription = "Expand menu"
+                            )
+                        },
+                        onDismissRequest = {
+                            expanded.value = false
+                        },
+                        expanded = expanded
                     ) {
                         Size.values().forEach {
-                            PrimaryItem(onClick = { sizeState = it }) {
+                            PrimaryItem(onClick = {
+                                sizeState = it
+                                expanded.value = false
+                            }) {
                                 Text(text = it.type)
                             }
                         }

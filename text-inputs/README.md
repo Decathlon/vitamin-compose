@@ -90,11 +90,13 @@ object VitaminTextInputs {
     fun OutlinedDropdown(
         value: String,
         label: String,
+        endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
-        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
+        expanded: State<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.body2,
+        onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     )
 }
@@ -112,6 +114,15 @@ val dropdownValue = remember { mutableStateOf("") }
 VitaminTextInputs.OutlinedDropdown(
     value = dropdownValue.value,
     label = "Label",
+    endIcon = {
+        Expand(
+            onClick = { expanded.value = true },
+            contentDescription = "Expand menu"
+        )
+    },
+    onDismissRequest = {
+        expanded.value = false
+    },
     expanded = expanded,
     children = {
         PrimaryItem(onClick = {
@@ -134,12 +145,14 @@ Parameters | Descriptions
 -- | --
 `value: String` | The value of your text input
 `label: String` | The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+`endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit` | The icon displayed at the end inside the input outlined
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can type in the text input, otherwise false
-`expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
+`expanded: State<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
 `textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
+`onDismissRequest: () -> Unit = {}` | The callback to be called when the dropdown menu is dismiss
 `children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown
 
 ### Filled
@@ -219,11 +232,13 @@ object VitaminTextInputs {
     fun FilledDropdown(
         value: String,
         label: String,
+        endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.body2,
+        onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     )
 }
@@ -241,6 +256,15 @@ val dropdownValue = remember { mutableStateOf("") }
 VitaminTextInputs.FilledDropdown(
     value = dropdownValue.value,
     label = "Label",
+    endIcon = {
+        Expand(
+            onClick = { expanded.value = true },
+            contentDescription = "Expand menu"
+        )
+    },
+    onDismissRequest = {
+        expanded.value = false
+    },
     expanded = expanded,
     children = {
         PrimaryItem(onClick = {
@@ -263,10 +287,12 @@ Parameters | Descriptions
 -- | --
 `value: String` | The value of your text input
 `label: String` | The label to be displayed inside the text input container and pushed at the top of text input when the component takes the focus
+`endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit` | The icon displayed at the end inside the input filled
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `enabled: Boolean = true` | True if you can type in the text input, otherwise false
 `expanded: MutableState<Boolean> = remember { mutableStateOf(false) }` | State to open or close the dropdown menu
 `interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }` | Representing the stream of interaction for the text input
 `colors: TextInputStateColors = TextInputsState.normal()` | The color to notify your user if they are in normal, error or success state
 `textStyle: TextStyle = VitaminTheme.typography.body2` | The typography of the text inside the text input
+`onDismissRequest: () -> Unit = {}` | The callback to be called when the dropdown menu is dismiss
 `children: @Composable VitaminMenuItems.() -> Unit` | Declare your dropdown menu item components inside your dropdown

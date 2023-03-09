@@ -10,4 +10,5 @@ dependencies {
     api(project(":foundation:foundation-icons"))
     api(project(":menus"))
     implementation(AndroidX.compose.ui.tooling)
+    lintChecks(Libs.compose_lint_checks)
 }

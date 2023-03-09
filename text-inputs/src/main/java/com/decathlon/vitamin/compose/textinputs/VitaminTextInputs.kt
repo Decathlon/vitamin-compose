@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.decathlon.vitamin.compose.textinputs
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -163,12 +165,17 @@ object VitaminTextInputs {
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
      */
+    @Deprecated(
+        message = "Use OutlinedDropdown variant with endIcon api slot to avoid breaking hoist " +
+            "principal with expanded parameter"
+    )
     @Composable
     fun OutlinedDropdown(
         value: String,
         label: String,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
+        //noinspection ComposeMutableParameters
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
@@ -206,6 +213,62 @@ object VitaminTextInputs {
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
             children = children,
             interactionSource = interactionSource
+        )
+    }
+
+    /**
+     * Outlined dropdown to get the input from a dropdown menu.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param endIcon The icon displayed at the end inside the input outlined
+     * @param modifier The `Modifier` to be applied to the component
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param onDismissRequest The callback to be called when the dropdown menu is dismiss
+     * @param children Declare your dropdown menu item components inside your dropdown
+     */
+    @Composable
+    fun OutlinedDropdown(
+        value: String,
+        label: String,
+        endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        expanded: androidx.compose.runtime.State<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.text2,
+        onDismissRequest: () -> Unit = {},
+        children: @Composable VitaminMenuItems.() -> Unit
+    ) {
+        var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
+        Dropdown(
+            expanded = expanded,
+            anchor = {
+                Outlined(
+                    value = value,
+                    label = label,
+                    modifier = Modifier.onGloballyPositioned {
+                        mTextFieldSize = it.size.toSize()
+                    },
+                    colors = colors,
+                    textStyle = textStyle,
+                    readOnly = true,
+                    singleLine = true,
+                    maxLines = 1,
+                    enabled = enabled,
+                    interactionSource = interactionSource,
+                    onValueChange = {},
+                    icon = { VitaminTextInputDropdownIconButtons.endIcon() }
+                )
+            },
+            modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
+            children = children,
+            onDismissRequest = onDismissRequest
         )
     }
 
@@ -332,12 +395,17 @@ object VitaminTextInputs {
      * @param textStyle The typography of the text inside the text input
      * @param children Declare your dropdown menu item components inside your dropdown
      */
+    @Deprecated(
+        message = "Use FilledDropdown variant with endIcon api slot to avoid breaking hoist " +
+            "principal with expanded parameter"
+    )
     @Composable
     fun FilledDropdown(
         value: String,
         label: String,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
+        //noinspection ComposeMutableParameters
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
@@ -373,8 +441,63 @@ object VitaminTextInputs {
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
+            children = children
+        )
+    }
+
+    /**
+     * Filled dropdown to get the input from a dropdown menu.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param endIcon The icon displayed at the end inside the input filled
+     * @param modifier The `Modifier` to be applied to the component
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param expanded State to open or close the dropdown menu
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param onDismissRequest The callback to be called when the dropdown menu is dismiss
+     * @param children Declare your dropdown menu item components inside your dropdown
+     */
+    @Composable
+    fun FilledDropdown(
+        value: String,
+        label: String,
+        endIcon: @Composable VitaminTextInputDropdownIconButtons.() -> Unit,
+        modifier: Modifier = Modifier,
+        enabled: Boolean = true,
+        expanded: androidx.compose.runtime.State<Boolean> = remember { mutableStateOf(false) },
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.text2,
+        onDismissRequest: () -> Unit = {},
+        children: @Composable VitaminMenuItems.() -> Unit
+    ) {
+        var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
+        Dropdown(
+            expanded = expanded,
+            anchor = {
+                Filled(
+                    value = value,
+                    label = label,
+                    modifier = Modifier.onGloballyPositioned {
+                        mTextFieldSize = it.size.toSize()
+                    },
+                    colors = colors,
+                    textStyle = textStyle,
+                    readOnly = true,
+                    singleLine = true,
+                    maxLines = 1,
+                    enabled = enabled,
+                    onValueChange = {},
+                    interactionSource = interactionSource,
+                    icon = { VitaminTextInputDropdownIconButtons.endIcon() }
+                )
+            },
+            modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
             children = children,
-            interactionSource = interactionSource
+            onDismissRequest = onDismissRequest
         )
     }
 }

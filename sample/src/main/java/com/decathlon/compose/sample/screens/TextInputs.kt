@@ -71,6 +71,15 @@ object TextInputs : Screen {
                     VitaminTextInputs.OutlinedDropdown(
                         value = dropdownValue.value,
                         label = "Label",
+                        endIcon = {
+                            Expand(
+                                onClick = { expanded.value = !expanded.value },
+                                contentDescription = "Expand menu"
+                            )
+                        },
+                        onDismissRequest = {
+                            expanded.value = false
+                        },
                         expanded = expanded,
                         children = {
                             PrimaryItem(onClick = {
@@ -154,6 +163,15 @@ object TextInputs : Screen {
                     VitaminTextInputs.FilledDropdown(
                         value = dropdownValue.value,
                         label = "Label",
+                        endIcon = {
+                            Expand(
+                                onClick = { expanded.value = !expanded.value },
+                                contentDescription = "Expand menu"
+                            )
+                        },
+                        onDismissRequest = {
+                            expanded.value = false
+                        },
                         expanded = expanded,
                         children = {
                             PrimaryItem(onClick = {
