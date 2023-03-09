@@ -110,9 +110,9 @@ object ButtonVariantsFactory {
     fun IconButton(
         variant: Variant,
         size: IconButtonSizes,
-        modifier: Modifier = Modifier,
         icon: Painter,
         contentDescription: String?,
+        modifier: Modifier = Modifier,
         enabled: Boolean = true
     ) {
         when (variant) {
