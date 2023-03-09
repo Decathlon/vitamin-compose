@@ -313,7 +313,7 @@ internal fun VitaminTagImpl(
     label: String,
     colors: TagColors,
     sizes: TagSizes,
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     iconPainter: Painter? = null,
     onClick: (() -> Unit)? = null,
 ) {

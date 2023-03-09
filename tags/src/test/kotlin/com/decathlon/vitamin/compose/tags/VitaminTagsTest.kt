@@ -2,6 +2,7 @@ package com.decathlon.vitamin.compose.tags
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -35,17 +36,13 @@ class VitaminTagsTest(
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
                 Scaffold { padding ->
-                    Column(
+                    Tags(
+                        variant = variant,
+                        sizes = VitaminTagSizes.medium(),
                         modifier = Modifier
                             .padding(padding)
                             .padding(horizontal = 16.dp, vertical = 16.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Tags(
-                            variant = variant,
-                            sizes = VitaminTagSizes.medium()
-                        )
-                    }
+                    )
                 }
             }
         }
@@ -56,17 +53,13 @@ class VitaminTagsTest(
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
                 Scaffold { padding ->
-                    Column(
+                    Tags(
+                        variant = variant,
+                        sizes = VitaminTagSizes.small(),
                         modifier = Modifier
                             .padding(padding)
                             .padding(horizontal = 16.dp, vertical = 16.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        Tags(
-                            variant = variant,
-                            sizes = VitaminTagSizes.small()
-                        )
-                    }
+                    )
                 }
             }
         }
@@ -77,98 +70,104 @@ class VitaminTagsTest(
 @Composable
 fun Tags(
     variant: Variant,
-    sizes: TagSizes
+    sizes: TagSizes,
+    modifier: Modifier = Modifier
 ) {
     val onClick: (() -> Unit)? = if (variant == Variant.Interactive) { {} } else null
-    Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.Accent(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.Alert(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.Brand(label = "Tag", sizes = sizes, onClick = onClick)
-    }
-    val iconPainter = rememberVectorPainter(image = VitaminIcons.Line.Football)
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.Accent(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.Alert(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.Brand(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-    }
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.DecorativeEmerald(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeAmethyst(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeBrick(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeGold(label = "Tag", sizes = sizes, onClick = onClick)
-    }
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.DecorativeEmerald(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeAmethyst(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeBrick(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeGold(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-    }
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.DecorativeCobalt(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeGravel(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeJade(label = "Tag", sizes = sizes, onClick = onClick)
-        VitaminTags.DecorativeSaffron(label = "Tag", sizes = sizes, onClick = onClick)
-    }
-    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VitaminTags.DecorativeCobalt(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeGravel(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeJade(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
-        VitaminTags.DecorativeSaffron(
-            label = "Tag",
-            iconPainter = iconPainter,
-            sizes = sizes,
-            onClick = onClick
-        )
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.Accent(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.Alert(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.Brand(label = "Tag", sizes = sizes, onClick = onClick)
+        }
+        val iconPainter = rememberVectorPainter(image = VitaminIcons.Line.Football)
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.Accent(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.Alert(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.Brand(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.DecorativeEmerald(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeAmethyst(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeBrick(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeGold(label = "Tag", sizes = sizes, onClick = onClick)
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.DecorativeEmerald(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeAmethyst(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeBrick(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeGold(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.DecorativeCobalt(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeGravel(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeJade(label = "Tag", sizes = sizes, onClick = onClick)
+            VitaminTags.DecorativeSaffron(label = "Tag", sizes = sizes, onClick = onClick)
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            VitaminTags.DecorativeCobalt(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeGravel(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeJade(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+            VitaminTags.DecorativeSaffron(
+                label = "Tag",
+                iconPainter = iconPainter,
+                sizes = sizes,
+                onClick = onClick
+            )
+        }
     }
 }
