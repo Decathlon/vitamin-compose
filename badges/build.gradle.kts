@@ -8,4 +8,5 @@ plugins {
 dependencies {
     api(project(":foundation:foundation"))
     implementation(AndroidX.compose.ui.tooling)
+    lintChecks(Libs.compose_lint_checks)
 }
