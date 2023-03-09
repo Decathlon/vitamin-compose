@@ -9,4 +9,5 @@ dependencies {
     implementation(AndroidX.core)
     api(AndroidX.compose.ui)
     api(AndroidX.compose.material)
+    lintChecks(Libs.compose_lint_checks)
 }
