@@ -19,22 +19,23 @@ import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Composable
 internal fun Title(
-    modifier: Modifier,
     painter: Painter?,
     iconColor: Color,
     iconSize: Dp,
     title: String?,
     titleColor: Color,
-    bottomPadding: Dp
+    bottomPadding: Dp,
+    modifier: Modifier = Modifier
 ) {
     Row(
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically
     ) {
         val hasIconAndText = painter != null && title != null
         val hasIconOrText = painter != null || title != null
         if (hasIconOrText) {
             Row(
-                modifier = modifier
+                modifier = Modifier
                     .fillMaxWidth()
                     .padding(
                         bottom = bottomPadding
@@ -42,7 +43,7 @@ internal fun Title(
             ) {
                 painter?.let {
                     Icon(
-                        modifier = modifier.size(size = iconSize),
+                        modifier = Modifier.size(size = iconSize),
                         painter = painter,
                         contentDescription = null,
                         tint = iconColor
@@ -50,7 +51,7 @@ internal fun Title(
                 }
                 if (hasIconAndText) {
                     Spacer(
-                        modifier = modifier.width(8.dp)
+                        modifier = Modifier.width(8.dp)
                     )
                 }
                 title?.let {

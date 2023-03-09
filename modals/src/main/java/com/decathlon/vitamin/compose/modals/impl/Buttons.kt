@@ -13,12 +13,12 @@ import com.decathlon.vitamin.compose.modals.ModalButtonsOrientation
 
 @Composable
 internal fun Buttons(
-    modifier: Modifier,
+    topPadding: Dp,
+    buttonsOrientation: ModalButtonsOrientation,
     positiveButton: (@Composable () -> Unit)?,
     negativeButton: (@Composable () -> Unit)?,
     neutralButton: (@Composable () -> Unit)?,
-    buttonsOrientation: ModalButtonsOrientation,
-    topPadding: Dp
+    modifier: Modifier = Modifier,
 ) {
     if (buttonsOrientation == ModalButtonsOrientation.HORIZONTAL) {
         Row(

@@ -17,18 +17,18 @@ import com.decathlon.vitamin.compose.modals.ModalSizes
 
 @Composable
 internal fun VitaminModalImpl(
-    content: @Composable (() -> Unit),
-    onDismissRequest: () -> Unit,
-    modifier: Modifier,
     title: String?,
     painter: Painter?,
+    buttonsOrientation: ModalButtonsOrientation,
+    colors: ModalColors,
+    sizes: ModalSizes,
     contentScrollState: ScrollState,
+    onDismissRequest: () -> Unit,
+    content: @Composable (() -> Unit),
     positiveButton: (@Composable () -> Unit)?,
     negativeButton: (@Composable () -> Unit)?,
     neutralButton: (@Composable () -> Unit)?,
-    buttonsOrientation: ModalButtonsOrientation,
-    sizes: ModalSizes,
-    colors: ModalColors
+    modifier: Modifier = Modifier
 ) {
     Dialog(
         onDismissRequest = onDismissRequest,
@@ -45,7 +45,6 @@ internal fun VitaminModalImpl(
                     )
             ) {
                 Title(
-                    modifier = modifier,
                     painter = painter,
                     iconColor = colors.iconColor,
                     iconSize = sizes.iconSize,
@@ -54,7 +53,7 @@ internal fun VitaminModalImpl(
                     bottomPadding = sizes.spacerSize
                 )
                 Column(
-                    modifier = modifier
+                    modifier = Modifier
                         .verticalScroll(contentScrollState)
                         .weight(
                             weight = 1F,
@@ -68,12 +67,11 @@ internal fun VitaminModalImpl(
                     )
                 }
                 Buttons(
-                    modifier = modifier,
+                    topPadding = sizes.spacerSize,
+                    buttonsOrientation = buttonsOrientation,
                     positiveButton = positiveButton,
                     negativeButton = negativeButton,
                     neutralButton = neutralButton,
-                    buttonsOrientation = buttonsOrientation,
-                    topPadding = sizes.spacerSize
                 )
             }
         }
