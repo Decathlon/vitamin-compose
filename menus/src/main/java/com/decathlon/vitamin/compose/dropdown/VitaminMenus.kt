@@ -7,6 +7,7 @@ import androidx.compose.material.DropdownMenu
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -22,10 +23,14 @@ object VitaminMenus {
      * @param onDismissRequest The callback to be called when the dropdown menu is dismiss
      * @param children Declare your dropdown menu item components inside your dropdown
      */
+    @Deprecated(
+        message = "Use Dropdown with expanded parameter typed with State and no more MutableState."
+    )
     @Composable
     fun Dropdown(
         anchor: @Composable () -> Unit,
         modifier: Modifier = Modifier,
+        //noinspection ComposeMutableParameters
         expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         onDismissRequest: () -> Unit = {},
@@ -48,6 +53,33 @@ object VitaminMenus {
                     onDismissRequest()
                     expanded.value = false
                 },
+                content = { VitaminMenuItems.children() }
+            )
+        }
+    }
+
+    /**
+     * A dropdown contains a list of options that have an immediate effect like filter or sort content on a page.
+     * @param anchor Component where the dropdown menu is attached
+     * @param modifier The [Modifier] to be applied to this BottomNavigation
+     * @param expanded State to open or close the dropdown menu
+     * @param onDismissRequest The callback to be called when the dropdown menu is dismiss
+     * @param children Declare your dropdown menu item components inside your dropdown
+     */
+    @Composable
+    fun Dropdown(
+        anchor: @Composable () -> Unit,
+        modifier: Modifier = Modifier,
+        expanded: State<Boolean> = remember { mutableStateOf(false) },
+        onDismissRequest: () -> Unit = {},
+        children: @Composable VitaminMenuItems.() -> Unit
+    ) {
+        Box {
+            anchor()
+            DropdownMenu(
+                modifier = modifier,
+                expanded = expanded.value,
+                onDismissRequest = onDismissRequest,
                 content = { VitaminMenuItems.children() }
             )
         }

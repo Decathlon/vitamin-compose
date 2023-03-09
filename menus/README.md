@@ -21,8 +21,7 @@ object VitaminMenus {
     fun Dropdown(
         anchor: @Composable () -> Unit,
         modifier: Modifier = Modifier,
-        expanded: MutableState<Boolean> = remember { mutableStateOf(false) },
-        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        expanded: State<Boolean> = remember { mutableStateOf(false) },
         onDismissRequest: () -> Unit = {},
         children: @Composable VitaminMenuItems.() -> Unit
     )
@@ -40,7 +39,9 @@ val expanded = remember { mutableStateOf(false) }
 VitaminMenus.Dropdown(
     expanded = expanded,
     anchor = {
-        VitaminButtons.Primary("Open menu")
+        VitaminButtons.Primary("Open menu") {
+            expanded.value = true
+        }
     },
     children = {
         PrimaryItem(
