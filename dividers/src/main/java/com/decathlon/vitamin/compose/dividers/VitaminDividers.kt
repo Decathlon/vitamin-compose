@@ -22,7 +22,7 @@ object VitaminDividers {
         modifier: Modifier = Modifier,
         thickness: Dp = 1.dp,
         color: Color = VitaminTheme.colors.vtmnBorderPrimary,
-    ) = VitaminDividerImpl(modifier, color, thickness, 0.dp, 0.dp)
+    ) = VitaminDividerImpl(color, thickness, 0.dp, 0.dp, modifier)
 
     /**
      * Inset dividers separate related content, such as list item or thread
@@ -37,7 +37,7 @@ object VitaminDividers {
         thickness: Dp = 1.dp,
         startIndent: Dp = 64.dp,
         color: Color = VitaminTheme.colors.vtmnBorderPrimary,
-    ) = VitaminDividerImpl(modifier, color, thickness, startIndent, 0.dp)
+    ) = VitaminDividerImpl(color, thickness, startIndent, 0.dp, modifier)
 
     /**
      * Middle dividers are used in the middle of the layout. They can be used for separating related content or actions
@@ -54,16 +54,16 @@ object VitaminDividers {
         startIndent: Dp = 32.dp,
         endIndent: Dp = 32.dp,
         color: Color = VitaminTheme.colors.vtmnBorderPrimary,
-    ) = VitaminDividerImpl(modifier, color, thickness, startIndent, endIndent)
+    ) = VitaminDividerImpl(color, thickness, startIndent, endIndent, modifier)
 }
 
 @Composable
 private fun VitaminDividerImpl(
-    modifier: Modifier,
     color: Color,
     thickness: Dp,
     startIndent: Dp,
-    endIndent: Dp
+    endIndent: Dp,
+    modifier: Modifier = Modifier,
 ) {
     val indentModifier = if (endIndent.value != 0f) {
         Modifier.padding(end = endIndent)
