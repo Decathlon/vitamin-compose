@@ -9,5 +9,6 @@ plugins {
 dependencies {
     api(project(":foundation:foundation"))
     implementation(AndroidX.compose.ui.tooling)
+    lintChecks(Libs.compose_lint_checks)
     testImplementation("com.google.testparameterinjector:test-parameter-injector:1.8")
 }
