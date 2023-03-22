@@ -4,14 +4,19 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleRow
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.buttons.VitaminButtons
 import com.decathlon.vitamin.compose.buttons.VitaminIconButtons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.fill.Add
 
 const val BigText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
@@ -31,8 +36,13 @@ object Buttons : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 item {
                     SampleRow(firstItem = true) {
@@ -51,7 +61,7 @@ object Buttons : Screen {
                     SampleRow {
                         VitaminButtons.Primary(
                             text = "Primary",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add)
                         ) {}
                         VitaminButtons.Primary(
                             text = "Primary",
@@ -63,7 +73,7 @@ object Buttons : Screen {
                 item {
                     SampleRow {
                         VitaminIconButtons.Primary(
-                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add),
                             contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.Primary(
@@ -83,7 +93,7 @@ object Buttons : Screen {
                     SampleRow {
                         VitaminButtons.Secondary(
                             text = "Secondary",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add)
                         ) {}
                         VitaminButtons.Secondary(
                             text = "Secondary",
@@ -102,7 +112,7 @@ object Buttons : Screen {
                     SampleRow {
                         VitaminButtons.Ghost(
                             text = "Ghost",
-                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add),
                         ) {}
                         VitaminButtons.Ghost(
                             text = "Ghost",
@@ -114,7 +124,7 @@ object Buttons : Screen {
                 item {
                     SampleRow {
                         VitaminIconButtons.Ghost(
-                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add),
                             contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.Ghost(
@@ -134,7 +144,7 @@ object Buttons : Screen {
                     SampleRow(lastItem = true) {
                         VitaminButtons.Conversion(
                             text = "Conversion",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add)
                         ) {}
                         VitaminButtons.Conversion(
                             text = "Conversion",
@@ -159,7 +169,7 @@ object Buttons : Screen {
                     SampleRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
                         VitaminButtons.PrimaryReversed(
                             text = "Primary Reversed",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add)
                         ) {}
                         VitaminButtons.PrimaryReversed(
                             text = "Primary Reversed",
@@ -171,7 +181,7 @@ object Buttons : Screen {
                 item {
                     SampleRow(color = VitaminTheme.colors.vtmnBackgroundBrandPrimary) {
                         VitaminIconButtons.PrimaryReversed(
-                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add),
                             contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.PrimaryReversed(
@@ -200,7 +210,7 @@ object Buttons : Screen {
                     ) {
                         VitaminButtons.GhostReversed(
                             text = "Ghost",
-                            icon = painterResource(id = R.drawable.ic_add_fill)
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add)
                         ) {}
                         VitaminButtons.GhostReversed(
                             text = "Ghost",
@@ -215,7 +225,7 @@ object Buttons : Screen {
                         color = VitaminTheme.colors.vtmnBackgroundBrandPrimary
                     ) {
                         VitaminIconButtons.GhostReversed(
-                            icon = painterResource(id = R.drawable.ic_add_fill),
+                            icon = rememberVectorPainter(VitaminIcons.Fill.Add),
                             contentDescription = "Add"
                         ) {}
                         VitaminIconButtons.GhostReversed(
@@ -234,6 +244,6 @@ object Buttons : Screen {
 @Composable
 private fun DefaultPreview() {
     VitaminTheme {
-        Buttons.Screen()
+        Buttons.Screen(null)
     }
 }

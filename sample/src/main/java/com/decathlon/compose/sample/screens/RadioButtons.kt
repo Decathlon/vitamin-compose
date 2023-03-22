@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.radiobuttons.VitaminRadioButtons
@@ -27,8 +28,13 @@ object RadioButtons : Screen {
 
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -170,7 +176,7 @@ object RadioButtons : Screen {
 @Composable
 private fun RadiobuttonScreenPreview() {
     VitaminTheme {
-        RadioButtons.Screen()
+        RadioButtons.Screen(null)
     }
 }
 

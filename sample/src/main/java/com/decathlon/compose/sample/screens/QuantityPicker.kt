@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.quantity.pickers.QuantityColors
@@ -28,8 +29,13 @@ object QuantityPicker : Screen {
         get() = "quantity-pickers"
 
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(8.dp),
@@ -99,6 +105,6 @@ private fun QuantityComponent(
 @Composable
 private fun QuantitiesScreenPreview() {
     VitaminTheme {
-        QuantityPicker.Screen()
+        QuantityPicker.Screen(null)
     }
 }

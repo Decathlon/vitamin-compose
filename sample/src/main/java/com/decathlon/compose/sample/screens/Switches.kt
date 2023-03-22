@@ -7,6 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleRow
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
@@ -20,8 +21,13 @@ object Switches : Screen {
         get() = "switches"
 
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 item {
                     SampleRow(firstItem = true) {
@@ -64,7 +70,7 @@ object Switches : Screen {
 @Composable
 private fun LightSwitchesDefaultPreview() {
     VitaminTheme {
-        Switches.Screen()
+        Switches.Screen(null)
     }
 }
 
@@ -72,6 +78,6 @@ private fun LightSwitchesDefaultPreview() {
 @Composable
 private fun DarkSwitchesDefaultPreview() {
     VitaminTheme(darkTheme = true) {
-        Switches.Screen()
+        Switches.Screen(null)
     }
 }

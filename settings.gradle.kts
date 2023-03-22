@@ -16,7 +16,9 @@ refreshVersions {
 
 rootProject.name = "vitamin-compose"
 include(":vitamin")
-include(":foundation")
+include(":foundation:foundation")
+include(":foundation:foundation-icons")
+include(":foundation:foundation-assets")
 include(":buttons")
 include(":text-inputs")
 include(":switches")
@@ -37,3 +39,5 @@ include(":snackbars")
 include(":badges")
 include(":fabs")
 include(":quantity-pickers")
+include(":chips")
+include(":cards")

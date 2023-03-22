@@ -9,13 +9,17 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.Paparazzi
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.buttons.utils.ButtonVariantsFactory
 import com.decathlon.vitamin.compose.buttons.utils.Theme
 import com.decathlon.vitamin.compose.buttons.utils.Variant
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Android
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
 import org.junit.Rule
@@ -36,6 +40,7 @@ class VitaminIconButtonsPrimaryTest(
     fun medium(@TestParameter theme: Theme) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
+                val icon = rememberVectorPainter(VitaminIcons.Line.Android)
                 Scaffold { padding ->
                     Column(
                         modifier = Modifier.padding(padding),
@@ -54,13 +59,13 @@ class VitaminIconButtonsPrimaryTest(
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.medium(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                icon = icon,
                                 contentDescription = "Add"
                             )
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.medium(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                icon = icon,
                                 contentDescription = "Add",
                                 enabled = false
                             )
@@ -76,6 +81,7 @@ class VitaminIconButtonsPrimaryTest(
     fun large(@TestParameter theme: Theme) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
+                val icon = rememberVectorPainter(VitaminIcons.Line.Android)
                 Scaffold { padding ->
                     Column(
                         modifier = Modifier.padding(padding),
@@ -91,13 +97,13 @@ class VitaminIconButtonsPrimaryTest(
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.large(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                icon = icon,
                                 contentDescription = "Add"
                             )
                             ButtonVariantsFactory.IconButton(
                                 variant = variant,
                                 size = VitaminIconButtonsSizes.large(),
-                                icon = painterResource(id = R.drawable.ic_vtmn_android_line),
+                                icon = icon,
                                 contentDescription = "Add",
                                 enabled = false
                             )

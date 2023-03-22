@@ -8,12 +8,15 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
 import app.cash.paparazzi.Paparazzi
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.tags.utils.Theme
 import com.decathlon.vitamin.compose.tags.utils.Variant
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Football
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
 import org.junit.Rule
@@ -83,22 +86,23 @@ fun Tags(
         VitaminTags.Alert(label = "Tag", sizes = sizes, onClick = onClick)
         VitaminTags.Brand(label = "Tag", sizes = sizes, onClick = onClick)
     }
+    val iconPainter = rememberVectorPainter(image = VitaminIcons.Line.Football)
     Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
         VitaminTags.Accent(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.Alert(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.Brand(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
@@ -112,25 +116,25 @@ fun Tags(
     Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
         VitaminTags.DecorativeEmerald(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeAmethyst(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeBrick(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeGold(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
@@ -144,25 +148,25 @@ fun Tags(
     Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
         VitaminTags.DecorativeCobalt(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeGravel(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeJade(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )
         VitaminTags.DecorativeSaffron(
             label = "Tag",
-            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+            iconPainter = iconPainter,
             sizes = sizes,
             onClick = onClick
         )

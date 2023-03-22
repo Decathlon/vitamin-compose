@@ -14,17 +14,20 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.decathlon.compose.sample.R
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 import com.decathlon.vitamin.compose.tags.VitaminTagColors
 import com.decathlon.vitamin.compose.tags.VitaminTagSizes
 import com.decathlon.vitamin.compose.tags.VitaminTags
 import com.decathlon.vitamin.compose.textinputs.VitaminTextInputs
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Football
 
 private enum class Size(val type: String) {
     Small("Small"), Medium("Medium")
@@ -39,7 +42,7 @@ object Tags : Screen {
 
     @Suppress("LongMethod")
     @Composable
-    override fun Screen() {
+    override fun Screen(navController: NavController?) {
         val allTagColors = listOf(
             Pair("Accent", VitaminTagColors.accent()),
             Pair("Alert", VitaminTagColors.alert()),
@@ -59,7 +62,13 @@ object Tags : Screen {
             Size.Small -> VitaminTagSizes.small()
             Size.Medium -> VitaminTagSizes.medium()
         }
-        SampleScaffold(title = name) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
+            val icon = rememberVectorPainter(VitaminIcons.Line.Football)
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 24.dp),
@@ -94,7 +103,7 @@ object Tags : Screen {
                         VitaminTags.Accent(
                             label = color.first,
                             colors = color.second,
-                            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_line),
+                            iconPainter = icon,
                             sizes = sizes
                         )
                     }
@@ -117,10 +126,14 @@ object Tags : Screen {
                         VitaminTags.Accent(
                             label = color.first,
                             colors = color.second,
-                            iconPainter = painterResource(id = R.drawable.ic_vtmn_football_fill),
+                            iconPainter = icon,
                             sizes = sizes
                         ) {
-                            Toast.makeText(context, "Click on tag ${color.first}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                context,
+                                "Click on tag ${color.first}",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     }
                 }
@@ -133,6 +146,6 @@ object Tags : Screen {
 @Composable
 private fun PreviewTagsScreen() {
     VitaminTheme(darkTheme = true) {
-        Tags.Screen()
+        Tags.Screen(null)
     }
 }

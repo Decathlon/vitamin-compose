@@ -83,7 +83,7 @@ The minimal usage of the component is an icon and the associated contentDescript
 
 ```kotlin
 VitaminIconButtons.Primary(
-    icon = painterResource(id = R.drawable.ic_add_fill),
+    icon = rememberVectorPainter(VitaminIcons.Line.Add),
     contentDescription = "Add"
 ) {}
 ```

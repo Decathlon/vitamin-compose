@@ -11,11 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.R
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.appbars.bottomnavigations.SelectedActionItem
 import com.decathlon.vitamin.compose.appbars.bottomnavigations.VitaminBottomNavigations
 import com.decathlon.vitamin.compose.appbars.topbars.ActionItem
@@ -23,6 +26,12 @@ import com.decathlon.vitamin.compose.appbars.topbars.SearchActionItem
 import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBarColors
 import com.decathlon.vitamin.compose.appbars.topbars.VitaminTopBars
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
+import com.decathlon.vitamin.compose.vitaminicons.Fill
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.fill.Mic
+import com.decathlon.vitamin.compose.vitaminicons.line.Amazon
+import com.decathlon.vitamin.compose.vitaminicons.line.Android
+import com.decathlon.vitamin.compose.vitaminicons.line.Search
 
 object AppBars : Screen {
     override val name: String
@@ -33,8 +42,10 @@ object AppBars : Screen {
     @OptIn(ExperimentalAnimationApi::class)
     @SuppressWarnings("LongMethod")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(title = name, onBackClick = {
+            navController?.popBackStack()
+        }) {
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -67,7 +78,7 @@ object AppBars : Screen {
                         },
                         actions = arrayListOf(
                             ActionItem(
-                                icon = painterResource(R.drawable.ic_vtmn_android_line),
+                                icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
                                 contentDescription = null,
                                 content = { Text("Android") },
                                 onClick = { }
@@ -106,7 +117,7 @@ object AppBars : Screen {
                         },
                         actions = arrayListOf(
                             ActionItem(
-                                icon = painterResource(R.drawable.ic_vtmn_android_line),
+                                icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
                                 contentDescription = null,
                                 content = { Text("Android") },
                                 onClick = { }
@@ -195,7 +206,7 @@ object AppBars : Screen {
                                     title = "Vitamin",
                                     actions = arrayListOf(
                                         ActionItem(
-                                            icon = painterResource(R.drawable.ic_vtmn_search_line),
+                                            icon = rememberVectorPainter(VitaminIcons.Line.Search),
                                             contentDescription = null,
                                             content = { Text("Search") },
                                             onClick = { searchMode.value = true }
@@ -229,7 +240,7 @@ object AppBars : Screen {
                         actions = arrayListOf(
                             SelectedActionItem(
                                 selected = selectedId.value == "android",
-                                icon = painterResource(R.drawable.ic_vtmn_android_line),
+                                icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
                                 contentDescription = null,
                                 text = "Android",
                                 onClick = {
@@ -249,7 +260,7 @@ object AppBars : Screen {
                             ),
                             SelectedActionItem(
                                 selected = selectedId.value == "amazon",
-                                icon = painterResource(R.drawable.ic_vtmn_amazon_line),
+                                icon = rememberVectorPainter(image = VitaminIcons.Line.Amazon),
                                 contentDescription = null,
                                 text = "Amazon",
                                 onClick = {
@@ -276,7 +287,7 @@ object AppBars : Screen {
                         actions = arrayListOf(
                             SelectedActionItem(
                                 selected = selectedId.value == "agenda",
-                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),
                                 contentDescription = null,
                                 text = "Agenda",
                                 onClick = {
@@ -286,7 +297,7 @@ object AppBars : Screen {
                             ),
                             SelectedActionItem(
                                 selected = selectedId.value == "speakers",
-                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),
                                 contentDescription = null,
                                 text = "Speakers",
                                 onClick = {
@@ -296,7 +307,7 @@ object AppBars : Screen {
                             ),
                             SelectedActionItem(
                                 selected = selectedId.value == "networking",
-                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),
                                 contentDescription = null,
                                 text = "Networking",
                                 onClick = {
@@ -306,7 +317,7 @@ object AppBars : Screen {
                             ),
                             SelectedActionItem(
                                 selected = selectedId.value == "partners",
-                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),
                                 contentDescription = null,
                                 text = "Partners",
                                 onClick = {
@@ -316,7 +327,7 @@ object AppBars : Screen {
                             ),
                             SelectedActionItem(
                                 selected = selectedId.value == "info",
-                                icon = painterResource(R.drawable.ic_vtmn_mic_fill),
+                                icon = rememberVectorPainter(image = VitaminIcons.Fill.Mic),
                                 contentDescription = null,
                                 text = "Info",
                                 onClick = {
@@ -336,7 +347,7 @@ object AppBars : Screen {
 @Composable
 private fun PreviewTopAppBar() {
     VitaminTheme {
-        AppBars.Screen()
+        AppBars.Screen(null)
     }
 }
 
@@ -344,6 +355,6 @@ private fun PreviewTopAppBar() {
 @Composable
 private fun PreviewDarkTopAppBar() {
     VitaminTheme(darkTheme = true) {
-        AppBars.Screen()
+        AppBars.Screen(null)
     }
 }

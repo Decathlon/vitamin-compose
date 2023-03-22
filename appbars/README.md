@@ -51,7 +51,7 @@ VitaminTopBars.Primary(
     },
     actions = arrayListOf(
         ActionItem(
-            icon = painterResource(R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
             contentDescription = null,
             text = { Text("Android") },
             onClick = { return@ActionItem true }
@@ -182,7 +182,7 @@ VitaminBottomNavigations.Primary(
     actions = arrayListOf(
         SelectedActionItem(
             selected = true,
-            icon = painterResource(R.drawable.ic_vtmn_android_line),
+            icon = rememberVectorPainter(image = VitaminIcons.Line.Android),
             contentDescription = null,
             content = "Android",
             onClick = { return@SelectedActionItem true }

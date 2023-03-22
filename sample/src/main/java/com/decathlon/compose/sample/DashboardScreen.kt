@@ -18,15 +18,22 @@ import com.decathlon.compose.sample.screens.Screen
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
 
 @Composable
-fun DashboardScreen(navController: NavHostController, screens: List<Screen>) {
-    SampleScaffold(title = "Dashboard") {
+fun DashboardScreen(
+    navController: NavHostController,
+    screens: List<Screen>
+) {
+    SampleScaffold(
+        title = "Dashboard"
+    ) {
         LazyColumn {
             items(screens) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(56.dp)
-                        .clickable { navController.navigate(it.navigationKey) },
+                        .clickable {
+                            navController.navigate(it.navigationKey)
+                        },
                     contentAlignment = Alignment.CenterStart
                 ) {
                     Text(

@@ -9,14 +9,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
+import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-import com.decathlon.vitamin.compose.textinputs.R
 import com.decathlon.vitamin.compose.textinputs.TextInputsState
 import com.decathlon.vitamin.compose.textinputs.VitaminTextInputs
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Heart
 
 object TextInputs : Screen {
     override val name: String
@@ -27,8 +30,14 @@ object TextInputs : Screen {
 
     @SuppressWarnings("LongMethod", "MagicNumber")
     @Composable
-    override fun Screen() {
-        SampleScaffold(title = name) {
+    override fun Screen(navController: NavController?) {
+        SampleScaffold(
+            title = name,
+            onBackClick = {
+                navController?.popBackStack()
+            }
+        ) {
+            val painter = rememberVectorPainter(VitaminIcons.Line.Heart)
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -50,7 +59,7 @@ object TextInputs : Screen {
                         counter = 999 to 999,
                         icon = {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                painter = painter,
                                 contentDescription = null
                             )
                         }
@@ -133,7 +142,7 @@ object TextInputs : Screen {
                         counter = 999 to 999,
                         icon = {
                             Icon(
-                                painter = painterResource(id = R.drawable.ic_vtmn_heart_line),
+                                painter = painter,
                                 contentDescription = null
                             )
                         }
@@ -209,6 +218,6 @@ object TextInputs : Screen {
 @Composable
 private fun TextInputsScreenPreview() {
     VitaminTheme {
-        TextInputs.Screen()
+        TextInputs.Screen(null)
     }
 }

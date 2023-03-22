@@ -41,6 +41,7 @@ internal fun VitaminStandaloneBadgeImpl(
                     count = count,
                     nbMaxChar = nbMaxChar
                 ),
+                color = colors.contentColor,
                 style = sizes.textStyle
             )
         }
