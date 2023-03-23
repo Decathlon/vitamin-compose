@@ -13,6 +13,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.error
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
@@ -69,9 +70,12 @@ object VitaminQuantityPickers {
             Column(
                 modifier = modifier
                     .semantics(
-                        mergeDescendants = true
+                        mergeDescendants = false
                     ) {
                         this.contentDescription = contentDescription
+                        helperText?.let {
+                            this.error(it)
+                        }
                     }
             ) {
                 Picker(
@@ -94,10 +98,9 @@ object VitaminQuantityPickers {
                     HelperText(
                         text = it,
                         textStyle = sizes.helperTextStyle,
-                        textColor = colors.helperTextColor,
                         icon = VitaminIcons.Line.Information,
-                        iconColor = colors.helperIconColor,
-                        iconSize = sizes.helperIconSize
+                        iconSize = sizes.helperIconSize,
+                        color = colors.helperColor
                     )
                 }
             }

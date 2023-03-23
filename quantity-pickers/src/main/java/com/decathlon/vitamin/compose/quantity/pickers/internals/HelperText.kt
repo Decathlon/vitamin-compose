@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -21,10 +22,9 @@ import androidx.compose.ui.unit.dp
 internal fun HelperText(
     text: String,
     textStyle: TextStyle,
-    textColor: Color,
     icon: ImageVector,
-    iconColor: Color,
-    iconSize: Dp
+    iconSize: Dp,
+    color: Color
 ) {
     Row(
         modifier = Modifier
@@ -36,15 +36,17 @@ internal fun HelperText(
                 .size(iconSize),
             painter = rememberVectorPainter(icon),
             contentDescription = null,
-            tint = iconColor
+            tint = color
         )
 
         Spacer(modifier = Modifier.width(8.dp))
 
         Text(
+            modifier = Modifier
+                .clearAndSetSemantics { },
             text = text,
             style = textStyle,
-            color = textColor
+            color = color
         )
     }
 }
