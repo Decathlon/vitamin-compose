@@ -26,18 +26,42 @@ public val PaymentsGroup.ChequePayment: ImageVector
             group {
             }
             group {
-                path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFF3F3F3)),
-                        strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(3.5614f, 0.5f)
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
+                    moveTo(3.5614f, 0.0f)
                     horizontalLineTo(54.4386f)
-                    curveTo(56.1256f, 0.5f, 57.5f, 1.8796f, 57.5f, 3.5897f)
+                    curveTo(56.4055f, 0.0f, 58.0f, 1.6072f, 58.0f, 3.5897f)
                     verticalLineTo(36.4103f)
-                    curveTo(57.5f, 38.1204f, 56.1256f, 39.5f, 54.4386f, 39.5f)
+                    curveTo(58.0f, 38.3928f, 56.4055f, 40.0f, 54.4386f, 40.0f)
                     horizontalLineTo(3.5614f)
-                    curveTo(1.8744f, 39.5f, 0.5f, 38.1204f, 0.5f, 36.4103f)
+                    curveTo(1.5945f, 40.0f, 0.0f, 38.3928f, 0.0f, 36.4103f)
                     verticalLineTo(3.5897f)
-                    curveTo(0.5f, 1.8796f, 1.8744f, 0.5f, 3.5614f, 0.5f)
+                    curveTo(0.0f, 1.6072f, 1.5945f, 0.0f, 3.5614f, 0.0f)
+                    close()
+                }
+                path(fill = SolidColor(Color(0xFFF3F3F3)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
+                    moveTo(54.4386f, 1.0f)
+                    horizontalLineTo(3.5614f)
+                    curveTo(2.1542f, 1.0f, 1.0f, 2.152f, 1.0f, 3.5897f)
+                    verticalLineTo(36.4103f)
+                    curveTo(1.0f, 37.848f, 2.1542f, 39.0f, 3.5614f, 39.0f)
+                    horizontalLineTo(54.4386f)
+                    curveTo(55.8458f, 39.0f, 57.0f, 37.848f, 57.0f, 36.4103f)
+                    verticalLineTo(3.5897f)
+                    curveTo(57.0f, 2.152f, 55.8458f, 1.0f, 54.4386f, 1.0f)
+                    close()
+                    moveTo(3.5614f, 0.0f)
+                    horizontalLineTo(54.4386f)
+                    curveTo(56.4055f, 0.0f, 58.0f, 1.6072f, 58.0f, 3.5897f)
+                    verticalLineTo(36.4103f)
+                    curveTo(58.0f, 38.3928f, 56.4055f, 40.0f, 54.4386f, 40.0f)
+                    horizontalLineTo(3.5614f)
+                    curveTo(1.5945f, 40.0f, 0.0f, 38.3928f, 0.0f, 36.4103f)
+                    verticalLineTo(3.5897f)
+                    curveTo(0.0f, 1.6072f, 1.5945f, 0.0f, 3.5614f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFD9DDE1)), stroke = null, strokeLineWidth = 0.0f,
@@ -50,7 +74,7 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     verticalLineTo(8.5f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(46.0f, 16.0f)
@@ -88,7 +112,7 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     verticalLineTo(19.0f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(50.0f, 8.0f)
@@ -108,8 +132,7 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     curveTo(36.5137f, 24.8603f, 36.5076f, 24.8859f, 36.5039f, 24.9061f)
                     curveTo(36.5021f, 24.9161f, 36.5011f, 24.9239f, 36.5006f, 24.9296f)
                     curveTo(36.5f, 24.9348f, 36.5f, 24.9374f, 36.5f, 24.9374f)
-                    verticalLineTo(24.9373f)
-                    curveTo(36.5f, 25.2135f, 36.2761f, 25.4373f, 36.0f, 25.4373f)
+                    curveTo(36.5f, 25.2136f, 36.2761f, 25.4373f, 36.0f, 25.4373f)
                     curveTo(35.7239f, 25.4373f, 35.5f, 25.2135f, 35.5f, 24.9373f)
                     curveTo(35.5f, 24.6778f, 35.6043f, 24.3812f, 35.7321f, 24.1527f)
                     curveTo(35.7998f, 24.0316f, 35.8869f, 23.9061f, 35.9941f, 23.7986f)
@@ -145,9 +168,7 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     curveTo(45.6803f, 24.7449f, 45.9306f, 24.8736f, 46.0985f, 25.1255f)
                     curveTo(46.2517f, 25.3552f, 46.1896f, 25.6657f, 45.9598f, 25.8189f)
                     curveTo(45.7305f, 25.9717f, 45.4208f, 25.9102f, 45.2674f, 25.6815f)
-                    curveTo(45.2671f, 25.6811f, 45.2668f, 25.6806f, 45.2664f, 25.6802f)
-                    curveTo(45.2669f, 25.6808f, 45.2673f, 25.6813f, 45.2676f, 25.6817f)
-                    curveTo(45.2675f, 25.6817f, 45.2674f, 25.6816f, 45.2674f, 25.6815f)
+                    curveTo(45.2673f, 25.6815f, 45.2674f, 25.6816f, 45.2674f, 25.6815f)
                     curveTo(45.2627f, 25.6771f, 45.2421f, 25.6607f, 45.1837f, 25.6444f)
                     curveTo(45.0998f, 25.6209f, 44.9782f, 25.6098f, 44.8242f, 25.6177f)
                     curveTo(44.5153f, 25.6337f, 44.1823f, 25.7203f, 44.0012f, 25.7882f)
@@ -161,12 +182,10 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     curveTo(40.9962f, 25.5139f, 40.8921f, 25.385f, 40.7817f, 25.2689f)
                     curveTo(40.5452f, 25.0203f, 40.4135f, 24.9721f, 40.3188f, 24.9831f)
                     curveTo(40.3196f, 24.9516f, 40.3226f, 24.9368f, 40.3233f, 24.9332f)
-                    curveTo(40.3236f, 24.9322f, 40.3236f, 24.9321f, 40.3233f, 24.9328f)
-                    curveTo(40.32f, 24.9412f, 40.3108f, 24.9588f, 40.2928f, 24.9761f)
+                    curveTo(40.3236f, 24.9322f, 40.3236f, 24.9325f, 40.3233f, 24.9332f)
+                    curveTo(40.32f, 24.9416f, 40.3108f, 24.9588f, 40.2928f, 24.9761f)
                     curveTo(40.2802f, 24.9882f, 40.2699f, 24.9937f, 40.2667f, 24.9953f)
-                    curveTo(40.2661f, 24.9957f, 40.2657f, 24.9958f, 40.2657f, 24.9959f)
-                    curveTo(40.2657f, 24.9959f, 40.266f, 24.9957f, 40.2668f, 24.9955f)
-                    curveTo(40.283f, 24.9898f, 40.3002f, 24.9853f, 40.3188f, 24.9831f)
+                    curveTo(40.2829f, 24.9896f, 40.3002f, 24.9853f, 40.3188f, 24.9831f)
                     curveTo(40.3183f, 25.0034f, 40.3187f, 25.0305f, 40.3212f, 25.066f)
                     curveTo(40.3265f, 25.1411f, 40.337f, 25.213f, 40.35f, 25.3023f)
                     curveTo(40.3558f, 25.3421f, 40.3621f, 25.3854f, 40.3687f, 25.4339f)
@@ -184,14 +203,20 @@ public val PaymentsGroup.ChequePayment: ImageVector
                     curveTo(36.8523f, 24.549f, 36.7465f, 24.5078f, 36.7051f, 24.5019f)
                     close()
                 }
-                path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFEFF1F3)),
-                        strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(49.5f, 8.5f)
-                    horizontalLineTo(8.5f)
-                    verticalLineTo(31.5f)
-                    horizontalLineTo(49.5f)
-                    verticalLineTo(8.5f)
+                path(fill = SolidColor(Color(0xFFEFF1F3)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
+                    moveTo(8.0f, 8.0f)
+                    horizontalLineTo(50.0f)
+                    verticalLineTo(32.0f)
+                    horizontalLineTo(8.0f)
+                    verticalLineTo(8.0f)
+                    close()
+                    moveTo(9.0f, 9.0f)
+                    verticalLineTo(31.0f)
+                    horizontalLineTo(49.0f)
+                    verticalLineTo(9.0f)
+                    horizontalLineTo(9.0f)
                     close()
                 }
             }

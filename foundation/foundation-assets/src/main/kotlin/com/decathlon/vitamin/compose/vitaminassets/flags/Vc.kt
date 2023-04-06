@@ -24,27 +24,28 @@ public val FlagsGroup.Vc: ImageVector
         _vc = Builder(name = "Vc", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 2.0f)
+                    curveTo(0.0f, 0.8954f, 0.8954f, 0.0f, 2.0f, 0.0f)
+                    horizontalLineTo(26.0f)
+                    curveTo(27.1046f, 0.0f, 28.0f, 0.8954f, 28.0f, 2.0f)
+                    verticalLineTo(18.0f)
+                    curveTo(28.0f, 19.1046f, 27.1046f, 20.0f, 26.0f, 20.0f)
+                    horizontalLineTo(2.0f)
+                    curveTo(0.8954f, 20.0f, 0.0f, 19.1046f, 0.0f, 18.0f)
+                    verticalLineTo(2.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF08C47A)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(13.3333f, 0.0f)
-                    horizontalLineToRelative(14.6667f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-14.6667f)
+                    horizontalLineTo(28.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(13.3333f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF0C87E1)), stroke = null, strokeLineWidth = 0.0f,
@@ -69,19 +70,27 @@ public val FlagsGroup.Vc: ImageVector
                 }
                 path(fill = SolidColor(Color(0xFF08C47A)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                        pathFillType = EvenOdd) {
+                        pathFillType = NonZero) {
                     moveTo(9.3333f, 8.0f)
                     lineTo(11.3333f, 4.0f)
                     lineTo(13.3333f, 8.0f)
                     lineTo(11.3333f, 12.0f)
                     lineTo(9.3333f, 8.0f)
                     close()
-                    moveTo(14.6666f, 8.0f)
-                    lineTo(16.6666f, 4.0f)
-                    lineTo(18.6666f, 8.0f)
-                    lineTo(16.6666f, 12.0f)
-                    lineTo(14.6666f, 8.0f)
+                }
+                path(fill = SolidColor(Color(0xFF08C47A)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(14.6667f, 8.0f)
+                    lineTo(16.6667f, 4.0f)
+                    lineTo(18.6667f, 8.0f)
+                    lineTo(16.6667f, 12.0f)
+                    lineTo(14.6667f, 8.0f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFF08C47A)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(14.0f, 9.3333f)
                     lineTo(12.0f, 13.3333f)
                     lineTo(14.0f, 17.3333f)

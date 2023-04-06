@@ -24,27 +24,24 @@ public val FlagsGroup.Kz: ImageVector
         _kz = Builder(name = "Kz", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    curveTo(28.0f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    curveTo(0.0f, 13.3333f, -0.0f, 6.6667f, 0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF30C6E0)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(0.0f, 0.0f)
-                    horizontalLineToRelative(28.0f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-28.0f)
+                    horizontalLineTo(28.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(0.0f)
+                    lineTo(0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
@@ -65,13 +62,13 @@ public val FlagsGroup.Kz: ImageVector
                     lineTo(15.6318f, 17.1495f)
                     lineTo(16.0452f, 14.2468f)
                     lineTo(18.5723f, 15.7334f)
-                    lineTo(17.6853f, 12.9389f)
+                    lineTo(17.6852f, 12.9389f)
                     lineTo(20.6071f, 13.1818f)
                     lineTo(18.5954f, 11.0489f)
                     lineTo(21.3333f, 10.0f)
                     lineTo(18.5954f, 8.9511f)
                     lineTo(20.6071f, 6.8182f)
-                    lineTo(17.6853f, 7.0611f)
+                    lineTo(17.6852f, 7.0611f)
                     lineTo(18.5723f, 4.2666f)
                     lineTo(16.0452f, 5.7532f)
                     lineTo(15.6318f, 2.8505f)
@@ -99,7 +96,7 @@ public val FlagsGroup.Kz: ImageVector
                 }
                 path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                        pathFillType = EvenOdd) {
+                        pathFillType = NonZero) {
                     moveTo(1.3333f, 1.6667f)
                     curveTo(1.3333f, 1.4826f, 1.4826f, 1.3333f, 1.6667f, 1.3333f)
                     horizontalLineTo(2.3333f)
@@ -110,16 +107,24 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(1.4826f, 2.6667f, 1.3333f, 2.5174f, 1.3333f, 2.3333f)
                     verticalLineTo(1.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.3333f, 4.3333f)
-                    curveTo(1.3333f, 4.1493f, 1.4826f, 4.0f, 1.6667f, 4.0f)
+                    curveTo(1.3333f, 4.1492f, 1.4826f, 4.0f, 1.6667f, 4.0f)
                     horizontalLineTo(2.3333f)
-                    curveTo(2.5174f, 4.0f, 2.6667f, 4.1493f, 2.6667f, 4.3333f)
+                    curveTo(2.5174f, 4.0f, 2.6667f, 4.1492f, 2.6667f, 4.3333f)
                     verticalLineTo(5.0f)
                     curveTo(2.6667f, 5.1841f, 2.5174f, 5.3333f, 2.3333f, 5.3333f)
                     horizontalLineTo(1.6667f)
                     curveTo(1.4826f, 5.3333f, 1.3333f, 5.1841f, 1.3333f, 5.0f)
                     verticalLineTo(4.3333f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.6667f, 6.6667f)
                     curveTo(1.4826f, 6.6667f, 1.3333f, 6.8159f, 1.3333f, 7.0f)
                     verticalLineTo(7.6667f)
@@ -130,6 +135,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.6667f, 6.8159f, 2.5174f, 6.6667f, 2.3333f, 6.6667f)
                     horizontalLineTo(1.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.3333f, 9.6667f)
                     curveTo(1.3333f, 9.4826f, 1.4826f, 9.3333f, 1.6667f, 9.3333f)
                     horizontalLineTo(2.3333f)
@@ -140,6 +149,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(1.4826f, 10.6667f, 1.3333f, 10.5174f, 1.3333f, 10.3333f)
                     verticalLineTo(9.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.6667f, 12.0f)
                     curveTo(1.4826f, 12.0f, 1.3333f, 12.1492f, 1.3333f, 12.3333f)
                     verticalLineTo(13.0f)
@@ -150,6 +163,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.6667f, 12.1492f, 2.5174f, 12.0f, 2.3333f, 12.0f)
                     horizontalLineTo(1.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.3333f, 15.0f)
                     curveTo(1.3333f, 14.8159f, 1.4826f, 14.6667f, 1.6667f, 14.6667f)
                     horizontalLineTo(2.3333f)
@@ -160,6 +177,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(1.4826f, 16.0f, 1.3333f, 15.8508f, 1.3333f, 15.6667f)
                     verticalLineTo(15.0f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(1.6667f, 17.3333f)
                     curveTo(1.4826f, 17.3333f, 1.3333f, 17.4826f, 1.3333f, 17.6667f)
                     verticalLineTo(18.3333f)
@@ -170,6 +191,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.6667f, 17.4826f, 2.5174f, 17.3333f, 2.3333f, 17.3333f)
                     horizontalLineTo(1.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(2.6667f, 16.3333f)
                     curveTo(2.6667f, 16.1492f, 2.8159f, 16.0f, 3.0f, 16.0f)
                     horizontalLineTo(3.6667f)
@@ -180,6 +205,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.8159f, 17.3333f, 2.6667f, 17.1841f, 2.6667f, 17.0f)
                     verticalLineTo(16.3333f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(3.0f, 13.3333f)
                     curveTo(2.8159f, 13.3333f, 2.6667f, 13.4826f, 2.6667f, 13.6667f)
                     verticalLineTo(14.3333f)
@@ -190,6 +219,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(4.0f, 13.4826f, 3.8508f, 13.3333f, 3.6667f, 13.3333f)
                     horizontalLineTo(3.0f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(2.6667f, 11.0f)
                     curveTo(2.6667f, 10.8159f, 2.8159f, 10.6667f, 3.0f, 10.6667f)
                     horizontalLineTo(3.6667f)
@@ -200,16 +233,24 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.8159f, 12.0f, 2.6667f, 11.8508f, 2.6667f, 11.6667f)
                     verticalLineTo(11.0f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(3.0f, 8.0f)
-                    curveTo(2.8159f, 8.0f, 2.6667f, 8.1493f, 2.6667f, 8.3333f)
+                    curveTo(2.8159f, 8.0f, 2.6667f, 8.1492f, 2.6667f, 8.3333f)
                     verticalLineTo(9.0f)
                     curveTo(2.6667f, 9.1841f, 2.8159f, 9.3333f, 3.0f, 9.3333f)
                     horizontalLineTo(3.6667f)
                     curveTo(3.8508f, 9.3333f, 4.0f, 9.1841f, 4.0f, 9.0f)
                     verticalLineTo(8.3333f)
-                    curveTo(4.0f, 8.1493f, 3.8508f, 8.0f, 3.6667f, 8.0f)
+                    curveTo(4.0f, 8.1492f, 3.8508f, 8.0f, 3.6667f, 8.0f)
                     horizontalLineTo(3.0f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(2.6667f, 5.6667f)
                     curveTo(2.6667f, 5.4826f, 2.8159f, 5.3333f, 3.0f, 5.3333f)
                     horizontalLineTo(3.6667f)
@@ -220,6 +261,10 @@ public val FlagsGroup.Kz: ImageVector
                     curveTo(2.8159f, 6.6667f, 2.6667f, 6.5174f, 2.6667f, 6.3333f)
                     verticalLineTo(5.6667f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFFFCD4B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(3.0f, 2.6667f)
                     curveTo(2.8159f, 2.6667f, 2.6667f, 2.8159f, 2.6667f, 3.0f)
                     verticalLineTo(3.6667f)

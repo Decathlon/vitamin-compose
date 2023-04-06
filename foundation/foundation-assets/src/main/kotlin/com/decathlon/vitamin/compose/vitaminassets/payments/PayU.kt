@@ -1,7 +1,5 @@
 package com.decathlon.vitamin.compose.vitaminassets.payments
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
@@ -24,7 +22,7 @@ public val PaymentsGroup.PayU: ImageVector
         }
         _payU = Builder(name = "PayU", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -66,10 +64,9 @@ public val PaymentsGroup.PayU: ImageVector
                 curveTo(51.0253f, 8.9877f, 50.8918f, 9.1211f, 50.7272f, 9.1211f)
                 close()
             }
-            path(fill = linearGradient(0.0f to Color(0xFFBCCF00), 1.0f to Color(0xFF438F29), start =
-                    Offset(3.61235f,17.203f), end = Offset(3.61235f,36.2951f)), stroke = null,
-                    strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                    strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+            path(fill = SolidColor(Color(0xFFBCCF00)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
                 moveTo(6.492f, 13.2421f)
                 horizontalLineTo(9.717f)
                 curveTo(13.0373f, 13.2421f, 14.5831f, 14.7133f, 14.5814f, 17.869f)

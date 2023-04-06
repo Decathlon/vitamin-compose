@@ -24,51 +24,48 @@ public val FlagsGroup.Cd: ImageVector
         _cd = Builder(name = "Cd", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    curveTo(8.6667f, 0.0f, 19.3333f, 0.0f, 28.0f, 0.0f)
+                    curveTo(28.0001f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF158AFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    curveTo(8.6667f, 0.0f, 19.3333f, 0.0f, 28.0f, 0.0f)
+                    curveTo(28.0001f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFFDD216)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
-                    moveTo(32.3594f, 5.2045f)
-                    lineTo(-2.0929f, 22.7588f)
-                    lineTo(-5.7248f, 15.6308f)
-                    lineTo(28.7275f, -1.9235f)
-                    lineTo(32.3594f, 5.2045f)
+                    moveTo(28.0f, 7.5f)
+                    lineTo(3.5f, 20.0f)
+                    horizontalLineTo(0.0f)
+                    lineTo(0.0f, 12.5f)
+                    lineTo(25.0f, 0.0f)
+                    lineTo(28.0f, 0.0f)
+                    verticalLineTo(7.5f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFCE1120)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(32.1216f, 3.7738f)
-                    lineToRelative(-34.4523f, 17.5543f)
-                    lineToRelative(-2.4213f, -4.752f)
-                    lineToRelative(34.4523f, -17.5543f)
+                    moveTo(28.0f, 6.0f)
+                    lineTo(0.5f, 20.0f)
+                    horizontalLineTo(0.0f)
+                    lineTo(0.0f, 14.0f)
+                    lineTo(27.5f, 0.0f)
+                    lineTo(28.0f, 0.0f)
+                    verticalLineTo(6.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFFDD216)), stroke = null, strokeLineWidth = 0.0f,

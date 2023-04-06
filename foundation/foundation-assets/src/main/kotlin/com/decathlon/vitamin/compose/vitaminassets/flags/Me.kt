@@ -24,27 +24,24 @@ public val FlagsGroup.Me: ImageVector
         _me = Builder(name = "Me", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    curveTo(9.3333f, -1.0E-4f, 18.6667f, 0.0f, 28.0f, 0.0f)
+                    curveTo(28.0f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    lineTo(0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE6BE53)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(0.0f, 0.0f)
-                    horizontalLineToRelative(28.0f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-28.0f)
+                    lineTo(28.0f, 0.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(0.0f)
+                    lineTo(0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE01826)), stroke = null, strokeLineWidth = 0.0f,
@@ -63,7 +60,7 @@ public val FlagsGroup.Me: ImageVector
                 }
                 path(fill = SolidColor(Color(0xFFE6BE53)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
-                        pathFillType = EvenOdd) {
+                        pathFillType = NonZero) {
                     moveTo(13.0233f, 3.6589f)
                     curveTo(12.5532f, 3.8156f, 12.4123f, 4.4123f, 12.7627f, 4.7627f)
                     lineTo(13.1381f, 5.1381f)
@@ -76,14 +73,16 @@ public val FlagsGroup.Me: ImageVector
                     curveTo(14.074f, 3.358f, 13.926f, 3.358f, 13.7892f, 3.4036f)
                     lineTo(13.0233f, 3.6589f)
                     close()
+                }
+                path(fill = SolidColor(Color(0xFFE6BE53)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(14.4716f, 6.8619f)
                     curveTo(14.2112f, 7.1223f, 13.7891f, 7.1223f, 13.5288f, 6.8619f)
-                    lineTo(13.3335f, 6.6667f)
                     lineTo(12.3399f, 5.6731f)
                     curveTo(12.137f, 5.4702f, 11.827f, 5.4199f, 11.5704f, 5.5482f)
                     lineTo(11.4941f, 5.5863f)
                     curveTo(11.0871f, 5.7899f, 10.9991f, 6.3323f, 11.3209f, 6.654f)
-                    lineTo(11.3335f, 6.6667f)
                     lineTo(12.3271f, 7.6602f)
                     curveTo(12.53f, 7.8631f, 12.5803f, 8.1731f, 12.4519f, 8.4298f)
                     lineTo(12.0381f, 9.2574f)
@@ -172,12 +171,10 @@ public val FlagsGroup.Me: ImageVector
                     curveTo(16.0002f, 9.3624f, 15.9872f, 9.3073f, 15.9622f, 9.2574f)
                     lineTo(15.5484f, 8.4298f)
                     curveTo(15.4201f, 8.1731f, 15.4704f, 7.8631f, 15.6733f, 7.6602f)
-                    lineTo(16.6668f, 6.6667f)
                     lineTo(16.6795f, 6.654f)
                     curveTo(17.0012f, 6.3323f, 16.9132f, 5.7899f, 16.5062f, 5.5863f)
                     lineTo(16.4299f, 5.5482f)
                     curveTo(16.1733f, 5.4199f, 15.8633f, 5.4702f, 15.6604f, 5.6731f)
-                    lineTo(14.6668f, 6.6667f)
                     lineTo(14.4716f, 6.8619f)
                     close()
                 }

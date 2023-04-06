@@ -138,7 +138,7 @@ public val PaymentsGroup.Bvr: ImageVector
                 verticalLineTo(2.344f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(2.0f, 21.0f)
@@ -163,7 +163,7 @@ public val PaymentsGroup.Bvr: ImageVector
                 curveTo(49.1591f, 10.3333f, 47.6667f, 8.841f, 47.6667f, 7.0f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(1.0f, 34.0f)
