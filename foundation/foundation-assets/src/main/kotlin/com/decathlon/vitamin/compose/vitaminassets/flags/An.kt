@@ -24,39 +24,37 @@ public val FlagsGroup.An: ImageVector
         _an = Builder(name = "An", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF5F5F5)),
-                        strokeLineWidth = 0.5f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(2.0f, 0.25f)
-                    lineTo(26.0f, 0.25f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 27.75f, 2.0f)
-                    lineTo(27.75f, 18.0f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 26.0f, 19.75f)
-                    lineTo(2.0f, 19.75f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 0.25f, 18.0f)
-                    lineTo(0.25f, 2.0f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 2.0f, 0.25f)
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFD6182D)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(10.6665f, 0.0f)
-                    horizontalLineToRelative(6.6667f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-6.6667f)
+                    horizontalLineTo(17.3332f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(10.6665f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF1425A2)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(0.0f, 6.6667f)
-                    horizontalLineToRelative(28.0f)
-                    verticalLineToRelative(6.6667f)
-                    horizontalLineToRelative(-28.0f)
+                    horizontalLineTo(28.0f)
+                    verticalLineTo(13.3333f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(6.6667f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(11.3332f, 11.6667f)
@@ -70,7 +68,7 @@ public val FlagsGroup.An: ImageVector
                     lineTo(11.3332f, 11.6667f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(16.6667f, 11.6667f)
@@ -84,7 +82,7 @@ public val FlagsGroup.An: ImageVector
                     lineTo(16.6667f, 11.6667f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(8.6667f, 10.3333f)
@@ -98,7 +96,7 @@ public val FlagsGroup.An: ImageVector
                     lineTo(8.6667f, 10.3333f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(19.3332f, 10.3333f)
@@ -112,7 +110,7 @@ public val FlagsGroup.An: ImageVector
                     lineTo(19.3332f, 10.3333f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(14.0002f, 9.0f)

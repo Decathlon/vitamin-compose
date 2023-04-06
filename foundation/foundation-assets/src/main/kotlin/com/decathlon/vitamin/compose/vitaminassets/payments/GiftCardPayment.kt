@@ -26,7 +26,7 @@ public val PaymentsGroup.GiftCardPayment: ImageVector
             group {
             }
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                         strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                         strokeLineMiter = 4.0f, pathFillType = NonZero) {
                     moveTo(3.5614f, 0.5f)

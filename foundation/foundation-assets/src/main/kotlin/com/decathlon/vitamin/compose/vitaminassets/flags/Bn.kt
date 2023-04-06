@@ -24,30 +24,31 @@ public val FlagsGroup.Bn: ImageVector
         _bn = Builder(name = "Bn", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(-0.0f, 2.0f)
+                    curveTo(-0.0f, 0.8954f, 0.8954f, 0.0f, 2.0f, 0.0f)
+                    horizontalLineTo(26.0f)
+                    curveTo(27.1046f, 0.0f, 28.0f, 0.8954f, 28.0f, 2.0f)
+                    verticalLineTo(18.0f)
+                    curveTo(28.0f, 19.1046f, 27.1046f, 20.0f, 26.0f, 20.0f)
+                    horizontalLineTo(2.0f)
+                    curveTo(0.8954f, 20.0f, -0.0f, 19.1046f, -0.0f, 18.0f)
+                    verticalLineTo(2.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFF7E250)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(0.0f, 0.0f)
-                    horizontalLineToRelative(28.0f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-28.0f)
+                    moveTo(-0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(-0.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(-4.1674f, 3.3876f)

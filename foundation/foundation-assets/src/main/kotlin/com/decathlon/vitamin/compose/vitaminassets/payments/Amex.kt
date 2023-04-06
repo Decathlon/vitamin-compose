@@ -35,7 +35,7 @@ public val PaymentsGroup.Amex: ImageVector
                 arcTo(3.5f, 3.5f, 0.0f, false, true, 4.0f, 0.5f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(11.8632f, 28.8937f)

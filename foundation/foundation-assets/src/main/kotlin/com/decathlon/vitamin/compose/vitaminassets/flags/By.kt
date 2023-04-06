@@ -24,18 +24,16 @@ public val FlagsGroup.By: ImageVector
         _by = Builder(name = "By", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    curveTo(0.0f, 0.0f, 0.8955f, 0.0f, 2.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    curveTo(28.0f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(19.3334f, 20.0f, 10.6667f, 20.0f, 2.0f, 20.0f)
+                    curveTo(0.8955f, 20.0f, 0.0f, 20.0f, 0.0f, 20.0f)
+                    lineTo(0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE54252)), stroke = null, strokeLineWidth = 0.0f,
@@ -44,7 +42,7 @@ public val FlagsGroup.By: ImageVector
                     moveTo(0.0f, 13.3333f)
                     horizontalLineTo(28.0f)
                     verticalLineTo(0.0f)
-                    horizontalLineTo(0.0f)
+                    lineTo(0.0f, 0.0f)
                     verticalLineTo(13.3333f)
                     close()
                 }
@@ -55,14 +53,14 @@ public val FlagsGroup.By: ImageVector
                     horizontalLineTo(28.0f)
                     verticalLineTo(13.3333f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(20.0f)
+                    lineTo(0.0f, 20.0f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(0.0f, 0.0f)
-                    horizontalLineTo(4.0f)
+                    lineTo(4.0f, 0.0f)
                     verticalLineTo(3.0002f)
                     lineTo(3.3335f, 4.0f)
                     lineTo(4.0f, 4.9998f)
@@ -77,63 +75,62 @@ public val FlagsGroup.By: ImageVector
                     lineTo(4.0f, 16.9998f)
                     verticalLineTo(20.0f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(0.0f)
+                    lineTo(0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE54252)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
-                    moveTo(-0.6667f, 2.0f)
-                    lineTo(-2.0f, 4.0f)
-                    lineTo(-0.6667f, 6.0f)
-                    lineTo(-2.0f, 8.0f)
-                    lineTo(-0.6667f, 10.0f)
-                    lineTo(-2.0f, 12.0f)
-                    lineTo(-0.6667f, 14.0f)
-                    lineTo(-2.0f, 16.0f)
-                    lineTo(-0.6667f, 18.0f)
+                    moveTo(0.0f, 3.0f)
+                    lineTo(0.0f, 5.0f)
+                    lineTo(0.0f, 9.0f)
+                    lineTo(0.0f, 15.0f)
+                    verticalLineTo(17.0f)
                     lineTo(0.6667f, 16.0f)
-                    lineTo(-0.6667f, 14.0f)
+                    lineTo(0.0f, 15.0f)
+                    verticalLineTo(13.0f)
                     lineTo(0.6667f, 12.0f)
-                    lineTo(-0.6667f, 10.0f)
+                    lineTo(0.0f, 11.0f)
+                    lineTo(0.0f, 9.0f)
                     lineTo(0.6667f, 8.0f)
-                    lineTo(-0.6667f, 6.0f)
+                    lineTo(0.0f, 7.0f)
+                    lineTo(0.0f, 5.0f)
                     lineTo(0.6667f, 4.0f)
-                    lineTo(-0.6667f, 2.0f)
+                    lineTo(0.0f, 3.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE54252)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(0.6665f, 2.0f)
-                    lineTo(1.9998f, 0.0f)
+                    lineTo(2.0f, 0.0f)
                     lineTo(3.3332f, 2.0f)
-                    lineTo(1.9998f, 4.0f)
+                    lineTo(1.9999f, 4.0f)
                     lineTo(0.6665f, 2.0f)
                     close()
-                    moveTo(1.9998f, 8.0f)
+                    moveTo(1.9999f, 8.0f)
                     lineTo(0.6665f, 6.0f)
-                    lineTo(1.9998f, 4.0f)
+                    lineTo(1.9999f, 4.0f)
                     lineTo(3.3332f, 6.0f)
-                    lineTo(1.9998f, 8.0f)
+                    lineTo(1.9999f, 8.0f)
                     close()
-                    moveTo(1.9998f, 12.0f)
+                    moveTo(1.9999f, 12.0f)
                     lineTo(0.6665f, 10.0f)
-                    lineTo(1.9998f, 8.0f)
+                    lineTo(1.9999f, 8.0f)
                     lineTo(3.3332f, 10.0f)
-                    lineTo(1.9998f, 12.0f)
+                    lineTo(1.9999f, 12.0f)
                     close()
-                    moveTo(1.9998f, 16.0f)
+                    moveTo(1.9999f, 16.0f)
                     lineTo(3.3332f, 14.0f)
-                    lineTo(1.9998f, 12.0f)
+                    lineTo(1.9999f, 12.0f)
                     lineTo(0.6665f, 14.0f)
-                    lineTo(1.9998f, 16.0f)
+                    lineTo(1.9999f, 16.0f)
                     close()
-                    moveTo(1.9998f, 16.0f)
+                    moveTo(1.9999f, 16.0f)
                     lineTo(3.3332f, 18.0f)
-                    lineTo(1.9998f, 20.0f)
+                    lineTo(2.0f, 20.0f)
                     lineTo(0.6665f, 18.0f)
-                    lineTo(1.9998f, 16.0f)
+                    lineTo(1.9999f, 16.0f)
                     close()
                 }
             }

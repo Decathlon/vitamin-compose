@@ -22,7 +22,7 @@ public val PaymentsGroup.Ideal: ImageVector
         }
         _ideal = Builder(name = "Ideal", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -36,7 +36,7 @@ public val PaymentsGroup.Ideal: ImageVector
                 arcTo(3.5f, 3.5f, 0.0f, false, true, 4.0f, 0.5f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(10.7f, 3.6999f)

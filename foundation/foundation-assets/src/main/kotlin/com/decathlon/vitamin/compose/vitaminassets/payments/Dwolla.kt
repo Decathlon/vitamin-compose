@@ -1,7 +1,5 @@
 package com.decathlon.vitamin.compose.vitaminassets.payments
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
@@ -24,7 +22,7 @@ public val PaymentsGroup.Dwolla: ImageVector
         }
         _dwolla = Builder(name = "Dwolla", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -59,6 +57,28 @@ public val PaymentsGroup.Dwolla: ImageVector
                 curveTo(27.0222f, 25.5857f, 26.4464f, 25.7049f, 25.9509f, 25.9428f)
                 curveTo(25.4548f, 26.1813f, 25.043f, 26.5013f, 24.7151f, 26.9033f)
                 close()
+                moveTo(24.7093f, 31.2834f)
+                curveTo(24.8302f, 31.7247f, 25.0176f, 32.1189f, 25.2715f, 32.4663f)
+                curveTo(25.525f, 32.8139f, 25.851f, 33.093f, 26.2493f, 33.304f)
+                curveTo(26.6476f, 33.5145f, 27.1237f, 33.6201f, 27.6781f, 33.6201f)
+                curveTo(28.2326f, 33.6201f, 28.7069f, 33.5145f, 29.1011f, 33.304f)
+                curveTo(29.4952f, 33.0932f, 29.8194f, 32.8141f, 30.0729f, 32.4663f)
+                curveTo(30.327f, 32.1189f, 30.5142f, 31.7247f, 30.6355f, 31.2834f)
+                curveTo(30.7558f, 30.8465f, 30.8168f, 30.3955f, 30.8167f, 29.9424f)
+                curveTo(30.8167f, 29.4817f, 30.7565f, 29.033f, 30.6355f, 28.5958f)
+                curveTo(30.5144f, 28.1586f, 30.327f, 27.7663f, 30.0729f, 27.4187f)
+                curveTo(29.8194f, 27.0715f, 29.4952f, 26.7921f, 29.1011f, 26.5814f)
+                curveTo(28.7069f, 26.3705f, 28.2326f, 26.2653f, 27.6781f, 26.2653f)
+                curveTo(27.1237f, 26.2653f, 26.6476f, 26.3705f, 26.2493f, 26.5814f)
+                curveTo(25.851f, 26.7921f, 25.525f, 27.0715f, 25.2715f, 27.4187f)
+                curveTo(25.0176f, 27.7663f, 24.8302f, 28.1586f, 24.7093f, 28.5958f)
+                curveTo(24.5879f, 29.0343f, 24.5268f, 29.4874f, 24.5277f, 29.9424f)
+                curveTo(24.5277f, 30.3953f, 24.5879f, 30.8425f, 24.7093f, 31.2834f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF2D2D48)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
                 moveTo(11.768f, 26.833f)
                 curveTo(11.1238f, 26.1498f, 10.1654f, 25.7927f, 8.8927f, 25.7616f)
                 horizontalLineTo(6.0f)
@@ -81,6 +101,10 @@ public val PaymentsGroup.Dwolla: ImageVector
                 curveTo(11.6057f, 31.992f, 11.3991f, 32.3551f, 11.118f, 32.6362f)
                 curveTo(10.8371f, 32.9173f, 10.4796f, 33.1222f, 10.0464f, 33.2509f)
                 close()
+            }
+            path(fill = SolidColor(Color(0xFF2D2D48)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
                 moveTo(13.7997f, 25.7616f)
                 lineTo(15.6971f, 33.0814f)
                 horizontalLineTo(15.7206f)
@@ -99,24 +123,10 @@ public val PaymentsGroup.Dwolla: ImageVector
                 lineTo(12.9447f, 25.7616f)
                 horizontalLineTo(13.7997f)
                 close()
-                moveTo(24.7093f, 31.2834f)
-                curveTo(24.8302f, 31.7247f, 25.0176f, 32.1189f, 25.2715f, 32.4663f)
-                curveTo(25.525f, 32.8139f, 25.851f, 33.093f, 26.2493f, 33.304f)
-                curveTo(26.6476f, 33.5145f, 27.1237f, 33.6201f, 27.6781f, 33.6201f)
-                curveTo(28.2326f, 33.6201f, 28.7069f, 33.5145f, 29.1011f, 33.304f)
-                curveTo(29.4952f, 33.0932f, 29.8194f, 32.8141f, 30.0729f, 32.4663f)
-                curveTo(30.327f, 32.1189f, 30.5142f, 31.7247f, 30.6355f, 31.2834f)
-                curveTo(30.7558f, 30.8465f, 30.8168f, 30.3955f, 30.8167f, 29.9424f)
-                curveTo(30.8167f, 29.4817f, 30.7565f, 29.033f, 30.6355f, 28.5958f)
-                curveTo(30.5144f, 28.1586f, 30.327f, 27.7663f, 30.0729f, 27.4187f)
-                curveTo(29.8194f, 27.0715f, 29.4952f, 26.7921f, 29.1011f, 26.5814f)
-                curveTo(28.7069f, 26.3705f, 28.2326f, 26.2653f, 27.6781f, 26.2653f)
-                curveTo(27.1237f, 26.2653f, 26.6476f, 26.3705f, 26.2493f, 26.5814f)
-                curveTo(25.851f, 26.7921f, 25.525f, 27.0715f, 25.2715f, 27.4187f)
-                curveTo(25.0176f, 27.7663f, 24.8302f, 28.1586f, 24.7093f, 28.5958f)
-                curveTo(24.5879f, 29.0343f, 24.5268f, 29.4874f, 24.5277f, 29.9424f)
-                curveTo(24.5277f, 30.3953f, 24.5879f, 30.8425f, 24.7093f, 31.2834f)
-                close()
+            }
+            path(fill = SolidColor(Color(0xFF2D2D48)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
                 moveTo(33.4164f, 33.4441f)
                 verticalLineTo(25.7616f)
                 horizontalLineTo(32.6202f)
@@ -125,6 +135,10 @@ public val PaymentsGroup.Dwolla: ImageVector
                 verticalLineTo(33.4441f)
                 horizontalLineTo(33.4164f)
                 close()
+            }
+            path(fill = SolidColor(Color(0xFF2D2D48)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
                 moveTo(39.7055f, 25.7616f)
                 verticalLineTo(33.4441f)
                 horizontalLineTo(44.3236f)
@@ -135,8 +149,6 @@ public val PaymentsGroup.Dwolla: ImageVector
                 lineTo(49.707f, 31.5236f)
                 horizontalLineTo(45.9008f)
                 lineTo(44.8936f, 34.1235f)
-                horizontalLineTo(44.3901f)
-                horizontalLineTo(44.0505f)
                 horizontalLineTo(38.9092f)
                 verticalLineTo(25.7616f)
                 horizontalLineTo(39.7055f)
@@ -147,10 +159,9 @@ public val PaymentsGroup.Dwolla: ImageVector
                 horizontalLineTo(49.4377f)
                 close()
             }
-            path(fill = linearGradient(0.0f to Color(0xFFF3904A), 0.999f to Color(0xFFAA437F), start
-                    = Offset(28.1613f,28.003f), end = Offset(43.5566f,16.0335f)), stroke = null,
-                    strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                    strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+            path(fill = SolidColor(Color(0xFFF3904A)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
                 moveTo(29.3509f, 5.1304f)
                 lineTo(35.6899f, 8.7901f)
                 curveTo(35.9911f, 8.964f, 36.1765f, 9.2853f, 36.1763f, 9.633f)

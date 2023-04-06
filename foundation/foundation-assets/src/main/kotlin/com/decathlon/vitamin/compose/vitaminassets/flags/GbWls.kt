@@ -1,12 +1,10 @@
 package com.decathlon.vitamin.compose.vitaminassets.flags
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin
@@ -26,10 +24,9 @@ public val FlagsGroup.GbWls: ImageVector
         _gbWls = Builder(name = "GbWls", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp,
                 viewportWidth = 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0f,0.0f), end = Offset(14.0f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.0f, 0.0f)
                     horizontalLineTo(0.0f)
                     verticalLineTo(20.0f)
@@ -37,32 +34,29 @@ public val FlagsGroup.GbWls: ImageVector
                     verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF3ACC55), 1.0f to Color(0xFF28A940),
-                        start = Offset(14.0f,9.33334f), end = Offset(14.0f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF3ACC55)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.0f, 9.3333f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(20.0f)
+                    lineTo(0.0f, 20.0f)
                     horizontalLineTo(28.0f)
                     verticalLineTo(9.3333f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0f,0.0f), end = Offset(14.0f,9.33333f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.0f, 0.0f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(9.3333f)
+                    lineTo(0.0f, 9.3333f)
                     horizontalLineTo(28.0f)
                     verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFE91C44), 1.0f to Color(0xFFD20F35),
-                        start = Offset(13.6403f,2.51562f), end = Offset(13.6403f,16.0911f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFE91C44)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(10.755f, 15.1945f)
                     lineTo(12.4033f, 14.9136f)
                     lineTo(11.127f, 14.3117f)
@@ -178,6 +172,20 @@ public val FlagsGroup.GbWls: ImageVector
                     curveTo(21.7821f, 7.5527f, 21.6328f, 7.4035f, 21.4487f, 7.4035f)
                     curveTo(21.2646f, 7.4035f, 21.1154f, 7.5527f, 21.1154f, 7.7368f)
                     curveTo(21.1154f, 7.9209f, 21.2646f, 8.0702f, 21.4487f, 8.0702f)
+                    close()
+                }
+                path(fill = SolidColor(Color(0xFF8996A2)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(28.0f, 0.0f)
+                    verticalLineTo(9.3218f)
+                    horizontalLineTo(27.5f)
+                    verticalLineTo(0.5f)
+                    horizontalLineTo(0.5f)
+                    lineTo(0.5f, 9.3218f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(0.0f)
+                    horizontalLineTo(28.0f)
                     close()
                 }
             }

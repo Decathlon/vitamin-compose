@@ -67,7 +67,7 @@ public val PaymentsGroup.PostFinance: ImageVector
                 curveTo(55.7337f, 39.0f, 57.0f, 37.6527f, 57.0f, 36.5137f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(46.4453f, 11.5012f)

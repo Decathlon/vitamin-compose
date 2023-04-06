@@ -22,7 +22,7 @@ public val PaymentsGroup.UnionPay: ImageVector
         }
         _unionPay = Builder(name = "UnionPay", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -82,7 +82,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 curveTo(17.8576f, 34.3044f, 16.9192f, 33.0859f, 17.2649f, 31.5885f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(26.4902f, 22.6519f)
@@ -173,7 +173,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 verticalLineTo(25.4765f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(17.8252f, 17.6873f)
@@ -195,7 +195,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 lineTo(17.8252f, 17.6873f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(23.7284f, 15.9431f)
@@ -211,7 +211,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 lineTo(24.0749f, 14.5016f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(25.8037f, 19.5987f)
@@ -241,7 +241,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 curveTo(26.7414f, 19.0633f, 26.9191f, 19.1288f, 27.1529f, 19.1288f)
                 curveTo(27.4591f, 19.1288f, 27.7075f, 19.0243f, 27.9016f, 18.8151f)
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(36.5597f, 22.6853f)
@@ -328,7 +328,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 lineTo(40.6354f, 23.3769f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(19.12f, 15.9417f)
@@ -350,7 +350,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 lineTo(19.12f, 15.9417f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(30.5052f, 15.9417f)
@@ -371,7 +371,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 horizontalLineTo(29.7045f)
                 lineTo(30.5052f, 15.9417f)
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(35.4166f, 13.4879f)
@@ -398,7 +398,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 horizontalLineTo(36.5285f)
                 lineTo(36.1376f, 16.4673f)
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(46.015f, 20.6667f)
@@ -414,7 +414,7 @@ public val PaymentsGroup.UnionPay: ImageVector
                 horizontalLineTo(48.3733f)
                 lineTo(46.015f, 20.6667f)
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = EvenOdd) {
                 moveTo(42.7355f, 16.2652f)

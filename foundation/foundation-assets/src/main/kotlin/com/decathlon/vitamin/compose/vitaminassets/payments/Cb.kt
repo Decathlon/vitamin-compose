@@ -1,9 +1,8 @@
 package com.decathlon.vitamin.compose.vitaminassets.payments
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
@@ -23,20 +22,37 @@ public val PaymentsGroup.Cb: ImageVector
         }
         _cb = Builder(name = "Cb", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp, viewportWidth =
                 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = linearGradient(0.0f to Color(0xFF222E72), 0.591647f to Color(0xFF40CBFF),
-                    1.0f to Color(0xFF3CB792), start = Offset(15.7319f,-5.06532f), end =
-                    Offset(1.63672f,38.2044f)), stroke = SolidColor(Color(0xFFF1F1F1)),
-                    strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                    strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                moveTo(3.0f, 0.5f)
-                lineTo(55.0f, 0.5f)
-                arcTo(2.5f, 2.5f, 0.0f, false, true, 57.5f, 3.0f)
-                lineTo(57.5f, 37.0f)
-                arcTo(2.5f, 2.5f, 0.0f, false, true, 55.0f, 39.5f)
-                lineTo(3.0f, 39.5f)
-                arcTo(2.5f, 2.5f, 0.0f, false, true, 0.5f, 37.0f)
-                lineTo(0.5f, 3.0f)
-                arcTo(2.5f, 2.5f, 0.0f, false, true, 3.0f, 0.5f)
+            path(fill = SolidColor(Color(0xFF2F3093)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(0.0f, 4.0f)
+                curveTo(0.0f, 1.7909f, 1.7909f, 0.0f, 4.0f, 0.0f)
+                horizontalLineTo(54.0f)
+                curveTo(56.2091f, 0.0f, 58.0f, 1.7909f, 58.0f, 4.0f)
+                verticalLineTo(13.0f)
+                horizontalLineTo(0.0f)
+                verticalLineTo(4.0f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF006618)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(0.0f, 26.0f)
+                horizontalLineTo(58.0f)
+                verticalLineTo(36.0f)
+                curveTo(58.0f, 37.6569f, 56.6569f, 39.0f, 55.0f, 39.0f)
+                horizontalLineTo(3.0f)
+                curveTo(1.3432f, 39.0f, 0.0f, 37.6569f, 0.0f, 36.0f)
+                verticalLineTo(26.0f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFF20A2E4)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(0.0f, 10.0f)
+                horizontalLineToRelative(58.0f)
+                verticalLineToRelative(20.0f)
+                horizontalLineToRelative(-58.0f)
                 close()
             }
             path(fill = SolidColor(Color(0xFFFEFEFE)), stroke = null, strokeLineWidth = 0.0f,
@@ -81,6 +97,30 @@ public val PaymentsGroup.Cb: ImageVector
                 horizontalLineTo(40.6607f)
                 curveTo(40.725f, 13.2627f, 40.8f, 13.2683f, 40.8733f, 13.2737f)
                 curveTo(40.919f, 13.277f, 40.964f, 13.2804f, 41.0054f, 13.2804f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFFF3F3F3)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
+                moveTo(54.0f, 1.0f)
+                horizontalLineTo(4.0f)
+                curveTo(2.3431f, 1.0f, 1.0f, 2.3431f, 1.0f, 4.0f)
+                verticalLineTo(36.0f)
+                curveTo(1.0f, 37.6569f, 2.3431f, 39.0f, 4.0f, 39.0f)
+                horizontalLineTo(54.0f)
+                curveTo(55.6569f, 39.0f, 57.0f, 37.6569f, 57.0f, 36.0f)
+                verticalLineTo(4.0f)
+                curveTo(57.0f, 2.3431f, 55.6569f, 1.0f, 54.0f, 1.0f)
+                close()
+                moveTo(4.0f, 0.0f)
+                curveTo(1.7909f, 0.0f, 0.0f, 1.7909f, 0.0f, 4.0f)
+                verticalLineTo(36.0f)
+                curveTo(0.0f, 38.2091f, 1.7909f, 40.0f, 4.0f, 40.0f)
+                horizontalLineTo(54.0f)
+                curveTo(56.2091f, 40.0f, 58.0f, 38.2091f, 58.0f, 36.0f)
+                verticalLineTo(4.0f)
+                curveTo(58.0f, 1.7909f, 56.2091f, 0.0f, 54.0f, 0.0f)
+                horizontalLineTo(4.0f)
                 close()
             }
         }
