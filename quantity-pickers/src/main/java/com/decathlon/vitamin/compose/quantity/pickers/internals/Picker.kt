@@ -45,12 +45,12 @@ internal fun Picker(
 ) {
     Row(
         modifier = Modifier
-            .height(48.dp)
+            .height(sizes.height)
             .then(
                 if (isExpanded) {
                     modifier.fillMaxWidth()
                 } else {
-                    modifier.width(156.dp)
+                    modifier.width(sizes.width)
                 }
             )
     ) {

@@ -3,5 +3,5 @@
     <string name="vtmn_add_button_description">Add</string>
     <string name="vtmn_subtract_button_description">Subtract</string>
 
-    <string name="vtmn_quantity_picker_accessibility_message">Quantity selected: %s.</string>
+    <string name="vtmn_quantity_picker_accessibility_message">Quantity selected: %s</string>
 </resources>
