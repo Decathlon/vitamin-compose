@@ -18,6 +18,7 @@ data class QuantityColors(
     val editTextBorderColor: Color,
     val focusBorderColor: Color,
     val backgroundColor: Color,
+    val helperColor: Color,
     val state: State
 )
 
@@ -30,7 +31,8 @@ object VitaminQuantitiesColors {
         buttonsBorderColor: Color = VitaminTheme.colors.vtmnBorderInactive,
         editTextBorderColor: Color = VitaminTheme.colors.vtmnBorderInactive,
         focusBorderColor: Color = VitaminTheme.colors.vtmnBorderActive,
-        backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundPrimary
+        backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundPrimary,
+        helperColor: Color = VitaminTheme.colors.vtmnContentNegative
     ): QuantityColors =
         remember(
             textColor,
@@ -39,7 +41,8 @@ object VitaminQuantitiesColors {
             buttonsBorderColor,
             editTextBorderColor,
             focusBorderColor,
-            backgroundColor
+            backgroundColor,
+            helperColor
         ) {
             QuantityColors(
                 textColor = textColor,
@@ -49,6 +52,7 @@ object VitaminQuantitiesColors {
                 editTextBorderColor = editTextBorderColor,
                 focusBorderColor = focusBorderColor,
                 backgroundColor = backgroundColor,
+                helperColor = helperColor,
                 state = State.NORMAL
             )
         }
@@ -61,7 +65,8 @@ object VitaminQuantitiesColors {
         buttonsBorderColor: Color = VitaminTheme.colors.vtmnBorderInactive,
         editTextBorderColor: Color = VitaminTheme.colors.vtmnBorderNegative,
         focusBorderColor: Color = VitaminTheme.colors.vtmnBorderNegative,
-        backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundPrimary
+        backgroundColor: Color = VitaminTheme.colors.vtmnBackgroundPrimary,
+        helperColor: Color = VitaminTheme.colors.vtmnContentNegative
     ): QuantityColors =
         remember(
             textColor,
@@ -70,7 +75,8 @@ object VitaminQuantitiesColors {
             buttonsBorderColor,
             editTextBorderColor,
             focusBorderColor,
-            backgroundColor
+            backgroundColor,
+            helperColor
         ) {
             QuantityColors(
                 textColor = textColor,
@@ -80,6 +86,7 @@ object VitaminQuantitiesColors {
                 editTextBorderColor = editTextBorderColor,
                 focusBorderColor = focusBorderColor,
                 backgroundColor = backgroundColor,
+                helperColor = helperColor,
                 state = State.ERROR
             )
         }

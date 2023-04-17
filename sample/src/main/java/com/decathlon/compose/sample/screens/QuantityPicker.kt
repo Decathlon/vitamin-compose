@@ -46,10 +46,18 @@ object QuantityPicker : Screen {
                     QuantityComponent(isExpanded = true)
                 }
                 item {
+                    QuantityComponent(
+                        isExpanded = true,
+                        errorMessage = "Error message goes here",
+                        colors = VitaminQuantitiesColors.error()
+                    )
+                }
+                item {
                     QuantityComponent()
                 }
                 item {
                     QuantityComponent(
+                        errorMessage = "Error message goes here",
                         colors = VitaminQuantitiesColors.error()
                     )
                 }
@@ -59,8 +67,8 @@ object QuantityPicker : Screen {
                         addEnabled = false,
                         subtractEnabled = false,
                         editTextEnabled = false,
-                        onAddClicked = { /*TODO*/ },
-                        onSubtractClicked = { /*TODO*/ },
+                        onAddClicked = { /* nothing */ },
+                        onSubtractClicked = { /* nothing */ },
                         onValueChange = {},
                     )
                 }
@@ -72,7 +80,8 @@ object QuantityPicker : Screen {
 @Composable
 private fun QuantityComponent(
     isExpanded: Boolean = false,
-    colors: QuantityColors = VitaminQuantitiesColors.normal()
+    colors: QuantityColors = VitaminQuantitiesColors.normal(),
+    errorMessage: String? = null
 ) {
     var quantity by remember { mutableStateOf("1") }
     VitaminQuantityPickers.Primary(
@@ -93,7 +102,8 @@ private fun QuantityComponent(
             if (quantity.isNotEmpty()) {
                 quantity = quantity.toIntOrNull()?.let { it - 1 }.toString()
             }
-        }
+        },
+        helperText = errorMessage
     ) {
         if (it.isDigitsOnly()) {
             quantity = it

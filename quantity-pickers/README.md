@@ -25,11 +25,11 @@ object VitaminQuantityPickers {
         subtractEnabled: Boolean = true,
         editTextEnabled: Boolean = true,
         isExpanded: Boolean = false,
+        helperText: String? = null,
         keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         colors: QuantityColors = VitaminQuantitiesColors.normal(),
-        shape: CornerBasedShape = VitaminTheme.shapes.radius100,
-        textStyle: TextStyle = VitaminTheme.typography.text2,
+        sizes: QuantitySizes = VitaminQuantitiesSizes.primary(),
         ripple: RippleTheme = VitaminTheme.ripples.brand,
         onAddClicked: () -> Unit,
         onSubtractClicked: () -> Unit,
@@ -59,11 +59,11 @@ Parameters | Descriptions
 `subtractEnabled: (Boolean)` | Whether substract button is enable or not
 `editTextEnabled: (Boolean)` | Whether textField is enable or not
 `isExpanded: Boolean = false` | If true, component will fill max width, otherwise get default width
+`helperText: String? = null` | Helper text displayed at the QuantityPicker's bottom
 `keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)` | Software keyboard options that contains such as KeyboardType and ImeAction
 `keyboardActions: KeyboardActions = KeyboardActions.Default` | When the text input emit an IME action, the corresponding callback is called
 `colors: QuantityColors = VitaminQuantitiesColors.normal()` | The color to notify your user if they are in normal or error state
-`shape: CornerBasedShape = VitaminTheme.shapes.radius100` | The shape for icon buttons
-`textStyle: TextStyle = VitaminTheme.typography.text2` | The typography of the text inside the text input
+`sizes: QuantitySizes = VitaminQuantitiesSizes.primary()` | Sizes to be applied to the QuantityPicker
 `ripple: RippleTheme = VitaminTheme.ripples.brand` | The ripple effect applied on buttons
 `onAddClicked: (Boolean) -> Unit` | The callback to be called when add button is clicked
 `onSubtractClicked: (Boolean) -> Unit` | The callback to be called when substract button is clicked
