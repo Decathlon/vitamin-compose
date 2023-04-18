@@ -97,6 +97,7 @@ import com.decathlon.vitamin.compose.vitaminicons.line.Google
 import com.decathlon.vitamin.compose.vitaminicons.line.Grid
 import com.decathlon.vitamin.compose.vitaminicons.line.Group
 import com.decathlon.vitamin.compose.vitaminicons.line.Hail
+import com.decathlon.vitamin.compose.vitaminicons.line.HearingImpairment
 import com.decathlon.vitamin.compose.vitaminicons.line.Heart
 import com.decathlon.vitamin.compose.vitaminicons.line.HeartPulse
 import com.decathlon.vitamin.compose.vitaminicons.line.History
@@ -248,31 +249,31 @@ public val LineGroup.AllAssets: ____KtList<ImageVector>
     if (__AllAssets != null) {
       return __AllAssets!!
     }
-    __AllAssets= listOf(Counter, Eye, MoneyEuroBox, Leaf, Google, ChevronRight, Music,
-        ArrowGoForward, Exchange, ArrowDown, ExternalLink, Calendar, More, Mail, Mic, Package,
-        SecurePayment, LineChart, EmotionNormal, Task, EmotionSad, Rocket, EmotionLaugh, Link, Mist,
-        MapPin, Navigation, WifiOff, Printer, ArrowUpCircle, ArrowLeftRight, ZoomOut, Train, WifiOn,
-        Viber, PieChart, Gift, ArrowLeftCircle, ArrowLeft, CloseCircle, ChevronUp, Visa, Mastercard,
-        Seed3, History, MoneyDollarBox, ArrowUpDown, Windy, Recycle, Cloud, HeartPulse, Refund,
-        Earth, Calendar2, Macbook, Youtube, SendPlane2, MailSend, Distance, Repeat, Settings, Image,
-        Notification, SelectedByDecathlon, ThumbUp, Function, Information, Filter, Chrome, Tiktok,
-        Search, Music2, Fullscreen, Pause, Apple, Mac, Smartphone, ShieldCheck, PauseCircle,
-        ArrowRightCircle, Football, Instagram, Emotion, Car, Unlink, SendPlane, TempHot, Barcode,
-        Home, MoneyCnyBox, ShareIos, Lightbulb, PriceTag, Drizzle, Snapchat, Star, Truck, Slack,
-        Seed2, Moon, Sparkles, Feedback, Group, Menu, Suitcase, Hourglass, Phone, Line, Bill,
-        Trophy, ArrowUp, CheckboxCircle, CalendarDate, VolumeAlert, ErrorWarning, Naver, User,
-        Award, Messenger, Amazon, MoonCloudy, ShoppingBag, Ruler, Android, Add, Database, Hail,
-        Scales, Download, Wallet, Fire, File, ChevronDown, Accessibility, Equalizer, ChevronLeft,
-        Time, ShareAndroid, Tablet, SunCloudy, BodyScan, ShutDown, CheckboxBlankCircle, KakaoTalk,
-        Timer, CloudWindy, Whatsapp, Run, Attachment, CustomerService, Stop, ShoppingCart,
-        ListCheck, StopCircle, ListSettings, ArrowGoBack, Rss, VolumeUp, ZoomIn, StarHalf, Keyboard,
-        More2, CheckboxMultiple, Message, FilterOff, DeleteBin, ThumbDown, EyeOff, Camera, Telegram,
-        Seed1, Refresh, QrScan, Showers, Share, PlayCircle, ArrowDownCircle, ArrowRightDown,
-        TempCold, ArrowRightUp, Heart, Walk, Focus, Ie, FileCopy, Upload, CheckboxBlank, Question,
-        AddCircle, Firefox, Check, Subtract, VolumeDown, ArrowRight, Safari, Checkbox,
-        EmotionUnhappy, RadioButton, Rainy, Store, Pinterest, Drive, Flashlight, BarChart,
-        Thunderstorms, Forbid, TShirt, Close, ArrowLeftDown, Lock, MoneyPoundBox, CalendarCheck,
-        Play, ArrowLeftUp, Foggy, Return, Direction, Snowy, Tools, LoyaltyCard, Grid, BankCard,
-        Edit, Riding, Sun, Github, Facebook, Film, Logout, VolumeMute, Twitter, Alert)
+    __AllAssets= listOf(More2, VolumeUp, ThumbUp, Rss, File, ShieldCheck, Exchange, Distance,
+        Feedback, BodyScan, VolumeMute, ShoppingCart, Counter, SelectedByDecathlon, Pinterest,
+        SecurePayment, Tablet, Pause, Foggy, Drizzle, Heart, Emotion, ZoomIn, BankCard, Stop,
+        Unlink, Tiktok, Flashlight, EyeOff, CheckboxMultiple, Chrome, EmotionNormal, Home, Printer,
+        ArrowLeftCircle, Twitter, Suitcase, Keyboard, Download, Snapchat, Smartphone, Music2, Lock,
+        CloseCircle, ExternalLink, Menu, DeleteBin, Facebook, CheckboxBlank, CustomerService, Seed2,
+        PlayCircle, Fullscreen, CheckboxBlankCircle, Share, Sun, Database, ArrowRight, Calendar2,
+        Showers, LoyaltyCard, Firefox, Time, RadioButton, Edit, Messenger, ArrowUpDown, ThumbDown,
+        Recycle, Trophy, ShareIos, Hourglass, Accessibility, ListCheck, ArrowDown, ArrowRightUp,
+        Barcode, Mic, Camera, Viber, Telegram, Hail, SendPlane2, Macbook, Repeat, Add, Image,
+        Package, Function, More, Football, ArrowUp, Rainy, Grid, ArrowLeftDown, MoneyDollarBox,
+        PriceTag, ArrowGoForward, MoneyPoundBox, Mac, QrScan, Windy, ArrowLeft, Music, Settings,
+        MoneyCnyBox, Focus, ChevronRight, TempCold, Message, ShareAndroid, VolumeDown, ArrowGoBack,
+        EmotionSad, Search, Eye, Award, MailSend, Bill, Whatsapp, Youtube, Alert, Seed1, StopCircle,
+        Navigation, Check, Instagram, Safari, Wallet, CalendarDate, Riding, Rocket, Attachment,
+        TShirt, HearingImpairment, Fire, TempHot, WifiOff, ArrowRightDown, Apple, Line, Scales, Run,
+        PauseCircle, Subtract, EmotionUnhappy, KakaoTalk, Visa, VolumeAlert, SunCloudy, BarChart,
+        Question, Cloud, MapPin, Play, Ie, Train, Google, Information, Star, ArrowLeftRight, Earth,
+        Task, AddCircle, Moon, ArrowUpCircle, ListSettings, Tools, Close, Snowy, Notification, Film,
+        Walk, ArrowLeftUp, Amazon, Github, Timer, Car, Direction, Slack, Seed3, Checkbox,
+        CheckboxCircle, ErrorWarning, MoneyEuroBox, MoonCloudy, ChevronDown, Truck, HeartPulse,
+        EmotionLaugh, Naver, Return, Forbid, Thunderstorms, Logout, Gift, CloudWindy, CalendarCheck,
+        Link, Filter, Drive, LineChart, Ruler, Android, FileCopy, PieChart, Upload, Mastercard,
+        Sparkles, ChevronLeft, User, Mist, Mail, Group, Phone, ZoomOut, Lightbulb, ArrowDownCircle,
+        WifiOn, Store, Leaf, Refund, Calendar, Refresh, ChevronUp, StarHalf, Equalizer, ShoppingBag,
+        History, FilterOff, SendPlane, ShutDown, ArrowRightCircle)
     return __AllAssets!!
   }

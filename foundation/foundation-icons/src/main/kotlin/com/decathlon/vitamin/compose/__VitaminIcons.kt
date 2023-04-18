@@ -15,6 +15,6 @@ public val VitaminIcons.AllAssets: ____KtList<ImageVector>
     if (__AllAssets != null) {
       return __AllAssets!!
     }
-    __AllAssets= Line.AllAssets + Fill.AllAssets + listOf()
+    __AllAssets= Fill.AllAssets + Line.AllAssets + listOf()
     return __AllAssets!!
   }
