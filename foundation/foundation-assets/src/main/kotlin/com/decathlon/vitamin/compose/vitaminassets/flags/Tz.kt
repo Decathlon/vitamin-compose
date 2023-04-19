@@ -27,22 +27,22 @@ public val FlagsGroup.Tz: ImageVector
                 path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(-1.0E-4f, -0.0f)
-                    curveTo(-1.0E-4f, -0.0f, 0.8953f, -0.0f, 1.9999f, -0.0f)
+                    moveTo(-1.0E-4f, 0.0f)
+                    curveTo(-1.0E-4f, 0.0f, 0.8953f, 0.0f, 1.9999f, 0.0f)
                     horizontalLineTo(25.9999f)
-                    curveTo(27.1045f, -0.0f, 27.9999f, -0.0f, 27.9999f, -0.0f)
+                    curveTo(27.1045f, 0.0f, 27.9999f, 0.0f, 27.9999f, 0.0f)
                     verticalLineTo(20.0f)
                     curveTo(27.9999f, 20.0f, 27.1045f, 20.0f, 25.9999f, 20.0f)
                     horizontalLineTo(1.9999f)
                     curveTo(0.8954f, 20.0f, -1.0E-4f, 20.0f, -1.0E-4f, 20.0f)
-                    verticalLineTo(-0.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF33CC4D)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(-1.0E-4f, 13.3333f)
-                    lineTo(27.9999f, -0.0f)
+                    lineTo(27.9999f, 0.0f)
                     horizontalLineTo(-1.0E-4f)
                     verticalLineTo(13.3333f)
                     close()
@@ -61,7 +61,7 @@ public val FlagsGroup.Tz: ImageVector
                         pathFillType = EvenOdd) {
                     moveTo(7.3654f, 20.0078f)
                     lineTo(28.012f, 7.0656f)
-                    lineTo(27.9999f, -0.0f)
+                    lineTo(27.9999f, 0.0f)
                     lineTo(20.7164f, -0.0216f)
                     lineTo(-0.0165f, 12.9531f)
                     lineTo(-1.0E-4f, 20.0f)
@@ -73,7 +73,7 @@ public val FlagsGroup.Tz: ImageVector
                         pathFillType = EvenOdd) {
                     moveTo(4.3123f, 19.992f)
                     lineTo(28.012f, 5.1255f)
-                    lineTo(27.9999f, -0.0f)
+                    lineTo(27.9999f, 0.0f)
                     lineTo(23.779f, -0.0055f)
                     lineTo(-0.0209f, 14.8212f)
                     lineTo(-1.0E-4f, 20.0f)
