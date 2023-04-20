@@ -61,6 +61,13 @@ class VitaminTextInputsPrimaryTest(
                             modifier = Modifier.fillMaxWidth(),
                             variant = variant,
                             colors = TextInputsState.normal(),
+                            enabled = false,
+                            value = "input"
+                        )
+                        TextInputVariantsFactory.TextInput(
+                            modifier = Modifier.fillMaxWidth(),
+                            variant = variant,
+                            colors = TextInputsState.normal(),
                             icon = {
                                 Icon(
                                     painter = painter,
@@ -81,6 +88,20 @@ class VitaminTextInputsPrimaryTest(
 
                             },
                             enabled = false
+                        )
+                        TextInputVariantsFactory.TextInput(
+                            modifier = Modifier.fillMaxWidth(),
+                            variant = variant,
+                            colors = TextInputsState.normal(),
+                            icon = {
+                                Icon(
+                                    painter = painter,
+                                    contentDescription = null
+                                )
+
+                            },
+                            enabled = false,
+                            value = "input"
                         )
                     }
                 }
@@ -111,6 +132,13 @@ class VitaminTextInputsPrimaryTest(
                             colors = TextInputsState.success(),
                             enabled = false
                         )
+                        TextInputVariantsFactory.TextInput(
+                            modifier = Modifier.fillMaxWidth(),
+                            variant = variant,
+                            colors = TextInputsState.success(),
+                            enabled = false,
+                            value = "input"
+                        )
                     }
                 }
             }
@@ -139,6 +167,13 @@ class VitaminTextInputsPrimaryTest(
                             variant = variant,
                             colors = TextInputsState.error(),
                             enabled = false
+                        )
+                        TextInputVariantsFactory.TextInput(
+                            modifier = Modifier.fillMaxWidth(),
+                            variant = variant,
+                            colors = TextInputsState.error(),
+                            enabled = false,
+                            value = "input"
                         )
                     }
                 }
