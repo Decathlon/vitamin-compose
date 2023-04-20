@@ -96,7 +96,7 @@ object VitaminTextInputs {
                         cursorColor = VitaminTheme.colors.vtmnContentAction,
                         errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
                         textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnActiveTertiary.copy(ContentAlpha.disabled),
+                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
                         focusedBorderColor = colors.focusBorderColor,
                         unfocusedBorderColor = colors.borderColor,
                         disabledBorderColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
@@ -265,7 +265,7 @@ object VitaminTextInputs {
                         cursorColor = VitaminTheme.colors.vtmnContentAction,
                         errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
                         textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnActiveTertiary.copy(ContentAlpha.disabled),
+                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
                         focusedIndicatorColor = colors.focusBorderColor,
                         unfocusedIndicatorColor = colors.borderColor,
                         disabledIndicatorColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
