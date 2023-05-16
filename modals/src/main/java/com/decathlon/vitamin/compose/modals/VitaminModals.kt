@@ -26,8 +26,8 @@ object VitaminModals {
      * @param neutralButton The optional neutral button to be displayed at the bottom of the modal
      */
     @Deprecated(
-        message = "Please use Acknowledge or Confirmation variant.",
-        replaceWith = ReplaceWith("Confirmation")
+        message = "Please use other Primary implementations.",
+        replaceWith = ReplaceWith("Primary")
     )
     @Composable
     fun Primary(
@@ -44,18 +44,29 @@ object VitaminModals {
         negativeButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
         neutralButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
     ) {
-        val rightButton = positiveButton ?: negativeButton ?: neutralButton
-        val middleButton = when {
+        // To avoid incorrect display of buttons, we need to display them from right to left
+        // If only one button is needed (positive, negative or neutral) -> display one button as confirmationButton
+        // If two buttons are defined -> display the first one as confirmationButton (positive or negative,
+        // in this order) & the other as dismissButton
+        // If three buttons are defined -> display positiveButton as confirmationButton, negativeButton as dismissButton
+        // & neutralButton as thirdButton
+
+        // We get the rightmost button as confirmationButton
+        val confirmationButton = positiveButton ?: negativeButton ?: neutralButton
+        // We get the rightmost button (exclude the confirmationButton) as dismissButton
+        val dismissButton = when {
             positiveButton != null -> negativeButton ?: neutralButton
             negativeButton != null -> neutralButton
             else -> null
         }
-        val leftButton = when {
+        // We get the last button as thirdButton
+        val thirdButton = when {
             positiveButton != null && negativeButton != null -> neutralButton
             else -> null
         }
         when {
-            (middleButton == null) -> Acknowledge(
+            // In this case, we have only one button or no button
+            (dismissButton == null) -> Primary(
                 content = content,
                 onDismissRequest = onDismissRequest,
                 modifier = modifier,
@@ -64,13 +75,14 @@ object VitaminModals {
                 contentScrollState = contentScrollState,
                 colors = colors,
                 sizes = sizes,
-                button = rightButton,
+                button = confirmationButton,
             )
-            else -> Confirmation(
+            // In this cas, we have at least two buttons
+            else -> Primary(
                 content = content,
                 onDismissRequest = onDismissRequest,
-                rightButton = rightButton!!,
-                middleButton = middleButton,
+                confirmationButton = confirmationButton!!,
+                dismissButton = dismissButton,
                 modifier = modifier,
                 title = title,
                 painter = iconRes?.let { painterResource(id = it) },
@@ -78,17 +90,20 @@ object VitaminModals {
                 contentScrollState = contentScrollState,
                 colors = colors,
                 sizes = sizes,
-                leftButton = leftButton,
+                thirdButton = thirdButton,
             )
         }
     }
 
     /**
-     * The [Confirmation] modal used to ask for decision.
+     * This implementation will be use to validate an action or request information from the user
+     * In this case, two buttons are mandatory. One must be a confirming action, and the other a dismissing action.
+     * Providing a third action, such as "Learn more" is not recommended as it navigates the user away from the dialog,
+     * leaving the dialog task unfinished.
      * @param content The content to be displayed below the title
      * @param onDismissRequest The callback to be called when the user need to dismiss the modal
-     * @param rightButton The button used to confirm the action
-     * @param middleButton The button used to dismiss the action
+     * @param confirmationButton The button used to confirm the action
+     * @param dismissButton The button used to dismiss the action
      * @param modifier The [Modifier] to be applied to the component
      * @param title The optional title to be displayed at the top of the modal
      * @param painter The optional leading icon to be displayed at the start of the title
@@ -96,14 +111,14 @@ object VitaminModals {
      * @param contentScrollState The optional scroll state to observe the scrolling
      * @param colors The optional sizes used to define colors of icon, title, content and background of the modal
      * @param sizes The optional sizes used to define modal padding, spacers sizes and icon size
-     * @param leftButton The optional button used to display a third action
+     * @param thirdButton The optional button used to display a third action (Not recommended).
      */
     @Composable
-    fun Confirmation(
+    fun Primary(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
-        rightButton: (@Composable VitaminModalButtons.() -> Unit),
-        middleButton: (@Composable VitaminModalButtons.() -> Unit),
+        confirmationButton: (@Composable VitaminModalButtons.() -> Unit),
+        dismissButton: (@Composable VitaminModalButtons.() -> Unit),
         modifier: Modifier = Modifier,
         title: String? = null,
         painter: Painter? = null,
@@ -111,7 +126,7 @@ object VitaminModals {
         contentScrollState: ScrollState = rememberScrollState(),
         colors: ModalColors = VitaminModalColors.primary(),
         sizes: ModalSizes = VitaminModalSizes.medium(),
-        leftButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
+        thirdButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
     ) = VitaminModalImpl(
         content = content,
         onDismissRequest = onDismissRequest,
@@ -120,15 +135,16 @@ object VitaminModals {
         painter = painter,
         buttonsOrientation = buttonsOrientation,
         contentScrollState = contentScrollState,
-        rightButton = rightButton.take(),
-        middleButton = middleButton.take(),
-        leftButton = leftButton.takeOrNull(),
+        confirmationButton = confirmationButton,
+        dismissButton = dismissButton,
+        thirdButton = thirdButton,
         colors = colors,
         sizes = sizes,
     )
 
     /**
-     * The [Acknowledge] modal used to provide information.
+     * This implementation will be use to notify the user.
+     * In this case, only one button is available to dismiss the [VitaminModals]
      * @param content The content to be displayed below the title
      * @param onDismissRequest The callback to be called when the user need to dismiss the modal
      * @param modifier The [Modifier] to be applied to the component
@@ -140,7 +156,7 @@ object VitaminModals {
      * @param button The optional button to do the acknowledgement action
      */
     @Composable
-    fun Acknowledge(
+    fun Primary(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
@@ -157,24 +173,11 @@ object VitaminModals {
         title = title,
         painter = painter,
         contentScrollState = contentScrollState,
-        rightButton = button.takeOrNull(),
-        middleButton = null,
-        leftButton = null,
+        confirmationButton = button,
+        dismissButton = null,
+        thirdButton = null,
         buttonsOrientation = ModalButtonsOrientation.HORIZONTAL,
         sizes = sizes,
         colors = colors
     )
-}
-
-private fun (@Composable VitaminModalButtons.() -> Unit).take(): (@Composable () -> Unit) {
-    return {
-        VitaminModalButtons.this()
-    }
-}
-
-private fun (@Composable VitaminModalButtons.() -> Unit)?.takeOrNull(): (@Composable () -> Unit)? {
-    if (this == null) return null
-    return {
-        VitaminModalButtons.this()
-    }
 }

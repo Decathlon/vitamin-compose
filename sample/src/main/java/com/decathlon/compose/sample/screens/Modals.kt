@@ -86,7 +86,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Acknowledge(
+            VitaminModals.Primary(
                 content = {
                     Text(text = message)
                 },
@@ -109,7 +109,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Acknowledge(
+            VitaminModals.Primary(
                 content = {
                     Text(text = message)
                 },
@@ -138,20 +138,20 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Confirmation(
+            VitaminModals.Primary(
                 content = {
                     Text(text = message)
                 },
                 onDismissRequest = { showDialog.value = false },
                 painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                 title = title,
-                rightButton = {
+                confirmationButton = {
                     VitaminModalButtons.Primary(
                         text = "Confirm",
                         onClick = { showDialog.value = false }
                     )
                 },
-                middleButton = {
+                dismissButton = {
                     VitaminModalButtons.Primary(
                         text = "Dismiss",
                         onClick = { showDialog.value = false }
@@ -173,26 +173,26 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Confirmation(
+            VitaminModals.Primary(
                 content = {
                     Text(text = message)
                 },
                 onDismissRequest = { showDialog.value = false },
                 painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                 title = title,
-                rightButton = {
+                confirmationButton = {
                     VitaminModalButtons.Primary(
                         text = "Confirm",
                         onClick = { showDialog.value = false }
                     )
                 },
-                middleButton = {
+                dismissButton = {
                     VitaminModalButtons.Primary(
                         text = "Dismiss",
                         onClick = { showDialog.value = false }
                     )
                 },
-                leftButton = {
+                thirdButton = {
                     VitaminModalButtons.Primary(
                         text = "Third action",
                         onClick = { showDialog.value = false }
@@ -214,7 +214,7 @@ object Modals : Screen {
         )
 
         if (showDialog.value) {
-            VitaminModals.Confirmation(
+            VitaminModals.Primary(
                 content = {
                     Text(text = message)
                 },
@@ -222,19 +222,19 @@ object Modals : Screen {
                 painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                 title = title,
                 buttonsOrientation = ModalButtonsOrientation.VERTICAL,
-                rightButton = {
+                confirmationButton = {
                     VitaminModalButtons.Primary(
                         text = "Confirm",
                         onClick = { showDialog.value = false }
                     )
                 },
-                middleButton = {
+                dismissButton = {
                     VitaminModalButtons.Primary(
                         text = "Dismiss",
                         onClick = { showDialog.value = false }
                     )
                 },
-                leftButton = {
+                thirdButton = {
                     VitaminModalButtons.Primary(
                         text = "Third action",
                         onClick = { showDialog.value = false }

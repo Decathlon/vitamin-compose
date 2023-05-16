@@ -13,12 +13,14 @@ first add the Gradle dependency in your Gradle file:
 implementation("com.decathlon.vitamin.compose:modals:<versions>")
 ```
 
-### Acknowledge
+### Primary
+
+#### To display an information
 
 ```kotlin
 object VitaminModals {
     @Composable
-    fun Acknowledge(
+    fun Primary(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
         modifier: Modifier = Modifier,
@@ -32,12 +34,12 @@ object VitaminModals {
 }
 ```
 
-The Acknowledge modal used to provide information.
+This Primary modal implementation used to provide information.
 
 The minimal usage of the component is callback to be notified when the user need to dismiss the modal.
 
 ```kotlin
-VitaminModals.Acknowledge(
+VitaminModals.Primary(
     content = {
         Text(text = "Simple information displayed to the user")
     },
@@ -63,18 +65,18 @@ Parameters | Descriptions
 `contentScrollState: ScrollState = rememberScrollState()` | The optional scroll state to observe the scrolling
 `colors: ModalColors = VitaminModalColors.primary()` | The optional sizes used to define colors of icon, title, content and background of the modal
 `sizes: ModalSizes = VitaminModalSizes.medium()` | The optional sizes used to define modal padding, spacers sizes and icon size
-`button: (@Composable VitaminModalButtons.() -> Unit)? = null,` | The optional button to do the acknowledgement action
+`button: (@Composable VitaminModalButtons.() -> Unit)? = null` | The optional button to do the acknowledgement action
 
-### Confirmation
+#### To confirm an action
 
 ```kotlin
 object VitaminModals {
     @Composable
-    fun Confirmation(
+    fun Primary(
         content: @Composable (() -> Unit),
         onDismissRequest: () -> Unit,
-        rightButton: (@Composable VitaminModalButtons.() -> Unit),
-        middleButton: (@Composable VitaminModalButtons.() -> Unit),
+        confirmationButton: (@Composable VitaminModalButtons.() -> Unit),
+        dismissButton: (@Composable VitaminModalButtons.() -> Unit),
         modifier: Modifier = Modifier,
         title: String? = null,
         painter: Painter? = null,
@@ -82,36 +84,38 @@ object VitaminModals {
         contentScrollState: ScrollState = rememberScrollState(),
         colors: ModalColors = VitaminModalColors.primary(),
         sizes: ModalSizes = VitaminModalSizes.medium(),
-        leftButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
+        thirdButton: (@Composable VitaminModalButtons.() -> Unit)? = null,
     )
 }
 ```
 
-The Confirmation modal used to ask for decision.
+This implementation will be use to validate an action or request information from the user.
+In this case, two buttons are mandatory. One must be a confirming action, and the other a dismissing action.
+Providing a third action, such as "Learn more" is not recommended as it navigates the user away from the dialog, leaving the dialog task unfinished.
 
 The minimal usage of the component is callback to be notified when the user need to dismiss the modal and action buttons (confirm & dismiss).
 
 ```kotlin
-VitaminModals.Confirmation(
+VitaminModals.Primary(
     content = {
         Text(text = "Description of the action you want to confirm")
     },
     onDismissRequest = {},
     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
     title = "title",
-    rightButton = {
+    confirmationButton = {
         VitaminModalButtons.Primary(
             text = "Confirm",
             onClick = {}
         )
     },
-    middleButton = {
+    dismissButton = {
         VitaminModalButtons.Primary(
             text = "Dismiss",
             onClick = {}
         )
     },
-    leftButton = {
+    thirdButton = {
         VitaminModalButtons.Primary(
             text = "Third action",
             onClick = {}
@@ -124,13 +128,13 @@ Parameters | Descriptions
 -- | --
 `content: @Composable (() -> Unit)` | The content to be displayed below the title
 `onDismissRequest: () -> Unit` | The callback to be called when the user need to dismiss the modal
-`rightButton: (@Composable VitaminModalButtons.() -> Unit),` | The button used to confirm the action
-`middleButton: (@Composable VitaminModalButtons.() -> Unit),` | The button used to dismiss the action
+`confirmationButton: (@Composable VitaminModalButtons.() -> Unit)` | The button used to confirm the action
+`dismissButton: (@Composable VitaminModalButtons.() -> Unit)` | The button used to dismiss the action
 `modifier: Modifier = Modifier` | The `Modifier` to be applied to the component
 `title: String? = null` | The optional title to be displayed at the top of the modal
 `painter: Painter? = null` | The optional leading icon to be displayed at the start of the title
-`buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL,` | The optional buttons orientation to display buttons vertically or horizontally
+`buttonsOrientation: ModalButtonsOrientation = ModalButtonsOrientation.HORIZONTAL` | The optional buttons orientation to display buttons vertically or horizontally
 `contentScrollState: ScrollState = rememberScrollState()` | The optional scroll state to observe the scrolling
 `colors: ModalColors = VitaminModalColors.primary()` | The optional sizes used to define colors of icon, title, content and background of the modal
 `sizes: ModalSizes = VitaminModalSizes.medium()` | The optional sizes used to define modal padding, spacers sizes and icon size
-`leftButton: (@Composable VitaminModalButtons.() -> Unit)? = null,`| The optional button used to display a third action
+`thirdButton: (@Composable VitaminModalButtons.() -> Unit)? = null`| The optional button used to display a third action

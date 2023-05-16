@@ -16,18 +16,18 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(TestParameterInjector::class)
-class VitaminModalsConfirmationTest {
+class VitaminModalsPrimaryTest {
 
     @get:Rule
     val paparazzi = Paparazzi()
 
     @Test
-    fun horizontal(
+    fun primaryWithoutButton(
         @TestParameter theme: Theme
     ) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
+                VitaminModals.Primary(
                     onDismissRequest = {},
                     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                     title = DataFactory.title,
@@ -36,67 +36,18 @@ class VitaminModalsConfirmationTest {
                             text = DataFactory.message
                         )
                     },
-                    rightButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Confirm",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    },
-                    middleButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Dismiss",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    }
                 )
             }
         }
     }
 
     @Test
-    fun vertical(
+    fun primaryWithScroll(
         @TestParameter theme: Theme
     ) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
-                    onDismissRequest = {},
-                    painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
-                    title = DataFactory.title,
-                    content = {
-                        Text(
-                            text = DataFactory.message
-                        )
-                    },
-                    buttonsOrientation = ModalButtonsOrientation.VERTICAL,
-                    rightButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Confirm",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    },
-                    middleButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Dismiss",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    }
-                )
-            }
-        }
-    }
-
-    @Test
-    fun longMessage(
-        @TestParameter theme: Theme
-    ) {
-        paparazzi.snapshot {
-            VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
+                VitaminModals.Primary(
                     onDismissRequest = {},
                     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                     title = DataFactory.title,
@@ -105,32 +56,18 @@ class VitaminModalsConfirmationTest {
                             text = DataFactory.longAnnotatedMessage
                         )
                     },
-                    rightButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Confirm",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    },
-                    middleButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Dismiss",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    }
                 )
             }
         }
     }
 
     @Test
-    fun thirdHorizontal(
+    fun primaryWithOneButton(
         @TestParameter theme: Theme
     ) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
+                VitaminModals.Primary(
                     onDismissRequest = {},
                     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                     title = DataFactory.title,
@@ -139,23 +76,69 @@ class VitaminModalsConfirmationTest {
                             text = DataFactory.message
                         )
                     },
-                    rightButton = {
+                    button = {
+                        VitaminModalButtons.Primary(
+                            text = "Got it",
+                            onClick = {},
+                        )
+                    },
+                )
+            }
+        }
+    }
+
+    @Test
+    fun primaryWithDisabledButton(
+        @TestParameter theme: Theme
+    ) {
+        paparazzi.snapshot {
+            VitaminTheme(theme == Theme.Dark) {
+                VitaminModals.Primary(
+                    onDismissRequest = {},
+                    painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
+                    title = DataFactory.title,
+                    content = {
+                        Text(
+                            text = DataFactory.message
+                        )
+                    },
+                    button = {
+                        VitaminModalButtons.Primary(
+                            text = "Got it",
+                            onClick = {},
+                            enabled = false,
+                        )
+                    },
+                )
+            }
+        }
+    }
+
+    @Test
+    fun primaryWithTwoHorizontalButtons(
+        @TestParameter theme: Theme
+    ) {
+        paparazzi.snapshot {
+            VitaminTheme(theme == Theme.Dark) {
+                VitaminModals.Primary(
+                    onDismissRequest = {},
+                    painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
+                    title = DataFactory.title,
+                    content = {
+                        Text(
+                            text = DataFactory.message
+                        )
+                    },
+                    confirmationButton = {
                         VitaminModalButtons.Primary(
                             text = "Confirm",
                             onClick = {},
                             enabled = true,
                         )
                     },
-                    middleButton = {
+                    dismissButton = {
                         VitaminModalButtons.Primary(
                             text = "Dismiss",
-                            onClick = {},
-                            enabled = true,
-                        )
-                    },
-                    leftButton = {
-                        VitaminModalButtons.Primary(
-                            text = "Third",
                             onClick = {},
                             enabled = true,
                         )
@@ -166,12 +149,12 @@ class VitaminModalsConfirmationTest {
     }
 
     @Test
-    fun thirdVertical(
+    fun primaryWithTwoVerticalButtons(
         @TestParameter theme: Theme
     ) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
+                VitaminModals.Primary(
                     onDismissRequest = {},
                     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                     title = DataFactory.title,
@@ -181,21 +164,55 @@ class VitaminModalsConfirmationTest {
                         )
                     },
                     buttonsOrientation = ModalButtonsOrientation.VERTICAL,
-                    rightButton = {
+                    confirmationButton = {
                         VitaminModalButtons.Primary(
                             text = "Confirm",
                             onClick = {},
                             enabled = true,
                         )
                     },
-                    middleButton = {
+                    dismissButton = {
+                        VitaminModalButtons.Primary(
+                            text = "Dismiss",
+                            onClick = {},
+                            enabled = true,
+                        )
+                    }
+                )
+            }
+        }
+    }
+
+    @Test
+    fun primaryWithThreeHorizontalButtons(
+        @TestParameter theme: Theme
+    ) {
+        paparazzi.snapshot {
+            VitaminTheme(theme == Theme.Dark) {
+                VitaminModals.Primary(
+                    onDismissRequest = {},
+                    painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
+                    title = DataFactory.title,
+                    content = {
+                        Text(
+                            text = DataFactory.message
+                        )
+                    },
+                    confirmationButton = {
+                        VitaminModalButtons.Primary(
+                            text = "Confirm",
+                            onClick = {},
+                            enabled = true,
+                        )
+                    },
+                    dismissButton = {
                         VitaminModalButtons.Primary(
                             text = "Dismiss",
                             onClick = {},
                             enabled = true,
                         )
                     },
-                    leftButton = {
+                    thirdButton = {
                         VitaminModalButtons.Primary(
                             text = "Third",
                             onClick = {},
@@ -208,12 +225,12 @@ class VitaminModalsConfirmationTest {
     }
 
     @Test
-    fun withDisableButton(
+    fun primaryWithThreeVerticalButtons(
         @TestParameter theme: Theme
     ) {
         paparazzi.snapshot {
             VitaminTheme(theme == Theme.Dark) {
-                VitaminModals.Confirmation(
+                VitaminModals.Primary(
                     onDismissRequest = {},
                     painter = rememberVectorPainter(image = VitaminIcons.Line.MapPin),
                     title = DataFactory.title,
@@ -222,16 +239,24 @@ class VitaminModalsConfirmationTest {
                             text = DataFactory.message
                         )
                     },
-                    rightButton = {
+                    buttonsOrientation = ModalButtonsOrientation.VERTICAL,
+                    confirmationButton = {
                         VitaminModalButtons.Primary(
                             text = "Confirm",
                             onClick = {},
-                            enabled = false,
+                            enabled = true,
                         )
                     },
-                    middleButton = {
+                    dismissButton = {
                         VitaminModalButtons.Primary(
                             text = "Dismiss",
+                            onClick = {},
+                            enabled = true,
+                        )
+                    },
+                    thirdButton = {
+                        VitaminModalButtons.Primary(
+                            text = "Third",
                             onClick = {},
                             enabled = true,
                         )

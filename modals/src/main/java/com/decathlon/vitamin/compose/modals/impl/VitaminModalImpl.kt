@@ -14,6 +14,7 @@ import androidx.compose.ui.window.Dialog
 import com.decathlon.vitamin.compose.modals.ModalButtonsOrientation
 import com.decathlon.vitamin.compose.modals.ModalColors
 import com.decathlon.vitamin.compose.modals.ModalSizes
+import com.decathlon.vitamin.compose.modals.VitaminModalButtons
 
 @Composable
 internal fun VitaminModalImpl(
@@ -23,9 +24,9 @@ internal fun VitaminModalImpl(
     title: String?,
     painter: Painter?,
     contentScrollState: ScrollState,
-    rightButton: (@Composable () -> Unit)?,
-    middleButton: (@Composable () -> Unit)?,
-    leftButton: (@Composable () -> Unit)?,
+    confirmationButton: (@Composable VitaminModalButtons.() -> Unit)?,
+    dismissButton: (@Composable VitaminModalButtons.() -> Unit)?,
+    thirdButton: (@Composable VitaminModalButtons.() -> Unit)?,
     buttonsOrientation: ModalButtonsOrientation,
     sizes: ModalSizes,
     colors: ModalColors
@@ -67,12 +68,12 @@ internal fun VitaminModalImpl(
                         contentColor = colors.contentColor
                     )
                 }
-                if (rightButton != null) {
-                    ModalButtons.Buttons(
+                if (confirmationButton != null) {
+                    ModalButtons(
                         modifier = modifier,
-                        right = rightButton,
-                        middle = middleButton,
-                        left = leftButton,
+                        confirmationButton = confirmationButton,
+                        dismissButton = dismissButton,
+                        thirdButton = thirdButton,
                         buttonsOrientation = buttonsOrientation,
                         topPadding = sizes.spacerSize,
                         buttonsSpacer = sizes.buttonsSpacer
