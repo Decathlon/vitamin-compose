@@ -71,7 +71,7 @@ object VitaminRadioButtons {
                 )
                 .padding(all = sizes.padding),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center,
+            horizontalArrangement = Arrangement.Center
         ) {
             RadioButton(
                 selected = selected,
