@@ -2,6 +2,7 @@ package com.decathlon.vitamin.compose.radiobuttons
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
@@ -65,10 +66,12 @@ object VitaminRadioButtons {
                 )
                 .semantics(mergeDescendants = true) {}
                 .sizeIn(
+                    minWidth = sizes.minimumSize,
                     minHeight = sizes.minimumSize
                 )
                 .padding(all = sizes.padding),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center,
         ) {
             RadioButton(
                 selected = selected,
