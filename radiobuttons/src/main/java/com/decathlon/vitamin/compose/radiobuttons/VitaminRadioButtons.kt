@@ -65,7 +65,6 @@ object VitaminRadioButtons {
                 )
                 .semantics(mergeDescendants = true) {}
                 .sizeIn(
-                    minWidth = sizes.minimumSize,
                     minHeight = sizes.minimumSize
                 )
                 .padding(all = sizes.padding),
