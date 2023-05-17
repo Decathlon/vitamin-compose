@@ -26,7 +26,7 @@ public val PaymentsGroup.Wallet: ImageVector
             group {
             }
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
                     moveTo(0.0f, 0.0f)
@@ -35,7 +35,7 @@ public val PaymentsGroup.Wallet: ImageVector
                     horizontalLineToRelative(-58.0f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                         strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                         strokeLineMiter = 4.0f, pathFillType = NonZero) {
                     moveTo(3.5614f, 0.5f)

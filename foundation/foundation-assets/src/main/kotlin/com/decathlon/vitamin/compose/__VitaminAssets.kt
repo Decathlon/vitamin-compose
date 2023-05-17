@@ -6,6 +6,7 @@ import com.decathlon.vitamin.compose.vitaminassets.Flags
 import com.decathlon.vitamin.compose.vitaminassets.Logos
 import com.decathlon.vitamin.compose.vitaminassets.Payments
 import com.decathlon.vitamin.compose.vitaminassets.Placeholders
+import com.decathlon.vitamin.compose.vitaminassets.Shipping
 import kotlin.collections.List as ____KtList
 
 public object VitaminAssets
@@ -18,6 +19,6 @@ public val VitaminAssets.AllAssets: ____KtList<ImageVector>
       return __AllAssets!!
     }
     __AllAssets= Payments.AllAssets + Flags.AllAssets + Placeholders.AllAssets + Logos.AllAssets +
-        listOf()
+        Shipping.AllAssets + listOf()
     return __AllAssets!!
   }

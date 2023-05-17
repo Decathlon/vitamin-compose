@@ -24,18 +24,16 @@ public val FlagsGroup.Na: ImageVector
         _na = Builder(name = "Na", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    curveTo(28.0f, 0.0f, 28.0f, 0.8954f, 28.0f, 2.0f)
+                    curveTo(28.0f, 8.0f, 28.0f, 14.0f, 28.0f, 20.0f)
+                    horizontalLineTo(0.0f)
+                    curveTo(0.0f, 20.0f, 0.0f, 19.1046f, 0.0f, 18.0f)
+                    curveTo(0.0f, 12.0f, 0.0f, 6.0f, 0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF0C4799)), stroke = null, strokeLineWidth = 0.0f,
@@ -44,7 +42,7 @@ public val FlagsGroup.Na: ImageVector
                     moveTo(0.0f, 13.3333f)
                     lineTo(28.0f, 0.0f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(13.3333f)
+                    lineTo(0.0f, 13.3333f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFFFD243)), stroke = null, strokeLineWidth = 0.0f,
@@ -74,28 +72,32 @@ public val FlagsGroup.Na: ImageVector
                         pathFillType = EvenOdd) {
                     moveTo(0.0f, 20.0f)
                     horizontalLineTo(28.0f)
-                    verticalLineTo(6.6667f)
+                    lineTo(28.0f, 6.6667f)
                     lineTo(0.0f, 20.0f)
                     close()
                 }
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
-                    moveTo(3.0824f, 22.6667f)
-                    lineTo(30.1707f, 5.74f)
-                    lineTo(24.9176f, -2.6667f)
-                    lineTo(-2.1707f, 14.26f)
-                    lineTo(3.0824f, 22.6667f)
+                    moveTo(7.0f, 20.0f)
+                    lineTo(28.0f, 7.0f)
+                    verticalLineTo(0.0f)
+                    lineTo(20.5f, 0.0f)
+                    lineTo(0.0f, 12.5f)
+                    verticalLineTo(20.0f)
+                    lineTo(7.0f, 20.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFE52347)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
-                    moveTo(-0.6292f, 23.0719f)
-                    lineTo(32.162f, 2.5817f)
-                    lineTo(28.6292f, -3.0719f)
-                    lineTo(-4.162f, 17.4183f)
-                    lineTo(-0.6292f, 23.0719f)
+                    moveTo(4.5f, 20.0f)
+                    lineTo(28.0f, 5.0f)
+                    verticalLineTo(0.0f)
+                    lineTo(23.5f, 0.0f)
+                    lineTo(0.0f, 14.5f)
+                    verticalLineTo(20.0f)
+                    lineTo(4.5f, 20.0f)
                     close()
                 }
             }

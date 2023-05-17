@@ -96,7 +96,7 @@ object VitaminTextInputs {
                         cursorColor = VitaminTheme.colors.vtmnContentAction,
                         errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
                         textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnActiveTertiary.copy(ContentAlpha.disabled),
+                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
                         focusedBorderColor = colors.focusBorderColor,
                         unfocusedBorderColor = colors.borderColor,
                         disabledBorderColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
@@ -109,13 +109,13 @@ object VitaminTextInputs {
                         ),
                         errorLeadingIconColor = colors.iconColor,
                         trailingIconColor = colors.iconColor,
-                        disabledTrailingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
+                        disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
                             ContentAlpha.disabled
                         ),
                         errorTrailingIconColor = colors.iconColor,
                         focusedLabelColor = colors.focusTextColor,
                         unfocusedLabelColor = colors.textColor,
-                        disabledLabelColor = VitaminTheme.colors.vtmnBorderInactive.copy(
+                        disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
                             ContentAlpha.disabled
                         ),
                         errorLabelColor = colors.textColor
@@ -265,7 +265,7 @@ object VitaminTextInputs {
                         cursorColor = VitaminTheme.colors.vtmnContentAction,
                         errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
                         textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnActiveTertiary.copy(ContentAlpha.disabled),
+                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
                         focusedIndicatorColor = colors.focusBorderColor,
                         unfocusedIndicatorColor = colors.borderColor,
                         disabledIndicatorColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
@@ -278,13 +278,13 @@ object VitaminTextInputs {
                         ),
                         errorLeadingIconColor = colors.iconColor,
                         trailingIconColor = colors.iconColor,
-                        disabledTrailingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
+                        disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
                             ContentAlpha.disabled
                         ),
                         errorTrailingIconColor = colors.iconColor,
                         focusedLabelColor = colors.focusTextColor,
                         unfocusedLabelColor = colors.textColor,
-                        disabledLabelColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
+                        disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
                             ContentAlpha.disabled
                         ),
                         errorLabelColor = colors.textColor
@@ -403,8 +403,8 @@ internal fun VitaminTextInputLayoutImpl(
         }
         Row(modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)) {
             helperText?.let {
-                val color = if (colors.state == State.ERROR) colors.textColor
-                else if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
+                val color = if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
+                else if (colors.state == State.ERROR) colors.textColor
                 else colors.helperColor
                 Text(
                     text = it,

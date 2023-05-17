@@ -29,6 +29,7 @@ import com.decathlon.vitamin.compose.vitaminassets.payments.Ideal
 import com.decathlon.vitamin.compose.vitaminassets.payments.Illicado
 import com.decathlon.vitamin.compose.vitaminassets.payments.Ing
 import com.decathlon.vitamin.compose.vitaminassets.payments.Ingenico
+import com.decathlon.vitamin.compose.vitaminassets.payments.Jcb
 import com.decathlon.vitamin.compose.vitaminassets.payments.Kbc
 import com.decathlon.vitamin.compose.vitaminassets.payments.Klarna
 import com.decathlon.vitamin.compose.vitaminassets.payments.Maestro
@@ -86,7 +87,7 @@ public val PaymentsGroup.AllAssets: ____KtList<ImageVector>
         Bancontact, Oney3x, Neteller, Cadhoc, Bvr, MbMay, Discover, MastercardFull, Bitcoin,
         Verifone, Wallet, Payoneer, Bitpay, Belfius, Eps, Dwolla, SpiritOfCadeau, UnionPay,
         Ingenico, DinersClubInternational, Paylib, Cb, ChequePayment, Paypal, Skrill, Mastercard,
-        Klarna, Stripe, Amex, Cash, WebMoney, Illicado, VisaElectron, PayU, WesternUnion,
+        Klarna, Stripe, Amex, Cash, WebMoney, Jcb, Illicado, VisaElectron, PayU, WesternUnion,
         Oney3x4x, ApplePay, Ideal, GooglePay, Mnp, Paymill, Sepa, MaestroSubtext, Kbc,
         MastercardIdCheck, Ing, VisaClassic, PostFinance, AmazonPay, GiftCardPayment)
     return __AllAssets!!

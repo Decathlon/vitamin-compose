@@ -2,6 +2,7 @@ package com.decathlon.vitamin.compose.vitaminassets.logos
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
+import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
@@ -25,10 +26,26 @@ public val LogosGroup.DecathlonLogoWithOutline: ImageVector
             path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
-                moveTo(0.5f, 0.5f)
-                horizontalLineToRelative(201.0f)
-                verticalLineToRelative(51.0f)
-                horizontalLineToRelative(-201.0f)
+                moveTo(1.0f, 1.0f)
+                horizontalLineToRelative(200.0f)
+                verticalLineToRelative(50.0f)
+                horizontalLineToRelative(-200.0f)
+                close()
+            }
+            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
+                moveTo(0.0f, 52.0f)
+                verticalLineTo(0.0f)
+                horizontalLineTo(202.0f)
+                verticalLineTo(52.0f)
+                horizontalLineTo(0.0f)
+                close()
+                moveTo(201.0f, 51.0f)
+                horizontalLineTo(1.0f)
+                verticalLineTo(1.0f)
+                horizontalLineTo(201.0f)
+                verticalLineTo(51.0f)
                 close()
             }
             path(fill = SolidColor(Color(0xFF0082C3)), stroke = null, strokeLineWidth = 0.0f,
@@ -183,15 +200,6 @@ public val LogosGroup.DecathlonLogoWithOutline: ImageVector
                 curveTo(29.058f, 30.22f, 29.666f, 28.414f, 29.666f, 25.904f)
                 curveTo(29.666f, 21.291f, 27.024f, 18.75f, 22.226f, 18.75f)
                 horizontalLineTo(19.615f)
-                close()
-            }
-            path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFFffffff)),
-                    strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                    strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                moveTo(0.5f, 0.5f)
-                horizontalLineToRelative(201.0f)
-                verticalLineToRelative(51.0f)
-                horizontalLineToRelative(-201.0f)
                 close()
             }
         }

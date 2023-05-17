@@ -1,6 +1,5 @@
 package com.decathlon.vitamin.compose.dividers
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -40,8 +39,7 @@ class VitaminDividersPrimaryTest(
                     ) {
                         Text(text = variant.name, style = VitaminTheme.typography.subtitle1)
                         DividerVariantsFactory.Divider(
-                            modifier = Modifier.fillMaxWidth(),
-                            variant = variant
+                            modifier = Modifier.fillMaxWidth(), variant = variant
                         )
                     }
                 }

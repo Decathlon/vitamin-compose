@@ -1,7 +1,5 @@
 package com.decathlon.vitamin.compose.vitaminassets.payments
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
@@ -24,7 +22,7 @@ public val PaymentsGroup.Discover: ImageVector
         }
         _discover = Builder(name = "Discover", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF3F3F3)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF3F3F3)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -136,11 +134,9 @@ public val PaymentsGroup.Discover: ImageVector
                 horizontalLineTo(51.1421f)
                 close()
             }
-            path(fill = linearGradient(0.0f to Color(0xFFF6A000), 0.623918f to Color(0xFFE47E02),
-                    1.0f to Color(0xFFD36002), start = Offset(36.5397f,19.0034f), end =
-                    Offset(29.0929f,14.241f)), stroke = null, strokeLineWidth = 0.0f, strokeLineCap
-                    = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType =
-                    EvenOdd) {
+            path(fill = SolidColor(Color(0xFFF6A000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = EvenOdd) {
                 moveTo(34.1585f, 22.7268f)
                 curveTo(35.4738f, 20.67f, 34.8731f, 17.9376f, 32.8166f, 16.6224f)
                 curveTo(30.76f, 15.3072f, 28.0271f, 15.9076f, 26.7117f, 17.9644f)

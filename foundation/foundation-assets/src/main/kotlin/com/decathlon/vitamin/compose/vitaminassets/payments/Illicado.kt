@@ -21,7 +21,7 @@ public val PaymentsGroup.Illicado: ImageVector
         }
         _illicado = Builder(name = "Illicado", defaultWidth = 58.0.dp, defaultHeight = 40.0.dp,
                 viewportWidth = 58.0f, viewportHeight = 40.0f).apply {
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF1F1F1)),
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = SolidColor(Color(0xFFF1F1F1)),
                     strokeLineWidth = 1.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
                     strokeLineMiter = 4.0f, pathFillType = NonZero) {
                 moveTo(4.0f, 0.5f)
@@ -174,7 +174,7 @@ public val PaymentsGroup.Illicado: ImageVector
                 curveTo(20.8485f, 17.9579f, 20.4545f, 18.3513f, 19.7879f, 18.3513f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(27.7273f, 23.8593f)
@@ -197,7 +197,7 @@ public val PaymentsGroup.Illicado: ImageVector
                 curveTo(27.7879f, 23.3145f, 27.8788f, 23.5566f, 27.7273f, 23.8593f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(34.3939f, 25.2816f)
@@ -215,7 +215,7 @@ public val PaymentsGroup.Illicado: ImageVector
                 curveTo(35.0909f, 24.9789f, 34.8485f, 25.2816f, 34.3939f, 25.2816f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(41.2424f, 25.1908f)
@@ -236,7 +236,7 @@ public val PaymentsGroup.Illicado: ImageVector
                 curveTo(41.6061f, 24.9487f, 41.5455f, 25.1f, 41.2424f, 25.1908f)
                 close()
             }
-            path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+            path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                     strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                     pathFillType = NonZero) {
                 moveTo(45.3031f, 25.4026f)

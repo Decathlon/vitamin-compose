@@ -13,6 +13,7 @@ import com.decathlon.compose.sample.screens.AppBars
 import com.decathlon.compose.sample.screens.Assets
 import com.decathlon.compose.sample.screens.Badges
 import com.decathlon.compose.sample.screens.Buttons
+import com.decathlon.compose.sample.screens.Cards
 import com.decathlon.compose.sample.screens.Checkboxes
 import com.decathlon.compose.sample.screens.Chips
 import com.decathlon.compose.sample.screens.Dividers
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                     arrayListOf(
                         Buttons,
                         TextInputs,
+                        Cards,
                         Checkboxes,
                         Switches,
                         Progress,
