@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.31"
+    kotlin("jvm") version "1.8.21"
     `kotlin-dsl`
 }
 
@@ -11,7 +11,16 @@ repositories {
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions.apiVersion = "1.6"
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+        apiVersion = "1.6"
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
 }
 
 gradlePlugin {
@@ -23,8 +32,8 @@ gradlePlugin {
 
 dependencies {
     implementation(gradleApi())
-    implementation("com.android.tools.build:gradle:7.4.0")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
+    implementation("com.android.tools.build:gradle:8.0.1")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21")
     implementation("com.vanniktech:gradle-maven-publish-plugin:0.18.0")
     implementation("app.cash.licensee:licensee-gradle-plugin:1.4.1")
     implementation("app.cash.paparazzi:paparazzi-gradle-plugin:1.2.0")

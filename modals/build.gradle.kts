@@ -10,3 +10,7 @@ dependencies {
     implementation(project(":buttons"))
     implementation(AndroidX.compose.ui.tooling)
 }
+
+android {
+    namespace = "com.decathlon.vitamin.compose.modals"
+}
