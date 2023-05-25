@@ -1,12 +1,10 @@
 package com.decathlon.vitamin.compose.vitaminassets.flags
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin
@@ -26,10 +24,9 @@ public val FlagsGroup.Xk: ImageVector
         _xk = Builder(name = "Xk", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.001f,0.0f), end = Offset(14.001f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.001f, 0.0f)
                     horizontalLineTo(0.001f)
                     verticalLineTo(20.0f)
@@ -37,10 +34,9 @@ public val FlagsGroup.Xk: ImageVector
                     verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF2F5FBF), 1.0f to Color(0xFF244EA3),
-                        start = Offset(14.001f,0.0f), end = Offset(14.001f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF2F5FBF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.001f, 0.0f)
                     horizontalLineTo(0.001f)
                     verticalLineTo(20.0f)
@@ -48,10 +44,9 @@ public val FlagsGroup.Xk: ImageVector
                     verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0011f,3.05721f), end = Offset(14.0011f,8.94282f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(12.0011f, 4.6667f)
                     lineTo(11.0583f, 4.9428f)
                     lineTo(11.3344f, 4.0f)
@@ -113,10 +108,9 @@ public val FlagsGroup.Xk: ImageVector
                     lineTo(8.0011f, 6.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFE9C072), 1.0f to Color(0xFFCFA557),
-                        start = Offset(14.001f,6.66667f), end = Offset(14.001f,16.0f)), stroke =
-                        null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFE9C072)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(12.001f, 13.3333f)
                     lineTo(10.6676f, 12.6667f)
                     lineTo(9.3343f, 10.0f)

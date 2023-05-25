@@ -1,7 +1,5 @@
 package com.decathlon.vitamin.compose.vitaminassets.flags
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
@@ -26,56 +24,53 @@ public val FlagsGroup.Bb: ImageVector
         _bb = Builder(name = "Bb", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = null, strokeLineWidth = 0.0f,
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(2.0f, 0.0f)
-                    lineTo(26.0f, 0.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 28.0f, 2.0f)
-                    lineTo(28.0f, 18.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 26.0f, 20.0f)
-                    lineTo(2.0f, 20.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 0.0f, 18.0f)
-                    lineTo(0.0f, 2.0f)
-                    arcTo(2.0f, 2.0f, 0.0f, false, true, 2.0f, 0.0f)
+                    moveTo(0.0f, 0.0f)
+                    curveTo(9.3333f, -1.0E-4f, 18.6667f, -1.0E-4f, 28.0f, 0.0f)
+                    verticalLineTo(20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF1132C7), 1.0f to Color(0xFF0522A5),
-                        start = Offset(0.0f,0.0f), end = Offset(0.0f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF1132C7)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(0.0f, 0.0f)
-                    horizontalLineToRelative(28.0f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-28.0f)
+                    lineTo(28.0f, 0.0f)
+                    verticalLineTo(20.0f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF08379D)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
-                    moveTo(13.3334f, 0.0f)
-                    horizontalLineToRelative(14.6667f)
-                    verticalLineToRelative(20.0f)
-                    horizontalLineToRelative(-14.6667f)
+                    moveTo(18.6667f, 0.0f)
+                    lineTo(28.0f, 0.0f)
+                    verticalLineTo(20.0f)
+                    lineTo(18.6667f, 20.0f)
+                    verticalLineTo(0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF08379D)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(0.0f, 20.0f)
-                    horizontalLineTo(9.3333f)
-                    verticalLineTo(0.0f)
-                    horizontalLineTo(0.0f)
+                    lineTo(9.3333f, 20.0f)
+                    verticalLineTo(-0.0f)
+                    lineTo(0.0f, 0.0f)
                     verticalLineTo(20.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFFFFCC50)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
-                    moveTo(9.3334f, 20.0f)
-                    horizontalLineTo(18.6667f)
+                    moveTo(9.3333f, 20.0f)
+                    lineTo(18.6667f, 20.0f)
                     verticalLineTo(0.0f)
-                    horizontalLineTo(9.3334f)
+                    lineTo(9.3333f, -0.0f)
                     verticalLineTo(20.0f)
                     close()
                 }
@@ -83,12 +78,12 @@ public val FlagsGroup.Bb: ImageVector
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = EvenOdd) {
                     moveTo(13.7456f, 6.4135f)
-                    curveTo(13.8794f, 6.2168f, 14.1702f, 6.2195f, 14.3003f, 6.4187f)
+                    curveTo(13.8794f, 6.2168f, 14.1702f, 6.2195f, 14.3003f, 6.4186f)
                     lineTo(14.9965f, 7.4844f)
                     curveTo(15.1413f, 7.7061f, 14.9822f, 8.0f, 14.7174f, 8.0f)
                     horizontalLineTo(14.7017f)
-                    curveTo(14.5044f, 8.0f, 14.3504f, 8.1703f, 14.37f, 8.3665f)
-                    lineTo(14.6366f, 11.0332f)
+                    curveTo(14.5045f, 8.0f, 14.3504f, 8.1703f, 14.37f, 8.3665f)
+                    lineTo(14.6367f, 11.0332f)
                     curveTo(14.6537f, 11.2036f, 14.7971f, 11.3333f, 14.9683f, 11.3333f)
                     horizontalLineTo(15.1963f)
                     curveTo(15.2841f, 11.3333f, 15.3683f, 11.2987f, 15.4307f, 11.237f)
@@ -129,7 +124,7 @@ public val FlagsGroup.Bb: ImageVector
                     horizontalLineTo(13.0317f)
                     curveTo(13.2029f, 11.3333f, 13.3463f, 11.2036f, 13.3633f, 11.0332f)
                     lineTo(13.63f, 8.3665f)
-                    curveTo(13.6496f, 8.1703f, 13.4948f, 8.0f, 13.2976f, 8.0f)
+                    curveTo(13.6496f, 8.1703f, 13.4949f, 8.0f, 13.2976f, 8.0f)
                     curveTo(13.03f, 8.0f, 12.8703f, 7.7005f, 13.0208f, 7.4792f)
                     lineTo(13.7456f, 6.4135f)
                     close()

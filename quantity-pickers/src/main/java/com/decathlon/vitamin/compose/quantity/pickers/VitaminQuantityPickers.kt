@@ -1,16 +1,9 @@
 package com.decathlon.vitamin.compose.quantity.pickers
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CornerBasedShape
-import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.ripple.LocalRippleTheme
@@ -18,20 +11,19 @@ import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.error
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.foundation.VitaminTheme
-import com.decathlon.vitamin.compose.foundation.VtmnStatesDisabled
-import com.decathlon.vitamin.compose.quantity.pickers.internals.IconButton
-import com.decathlon.vitamin.compose.quantity.pickers.internals.MiddleTextField
-import com.decathlon.vitamin.compose.vitaminicons.Fill
-import com.decathlon.vitamin.compose.vitaminicons.fill.Add
-import com.decathlon.vitamin.compose.vitaminicons.fill.Subtract
+import com.decathlon.vitamin.compose.quantity.pickers.internals.HelperText
+import com.decathlon.vitamin.compose.quantity.pickers.internals.Picker
+import com.decathlon.vitamin.compose.vitaminicons.Line
+import com.decathlon.vitamin.compose.vitaminicons.line.Information
 
 internal const val VtmnStatesEnabled = 1.0f
 
@@ -44,11 +36,11 @@ object VitaminQuantityPickers {
      * @param subtractEnabled Whether substract button is enable or not
      * @param editTextEnabled Whether textField is enable or not
      * @param isExpanded if true, component will fill max width, otherwise get default width
+     * @param helperText Helper text displayed at the QuantityPicker's bottom
      * @param keyboardOptions Software keyboard options that contains such as KeyboardType and ImeAction
      * @param keyboardActions When the text input emit an IME action, the corresponding callback is called
      * @param colors The color to notify your user if they are in normal or error state
-     * @param shape The shape for icon buttons
-     * @param textStyle The typography of the text inside the text input
+     * @param sizes Sizes to be applied to the QuantityPicker. (VitaminQuantitiesSizes.primary())
      * @param ripple The ripple effect applied on buttons
      * @param onAddClicked The callback to be called when add button is clicked
      * @param onSubtractClicked The callback to be called when substract button is clicked
@@ -62,71 +54,55 @@ object VitaminQuantityPickers {
         subtractEnabled: Boolean = true,
         editTextEnabled: Boolean = true,
         isExpanded: Boolean = false,
+        helperText: String? = null,
         keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
         keyboardActions: KeyboardActions = KeyboardActions.Default,
         colors: QuantityColors = VitaminQuantitiesColors.normal(),
-        shape: CornerBasedShape = VitaminTheme.shapes.radius100,
-        textStyle: TextStyle = VitaminTheme.typography.text2,
+        sizes: QuantitySizes = VitaminQuantitiesSizes.primary(),
         ripple: RippleTheme = VitaminTheme.ripples.brand,
         onAddClicked: () -> Unit,
         onSubtractClicked: () -> Unit,
         onValueChange: (String) -> Unit
     ) {
         CompositionLocalProvider(LocalRippleTheme provides ripple) {
-            Row(
-                modifier = modifier
-                    .height(48.dp)
-                    .then(
-                        if (isExpanded) {
-                            modifier.fillMaxWidth()
-                        } else {
-                            modifier.width(156.dp)
-                        }
-                    )
-            ) {
-                IconButton(
-                    painter = rememberVectorPainter(VitaminIcons.Fill.Subtract),
-                    contentDescription = stringResource(id = R.string.vtmn_subtract_button_description),
-                    enabled = subtractEnabled,
-                    colors = colors,
-                    shape = shape.copy(
-                        topEnd = CornerSize(0.dp),
-                        bottomEnd = CornerSize(0.dp)
-                    ),
-                    onClick = onSubtractClicked
-                )
+            val contentDescription = stringResource(id = R.string.vtmn_quantity_picker_accessibility_message, value)
 
-                MiddleTextField(
-                    modifier = Modifier
-                        .background(
-                            color = colors.backgroundColor.copy(
-                                alpha = if (!addEnabled && !subtractEnabled) VtmnStatesDisabled else VtmnStatesEnabled
-                            )
-                        )
-                        .fillMaxHeight()
-                        .weight(1.0f),
+            Column(
+                modifier = modifier
+                    .semantics(
+                        mergeDescendants = false
+                    ) {
+                        this.contentDescription = contentDescription
+                        helperText?.let {
+                            this.error(it)
+                        }
+                    }
+            ) {
+                Picker(
+                    value = value,
+                    modifier = modifier,
                     addEnabled = addEnabled,
                     subtractEnabled = subtractEnabled,
-                    colors = colors,
-                    textStyle = textStyle,
-                    value = value,
-                    onValueChange = onValueChange,
                     editTextEnabled = editTextEnabled,
+                    isExpanded = isExpanded,
                     keyboardOptions = keyboardOptions,
-                    keyboardActions = keyboardActions
+                    keyboardActions = keyboardActions,
+                    colors = colors,
+                    sizes = sizes,
+                    onAddClicked = onAddClicked,
+                    onSubtractClicked = onSubtractClicked,
+                    onValueChange = onValueChange
                 )
 
-                IconButton(
-                    painter = rememberVectorPainter(VitaminIcons.Fill.Add),
-                    contentDescription = stringResource(id = R.string.vtmn_add_button_description),
-                    enabled = addEnabled,
-                    colors = colors,
-                    shape = shape.copy(
-                        topStart = CornerSize(0.dp),
-                        bottomStart = CornerSize(0.dp)
-                    ),
-                    onClick = onAddClicked
-                )
+                helperText?.let {
+                    HelperText(
+                        text = it,
+                        textStyle = sizes.helperTextStyle,
+                        icon = VitaminIcons.Line.Information,
+                        iconSize = sizes.helperIconSize,
+                        color = colors.helperColor
+                    )
+                }
             }
         }
     }
@@ -171,6 +147,20 @@ private fun PreviewQuantities() {
                     onSubtractClicked = {}
                 ) {}
             }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            Column(Modifier) {
+                VitaminQuantityPickers.Primary(
+                    value = "0",
+                    addEnabled = true,
+                    subtractEnabled = true,
+                    onAddClicked = {},
+                    onSubtractClicked = {},
+                    helperText = "Error message goes here",
+                    colors = VitaminQuantitiesColors.error()
+                ) {}
+            }
         }
     }
 }
@@ -197,6 +187,20 @@ private fun PreviewDarkQuantities() {
                     subtractEnabled = false,
                     onAddClicked = {},
                     onSubtractClicked = {}
+                ) {}
+            }
+
+            Spacer(modifier = Modifier.height(10.dp))
+
+            Column(Modifier) {
+                VitaminQuantityPickers.Primary(
+                    value = "0",
+                    addEnabled = true,
+                    subtractEnabled = true,
+                    onAddClicked = {},
+                    onSubtractClicked = {},
+                    helperText = "Error message goes here",
+                    colors = VitaminQuantitiesColors.error()
                 ) {}
             }
         }

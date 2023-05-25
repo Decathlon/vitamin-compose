@@ -116,6 +116,7 @@ import com.decathlon.vitamin.compose.vitaminassets.flags.Hu
 import com.decathlon.vitamin.compose.vitaminassets.flags.Id
 import com.decathlon.vitamin.compose.vitaminassets.flags.Ie
 import com.decathlon.vitamin.compose.vitaminassets.flags.Il
+import com.decathlon.vitamin.compose.vitaminassets.flags.Im
 import com.decathlon.vitamin.compose.vitaminassets.flags.In
 import com.decathlon.vitamin.compose.vitaminassets.flags.Io
 import com.decathlon.vitamin.compose.vitaminassets.flags.Iq
@@ -288,7 +289,7 @@ public val FlagsGroup.AllAssets: ____KtList<ImageVector>
         Mc, Tv, Vi, Ceu, Us, Tw, Mu, Bz, Bm, Ci, Cz, Ae, Cm, Bi, Ar, Lb, Mf, Lu, Mq, Yt, Td, Tr, Ua,
         Mp, Lt, Mg, Lc, As, Bh, Cl, Ad, Af, Cy, Bj, Cn, Me, La, Mr, Ni, Lv, Om, Tg, GbEng, Vn, Zm,
         Ms, Md, Co, Cx, Ag, Gw, Eh, Jp, Sr, Se, GbZet, Sd, Rw, Ph, Ss, Hn, Dz, Ga, Fr, Dm, Do, Gt,
-        Kw, Ru, Coc, Sg, Pk, Je, Hm, Gb, Gu, Gf, Dj, Gq, Ke, Kr, Sc, St, UsCa, Pn, Sb, Py, Il,
+        Kw, Ru, Coc, Sg, Pk, Je, Hm, Gb, Gu, Gf, Dj, Gq, Ke, Im, Kr, Sc, St, UsCa, Pn, Sb, Py, Il,
         Gp, Dk, Gg, Ge, Gr, In, Pl, Rs, Cna, GbWls, Pm, Sv, Re, Sa, Io, Hk, Kp, Kg, Gs, Gd)
     return __AllAssets!!
   }

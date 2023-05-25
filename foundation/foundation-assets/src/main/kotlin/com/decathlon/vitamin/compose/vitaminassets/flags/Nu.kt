@@ -1,12 +1,9 @@
 package com.decathlon.vitamin.compose.vitaminassets.flags
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
-import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
 import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
 import androidx.compose.ui.graphics.StrokeJoin
@@ -26,179 +23,148 @@ public val FlagsGroup.Nu: ImageVector
         _nu = Builder(name = "Nu", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0001f,1.52588E-5f), end = Offset(14.0001f,20.0f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(28.0001f, 0.0f)
-                    horizontalLineTo(1.0E-4f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
                     verticalLineTo(20.0f)
-                    horizontalLineTo(28.0001f)
+                    horizontalLineTo(0.0f)
                     verticalLineTo(0.0f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFCD54E), 1.0f to Color(0xFFFCD036),
-                        start = Offset(14.0001f,1.52588E-5f), end = Offset(14.0001f,20.0f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(28.0001f, 0.0f)
-                    horizontalLineTo(1.0E-4f)
-                    verticalLineTo(20.0f)
-                    horizontalLineTo(28.0001f)
+                path(fill = SolidColor(Color(0xFF07319C)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(0.0f, -0.0028f)
+                    horizontalLineTo(14.0006f)
+                    verticalLineTo(9.9998f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(-0.0028f)
+                    close()
+                }
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(14.0006f, 0.9446f)
+                    lineTo(11.4314f, 3.0995f)
+                    horizontalLineTo(14.0006f)
+                    verticalLineTo(6.6672f)
+                    horizontalLineTo(11.4319f)
+                    lineTo(14.0006f, 8.821f)
+                    verticalLineTo(9.9998f)
+                    horizontalLineTo(10.8044f)
+                    lineTo(8.7864f, 8.3101f)
+                    verticalLineTo(9.9998f)
+                    horizontalLineTo(5.215f)
+                    verticalLineTo(8.3085f)
+                    lineTo(3.1932f, 9.9998f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(8.8108f)
+                    lineTo(2.5635f, 6.6672f)
+                    horizontalLineTo(0.0f)
+                    verticalLineTo(3.0995f)
+                    horizontalLineTo(2.5671f)
+                    lineTo(0.0f, 0.9492f)
                     verticalLineTo(0.0f)
+                    lineTo(3.4735f, -2.0E-4f)
+                    lineTo(5.215f, 1.4573f)
+                    verticalLineTo(-2.0E-4f)
+                    horizontalLineTo(8.7864f)
+                    verticalLineTo(1.4602f)
+                    lineTo(10.5352f, -2.0E-4f)
+                    horizontalLineTo(14.0006f)
+                    verticalLineTo(0.9446f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF053C8A), 1.0f to Color(0xFF002B67),
-                        start = Offset(6.00012f,1.52588E-5f), end = Offset(6.00012f,9.33335f)),
-                        stroke = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin
-                        = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(12.0001f, 0.0f)
-                    horizontalLineTo(1.0E-4f)
-                    verticalLineTo(9.3334f)
-                    horizontalLineTo(12.0001f)
-                    verticalLineTo(0.0f)
+                path(fill = SolidColor(Color(0xFFDC1F37)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(8.6828f, 4.0995f)
+                    lineTo(13.571f, -2.0E-4f)
+                    lineTo(12.0943f, -0.0028f)
+                    lineTo(7.7864f, 3.5982f)
+                    verticalLineTo(0.0016f)
+                    lineTo(6.215f, 0.0016f)
+                    verticalLineTo(3.5983f)
+                    lineTo(1.9281f, 0.0103f)
+                    lineTo(0.4262f, 0.0017f)
+                    lineTo(5.3183f, 4.0995f)
+                    horizontalLineTo(6.0E-4f)
+                    verticalLineTo(5.6672f)
+                    horizontalLineTo(5.3183f)
+                    lineTo(0.139f, 9.998f)
+                    lineTo(1.6391f, 9.9961f)
+                    lineTo(6.215f, 6.1682f)
+                    verticalLineTo(9.9976f)
+                    horizontalLineTo(7.7864f)
+                    verticalLineTo(6.1684f)
+                    lineTo(12.36f, 9.998f)
+                    lineTo(13.8503f, 10.0f)
+                    lineTo(8.6829f, 5.6672f)
+                    horizontalLineTo(14.0006f)
+                    verticalLineTo(4.0995f)
+                    horizontalLineTo(8.6828f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(5.43229f,-1.2028f), end = Offset(5.43229f,10.5362f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(4.0001f, 4.3067f)
-                    lineTo(-1.8021f, -0.6666f)
-                    horizontalLineTo(0.8804f)
-                    lineTo(5.547f, 2.6667f)
-                    horizontalLineTo(6.4755f)
-                    lineTo(12.6667f, -1.2028f)
-                    verticalLineTo(0.3334f)
-                    curveTo(12.6667f, 0.7367f, 12.4442f, 1.1687f, 12.1096f, 1.4077f)
-                    lineTo(8.0f, 4.3431f)
-                    verticalLineTo(5.0267f)
-                    lineTo(12.183f, 8.6121f)
-                    curveTo(12.7992f, 9.1403f, 12.4548f, 10.0f, 11.6667f, 10.0f)
-                    curveTo(11.3398f, 10.0f, 10.9404f, 9.8719f, 10.6679f, 9.6773f)
-                    lineTo(6.4531f, 6.6667f)
-                    horizontalLineTo(5.5246f)
-                    lineTo(-0.6666f, 10.5362f)
-                    verticalLineTo(8.3236f)
-                    lineTo(4.0001f, 4.9903f)
-                    verticalLineTo(4.3067f)
+                path(fill = SolidColor(Color(0xFF053C8A)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(8.3325f, 4.9218f)
+                    curveTo(8.3325f, 5.6575f, 7.736f, 6.254f, 7.0002f, 6.254f)
+                    curveTo(6.2645f, 6.254f, 5.668f, 5.6575f, 5.668f, 4.9218f)
+                    curveTo(5.668f, 4.186f, 6.2645f, 3.5895f, 7.0002f, 3.5895f)
+                    curveTo(7.736f, 3.5895f, 8.3325f, 4.186f, 8.3325f, 4.9218f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFDB1E36), 1.0f to Color(0xFFD51931),
-                        start = Offset(6.00012f,1.52588E-5f), end = Offset(6.00012f,9.33335f)),
-                        stroke = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin
-                        = Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
-                    moveTo(4.6668f, 4.0f)
-                    lineTo(1.0E-4f, 0.0f)
-                    horizontalLineTo(0.6668f)
-                    lineTo(5.3335f, 3.3333f)
-                    horizontalLineTo(6.6668f)
-                    lineTo(12.0001f, 0.0f)
-                    verticalLineTo(0.3333f)
-                    curveTo(12.0001f, 0.5174f, 11.8848f, 0.7491f, 11.7222f, 0.8652f)
-                    lineTo(7.3335f, 4.0f)
-                    verticalLineTo(5.3334f)
-                    lineTo(11.7492f, 9.1183f)
-                    curveTo(11.8878f, 9.2371f, 11.8455f, 9.3334f, 11.6668f, 9.3334f)
-                    curveTo(11.4827f, 9.3334f, 11.2181f, 9.2509f, 11.0555f, 9.1348f)
-                    lineTo(6.6668f, 6.0f)
-                    horizontalLineTo(5.3335f)
-                    lineTo(1.0E-4f, 9.3334f)
-                    verticalLineTo(8.6667f)
-                    lineTo(4.6668f, 5.3334f)
-                    verticalLineTo(4.0f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(7.8003f, 4.9218f)
+                    curveTo(7.8003f, 5.3636f, 7.4422f, 5.7218f, 7.0003f, 5.7218f)
+                    curveTo(6.5585f, 5.7218f, 6.2003f, 5.3636f, 6.2003f, 4.9218f)
+                    curveTo(6.2003f, 4.4799f, 6.5585f, 4.1218f, 7.0003f, 4.1218f)
+                    curveTo(7.4422f, 4.1218f, 7.8003f, 4.4799f, 7.8003f, 4.9218f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(6.33346f,1.52588E-5f), end = Offset(6.33346f,10.0f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
-                    moveTo(1.0E-4f, 3.3333f)
-                    verticalLineTo(6.0f)
-                    horizontalLineTo(4.6668f)
-                    verticalLineTo(9.3395f)
-                    curveTo(4.6668f, 9.7043f, 4.9522f, 10.0f, 5.3397f, 10.0f)
-                    horizontalLineTo(6.6605f)
-                    curveTo(7.0322f, 10.0f, 7.3335f, 9.7123f, 7.3335f, 9.3395f)
-                    verticalLineTo(6.0f)
-                    horizontalLineTo(12.0128f)
-                    curveTo(12.374f, 6.0f, 12.6668f, 5.7146f, 12.6668f, 5.3271f)
-                    verticalLineTo(4.0063f)
-                    curveTo(12.6668f, 3.6346f, 12.38f, 3.3333f, 12.0128f, 3.3333f)
-                    horizontalLineTo(7.3335f)
-                    verticalLineTo(0.0f)
-                    horizontalLineTo(4.6668f)
-                    verticalLineTo(3.3333f)
-                    horizontalLineTo(1.0E-4f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(4.8027f, 4.9218f)
+                    curveTo(4.8027f, 5.3647f, 4.4437f, 5.7238f, 4.0007f, 5.7238f)
+                    curveTo(3.5578f, 5.7238f, 3.1987f, 5.3647f, 3.1987f, 4.9218f)
+                    curveTo(3.1987f, 4.4788f, 3.5578f, 4.1198f, 4.0007f, 4.1198f)
+                    curveTo(4.4437f, 4.1198f, 4.8027f, 4.4788f, 4.8027f, 4.9218f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFDB1E36), 1.0f to Color(0xFFD51931),
-                        start = Offset(6.00012f,1.52588E-5f), end = Offset(6.00012f,9.33335f)),
-                        stroke = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin
-                        = Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
-                    moveTo(1.0E-4f, 4.0f)
-                    horizontalLineTo(5.3335f)
-                    verticalLineTo(3.3333f)
-                    verticalLineTo(0.0f)
-                    horizontalLineTo(6.6668f)
-                    verticalLineTo(3.3333f)
-                    verticalLineTo(4.0f)
-                    horizontalLineTo(12.0001f)
-                    verticalLineTo(5.3334f)
-                    horizontalLineTo(6.6668f)
-                    verticalLineTo(6.0f)
-                    verticalLineTo(9.3334f)
-                    horizontalLineTo(5.3335f)
-                    verticalLineTo(6.0f)
-                    verticalLineTo(5.3334f)
-                    horizontalLineTo(1.0E-4f)
-                    verticalLineTo(4.0f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(10.8019f, 4.9218f)
+                    curveTo(10.8019f, 5.3647f, 10.4429f, 5.7238f, 9.9999f, 5.7238f)
+                    curveTo(9.557f, 5.7238f, 9.1979f, 5.3647f, 9.1979f, 4.9218f)
+                    curveTo(9.1979f, 4.4788f, 9.557f, 4.1198f, 9.9999f, 4.1198f)
+                    curveTo(10.4429f, 4.1198f, 10.8019f, 4.4788f, 10.8019f, 4.9218f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF053C8A), 1.0f to Color(0xFF002B67),
-                        start = Offset(6.00008f,3.33334f), end = Offset(6.00008f,6.00001f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(6.0001f, 6.0f)
-                    curveTo(6.7365f, 6.0f, 7.3334f, 5.4031f, 7.3334f, 4.6667f)
-                    curveTo(7.3334f, 3.9303f, 6.7365f, 3.3333f, 6.0001f, 3.3333f)
-                    curveTo(5.2637f, 3.3333f, 4.6667f, 3.9303f, 4.6667f, 4.6667f)
-                    curveTo(4.6667f, 5.4031f, 5.2637f, 6.0f, 6.0001f, 6.0f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(7.8003f, 2.382f)
+                    curveTo(7.8003f, 2.8238f, 7.4422f, 3.182f, 7.0003f, 3.182f)
+                    curveTo(6.5585f, 3.182f, 6.2003f, 2.8238f, 6.2003f, 2.382f)
+                    curveTo(6.2003f, 1.9401f, 6.5585f, 1.582f, 7.0003f, 1.582f)
+                    curveTo(7.4422f, 1.582f, 7.8003f, 1.9401f, 7.8003f, 2.382f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFDD650), 1.0f to Color(0xFFFCD036),
-                        start = Offset(6.00008f,1.33334f), end = Offset(6.00008f,8.00001f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
-                    moveTo(6.0001f, 5.3333f)
-                    curveTo(5.6319f, 5.3333f, 5.3334f, 5.0349f, 5.3334f, 4.6667f)
-                    curveTo(5.3334f, 4.2985f, 5.6319f, 4.0f, 6.0001f, 4.0f)
-                    curveTo(6.3683f, 4.0f, 6.6667f, 4.2985f, 6.6667f, 4.6667f)
-                    curveTo(6.6667f, 5.0349f, 6.3683f, 5.3333f, 6.0001f, 5.3333f)
-                    close()
-                    moveTo(8.6667f, 5.3333f)
-                    curveTo(8.2986f, 5.3333f, 8.0001f, 5.0349f, 8.0001f, 4.6667f)
-                    curveTo(8.0001f, 4.2985f, 8.2986f, 4.0f, 8.6667f, 4.0f)
-                    curveTo(9.0349f, 4.0f, 9.3334f, 4.2985f, 9.3334f, 4.6667f)
-                    curveTo(9.3334f, 5.0349f, 9.0349f, 5.3333f, 8.6667f, 5.3333f)
-                    close()
-                    moveTo(3.3334f, 5.3333f)
-                    curveTo(2.9652f, 5.3333f, 2.6667f, 5.0349f, 2.6667f, 4.6667f)
-                    curveTo(2.6667f, 4.2985f, 2.9652f, 4.0f, 3.3334f, 4.0f)
-                    curveTo(3.7016f, 4.0f, 4.0001f, 4.2985f, 4.0001f, 4.6667f)
-                    curveTo(4.0001f, 5.0349f, 3.7016f, 5.3333f, 3.3334f, 5.3333f)
-                    close()
-                    moveTo(6.0001f, 2.6667f)
-                    curveTo(5.6319f, 2.6667f, 5.3334f, 2.3682f, 5.3334f, 2.0f)
-                    curveTo(5.3334f, 1.6318f, 5.6319f, 1.3333f, 6.0001f, 1.3333f)
-                    curveTo(6.3683f, 1.3333f, 6.6667f, 1.6318f, 6.6667f, 2.0f)
-                    curveTo(6.6667f, 2.3682f, 6.3683f, 2.6667f, 6.0001f, 2.6667f)
-                    close()
-                    moveTo(6.0001f, 8.0f)
-                    curveTo(5.6319f, 8.0f, 5.3334f, 7.7015f, 5.3334f, 7.3333f)
-                    curveTo(5.3334f, 6.9651f, 5.6319f, 6.6667f, 6.0001f, 6.6667f)
-                    curveTo(6.3683f, 6.6667f, 6.6667f, 6.9651f, 6.6667f, 7.3333f)
-                    curveTo(6.6667f, 7.7015f, 6.3683f, 8.0f, 6.0001f, 8.0f)
+                path(fill = SolidColor(Color(0xFFFDD650)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(7.8003f, 7.6176f)
+                    curveTo(7.8003f, 8.0594f, 7.4422f, 8.4176f, 7.0003f, 8.4176f)
+                    curveTo(6.5585f, 8.4176f, 6.2003f, 8.0594f, 6.2003f, 7.6176f)
+                    curveTo(6.2003f, 7.1757f, 6.5585f, 6.8176f, 7.0003f, 6.8176f)
+                    curveTo(7.4422f, 6.8176f, 7.8003f, 7.1757f, 7.8003f, 7.6176f)
                     close()
                 }
             }

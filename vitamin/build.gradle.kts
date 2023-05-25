@@ -11,6 +11,7 @@ dependencies {
     api(project(":buttons"))
     api(project(":checkboxes"))
     api(project(":chips"))
+    api(project(":cards"))
     api(project(":dividers"))
     api(project(":fabs"))
     api(project(":foundation:foundation"))
@@ -29,4 +30,5 @@ dependencies {
     api(project(":tags"))
     api(project(":text-inputs"))
     api(project(":quantity-pickers"))
+    api(project(":scaffolds"))
 }

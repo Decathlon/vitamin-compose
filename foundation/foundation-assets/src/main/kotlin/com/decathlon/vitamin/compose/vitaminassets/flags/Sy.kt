@@ -24,18 +24,14 @@ public val FlagsGroup.Sy: ImageVector
         _sy = Builder(name = "Sy", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = SolidColor(Color(0xFFffffff)), stroke = SolidColor(Color(0xFFF5F5F5)),
-                        strokeLineWidth = 0.5f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
-                    moveTo(2.0f, 0.25f)
-                    lineTo(26.0f, 0.25f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 27.75f, 2.0f)
-                    lineTo(27.75f, 18.0f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 26.0f, 19.75f)
-                    lineTo(2.0f, 19.75f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 0.25f, 18.0f)
-                    lineTo(0.25f, 2.0f)
-                    arcTo(1.75f, 1.75f, 0.0f, false, true, 2.0f, 0.25f)
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
+                    moveTo(0.0f, 0.0f)
+                    horizontalLineTo(28.0f)
+                    curveTo(28.0f, 6.6667f, 28.0f, 13.3333f, 28.0f, 20.0f)
+                    curveTo(18.6667f, 20.0f, 9.3333f, 20.0f, 0.0f, 20.0f)
+                    curveTo(0.0f, 13.3333f, 0.0f, 6.6667f, 0.0f, 0.0f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF262626)), stroke = null, strokeLineWidth = 0.0f,
@@ -55,7 +51,7 @@ public val FlagsGroup.Sy: ImageVector
                     horizontalLineTo(28.0f)
                     verticalLineTo(0.0f)
                     horizontalLineTo(0.0f)
-                    verticalLineTo(6.6667f)
+                    lineTo(0.0f, 6.6667f)
                     close()
                 }
                 path(fill = SolidColor(Color(0xFF128A49)), stroke = null, strokeLineWidth = 0.0f,
@@ -65,9 +61,9 @@ public val FlagsGroup.Sy: ImageVector
                     lineTo(7.7657f, 12.1574f)
                     lineTo(8.2934f, 10.3378f)
                     lineTo(6.797f, 9.1759f)
-                    lineTo(8.6905f, 9.1154f)
+                    lineTo(8.6905f, 9.1155f)
                     lineTo(9.3332f, 7.3333f)
-                    lineTo(9.9758f, 9.1154f)
+                    lineTo(9.9758f, 9.1155f)
                     lineTo(11.8693f, 9.1759f)
                     lineTo(10.373f, 10.3378f)
                     lineTo(10.9006f, 12.1574f)

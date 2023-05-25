@@ -1,8 +1,5 @@
 package com.decathlon.vitamin.compose.vitaminassets.flags
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Brush.Companion.linearGradient
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.PathFillType.Companion.EvenOdd
@@ -27,10 +24,9 @@ public val FlagsGroup.Yt: ImageVector
         _yt = Builder(name = "Yt", defaultWidth = 28.0.dp, defaultHeight = 20.0.dp, viewportWidth =
                 28.0f, viewportHeight = 20.0f).apply {
             group {
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0002f,0.0f), end = Offset(14.0002f,20.0f)), stroke = null,
-                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFFF7F7F7)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(28.0002f, 0.0f)
                     horizontalLineTo(2.0E-4f)
                     verticalLineTo(20.0f)
@@ -53,31 +49,6 @@ public val FlagsGroup.Yt: ImageVector
                     verticalLineTo(5.988f)
                     close()
                 }
-                path(fill = SolidColor(Color(0x00000000)), stroke = SolidColor(Color(0xFF979797)),
-                        strokeLineWidth = 1.33333f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
-                    moveTo(16.6662f, 6.0001f)
-                    verticalLineTo(5.9881f)
-                    curveTo(16.6662f, 5.9973f, 16.6653f, 5.9996f, 16.6662f, 6.0001f)
-                    close()
-                    moveTo(16.6662f, 6.0001f)
-                    curveTo(16.6666f, 6.0003f, 16.6675f, 6.0001f, 16.6692f, 6.0001f)
-                    horizontalLineTo(16.6662f)
-                    close()
-                    moveTo(11.3328f, 6.0001f)
-                    verticalLineTo(12.6787f)
-                    curveTo(11.3328f, 12.6797f, 11.36f, 12.7083f, 11.3199f, 12.7081f)
-                    curveTo(11.3241f, 12.708f, 11.3241f, 12.708f, 11.3321f, 12.7079f)
-                    curveTo(11.7884f, 12.7031f, 12.3897f, 12.7723f, 12.999f, 12.9916f)
-                    curveTo(13.3793f, 13.1284f, 13.7173f, 13.3123f, 13.9995f, 13.55f)
-                    curveTo(14.2816f, 13.3123f, 14.6197f, 13.1284f, 15.0f, 12.9916f)
-                    curveTo(15.5916f, 12.7786f, 16.1756f, 12.7072f, 16.6267f, 12.7077f)
-                    curveTo(16.6526f, 12.7013f, 16.6662f, 12.686f, 16.6662f, 12.6787f)
-                    verticalLineTo(6.0001f)
-                    curveTo(16.6662f, 6.0001f, 16.6662f, 6.0001f, 16.6662f, 6.0001f)
-                    horizontalLineTo(11.3328f)
-                    close()
-                }
                 path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
                         strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
                         pathFillType = NonZero) {
@@ -88,10 +59,9 @@ public val FlagsGroup.Yt: ImageVector
                     verticalLineTo(5.3334f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF1B2CA9), 1.0f to Color(0xFF132294),
-                        start = Offset(13.9995f,5.33337f), end = Offset(13.9995f,9.33337f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF1B2CA9)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(17.3329f, 5.3334f)
                     horizontalLineTo(10.6662f)
                     verticalLineTo(9.3334f)
@@ -109,10 +79,9 @@ public val FlagsGroup.Yt: ImageVector
                     verticalLineTo(9.3334f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFE6402C), 1.0f to Color(0xFFD1321F),
-                        start = Offset(13.9995f,9.33337f), end = Offset(13.9995f,14.6667f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFFE6402C)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = NonZero) {
                     moveTo(17.3329f, 9.3334f)
                     horizontalLineTo(10.6662f)
                     verticalLineTo(14.6667f)
@@ -120,10 +89,9 @@ public val FlagsGroup.Yt: ImageVector
                     verticalLineTo(9.3334f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFD0D0D0), 1.0f to Color(0xFFC4C4C4),
-                        start = Offset(21.3376f,4.59187f), end = Offset(21.3376f,14.2899f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFD0D0D0)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(20.0524f, 6.3011f)
                     verticalLineTo(5.683f)
                     lineTo(20.667f, 5.3333f)
@@ -147,15 +115,14 @@ public val FlagsGroup.Yt: ImageVector
                     curveTo(19.5083f, 14.4525f, 19.1148f, 12.5148f, 19.1148f, 12.5148f)
                     curveTo(19.1148f, 12.5148f, 18.7251f, 10.7066f, 19.1148f, 9.401f)
                     curveTo(19.5044f, 8.0953f, 20.082f, 8.0629f, 21.2553f, 7.346f)
-                    curveTo(22.4287f, 6.6291f, 20.547f, 7.1029f, 20.547f, 7.1029f)
-                    curveTo(20.547f, 7.1029f, 19.6534f, 7.7751f, 19.3733f, 7.5304f)
+                    curveTo(22.4287f, 6.6291f, 20.547f, 7.103f, 20.547f, 7.103f)
+                    curveTo(20.547f, 7.103f, 19.6534f, 7.7751f, 19.3733f, 7.5304f)
                     curveTo(19.0932f, 7.2858f, 20.0524f, 6.3011f, 20.0524f, 6.3011f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF262626), 1.0f to Color(0xFF0D0D0D),
-                        start = Offset(21.0002f,5.00002f), end = Offset(21.0002f,7.66668f)), stroke
-                        = null, fillAlpha = 0.3f, strokeLineWidth = 0.0f, strokeLineCap = Butt,
-                        strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF262626)), stroke = null, fillAlpha = 0.3f,
+                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
+                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
                     moveTo(21.0002f, 7.6667f)
                     curveTo(21.7366f, 7.6667f, 22.3335f, 7.0697f, 22.3335f, 6.3334f)
                     curveTo(22.3335f, 5.597f, 21.7366f, 5.0f, 21.0002f, 5.0f)
@@ -163,10 +130,9 @@ public val FlagsGroup.Yt: ImageVector
                     curveTo(19.6669f, 7.0697f, 20.2638f, 7.6667f, 21.0002f, 7.6667f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFD0D0D0), 1.0f to Color(0xFFC4C4C4),
-                        start = Offset(6.66275f,4.59187f), end = Offset(6.66275f,14.2899f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFD0D0D0)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(7.948f, 6.3011f)
                     verticalLineTo(5.683f)
                     lineTo(7.3334f, 5.3333f)
@@ -190,15 +156,14 @@ public val FlagsGroup.Yt: ImageVector
                     curveTo(8.4921f, 14.4525f, 8.8856f, 12.5148f, 8.8856f, 12.5148f)
                     curveTo(8.8856f, 12.5148f, 9.2753f, 10.7066f, 8.8856f, 9.401f)
                     curveTo(8.496f, 8.0953f, 7.9184f, 8.0629f, 6.7451f, 7.346f)
-                    curveTo(5.5717f, 6.6291f, 7.4534f, 7.1029f, 7.4534f, 7.1029f)
-                    curveTo(7.4534f, 7.1029f, 8.347f, 7.7751f, 8.6271f, 7.5304f)
+                    curveTo(5.5717f, 6.6291f, 7.4534f, 7.103f, 7.4534f, 7.103f)
+                    curveTo(7.4534f, 7.103f, 8.347f, 7.7751f, 8.6271f, 7.5304f)
                     curveTo(8.9072f, 7.2858f, 7.948f, 6.3011f, 7.948f, 6.3011f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFF262626), 1.0f to Color(0xFF0D0D0D),
-                        start = Offset(7.00019f,5.00002f), end = Offset(7.00019f,7.66668f)), stroke
-                        = null, fillAlpha = 0.3f, strokeLineWidth = 0.0f, strokeLineCap = Butt,
-                        strokeLineJoin = Miter, strokeLineMiter = 4.0f, pathFillType = NonZero) {
+                path(fill = SolidColor(Color(0xFF262626)), stroke = null, fillAlpha = 0.3f,
+                        strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
+                        strokeLineMiter = 4.0f, pathFillType = NonZero) {
                     moveTo(7.0002f, 7.6667f)
                     curveTo(6.2638f, 7.6667f, 5.6669f, 7.0697f, 5.6669f, 6.3334f)
                     curveTo(5.6669f, 5.597f, 6.2638f, 5.0f, 7.0002f, 5.0f)
@@ -206,10 +171,9 @@ public val FlagsGroup.Yt: ImageVector
                     curveTo(8.3335f, 7.0697f, 7.7366f, 7.6667f, 7.0002f, 7.6667f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFFFFFFF), 1.0f to Color(0xFFF0F0F0),
-                        start = Offset(14.0002f,6.66667f), end = Offset(14.0002f,8.66667f)), stroke
-                        = null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin =
-                        Miter, strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFFFFFFF)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(12.8452f, 6.6667f)
                     curveTo(12.7318f, 6.8628f, 12.6669f, 7.0905f, 12.6669f, 7.3333f)
                     curveTo(12.6669f, 8.0697f, 13.2638f, 8.6667f, 14.0002f, 8.6667f)
@@ -219,10 +183,9 @@ public val FlagsGroup.Yt: ImageVector
                     curveTo(13.5067f, 7.3333f, 13.0758f, 7.0652f, 12.8452f, 6.6667f)
                     close()
                 }
-                path(fill = linearGradient(0.0f to Color(0xFFF7E04B), 1.0f to Color(0xFFEAD135),
-                        start = Offset(14.0002f,10.6667f), end = Offset(14.0002f,12.0f)), stroke =
-                        null, strokeLineWidth = 0.0f, strokeLineCap = Butt, strokeLineJoin = Miter,
-                        strokeLineMiter = 4.0f, pathFillType = EvenOdd) {
+                path(fill = SolidColor(Color(0xFFF7E04B)), stroke = null, strokeLineWidth = 0.0f,
+                        strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                        pathFillType = EvenOdd) {
                     moveTo(12.6669f, 12.0f)
                     curveTo(12.2987f, 12.0f, 12.0002f, 11.7015f, 12.0002f, 11.3333f)
                     curveTo(12.0002f, 10.9651f, 12.2987f, 10.6667f, 12.6669f, 10.6667f)

@@ -51,13 +51,14 @@ object VitaminRadioButtons {
             disabledColor = if (selected) colors.disabledSelectedColor
             else colors.disabledUnselectedColor
         )
+        val indication = LocalIndication.current.takeIf { onClick != null }
 
         Row(
             modifier = modifier
                 .selectable(
                     selected = selected,
                     interactionSource = interactionSource,
-                    indication = LocalIndication.current,
+                    indication = indication,
                     enabled = enabled,
                     role = Role.RadioButton,
                     onClick = {
