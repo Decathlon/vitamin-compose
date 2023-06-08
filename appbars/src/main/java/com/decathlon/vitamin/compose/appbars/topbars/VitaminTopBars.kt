@@ -15,12 +15,15 @@ import androidx.compose.material.TextButton
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
@@ -123,6 +126,7 @@ object VitaminTopBars {
         placeholder: String,
         modifier: Modifier = Modifier,
         enabled: Boolean = true,
+        focused: Boolean = false,
         actions: List<SearchActionItem> = emptyList(),
         keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
         keyboardActions: KeyboardActions = KeyboardActions.Default,
@@ -132,6 +136,14 @@ object VitaminTopBars {
         onValueChange: (String) -> Unit,
         navigationIcon: @Composable VitaminSearchNavigationIconButtons.() -> Unit,
     ) {
+        val focusRequester = remember { FocusRequester() }
+
+        LaunchedEffect(focused) {
+            if (focused) {
+                focusRequester.requestFocus()
+            }
+        }
+
         CompositionLocalProvider(LocalVitaminTopBarColors provides colors) {
             TopAppBar(
                 modifier = modifier,
@@ -144,7 +156,9 @@ object VitaminTopBars {
                     onValueChange = onValueChange,
                     enabled = enabled,
                     textStyle = textStyle.copy(color = colors.inputColor!!),
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .focusRequester(focusRequester),
                     singleLine = true,
                     maxLines = 1,
                     interactionSource = interactionSource,

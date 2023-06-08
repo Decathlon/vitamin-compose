@@ -228,7 +228,8 @@ object AppBars : Screen {
                                                 searchMode.value = false
                                             }, contentDescription = null)
                                         }
-                                    }
+                                    },
+                                    focused = true
                                 )
                             }
                         }
