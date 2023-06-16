@@ -18,8 +18,8 @@ internal sealed class Icon(val imageVector: ImageVector) {
         private const val HALF = 0.5f
         fun get(index: Int, number: Float): Icon {
             val floor = floor(number).toInt()
-            return if (floor == index) {
-                val decimal = number - index
+            val decimal = number - index
+            return if (floor == index && decimal != 0f) {
                 if (decimal < HALF) Half else Fill
             } else if (index < number) {
                 Fill
