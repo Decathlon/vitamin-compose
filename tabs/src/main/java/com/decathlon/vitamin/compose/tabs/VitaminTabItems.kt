@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
@@ -72,8 +73,15 @@ private fun VitaminTab(
     val color =
         if (selectedTabIndex == index) activeColor else disabledColor
 
+    val modifier = Modifier
+    tabItem.testTags?.tabTag?.let { tag ->
+        modifier.testTag(tag)
+    }
+
     Tab(
-        modifier = Modifier.fillMaxHeight().semantics(mergeDescendants = true) {},
+        modifier = modifier
+            .fillMaxHeight()
+            .semantics(mergeDescendants = true) {},
         selected = selectedTabIndex == index,
         onClick = {
             onTabClicked(tabItem)
@@ -86,12 +94,14 @@ private fun VitaminTab(
                     textStyle = textStyle,
                     textOverflow = textOverflow
                 )
+
                 tabItem.topIcon.not() && tabItem.icon != null -> VitaminRightIconTab(
                     tabItem = tabItem,
                     color = color,
                     textStyle = textStyle,
                     textOverflow = textOverflow
                 )
+
                 else -> VitaminLabelTab(
                     tabItem = tabItem,
                     color = color,
@@ -110,7 +120,13 @@ private fun VitaminLabelTab(
     textStyle: TextStyle,
     textOverflow: TextOverflow
 ) {
+    val modifier = Modifier
+    tabItem.testTags?.labelTag?.let { tag ->
+        modifier.testTag(tag)
+    }
+
     Text(
+        modifier = modifier,
         text = tabItem.label,
         style = textStyle,
         color = color,
@@ -127,16 +143,8 @@ private fun VitaminRightIconTab(
     textOverflow: TextOverflow
 ) {
     Row {
-        tabItem.icon?.let {
-            Image(
-                painter = it,
-                contentDescription = null,
-                colorFilter = ColorFilter.tint(color = color),
-            )
-        }
-
+        VitaminTabIcon(tabItem = tabItem, color = color)
         Spacer(modifier = Modifier.width(10.dp))
-
         VitaminLabelTab(
             tabItem = tabItem,
             color = color,
@@ -157,19 +165,30 @@ private fun VitaminTopIconTab(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        tabItem.icon?.let {
-            Image(
-                painter = it,
-                contentDescription = null,
-                colorFilter = ColorFilter.tint(color = color)
-            )
-        }
-
+        VitaminTabIcon(tabItem = tabItem, color = color)
         VitaminLabelTab(
             tabItem = tabItem,
             color = color,
             textStyle = textStyle,
             textOverflow = textOverflow
+        )
+    }
+}
+
+@Composable
+private fun VitaminTabIcon(tabItem: TabItem, color: Color) {
+    tabItem.icon?.let { icon ->
+
+        val modifier = Modifier
+        tabItem.testTags?.iconTag?.let { tag ->
+            modifier.testTag(tag)
+        }
+
+        Image(
+            modifier = modifier,
+            painter = icon,
+            contentDescription = null,
+            colorFilter = ColorFilter.tint(color = color)
         )
     }
 }

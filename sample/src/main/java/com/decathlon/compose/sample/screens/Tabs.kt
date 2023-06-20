@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import com.decathlon.compose.sample.components.SampleScaffold
 import com.decathlon.vitamin.compose.VitaminIcons
 import com.decathlon.vitamin.compose.tabs.TabItem
+import com.decathlon.vitamin.compose.tabs.TabItemTags
 import com.decathlon.vitamin.compose.tabs.VitaminTabs
 import com.decathlon.vitamin.compose.vitaminicons.Line
 import com.decathlon.vitamin.compose.vitaminicons.line.Heart

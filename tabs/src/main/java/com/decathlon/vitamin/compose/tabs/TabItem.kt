@@ -6,5 +6,12 @@ data class TabItem(
     val label: String,
     val icon: Painter? = null,
     val topIcon: Boolean = false,
-    var selected: Boolean = false
+    var selected: Boolean = false,
+    var testTags: TabItemTags? = null,
+)
+
+data class TabItemTags(
+    val labelTag: String? = null,
+    val tabTag: String? = null,
+    val iconTag: String? = null,
 )
