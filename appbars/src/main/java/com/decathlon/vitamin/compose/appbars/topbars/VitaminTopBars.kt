@@ -152,24 +152,26 @@ object VitaminTopBars {
                     keyboardActions = keyboardActions,
                     cursorBrush = SolidColor(colors.cursorColor!!),
                     decorationBox = { textField ->
-                        if (value == "") {
-                            Text(text = placeholder)
-                        } else {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxHeight()
-                                        .weight(1f),
-                                    contentAlignment = Alignment.CenterStart,
-                                ) {
-                                    textField()
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxHeight()
+                                    .weight(1f),
+                                contentAlignment = Alignment.CenterStart,
+                            ) {
+                                if (value.isEmpty()) {
+                                    Text(text = placeholder)
                                 }
+                                textField()
+                            }
+                            if (value.isNotEmpty()) {
                                 actions.forEach {
                                     when (it) {
                                         is SearchActionItem.Microphone -> VitaminSearchMenuIconButtons.Microphone(
                                             onClick = it.onClick,
                                             contentDescription = it.contentDescription
                                         )
+
                                         is SearchActionItem.Close -> VitaminSearchMenuIconButtons.Close(
                                             onClick = it.onClick,
                                             contentDescription = it.contentDescription
