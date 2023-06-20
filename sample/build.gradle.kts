@@ -1,4 +1,5 @@
 import com.decathlon.vitamin.compose.Versions
+import de.fayard.refreshVersions.core.versionFor
 
 plugins {
     id("com.android.application")
@@ -12,7 +13,6 @@ repositories {
 }
 
 android {
-    namespace = "com.decathlon.compose.sample"
     compileSdk = Versions.AndroidConfig.compileSdk
 
     defaultConfig {
@@ -26,33 +26,24 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
         freeCompilerArgs = freeCompilerArgs + listOf(
-            "-opt-in=kotlin.RequiresOptIn",
+            "-opt-in=kotlin.RequiresOptIn"
         )
     }
 
-    java {
-        toolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
-    }
-
     composeOptions {
-        kotlinCompilerExtensionVersion = Libs.compose_compiler.split(":").last()
+        kotlinCompilerExtensionVersion = versionFor(AndroidX.compose.ui)
     }
 
     buildFeatures {
