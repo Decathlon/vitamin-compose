@@ -13,3 +13,7 @@ dependencies {
     implementation(Google.accompanist.module("accompanist-placeholder"))
     testImplementation("com.google.testparameterinjector:test-parameter-injector:1.8")
 }
+
+android {
+    namespace = "com.decathlon.vitamin.compose.skeletons"
+}
