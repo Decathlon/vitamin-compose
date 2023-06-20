@@ -9,7 +9,3 @@ dependencies {
     api(project(":foundation:foundation"))
     implementation(AndroidX.compose.ui.tooling)
 }
-
-android {
-    namespace = "com.decathlon.vitamin.compose.switches"
-}

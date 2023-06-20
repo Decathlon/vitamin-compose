@@ -3,7 +3,6 @@ object Libs {
     const val vitamin_assets = "com.decathlon.vitamin:foundation-assets:_"
 
     const val compose_ui =  "androidx.compose.ui:ui:_"
-    const val compose_compiler =  "androidx.compose.compiler:compiler:_"
 
     const val compose_ui_util =  "androidx.compose.ui:ui-util:_"
 

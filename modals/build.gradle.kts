@@ -13,7 +13,3 @@ dependencies {
     testImplementation("com.google.testparameterinjector:test-parameter-injector:1.8")
     testImplementation(project(":foundation:foundation-icons"))
 }
-
-android {
-    namespace = "com.decathlon.vitamin.compose.modals"
-}
