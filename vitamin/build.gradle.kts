@@ -32,7 +32,3 @@ dependencies {
     api(project(":quantity-pickers"))
     api(project(":scaffolds"))
 }
-
-android {
-    namespace = "com.decathlon.vitamin.compose.vitamin"
-}

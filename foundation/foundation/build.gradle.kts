@@ -10,7 +10,3 @@ dependencies {
     api(AndroidX.compose.ui)
     api(AndroidX.compose.material)
 }
-
-android {
-    namespace = "com.decathlon.vitamin.compose.foundation"
-}

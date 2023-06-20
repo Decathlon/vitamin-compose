@@ -4,7 +4,6 @@ import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.jvm.toolchain.JavaLanguageVersion
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
@@ -18,6 +17,7 @@ class VitaminComposeLibraryPlugin : Plugin<Project> {
         target.apply(plugin = "app.cash.licensee")
         target.configure<app.cash.licensee.LicenseeExtension> {
             allow("Apache-2.0")
+            allow("MIT")
         }
         target.repositories {
             google()
@@ -52,29 +52,29 @@ internal fun Project.configureAndroid() = this.extensions.getByType(LibraryExten
             useSupportLibrary = true
         }
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Libs.compose_compiler.split(":").last()
+        kotlinCompilerExtensionVersion = Libs.compose_ui.split(":").last()
     }
     tasks.withType<KotlinCompile> {
         kotlinOptions {
             allWarningsAsErrors = true
-            jvmTarget = JavaVersion.VERSION_17.toString()
+            jvmTarget = JavaVersion.VERSION_11.toString()
             freeCompilerArgs = freeCompilerArgs + listOf(
-                "-opt-in=kotlin.RequiresOptIn",
+                "-opt-in=kotlin.RequiresOptIn"
             )
         }
     }
-
     buildFeatures {
         compose = true
     }
 
-    packaging {
+    packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
