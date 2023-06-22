@@ -30,4 +30,5 @@ dependencies {
     api(project(":tags"))
     api(project(":text-inputs"))
     api(project(":quantity-pickers"))
+    api(project(":scaffolds"))
 }

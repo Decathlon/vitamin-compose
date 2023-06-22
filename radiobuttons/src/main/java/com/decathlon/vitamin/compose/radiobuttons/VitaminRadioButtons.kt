@@ -2,6 +2,7 @@ package com.decathlon.vitamin.compose.radiobuttons
 
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
@@ -50,13 +51,14 @@ object VitaminRadioButtons {
             disabledColor = if (selected) colors.disabledSelectedColor
             else colors.disabledUnselectedColor
         )
+        val indication = LocalIndication.current.takeIf { onClick != null }
 
         Row(
             modifier = modifier
                 .selectable(
                     selected = selected,
                     interactionSource = interactionSource,
-                    indication = LocalIndication.current,
+                    indication = indication,
                     enabled = enabled,
                     role = Role.RadioButton,
                     onClick = {
@@ -69,7 +71,8 @@ object VitaminRadioButtons {
                     minHeight = sizes.minimumSize
                 )
                 .padding(all = sizes.padding),
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
         ) {
             RadioButton(
                 selected = selected,
