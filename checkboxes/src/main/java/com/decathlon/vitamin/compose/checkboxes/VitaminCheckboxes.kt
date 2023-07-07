@@ -60,7 +60,7 @@ object VitaminCheckboxes {
                 val alpha = if (enabled) 1f else VtmnStatesDisabled
                 Spacer(modifier = Modifier.width(7.dp))
                 CompositionLocalProvider(LocalContentAlpha provides alpha) {
-                    ProvideTextStyle(value = textStyle.copy(color = colors.contentColor)) {
+                    ProvideTextStyle(value = textStyle.copy(color = colors.contentColor.copy(alpha = alpha))) {
                         endContent()
                     }
                 }
