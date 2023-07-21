@@ -2,7 +2,6 @@ package com.decathlon.vitamin.compose.textinputs
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Icon
@@ -18,7 +17,6 @@ import com.decathlon.vitamin.compose.textinputs.utils.TextInputVariantsFactory
 import com.decathlon.vitamin.compose.textinputs.utils.Theme
 import com.decathlon.vitamin.compose.textinputs.utils.Variant
 import com.decathlon.vitamin.compose.vitaminicons.Line
-import com.decathlon.vitamin.compose.vitaminicons.line.Android
 import com.decathlon.vitamin.compose.vitaminicons.line.Heart
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
@@ -50,6 +48,12 @@ class VitaminTextInputsPrimaryTest(
                             modifier = Modifier.fillMaxWidth(),
                             variant = variant,
                             colors = TextInputsState.normal(),
+                        )
+                        TextInputVariantsFactory.TextInput(
+                            modifier = Modifier.fillMaxWidth(),
+                            variant = variant,
+                            colors = TextInputsState.normal(),
+                            helperText = null
                         )
                         TextInputVariantsFactory.TextInput(
                             modifier = Modifier.fillMaxWidth(),

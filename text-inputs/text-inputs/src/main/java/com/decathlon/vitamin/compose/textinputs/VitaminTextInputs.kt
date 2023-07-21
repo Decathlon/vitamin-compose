@@ -31,6 +31,7 @@ import androidx.compose.ui.semantics.disabled
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.toSize
@@ -81,7 +82,7 @@ object VitaminTextInputs {
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
-        icon: @Composable (() -> Unit)? = null
+        icon: @Composable (() -> Unit)? = null,
     ) {
         VitaminTextInputLayoutImpl(
             helperText = helperText,
@@ -102,25 +103,25 @@ object VitaminTextInputs {
                         focusedBorderColor = colors.focusBorderColor,
                         unfocusedBorderColor = colors.borderColor,
                         disabledBorderColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorBorderColor = colors.borderColor,
                         leadingIconColor = colors.iconColor,
                         disabledLeadingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorLeadingIconColor = colors.iconColor,
                         trailingIconColor = colors.iconColor,
                         disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorTrailingIconColor = colors.iconColor,
                         focusedLabelColor = colors.focusTextColor,
                         unfocusedLabelColor = colors.textColor,
                         disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
-                        errorLabelColor = colors.textColor
+                        errorLabelColor = colors.textColor,
                     ),
                     textStyle = textStyle,
                     visualTransformation = transformation,
@@ -142,13 +143,13 @@ object VitaminTextInputs {
                         ) {
                             Icon(
                                 imageVector = colors.imageVector,
-                                contentDescription = null
+                                contentDescription = null,
                             )
                         }
-                    }
+                    },
                 )
             },
-            modifier = modifier
+            modifier = modifier,
         )
     }
 
@@ -175,7 +176,7 @@ object VitaminTextInputs {
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
-        children: @Composable VitaminMenuItems.() -> Unit
+        children: @Composable VitaminMenuItems.() -> Unit,
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
         Dropdown(
@@ -199,15 +200,15 @@ object VitaminTextInputs {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
                                 imageVector = VitaminIcons.Line.ChevronDown,
-                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
+                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu),
                             )
                         }
-                    }
+                    },
                 )
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
             children = children,
-            interactionSource = interactionSource
+            interactionSource = interactionSource,
         )
     }
 
@@ -271,25 +272,25 @@ object VitaminTextInputs {
                         focusedIndicatorColor = colors.focusBorderColor,
                         unfocusedIndicatorColor = colors.borderColor,
                         disabledIndicatorColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorIndicatorColor = colors.borderColor,
                         leadingIconColor = colors.iconColor,
                         disabledLeadingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorLeadingIconColor = colors.iconColor,
                         trailingIconColor = colors.iconColor,
                         disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
                         errorTrailingIconColor = colors.iconColor,
                         focusedLabelColor = colors.focusTextColor,
                         unfocusedLabelColor = colors.textColor,
                         disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
-                            ContentAlpha.disabled
+                            ContentAlpha.disabled,
                         ),
-                        errorLabelColor = colors.textColor
+                        errorLabelColor = colors.textColor,
                     ),
                     textStyle = textStyle,
                     visualTransformation = transformation,
@@ -311,13 +312,13 @@ object VitaminTextInputs {
                         ) {
                             Icon(
                                 imageVector = colors.imageVector,
-                                contentDescription = null
+                                contentDescription = null,
                             )
                         }
-                    }
+                    },
                 )
             },
-            modifier = modifier
+            modifier = modifier,
         )
     }
 
@@ -344,7 +345,7 @@ object VitaminTextInputs {
         interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
         colors: TextInputStateColors = TextInputsState.normal(),
         textStyle: TextStyle = VitaminTheme.typography.text2,
-        children: @Composable VitaminMenuItems.() -> Unit
+        children: @Composable VitaminMenuItems.() -> Unit,
     ) {
         var mTextFieldSize by remember { mutableStateOf(Size.Zero) }
         Dropdown(
@@ -368,7 +369,7 @@ object VitaminTextInputs {
                         IconButton(onClick = { expanded.value = true }) {
                             Icon(
                                 imageVector = VitaminIcons.Line.ChevronDown,
-                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu)
+                                contentDescription = stringResource(id = R.string.vtmn_text_inputs_open_menu),
                             )
                         }
                     },
@@ -376,7 +377,7 @@ object VitaminTextInputs {
             },
             modifier = modifier.width(with(LocalDensity.current) { mTextFieldSize.width.toDp() }),
             children = children,
-            interactionSource = interactionSource
+            interactionSource = interactionSource,
         )
     }
 }
@@ -388,7 +389,7 @@ internal fun VitaminTextInputLayoutImpl(
     colors: TextInputStateColors,
     enabled: Boolean,
     textInput: @Composable () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier) {
         // This is a hack because [Outlined]TextField doesn't expose
@@ -398,8 +399,8 @@ internal fun VitaminTextInputLayoutImpl(
         MaterialTheme(
             typography = MaterialTheme.typography.copy(
                 subtitle1 = VitaminTheme.typography.text2,
-                caption = VitaminTheme.typography.caption
-            )
+                caption = VitaminTheme.typography.caption,
+            ),
         ) {
             textInput()
         }
@@ -407,9 +408,13 @@ internal fun VitaminTextInputLayoutImpl(
             modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)
         ) {
             helperText?.let {
-                val color = if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
-                else if (colors.state == State.ERROR) colors.textColor
-                else colors.helperColor
+                val color = if (!enabled) {
+                    colors.helperColor.copy(ContentAlpha.disabled)
+                } else if (colors.state == State.ERROR) {
+                    colors.textColor
+                } else {
+                    colors.helperColor
+                }
                 Text(
                     text = it,
                     style = VitaminTheme.typography.caption,
@@ -427,17 +432,23 @@ internal fun VitaminTextInputLayoutImpl(
                 )
             }
             counter?.let {
-                val color = if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
-                else colors.helperColor
+                val color = if (!enabled) {
+                    colors.helperColor.copy(ContentAlpha.disabled)
+                } else {
+                    colors.helperColor
+                }
                 Text(
                     text = "${it.first}/${it.second}",
                     style = VitaminTheme.typography.caption,
                     color = color,
-                    modifier = Modifier.semantics {
-                        if (!enabled) {
-                            this.disabled()
+                    modifier = Modifier
+                        .semantics {
+                            if (!enabled) {
+                                this.disabled()
+                            }
                         }
-                    }
+                        .weight(1f),
+                    textAlign = TextAlign.End,
                 )
             }
         }
