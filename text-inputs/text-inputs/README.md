@@ -4,6 +4,13 @@
 
 You can find the design specs on [decathlon.design](https://www.decathlon.design/).
 
+## Testing
+
+If you want to add Compose tests in your own project, you can use the dedicated test artifact
+for this component in your test dependencies which provides selectors and assertions that 
+encapsulate the internal implementation of the component.
+[Check the documentation here.](../text-inputs-test/README.md)
+
 ## Usage
 
 If you want to use components of this module in your android mobile application, you should 

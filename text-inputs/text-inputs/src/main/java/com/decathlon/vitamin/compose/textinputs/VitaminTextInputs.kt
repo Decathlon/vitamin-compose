@@ -27,6 +27,8 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.disabled
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
@@ -127,7 +129,7 @@ object VitaminTextInputs {
                     keyboardActions = keyboardActions,
                     singleLine = singleLine,
                     maxLines = maxLines,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().vtmnSemantics(helperText, counter),
                     enabled = enabled,
                     readOnly = readOnly,
                     isError = colors.state == State.ERROR,
@@ -296,7 +298,7 @@ object VitaminTextInputs {
                     keyboardActions = keyboardActions,
                     singleLine = singleLine,
                     maxLines = maxLines,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().vtmnSemantics(helperText, counter),
                     enabled = enabled,
                     isError = colors.state == State.ERROR,
                     readOnly = readOnly,
@@ -401,7 +403,9 @@ internal fun VitaminTextInputLayoutImpl(
         ) {
             textInput()
         }
-        Row(modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)) {
+        Row(
+            modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)
+        ) {
             helperText?.let {
                 val color = if (!enabled) colors.helperColor.copy(ContentAlpha.disabled)
                 else if (colors.state == State.ERROR) colors.textColor
@@ -414,7 +418,12 @@ internal fun VitaminTextInputLayoutImpl(
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
                         .weight(1f)
-                        .padding(end = 4.dp),
+                        .padding(end = 4.dp)
+                        .semantics {
+                            if (!enabled) {
+                                this.disabled()
+                            }
+                        }
                 )
             }
             counter?.let {
@@ -424,6 +433,11 @@ internal fun VitaminTextInputLayoutImpl(
                     text = "${it.first}/${it.second}",
                     style = VitaminTheme.typography.caption,
                     color = color,
+                    modifier = Modifier.semantics {
+                        if (!enabled) {
+                            this.disabled()
+                        }
+                    }
                 )
             }
         }
