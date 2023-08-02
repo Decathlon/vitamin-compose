@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -67,7 +68,8 @@ object VitaminProgressBars {
                 progress = progress,
                 modifier = Modifier.vitaminLinearProgressModifier(sizes.strokeSize),
                 color = colors.progressColor,
-                backgroundColor = colors.backgroundColor
+                backgroundColor = colors.backgroundColor,
+                strokeCap = StrokeCap.Round
             )
         }
     }
@@ -100,7 +102,8 @@ object VitaminProgressBars {
             LinearProgressIndicator(
                 modifier = Modifier.vitaminLinearProgressModifier(sizes.strokeSize),
                 color = colors.progressColor,
-                backgroundColor = colors.backgroundColor
+                backgroundColor = colors.backgroundColor,
+                strokeCap = StrokeCap.Round
             )
         }
     }
@@ -140,7 +143,8 @@ object VitaminProgressBars {
                     .align(Alignment.Center)
                     .size(sizes.boxSize),
                 color = colors.progressColor,
-                strokeWidth = sizes.strokeSize
+                strokeWidth = sizes.strokeSize,
+                strokeCap = StrokeCap.Round
             )
         }
     }
@@ -176,7 +180,8 @@ object VitaminProgressBars {
                     .align(Alignment.Center)
                     .size(sizes.boxSize),
                 color = colors.progressColor,
-                strokeWidth = sizes.strokeSize
+                strokeWidth = sizes.strokeSize,
+                strokeCap = StrokeCap.Round
             )
         }
     }

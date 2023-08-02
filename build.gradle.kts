@@ -90,10 +90,10 @@ sonarqube {
 conventionalCommits {
     scopes = subprojects.map { module -> module.name }.toList()
     failureMessage = "Error : The commit message does not meet the Conventional Commit standard\n" +
-            "An example of a valid message is:\n" +
-            "feat(buttons): add the small size button\n" +
-            "Available scopes : ${scopes}\n" +
-            "More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary"
+        "An example of a valid message is:\n" +
+        "feat(buttons): add the small size button\n" +
+        "Available scopes : ${scopes}\n" +
+        "More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary"
 }
 
 tasks.create<Delete>("clean") {

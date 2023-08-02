@@ -10,3 +10,7 @@ dependencies {
     implementation(project(":foundation:foundation-icons"))
     implementation(AndroidX.compose.ui.tooling)
 }
+
+android {
+    namespace = "com.decathlon.vitamin.compose.ratings"
+}
