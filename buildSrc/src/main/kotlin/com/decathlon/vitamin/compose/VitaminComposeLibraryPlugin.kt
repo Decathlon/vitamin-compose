@@ -14,11 +14,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 class VitaminComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        target.apply(plugin = "app.cash.licensee")
-        target.configure<app.cash.licensee.LicenseeExtension> {
-            allow("Apache-2.0")
-            allow("MIT")
-        }
         target.repositories {
             google()
             mavenCentral()

@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("VitaminComposeLibraryPlugin")
+    id("VitaminQualityPlugin")
     id("com.vanniktech.maven.publish")
 }
 
@@ -28,7 +29,7 @@ dependencies {
     api(project(":switches"))
     api(project(":tabs"))
     api(project(":tags"))
-    api(project(":text-inputs"))
+    api(project(":text-inputs:text-inputs"))
     api(project(":quantity-pickers"))
     api(project(":scaffolds"))
 }

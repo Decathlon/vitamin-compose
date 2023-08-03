@@ -19,6 +19,10 @@ gradlePlugin {
         id = "VitaminComposeLibraryPlugin"
         implementationClass = "com.decathlon.vitamin.compose.VitaminComposeLibraryPlugin"
     }
+    plugins.register("VitaminQualityPlugin") {
+        id = "VitaminQualityPlugin"
+        implementationClass = "com.decathlon.vitamin.compose.VitaminQualityPlugin"
+    }
 }
 
 dependencies {
