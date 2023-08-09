@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("VitaminComposeLibraryPlugin")
     id("VitaminQualityPlugin")
+    id("com.vanniktech.maven.publish")
 }
 
 dependencies {
