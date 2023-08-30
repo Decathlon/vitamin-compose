@@ -82,13 +82,13 @@ public val PaymentsGroup.AllAssets: ____KtList<ImageVector>
     if (__AllAssets != null) {
       return __AllAssets!!
     }
-    __AllAssets= listOf(Eway, OneyClassic, Elo, PostePay, MbMultibanco, PaysafeCard, PostEfinance,
-        GiroPay, BancontactPayconiq, PowerPay, Przelewy24, Oney4x, Maestro, ClickAndBuy, PointsPay,
-        Bancontact, Oney3x, Neteller, Cadhoc, Bvr, MbMay, Discover, MastercardFull, Bitcoin,
-        Verifone, Wallet, Payoneer, Bitpay, Belfius, Eps, Dwolla, SpiritOfCadeau, UnionPay,
-        Ingenico, DinersClubInternational, Paylib, Cb, ChequePayment, Paypal, Skrill, Mastercard,
-        Klarna, Stripe, Amex, Cash, WebMoney, Jcb, Illicado, VisaElectron, PayU, WesternUnion,
-        Oney3x4x, ApplePay, Ideal, GooglePay, Mnp, Paymill, Sepa, MaestroSubtext, Kbc,
-        MastercardIdCheck, Ing, VisaClassic, PostFinance, AmazonPay, GiftCardPayment)
+    __AllAssets= listOf(MbMay, ClickAndBuy, Oney3x4x, Amex, Kbc, VisaClassic, WesternUnion,
+        AmazonPay, GiftCardPayment, Oney4x, Elo, Paypal, DinersClubInternational, SpiritOfCadeau,
+        Stripe, PayU, Bancontact, BancontactPayconiq, PostePay, PostEfinance, Eps, Paylib, Cash,
+        Sepa, Skrill, Illicado, Maestro, PaysafeCard, Belfius, GiroPay, MaestroSubtext, PostFinance,
+        Neteller, Przelewy24, Eway, Mnp, Cadhoc, GooglePay, Jcb, Discover, Paymill, UnionPay,
+        WebMoney, ChequePayment, Ideal, Bitpay, Mastercard, ApplePay, Oney3x, Klarna,
+        MastercardFull, PowerPay, Payoneer, Wallet, Cb, Dwolla, VisaElectron, Bitcoin, OneyClassic,
+        Bvr, MbMultibanco, PointsPay, Verifone, MastercardIdCheck, Ingenico, Ing)
     return __AllAssets!!
   }

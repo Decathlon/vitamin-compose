@@ -279,17 +279,17 @@ public val FlagsGroup.AllAssets: ____KtList<ImageVector>
     if (__AllAssets != null) {
       return __AllAssets!!
     }
-    __AllAssets= listOf(Fm, Gi, De, GbSct, Pw, Sl, Pa, Sz, Sm, Jo, It, Gh, Eu, Hr, Ki, Jm, Pt, So,
-        Sx, Sy, Lgbt, Sn, Kh, Ec, Et, Fo, Eg, Fk, Id, Is, Pf, Sj, Cas, Ro, Sk, Pg, Ir, Km, Ie, Kz,
-        Fj, Gn, Gy, Es, Gl, Ht, Qa, Pe, Pr, Si, Caf, Sh, Ps, Kn, Hu, Iq, Ky, Gm, Er, Fi, Ee, Cu, Bf,
-        Nr, Ne, Zw, Tk, Vc, GbNir, Uy, Wf, Vu, Tj, Za, Mh, Bg, Cc, Ai, Br, Cv, Be, Ca, Nf, Ly, Xk,
-        Ws, Th, Va, Uz, Um, Ng, Mk, Np, Bd, Cw, Bs, Cd, Al, Bw, Mx, Nc, Mo, Lk, Ve, Tz, Tm, Tl, Ww,
-        Mn, Nu, My, Cr, Bv, Am, Az, Ba, Cg, Ax, Ao, Bt, Ml, Tn, Csa, To, Vg, Mm, Li, Na, Mz, An, Bb,
-        Cf, Bo, At, Ck, Mw, Nl, Ls, Ye, Tc, Ug, Tt, Ma, Nz, Lr, Mv, By, Au, Bn, Ch, Bl, Aw, Mt, No,
-        Mc, Tv, Vi, Ceu, Us, Tw, Mu, Bz, Bm, Ci, Cz, Ae, Cm, Bi, Ar, Lb, Mf, Lu, Mq, Yt, Td, Tr, Ua,
-        Mp, Lt, Mg, Lc, As, Bh, Cl, Ad, Af, Cy, Bj, Cn, Me, La, Mr, Ni, Lv, Om, Tg, GbEng, Vn, Zm,
-        Ms, Md, Co, Cx, Ag, Gw, Eh, Jp, Sr, Se, GbZet, Sd, Rw, Ph, Ss, Hn, Dz, Ga, Fr, Dm, Do, Gt,
-        Kw, Ru, Coc, Sg, Pk, Je, Hm, Gb, Gu, Gf, Dj, Gq, Ke, Im, Kr, Sc, St, UsCa, Pn, Sb, Py, Il,
-        Gp, Dk, Gg, Ge, Gr, In, Pl, Rs, Cna, GbWls, Pm, Sv, Re, Sa, Io, Hk, Kp, Kg, Gs, Gd)
+    __AllAssets= listOf(Ga, Gh, Mh, Zw, Tg, De, Gm, Mm, In, At, Vg, Sr, Cx, Gw, Bd, Af, Mp, Iq, Rs,
+        Kg, Ir, Lr, My, Pf, Lc, GbSct, Tn, Ww, Ch, Ck, Bn, Sv, Tl, Pr, Sm, Hn, Hu, Cy, Pk, Bw, Sl,
+        Ad, Tt, Nu, Az, Be, Cn, Py, Jp, Ec, Mr, Pe, Bz, Ml, Sn, Is, Cw, Et, Gd, Sy, Pw, Gb, Ai, Nr,
+        Nl, Lk, Um, Fi, Nz, Sh, Tv, Kw, Sj, Tj, Vi, Tr, Ke, Bs, Km, Fr, Ls, Ceu, Vc, Mk, Yt, Ge, Ws,
+        Hr, Pm, Dm, Id, Zm, Nf, Cu, Il, Uy, Im, Vn, Ms, Ss, Bh, Ly, Gs, Ma, Am, Si, Jm, Ao, Bf, Fj,
+        Vu, Lb, Cg, Me, Gf, Ye, Gg, Mq, Tz, Gp, Coc, Do, Mx, Lgbt, Fk, Fm, Gt, Ht, Kn, Pl, Bg, Gu,
+        Sc, Wf, La, Fo, Sa, Us, Lv, Td, Csa, Io, Lu, GbZet, Mw, Caf, Tk, Sd, Mg, UsCa, Pa, Za, Cv,
+        As, Sg, It, Qa, Cas, Cd, Ky, Bj, Bi, Xk, Br, Ie, Gi, Hk, Pg, St, Hm, By, Cl, Re, Tc, Na, Sb,
+        Mz, Mn, Rw, So, Np, Mu, Lt, Cm, Ae, Eg, Kp, Gr, Mt, Ca, Ee, Aw, Ci, Ps, Th, An, Cna, Kr, Ro,
+        Cz, Uz, Gq, Ug, Eh, Li, Ve, Sk, Va, Ua, Ph, GbWls, Dk, Au, GbNir, Dz, Ki, Je, Es, Md, Bl,
+        Bb, Nc, Bm, Se, Ar, Mo, Gy, Tw, Kh, Bo, Al, Pn, Dj, Ng, Mf, Om, Jo, Gl, Bt, Ba, Gn, Ni, Ne,
+        Ag, Mc, Er, Sz, Sx, Cc, Kz, Mv, To, Cf, Ru, Cr, Eu, Pt, Bv, Ax, Co, GbEng, Tm, No)
     return __AllAssets!!
   }
