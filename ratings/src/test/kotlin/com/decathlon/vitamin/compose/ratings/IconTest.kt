@@ -34,6 +34,11 @@ class IconTest {
         assertStars(number = 3.8f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Empty)
     }
 
+    @Test
+    fun close_edge_case_below_int() {
+        assertStars(number = 3.751f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Empty)
+    }
+
     /**
      * Asserts that a given [number] produces an expected list of icons.
      */
