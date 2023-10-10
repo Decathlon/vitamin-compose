@@ -15,6 +15,11 @@ class IconTest {
     }
 
     @Test
+    fun lower_limit_of_half() {
+        assertStars(number = 3.25f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
+    }
+
+    @Test
     fun close_below_half() {
         assertStars(number = 3.4f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
     }
@@ -27,6 +32,11 @@ class IconTest {
     @Test
     fun close_above_half() {
         assertStars(number = 3.6f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
+    }
+
+    @Test
+    fun high_limit_of_half() {
+        assertStars(number = 3.75f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
     }
 
     @Test
