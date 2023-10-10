@@ -15,11 +15,8 @@ internal sealed class Icon(val imageVector: ImageVector) {
     object Fill : Icon(imageVector = VitaminIcons.Fill.Star)
 
     companion object {
-        private const val EMPTY_LOWER_BOUND = 0f
-        private const val EMPTY_UPPER_BOUND = 0.24f
         private const val HALF_LOWER_BOUND = 0.25f
         private const val HALF_UPPER_BOUND = 0.75f
-        private const val FILL_LOWER_BOUND = 0.76f
         private const val FILL_UPPER_BOUND = 1f
 
         fun get(index: Int, number: Float): Icon {
@@ -27,9 +24,9 @@ internal sealed class Icon(val imageVector: ImageVector) {
             val decimal = number - index
             return when {
                 index < floor -> Fill
-                decimal in EMPTY_LOWER_BOUND..EMPTY_UPPER_BOUND -> Empty
-                decimal in HALF_LOWER_BOUND..HALF_UPPER_BOUND -> Half
-                decimal in FILL_LOWER_BOUND..FILL_UPPER_BOUND -> Fill
+                decimal < HALF_LOWER_BOUND -> Empty
+                decimal <= HALF_UPPER_BOUND -> Half
+                decimal <= FILL_UPPER_BOUND -> Fill
                 else -> Empty
             }
         }
