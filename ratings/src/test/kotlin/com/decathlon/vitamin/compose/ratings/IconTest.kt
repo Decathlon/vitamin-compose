@@ -1,72 +1,54 @@
 package com.decathlon.vitamin.compose.ratings
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class IconTest {
     @Test
     fun integer() {
-        val number = 3.0f
-
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Empty, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+        assertStars(number = 3.0f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Empty, Icon.Empty)
     }
 
     @Test
     fun close_above_int() {
-        val number = 3.2f
-
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Empty, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+        assertStars(number = 3.2f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Empty, Icon.Empty)
     }
 
     @Test
     fun close_below_half() {
-        val number = 3.4f
-
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Half, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+        assertStars(number = 3.4f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
     }
 
     @Test
     fun strictly_half() {
-        val number = 3.5f
-
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Half, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+        assertStars(number = 3.5f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
     }
 
     @Test
     fun close_above_half() {
-        val number = 3.6f
-
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Half, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+        assertStars(number = 3.6f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Half, Icon.Empty)
     }
 
     @Test
     fun close_below_int() {
-        val number = 3.8f
+        assertStars(number = 3.8f, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Fill, Icon.Empty)
+    }
 
-        assertEquals(Icon.Fill, Icon.get(0, number))
-        assertEquals(Icon.Fill, Icon.get(1, number))
-        assertEquals(Icon.Fill, Icon.get(2, number))
-        assertEquals(Icon.Fill, Icon.get(3, number))
-        assertEquals(Icon.Empty, Icon.get(4, number))
+    /**
+     * Asserts that a given [number] produces an expected list of icons.
+     */
+    private fun assertStars(
+        number: Float,
+        icon1: Icon,
+        icon2: Icon,
+        icon3: Icon,
+        icon4: Icon,
+        icon5: Icon
+    ) {
+        assertEquals("1st star of $number should be ${icon1::class.simpleName}", icon1, Icon.get(0, number))
+        assertEquals("2nd star of $number should be ${icon2::class.simpleName}", icon2, Icon.get(1, number))
+        assertEquals("3rd star of $number should be ${icon3::class.simpleName}", icon3, Icon.get(2, number))
+        assertEquals("4th star of $number should be ${icon4::class.simpleName}", icon4, Icon.get(3, number))
+        assertEquals("5th star of $number should be ${icon5::class.simpleName}", icon5, Icon.get(4, number))
     }
 }
