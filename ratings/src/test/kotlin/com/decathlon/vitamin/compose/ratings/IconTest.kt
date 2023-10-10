@@ -52,13 +52,14 @@ class IconTest {
     /**
      * Asserts that a given [number] produces an expected list of icons.
      */
+    @Suppress("LongParameterList")
     private fun assertStars(
         number: Float,
         icon1: Icon,
         icon2: Icon,
         icon3: Icon,
         icon4: Icon,
-        icon5: Icon
+        icon5: Icon,
     ) {
         assertEquals("1st star of $number should be ${icon1::class.simpleName}", icon1, Icon.get(0, number))
         assertEquals("2nd star of $number should be ${icon2::class.simpleName}", icon2, Icon.get(1, number))
