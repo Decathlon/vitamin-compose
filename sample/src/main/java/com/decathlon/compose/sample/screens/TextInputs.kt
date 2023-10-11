@@ -88,9 +88,9 @@ object TextInputs : Screen {
                         icon = {
                             Icon(
                                 painter = painter,
-                                contentDescription = null
+                                contentDescription = null,
                             )
-                        }
+                        },
                     )
                 }
                 item {
@@ -166,7 +166,7 @@ object TextInputs : Screen {
                         value = "Input",
                         label = "Label",
                         onValueChange = {},
-                        helperText = "Helper Text",
+                        helperText = "Helper Text, lorem ipsum helper text next to the counter",
                         counter = 999 to 999,
                         icon = {
                             Icon(
