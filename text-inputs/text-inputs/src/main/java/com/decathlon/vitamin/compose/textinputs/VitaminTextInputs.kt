@@ -1,11 +1,14 @@
 package com.decathlon.vitamin.compose.textinputs
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.ContentAlpha
@@ -15,7 +18,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
-import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -94,35 +96,7 @@ object VitaminTextInputs {
                     value = value,
                     onValueChange = onValueChange,
                     label = { Text(text = label) },
-                    colors = TextFieldDefaults.outlinedTextFieldColors(
-                        backgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary,
-                        cursorColor = VitaminTheme.colors.vtmnContentAction,
-                        errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
-                        textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
-                        focusedBorderColor = colors.focusBorderColor,
-                        unfocusedBorderColor = colors.borderColor,
-                        disabledBorderColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorBorderColor = colors.borderColor,
-                        leadingIconColor = colors.iconColor,
-                        disabledLeadingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorLeadingIconColor = colors.iconColor,
-                        trailingIconColor = colors.iconColor,
-                        disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorTrailingIconColor = colors.iconColor,
-                        focusedLabelColor = colors.focusTextColor,
-                        unfocusedLabelColor = colors.textColor,
-                        disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorLabelColor = colors.textColor,
-                    ),
+                    colors = colors.outlinedTextFieldColors(),
                     textStyle = textStyle,
                     visualTransformation = transformation,
                     interactionSource = interactionSource,
@@ -263,35 +237,7 @@ object VitaminTextInputs {
                     value = value,
                     onValueChange = onValueChange,
                     label = { Text(text = label) },
-                    colors = TextFieldDefaults.textFieldColors(
-                        backgroundColor = VitaminTheme.colors.vtmnBackgroundPrimary,
-                        cursorColor = VitaminTheme.colors.vtmnContentAction,
-                        errorCursorColor = VitaminTheme.colors.vtmnContentNegative,
-                        textColor = VitaminTheme.colors.vtmnContentPrimary,
-                        disabledTextColor = VitaminTheme.colors.vtmnContentTertiary.copy(ContentAlpha.disabled),
-                        focusedIndicatorColor = colors.focusBorderColor,
-                        unfocusedIndicatorColor = colors.borderColor,
-                        disabledIndicatorColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorIndicatorColor = colors.borderColor,
-                        leadingIconColor = colors.iconColor,
-                        disabledLeadingIconColor = VitaminTheme.colors.vtmnActiveTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorLeadingIconColor = colors.iconColor,
-                        trailingIconColor = colors.iconColor,
-                        disabledTrailingIconColor = VitaminTheme.colors.vtmnContentPrimary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorTrailingIconColor = colors.iconColor,
-                        focusedLabelColor = colors.focusTextColor,
-                        unfocusedLabelColor = colors.textColor,
-                        disabledLabelColor = VitaminTheme.colors.vtmnContentTertiary.copy(
-                            ContentAlpha.disabled,
-                        ),
-                        errorLabelColor = colors.textColor,
-                    ),
+                    colors = colors.textFieldColors(),
                     textStyle = textStyle,
                     visualTransformation = transformation,
                     interactionSource = interactionSource,
@@ -405,7 +351,10 @@ internal fun VitaminTextInputLayoutImpl(
             textInput()
         }
         Row(
-            modifier = Modifier.padding(vertical = 1.dp, horizontal = 4.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 1.dp, horizontal = 4.dp),
+            horizontalArrangement = Arrangement.End,
         ) {
             helperText?.let {
                 val color = if (!enabled) {
@@ -428,7 +377,7 @@ internal fun VitaminTextInputLayoutImpl(
                             if (!enabled) {
                                 this.disabled()
                             }
-                        }
+                        },
                 )
             }
             counter?.let {
@@ -437,6 +386,7 @@ internal fun VitaminTextInputLayoutImpl(
                 } else {
                     colors.helperColor
                 }
+                Spacer(modifier = Modifier.width(4.dp))
                 Text(
                     text = "${it.first}/${it.second}",
                     style = VitaminTheme.typography.caption,
@@ -447,7 +397,7 @@ internal fun VitaminTextInputLayoutImpl(
                                 this.disabled()
                             }
                         }
-                        .weight(1f),
+                        .wrapContentWidth(),
                     textAlign = TextAlign.End,
                 )
             }
