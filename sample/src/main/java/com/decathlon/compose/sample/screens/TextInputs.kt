@@ -10,6 +10,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -114,6 +116,20 @@ object TextInputs : Screen {
                                 Text(text = "Option 2")
                             }
                         },
+                    )
+                }
+                item {
+                    VitaminTextInputs.Outlined(
+                        value = TextFieldValue(text = "Input", selection = TextRange(0, Integer.MAX_VALUE)),
+                        label = "Label",
+                        onValueChange = {},
+                    )
+                }
+                item {
+                    VitaminTextInputs.Outlined(
+                        value = TextFieldValue(text = "Input", selection = TextRange(2, 2)),
+                        label = "Label",
+                        onValueChange = {},
                     )
                 }
                 item {
