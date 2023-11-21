@@ -32,6 +32,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.disabled
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -71,6 +72,88 @@ object VitaminTextInputs {
         value: String,
         label: String,
         onValueChange: (String) -> Unit,
+        modifier: Modifier = Modifier,
+        helperText: String? = null,
+        counter: Pair<Int, Int>? = null,
+        singleLine: Boolean = false,
+        maxLines: Int = Int.MAX_VALUE,
+        readOnly: Boolean = false,
+        enabled: Boolean = true,
+        transformation: VisualTransformation = TextInputsTransformations.none,
+        keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+        keyboardActions: KeyboardActions = KeyboardActions.Default,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.text2,
+        icon: @Composable (() -> Unit)? = null,
+    ) {
+        VitaminTextInputLayoutImpl(
+            helperText = helperText,
+            counter = counter,
+            colors = colors,
+            enabled = enabled,
+            textInput = {
+                OutlinedTextField(
+                    value = value,
+                    onValueChange = onValueChange,
+                    label = { Text(text = label) },
+                    colors = colors.outlinedTextFieldColors(),
+                    textStyle = textStyle,
+                    visualTransformation = transformation,
+                    interactionSource = interactionSource,
+                    keyboardOptions = keyboardOptions,
+                    keyboardActions = keyboardActions,
+                    singleLine = singleLine,
+                    maxLines = maxLines,
+                    modifier = Modifier.fillMaxWidth().vtmnSemantics(helperText, counter),
+                    enabled = enabled,
+                    readOnly = readOnly,
+                    isError = colors.state == State.ERROR,
+                    trailingIcon = {
+                        if (icon != null && colors.state != State.SUCCESS) {
+                            icon()
+                        } else if (
+                            colors.imageVector != null &&
+                            (colors.state == State.SUCCESS || colors.state == State.ERROR)
+                        ) {
+                            Icon(
+                                imageVector = colors.imageVector,
+                                contentDescription = null,
+                            )
+                        }
+                    },
+                )
+            },
+            modifier = modifier,
+        )
+    }
+
+    /**
+     * Outlined text input to get an input value from the user.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param onValueChange The callback to be called when the user type a new character
+     * @param modifier The `Modifier` to be applied to the component
+     * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
+     * @param counter The optional counter to be displayed the the end bottom outside the text input container
+     * @param singleLine True if the text input doesn't extend their height, otherwise, false
+     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
+     * @param readOnly True if you don't want open the keyboard when the user click on the text field
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param transformation Transforms the visual representation of the input value
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
+     */
+    @Composable
+    fun Outlined(
+        value: TextFieldValue,
+        label: String,
+        onValueChange: (TextFieldValue) -> Unit,
         modifier: Modifier = Modifier,
         helperText: String? = null,
         counter: Pair<Int, Int>? = null,
@@ -212,6 +295,88 @@ object VitaminTextInputs {
         value: String,
         label: String,
         onValueChange: (String) -> Unit,
+        modifier: Modifier = Modifier,
+        helperText: String? = null,
+        counter: Pair<Int, Int>? = null,
+        maxLines: Int = Int.MAX_VALUE,
+        singleLine: Boolean = false,
+        readOnly: Boolean = false,
+        enabled: Boolean = true,
+        transformation: VisualTransformation = TextInputsTransformations.none,
+        keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+        keyboardActions: KeyboardActions = KeyboardActions.Default,
+        interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
+        colors: TextInputStateColors = TextInputsState.normal(),
+        textStyle: TextStyle = VitaminTheme.typography.text2,
+        icon: @Composable (() -> Unit)? = null,
+    ) {
+        VitaminTextInputLayoutImpl(
+            helperText = helperText,
+            counter = counter,
+            colors = colors,
+            enabled = enabled,
+            textInput = {
+                TextField(
+                    value = value,
+                    onValueChange = onValueChange,
+                    label = { Text(text = label) },
+                    colors = colors.textFieldColors(),
+                    textStyle = textStyle,
+                    visualTransformation = transformation,
+                    interactionSource = interactionSource,
+                    keyboardOptions = keyboardOptions,
+                    keyboardActions = keyboardActions,
+                    singleLine = singleLine,
+                    maxLines = maxLines,
+                    modifier = Modifier.fillMaxWidth().vtmnSemantics(helperText, counter),
+                    enabled = enabled,
+                    isError = colors.state == State.ERROR,
+                    readOnly = readOnly,
+                    trailingIcon = {
+                        if (icon != null && colors.state != State.SUCCESS) {
+                            icon()
+                        } else if (
+                            colors.imageVector != null &&
+                            (colors.state == State.SUCCESS || colors.state == State.ERROR)
+                        ) {
+                            Icon(
+                                imageVector = colors.imageVector,
+                                contentDescription = null,
+                            )
+                        }
+                    },
+                )
+            },
+            modifier = modifier,
+        )
+    }
+
+    /**
+     * Filled text input to get an input value from the user.
+     * @param value The value of your text input
+     * @param label The label to be displayed inside the text input container and pushed at the top
+     * of text input when the component takes the focus
+     * @param onValueChange The callback to be called when the user type a new character
+     * @param modifier The `Modifier` to be applied to the component
+     * @param helperText The optional helper text to be displayed at the start bottom outside the text input container
+     * @param counter The optional counter to be displayed the the end bottom outside the text input container
+     * @param maxLines The number of maximum lines the text input can have if the `singleLine` is set to `true`
+     * @param singleLine True if the text input doesn't extend their height, otherwise, false
+     * @param readOnly True if you don't want open the keyboard when the user click on the text field
+     * @param enabled True if you can type in the text input, otherwise false
+     * @param transformation Transforms the visual representation of the input value
+     * @param keyboardOptions When the text input emit an IME action, the corresponding callback is called
+     * @param keyboardActions Software keyboard options that contains such as KeyboardType and ImeAction
+     * @param interactionSource Representing the stream of interaction for the text input
+     * @param colors The color to notify your user if they are in normal, error or success state
+     * @param textStyle The typography of the text inside the text input
+     * @param icon The optional trailing icon to be displayed at the end of the text input container
+     */
+    @Composable
+    fun Filled(
+        value: TextFieldValue,
+        label: String,
+        onValueChange: (TextFieldValue) -> Unit,
         modifier: Modifier = Modifier,
         helperText: String? = null,
         counter: Pair<Int, Int>? = null,
